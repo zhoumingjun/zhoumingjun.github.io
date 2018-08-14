@@ -21,7 +21,7 @@ const P = styled.p(({theme}) => ({
 
 const SiteFooter = () => (
   <Footer>
-    <P>&copy; 2018 Kenneth Powers</P>
+    <P>&copy; 2017-2018 Mingjun Zhou</P>
     <P>
       <small>
         This site is built with{' '}
@@ -29,7 +29,9 @@ const SiteFooter = () => (
           GatsbyJS
         </A>
         . You can find the{' '}
-        <A inline href="https://github.com/knpwrs/knpw.rs">
+        <A
+          inline
+          href="https://github.com/zhoumingjun/zhoumingjun.github.io/tree/develop">
           source code on GitHub
         </A>
         .

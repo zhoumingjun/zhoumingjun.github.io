@@ -2,7 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import {Link} from 'gatsby';
 import get from 'lodash/get';
-
+import {css} from 'emotion';
 import Layout from '../components/layout';
 import {rhythm, scale} from '../utils/typography';
 
@@ -20,14 +20,20 @@ class BlogPostTemplate extends React.Component {
           meta={[{name: 'description', content: siteDescription}]}
           title={`${post.frontmatter.title} | ${siteTitle}`}
         />
-        <h1>{post.frontmatter.title}</h1>
+        <h1
+          className={css`
+            text-align: center;
+          `}>
+          {post.frontmatter.title}
+        </h1>
         <p
-          style={{
-            ...scale(-1 / 5),
-            display: 'block',
-            marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
-          }}>
+          className={css`
+            text-align: right;
+            margin-bottom: ${rhythm(1)};
+            margin-top: ${rhythm(-1)};
+            display: block;
+            ${scale(-1 / 5)};
+          `}>
           {post.frontmatter.date}
         </p>
         <div dangerouslySetInnerHTML={{__html: post.html}} />

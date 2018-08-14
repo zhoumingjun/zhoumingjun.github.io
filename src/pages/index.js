@@ -1,6 +1,5 @@
 import React from 'react';
 import {graphql} from 'gatsby';
-import CenterWrap from '../components/center-wrap';
 import Posts from '../components/posts';
 import Layout from '../components/layout';
 
@@ -10,10 +9,8 @@ const Index = ({
   },
 }) => (
   <Layout>
-    <CenterWrap>
-      <h2>Blog</h2>
-      <Posts posts={posts.map(post => post.node)} />
-    </CenterWrap>
+    <h2>Blog</h2>
+    <Posts posts={posts.map(post => post.node)} />
   </Layout>
 );
 

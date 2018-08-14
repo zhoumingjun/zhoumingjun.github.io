@@ -2,28 +2,24 @@
 import React from 'react';
 import styled from 'react-emotion';
 import A from './header-footer-anchor';
+import {withTheme} from 'emotion-theming';
 
-const Header = styled.header(({theme}) => ({
-  display: 'flex',
-  flexDirection: 'row',
-  justifyContent: 'space-between',
-  height: theme.headerHeight,
-  lineHeight: theme.headerHeight,
-  color: theme.textColor,
-}));
+const Header = styled.header`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: ${props => props.theme.headerHeight};
+  color: ${props => props.theme.textColor};
+`;
 
 const H1 = styled.h1(({theme}) => ({
-  fontSize: '1.25rem',
   margin: 0,
-  [theme.smallMedia]: {
-    fontSize: '1rem',
-  },
 }));
 
-const Small = styled.small({
-  fontSize: '75%',
-  opacity: 0.35,
-});
+const Small = styled.small`
+  font-size: 75%;
+  opacity: 0.35;
+}`;
 
 const Nav = styled.nav({
   display: 'flex',
