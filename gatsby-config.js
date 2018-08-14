@@ -1,12 +1,18 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Starter Blog',
-    author: 'Kyle Mathews',
-    description: 'A starter blog demonstrating what Gatsby can do.',
-    siteUrl: 'https://gatsbyjs.github.io/gatsby-starter-blog/',
+    title: 'zhoumingjun blog',
+    author: 'Mingjun Zhou',
+    description: 'personal blog',
+    siteUrl: 'https://zhoumingjun.github.io',
   },
-  pathPrefix: '/gatsby-starter-blog',
+  pathPrefix: '/',
   plugins: [
+    {
+      resolve: `gatsby-plugin-emotion`,
+      options: {
+        // Accepts all options defined by `babel-plugin-emotion` plugin.
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -66,4 +72,4 @@ module.exports = {
       },
     },
   ],
-}
+};
