@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[zhoumingjun blog]]></title><description><![CDATA[personal blog]]></description><link>https://zhoumingjun.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 14 Aug 2018 11:09:07 GMT</lastBuildDate><item><title><![CDATA[Migrate from Hugo to Gatsby]]></title><description><![CDATA[I decided to migrate my blog from hugo to gatsby.
+Gatsby is based on react and misc plugins, and it works in the same way as normal web…]]></description><link>https://zhoumingjun.github.io/blog/2018-08-14-migrate-from-hugo-to-gatsby/</link><guid isPermaLink="false">https://zhoumingjun.github.io/blog/2018-08-14-migrate-from-hugo-to-gatsby/</guid><pubDate>Tue, 14 Aug 2018 10:52:17 GMT</pubDate><content:encoded>&lt;p&gt;I decided to migrate my blog from hugo to gatsby.
+Gatsby is based on react and misc plugins, and it works in the same way as normal web development.
+But there are still some works to do, such as mathjax support.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[About]]></title><description><![CDATA[This is the personal blog for teck stacks.]]></description><link>https://zhoumingjun.github.io/about/</link><guid isPermaLink="false">https://zhoumingjun.github.io/about/</guid><pubDate>Tue, 14 Aug 2018 10:43:09 GMT</pubDate><content:encoded>&lt;p&gt;This is the personal blog for teck stacks.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[lvs keepalived]]></title><description><![CDATA[introduction lvs: lvs  is a kind of L4 load balancer. some references here:
+ howto  ( http://www.austintek.com/LVS/LVS-HOWTO/HOWTO/index…]]></description><link>https://zhoumingjun.github.io/blog/2017-03-22-lvs-keepalived/</link><guid isPermaLink="false">https://zhoumingjun.github.io/blog/2017-03-22-lvs-keepalived/</guid><pubDate>Wed, 22 Mar 2017 09:23:36 GMT</pubDate><content:encoded>&lt;h1&gt;introduction&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;lvs:&lt;br&gt;
+&lt;a href=&quot;http://www.linuxvirtualserver.org/&quot;&gt;lvs&lt;/a&gt; is a kind of L4 load balancer.&lt;br&gt;
+some references here:
+[howto] (&lt;a href=&quot;http://www.austintek.com/LVS/LVS-HOWTO/HOWTO/index.html&quot;&gt;http://www.austintek.com/LVS/LVS-HOWTO/HOWTO/index.html&lt;/a&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;keepalived:&lt;br&gt;
+&lt;a href=&quot;http://www.keepalived.org/&quot;&gt;keepalived&lt;/a&gt; is a facilitator for lvs&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;configuration&lt;/h1&gt;
+&lt;p&gt;topology:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DIP: 192.168.2.172            &lt;/li&gt;
+&lt;li&gt;RIP[1]: 192.168.2.173         &lt;/li&gt;
+&lt;li&gt;RIP[2]: 192.168.2.174     &lt;/li&gt;
+&lt;li&gt;VIP: 192.168.2.175            &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;lvs only&lt;/h2&gt;
+&lt;p&gt;director side &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;
+      &lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;#install ipvsadm
+yum -y install ipvsadm
+echo &amp;#39;net.ipv4.ip_forward = 1&amp;#39; &amp;gt;&amp;gt; /etc/sysctl.conf 
+sysctl -p
+touch /etc/sysconfig/ipvsadm 
+systemctl start ipvsadm 
+systemctl enable ipvsadm 
+
+# add vip
+ifconfig em1:0 192.168.2.175 netmask 255.255.255.255
+
+# configuration
+ipvsadm -C
+ipvsadm -A -t 192.168.2,175:80 -s rr
+ipvsadm -a -t 192.168.2,175:80 -r 192.168.2,173:80 -g
+ipvsadm -a -t 192.168.2,175:80 -r 192.168.2,174:80 -g
+ipvsadm -l &lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;realserver side&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;
+      &lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# add vip
+ifconfig lo:0 192.168.2.175 netmask 255.255.255.255 broadcast 192.168.2.175 
+
+# disable VIP arp
+echo &amp;quot;1&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/lo/arp_ignore
+echo &amp;quot;2&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/lo/arp_announce
+echo &amp;quot;1&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/all/arp_ignore
+echo &amp;quot;2&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/all/arp_announce&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;h2&gt;lvs + keepalived&lt;/h2&gt;
+&lt;p&gt;director side &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;
+      &lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;global_defs {              
+    router_id LVS_MASTER   
+}
+vrrp_instance VI_1 {       
+    state MASTER           
+    interface em1          
+    virtual_router_id 51   
+    priority 100           
+    advert_int 1           
+    authentication {       
+    auth_type PASS
+    auth_pass 1111
+    }
+virtual_ipaddress {        
+    192.168.2.175
+    }
+}
+virtual_server 192.168.2.175 80 {
+    delay_loop 6            
+    lb_algo wrr             
+    lb_kind DR              
+    nat_mask 255.255.255.0  
+    #persistence_timeout 5  
+    protocol TCP            
+    real_server 192.168.2.173 80 {      
+        weight 3                   
+        TCP_CHECK {               
+        connect_timeout 5        
+        nb_get_retry 3
+        delay_before_retry 3
+        connect_port 80
+        }
+    }
+    real_server 192.168.2.174 80 {
+        weight 3
+        TCP_CHECK {
+        connect_timeout 10
+        nb_get_retry 3
+        delay_before_retry 3
+        connect_port 80
+        }
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;realserver side&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;
+      &lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# add vip
+ifconfig lo:0 192.168.2.175 netmask 255.255.255.255 broadcast 192.168.2.175 
+
+# disable VIP arp
+echo &amp;quot;1&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/lo/arp_ignore
+echo &amp;quot;2&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/lo/arp_announce
+echo &amp;quot;1&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/all/arp_ignore
+echo &amp;quot;2&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/all/arp_announce&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;</content:encoded></item><item><title><![CDATA[Using MathJax and Graphviz with Hugo]]></title><description><![CDATA[MathJax support configuration Hugo doc MathJax doc       example code      result graphviz support configuration example code…]]></description><link>https://zhoumingjun.github.io/blog/2017-03-10-using-mathjax-viz-with-hugo/</link><guid isPermaLink="false">https://zhoumingjun.github.io/blog/2017-03-10-using-mathjax-viz-with-hugo/</guid><pubDate>Fri, 10 Mar 2017 03:40:12 GMT</pubDate><content:encoded>&lt;h1&gt;MathJax support&lt;/h1&gt;
+&lt;h2&gt;configuration&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://gohugo.io/tutorials/mathjax/&quot;&gt;Hugo doc&lt;/a&gt;&lt;br&gt;
+&lt;a href=&quot;http://docs.mathjax.org/en/latest/configuration.html?#using-plain-javascript&quot;&gt;MathJax doc&lt;/a&gt;     &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;
+      &lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;!-- LaTeX math rendering --&amp;gt;
+{{ if  .Params.math   }}
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+    window.MathJax = {
+        tex2jax: {
+            inlineMath: [[&amp;#39;$&amp;#39;,&amp;#39;$&amp;#39;], [&amp;#39;\\(&amp;#39;,&amp;#39;\\)&amp;#39;]],
+            displayMath: [[&amp;#39;$$&amp;#39;,&amp;#39;$$&amp;#39;], [&amp;#39;\[&amp;#39;,&amp;#39;\]&amp;#39;]],
+            processEscapes: true,
+            processEnvironments: true,
+            skipTags: [&amp;#39;script&amp;#39;, &amp;#39;noscript&amp;#39;, &amp;#39;style&amp;#39;, &amp;#39;textarea&amp;#39;, &amp;#39;pre&amp;#39;],
+            TeX: { equationNumbers: { autoNumber: &amp;quot;AMS&amp;quot; },
+                extensions: [&amp;quot;AMSmath.js&amp;quot;, &amp;quot;AMSsymbols.js&amp;quot;, &amp;quot;color.js&amp;quot;] }
+        },
+        AuthorInit: function () {
+            MathJax.Hub.Register.StartupHook(&amp;quot;Begin&amp;quot;,function () {
+                MathJax.Hub.Queue(function() {
+                    var all = MathJax.Hub.getAllJax(), i;
+                    for(i = 0; i &amp;lt; all.length; i += 1) {
+                        all[i].SourceElement().parentNode.className += &amp;#39; has-jax&amp;#39;;
+                    }
+                })
+            });
+        }
+    };
+&amp;lt;/script&amp;gt;
+&amp;lt;script  type=&amp;quot;text/javascript&amp;quot;
+    src=&amp;quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML&amp;quot;&amp;gt;
+&amp;lt;/script&amp;gt;
+{{ end }}&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;h2&gt;example&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;code&lt;/strong&gt;    &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;
+      &lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;    `$ v_\pi(s) = \sum_{a \in \mathcal{A}} \pi(a|s) q_\pi(s,a)  $`&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;result&lt;/strong&gt;&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ v_\pi(s) = \sum_{a \in \mathcal{A}} \pi(a|s) q_\pi(s,a)  $&lt;/code&gt;&lt;/p&gt;
+&lt;h1&gt;graphviz support&lt;/h1&gt;
+&lt;h2&gt;configuration&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;
+      &lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;&amp;lt;!-- graphviz renderring --&gt;&lt;/span&gt;
+{{ if  .Params.viz}}
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;script&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;text/javascript&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;//cdnjs.cloudflare.com/ajax/libs/viz.js/1.7.1/viz.js&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt; &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;script&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;text/javascript&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; vizPrefix &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;language-viz-&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    Array&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;prototype&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;forEach&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;document&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;querySelectorAll&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;[class^=&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; vizPrefix &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;]&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; engine&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        x&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getAttribute&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;class&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;forEach&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;cls&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;cls&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;startsWith&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;vizPrefix&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+                engine &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; cls&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;substr&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;vizPrefix&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;length&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; image &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;DOMParser&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;parseFromString&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;Viz&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;innerText&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;format&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;svg&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; engine&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;engine&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;image/svg+xml&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        x&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;parentNode&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;insertBefore&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;image&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;documentElement&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; x&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        x&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;style&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;display &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;none&apos;&lt;/span&gt;
+        x&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;parentNode&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;style&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;backgroundColor &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;white&quot;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+{{ end }}&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;h2&gt;example&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;code&lt;/strong&gt;        &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;
+      &lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;    ```viz-dot
+    digraph g { 
+    node[shape=&amp;quot;circle&amp;quot; , label=&amp;quot;&amp;quot;, width=0.2, height=0.2]
+    l1[xlabel=&amp;quot;v\(s\)&amp;quot;]
+    l21[xlabel=&amp;quot;a&amp;quot;, width=0.1, height=0.1 , style=filled]
+    l22[width=0.1, height=0.1, style=filled]
+    l31[xlabel=&amp;quot;v\(s&amp;#39;\)&amp;quot;]
+
+    l1 -&amp;gt; l21
+    l1 -&amp;gt; l22
+    l21 -&amp;gt; l31 [xlabel=&amp;quot;r&amp;quot;]
+    l21 -&amp;gt; l32
+    l22 -&amp;gt; l33
+    l22 -&amp;gt; l34
+    }
+    ```&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;result&lt;/strong&gt;   &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;viz-dot&quot;&gt;
+      &lt;pre class=&quot;language-viz-dot&quot;&gt;&lt;code class=&quot;language-viz-dot&quot;&gt;digraph g { 
+   node[shape=&amp;quot;circle&amp;quot; , label=&amp;quot;&amp;quot;, width=0.2, height=0.2]
+   l1[xlabel=&amp;quot;v\(s\)&amp;quot;]
+   l21[xlabel=&amp;quot;a&amp;quot;, width=0.1, height=0.1 , style=filled]
+   l22[width=0.1, height=0.1, style=filled]
+   l31[xlabel=&amp;quot;v\(s&amp;#39;\)&amp;quot;]
+
+   l1 -&amp;gt; l21
+   l1 -&amp;gt; l22
+   l21 -&amp;gt; l31 [xlabel=&amp;quot;r&amp;quot;]
+   l21 -&amp;gt; l32
+   l22 -&amp;gt; l33
+   l22 -&amp;gt; l34
+}&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;</content:encoded></item><item><title><![CDATA[First Post]]></title><description><![CDATA[I build this site to boost my daily work.  This website is powered by  Academic ,  Hugo , and  GitHub Pages .   ]]></description><link>https://zhoumingjun.github.io/blog/2017-03-06-first-post/</link><guid isPermaLink="false">https://zhoumingjun.github.io/blog/2017-03-06-first-post/</guid><pubDate>Mon, 06 Mar 2017 08:03:35 GMT</pubDate><content:encoded>&lt;p&gt;I build this site to boost my daily work. &lt;/p&gt;
+&lt;p&gt;This website is powered by &lt;a href=&quot;https://github.com/gcushen/hugo-academic&quot;&gt;Academic&lt;/a&gt;, &lt;a href=&quot;https://gohugo.io&quot;&gt;Hugo&lt;/a&gt;, and &lt;a href=&quot;https://github.com/&quot;&gt;GitHub Pages&lt;/a&gt;.   &lt;/p&gt;</content:encoded></item></channel></rss>
