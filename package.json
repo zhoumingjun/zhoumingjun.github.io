@@ -1,10 +1,10 @@
 {
-  "name": "gatsby-starter-blog",
-  "description": "Starter Gatsby Blog",
+  "name": "blog",
+  "description": "blog",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Mingjun Zhou <zhoumingjun@gmail.com>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby-starter-blog/issues"
+    "url": "https://github.com/zhoumingjun/zhoumingjun.github.io/issues"
   },
   "dependencies": {
     "emotion": "^9.2.6",
@@ -51,7 +51,7 @@
     "gh-pages": "^1.1.0",
     "prettier": "^1.12.0"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/zhoumingjun/zhoumingjun.github.io/blob/develop/README.md",
   "keywords": [
     "gatsby"
   ],
@@ -59,7 +59,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/zhoumingjun/zhoumingjun.github.io.git"
   },
   "scripts": {
     "dev": "node_env=test gatsby develop",
