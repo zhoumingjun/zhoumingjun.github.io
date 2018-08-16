@@ -21,6 +21,7 @@ const Header = styled.header(({theme}) => ({
 
 const H3 = styled.h4(({theme}) => ({
   marginBottom: theme.spacing,
+  textDecoration: 'underline double',
 }));
 
 const Article = styled.article(({theme}) => ({
