@@ -1,6 +1,6 @@
 import React from 'react';
 import dateformat from 'dateformat';
-import styled from 'react-emotion';
+import styled from 'styled-components';
 import groupBy from 'lodash/groupBy';
 import first from 'lodash/first';
 import TagsList from './tags-list';

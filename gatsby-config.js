@@ -8,9 +8,9 @@ module.exports = {
   pathPrefix: '/',
   plugins: [
     {
-      resolve: `gatsby-plugin-emotion`,
+      resolve: `gatsby-plugin-styled-components`,
       options: {
-        // Accepts all options defined by `babel-plugin-emotion` plugin.
+        // Add any options here
       },
     },
     {
@@ -72,11 +72,5 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: 'gatsby-plugin-typography',
-      options: {
-        pathToConfigModule: 'src/utils/typography',
-      },
-    },
   ],
 };

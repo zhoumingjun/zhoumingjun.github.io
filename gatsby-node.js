@@ -83,7 +83,7 @@ function createTagPages(createPage, edges) {
 
     for (let page = 1; page <= pagesSum; page++) {
       createPage({
-        path: page === 1 ? `/tag/${tagName}` : `/tag/${tagName}/page/${page}`,
+        path: page === 1 ? `/tags/${tagName}` : `/tags/${tagName}/page/${page}`,
         component: tagTemplate,
         context: {
           posts: posts[tagName],

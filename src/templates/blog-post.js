@@ -2,9 +2,9 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import {Link} from 'gatsby';
 import get from 'lodash/get';
-import {css} from 'emotion';
 import Layout from '../components/layout';
-import {rhythm, scale} from '../utils/typography';
+import {css} from 'styled-components';
+import {Heading, Paragraph} from 'grommet';
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -20,26 +20,12 @@ class BlogPostTemplate extends React.Component {
           meta={[{name: 'description', content: siteDescription}]}
           title={`${post.frontmatter.title} | ${siteTitle}`}
         />
-        <h1
-          className={css`
-            text-align: center;
-          `}>
-          {post.frontmatter.title}
-        </h1>
-        <p
-          className={css`
-            text-align: right;
-            margin-bottom: ${rhythm(1)};
-            margin-top: ${rhythm(-1)};
-            display: block;
-            ${scale(-1 / 5)};
-          `}>
-          {post.frontmatter.date}
-        </p>
+        <Heading level={1}>{post.frontmatter.title}</Heading>
+        <Paragraph>{post.frontmatter.date}</Paragraph>
         <div dangerouslySetInnerHTML={{__html: post.html}} />
         <hr
           style={{
-            marginBottom: rhythm(1),
+            marginBottom: 1,
           }}
         />
 
