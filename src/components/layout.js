@@ -1,8 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import {StaticQuery, graphql} from 'gatsby';
-import Header from './header';
-import Footer from './footer';
 import {
   Anchor,
   Box,
@@ -28,9 +26,14 @@ import {
   Grommet,
   grommet,
 } from 'grommet';
+import {injectGlobal} from 'styled-components';
 
-import {Actions} from 'grommet-icons';
-
+injectGlobal`
+ 
+  body {
+    margin: 0;
+  }
+`;
 let theme1 = {
   global: {
     colors: {brand: '#FFA500', accent: ['#19e69e', '#9e19e6']},
