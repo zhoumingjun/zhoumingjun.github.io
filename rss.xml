@@ -1,4 +1,41 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[zhoumingjun blog]]></title><description><![CDATA[personal blog]]></description><link>https://zhoumingjun.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 15 Aug 2018 03:01:53 GMT</lastBuildDate><item><title><![CDATA[Migrate from Hugo to Gatsby]]></title><description><![CDATA[I decided to migrate my blog from hugo to gatsby.
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[zhoumingjun blog]]></title><description><![CDATA[personal blog]]></description><link>https://zhoumingjun.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 20 Aug 2018 09:58:56 GMT</lastBuildDate><item><title><![CDATA[GAN]]></title><description><![CDATA[refs https://medium.com/@jonathan_hui/gan-gan-series-2d279f906e7b https://www.datacamp.com/community/tutorials/generative-adversarial…]]></description><link>https://zhoumingjun.github.io/note/gan/</link><guid isPermaLink="false">https://zhoumingjun.github.io/note/gan/</guid><pubDate>Fri, 17 Aug 2018 06:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;refs&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://medium.com/@jonathan_hui/gan-gan-series-2d279f906e7b&quot;&gt;https://medium.com/@jonathan_hui/gan-gan-series-2d279f906e7b&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.datacamp.com/community/tutorials/generative-adversarial-networks&quot;&gt;https://www.datacamp.com/community/tutorials/generative-adversarial-networks&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://medium.com/ai-society/gans-from-scratch-1-a-deep-introduction-with-code-in-pytorch-and-tensorflow-cb03cdcdba0f&quot;&gt;https://medium.com/ai-society/gans-from-scratch-1-a-deep-introduction-with-code-in-pytorch-and-tensorflow-cb03cdcdba0f&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;people&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://people.csail.mit.edu/junyanz/&quot;&gt;Jun-Yan Zhu&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Awesome AI]]></title><description><![CDATA[latest srnn Datasets https://medium.com/startup-grind/fueling-the-ai-gold-rush-7ae438505bc2 image PASCAL Visual Object Classification…]]></description><link>https://zhoumingjun.github.io/note/awesome-ai/</link><guid isPermaLink="false">https://zhoumingjun.github.io/note/awesome-ai/</guid><pubDate>Wed, 15 Aug 2018 04:12:07 GMT</pubDate><content:encoded>&lt;h2&gt;latest&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/zepingyu0512/srnn&quot;&gt;srnn&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Datasets&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://medium.com/startup-grind/fueling-the-ai-gold-rush-7ae438505bc2&quot;&gt;https://medium.com/startup-grind/fueling-the-ai-gold-rush-7ae438505bc2&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;image&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://host.robots.ox.ac.uk/pascal/VOC/&quot;&gt;PASCAL Visual Object Classification (PASCAL VOC) dataset&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.image-net.org/&quot;&gt;ImageNet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://cocodataset.org/#home&quot;&gt;COCO&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;nlp&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://nlp.stanford.edu/projects/glove/&quot;&gt;GloVe&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; Yelp &lt;/p&gt;
+&lt;h3&gt;blog&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://colah.github.io/&quot;&gt;&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Object Detection and Localization]]></title><description><![CDATA[References blogs Evolution of Object Detection and Localization Algorithms Review of Deep Learning Algorithms for Object Detection * yolo v…]]></description><link>https://zhoumingjun.github.io/note/object-detection-and-localization-algorithms/</link><guid isPermaLink="false">https://zhoumingjun.github.io/note/object-detection-and-localization-algorithms/</guid><pubDate>Wed, 15 Aug 2018 04:12:07 GMT</pubDate><content:encoded>&lt;h2&gt;References&lt;/h2&gt;
+&lt;h3&gt;blogs&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://towardsdatascience.com/evolution-of-object-detection-and-localization-algorithms-e241021d8bad&quot;&gt;Evolution of Object Detection and Localization Algorithms&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/comet-app/review-of-deep-learning-algorithms-for-object-detection-c1f3d437b852&quot;&gt;Review of Deep Learning Algorithms for Object Detection&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;*&lt;a href=&quot;https://www.kdnuggets.com/2018/05/implement-yolo-v3-object-detector-pytorch-part-1.html&quot;&gt;yolo v3&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;papers&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1506.02640.pdf&quot;&gt;You Only Look Once: Unified, Real-Time Object Detection&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1612.08242.pdf&quot;&gt;YOLO9000: Better, Faster, Stronger&lt;/a&gt;  &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.coursera.org/learn/convolutional-neural-networks&quot;&gt;Convolutional Neural Networks by Andrew Ng (deeplearning.ai)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Problems&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Image Classification    &lt;/li&gt;
+&lt;li&gt;Object classification and localization  &lt;/li&gt;
+&lt;li&gt;Multiple objects detection and localization&lt;/li&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Migrate from Hugo to Gatsby]]></title><description><![CDATA[I decided to migrate my blog from hugo to gatsby.
 Gatsby is based on react and misc plugins, and it works in the same way as normal web…]]></description><link>https://zhoumingjun.github.io/blog/2018-08-14-migrate-from-hugo-to-gatsby/</link><guid isPermaLink="false">https://zhoumingjun.github.io/blog/2018-08-14-migrate-from-hugo-to-gatsby/</guid><pubDate>Tue, 14 Aug 2018 10:52:17 GMT</pubDate><content:encoded>&lt;p&gt;I decided to migrate my blog from hugo to gatsby.
 Gatsby is based on react and misc plugins, and it works in the same way as normal web development.
 But there are still some works to do, such as mathjax support.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[About]]></title><description><![CDATA[This is the personal blog for teck stacks.]]></description><link>https://zhoumingjun.github.io/about/</link><guid isPermaLink="false">https://zhoumingjun.github.io/about/</guid><pubDate>Tue, 14 Aug 2018 10:43:09 GMT</pubDate><content:encoded>&lt;p&gt;This is the personal blog for teck stacks.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[lvs keepalived]]></title><description><![CDATA[introduction lvs: lvs  is a kind of L4 load balancer. some references here:
@@ -25,8 +62,7 @@ some references here:
 &lt;/ul&gt;
 &lt;h2&gt;lvs only&lt;/h2&gt;
 &lt;p&gt;director side &lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;
-      &lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;#install ipvsadm
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;#install ipvsadm
 yum -y install ipvsadm
 echo &amp;#39;net.ipv4.ip_forward = 1&amp;#39; &amp;gt;&amp;gt; /etc/sysctl.conf 
 sysctl -p
@@ -42,23 +78,19 @@ ipvsadm -C
 ipvsadm -A -t 192.168.2,175:80 -s rr
 ipvsadm -a -t 192.168.2,175:80 -r 192.168.2,173:80 -g
 ipvsadm -a -t 192.168.2,175:80 -r 192.168.2,174:80 -g
-ipvsadm -l &lt;/code&gt;&lt;/pre&gt;
-      &lt;/div&gt;
+ipvsadm -l &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;realserver side&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;
-      &lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# add vip
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# add vip
 ifconfig lo:0 192.168.2.175 netmask 255.255.255.255 broadcast 192.168.2.175 
 
 # disable VIP arp
 echo &amp;quot;1&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/lo/arp_ignore
 echo &amp;quot;2&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/lo/arp_announce
 echo &amp;quot;1&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/all/arp_ignore
-echo &amp;quot;2&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/all/arp_announce&lt;/code&gt;&lt;/pre&gt;
-      &lt;/div&gt;
+echo &amp;quot;2&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/all/arp_announce&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;lvs + keepalived&lt;/h2&gt;
 &lt;p&gt;director side &lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;
-      &lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;global_defs {              
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;global_defs {              
     router_id LVS_MASTER   
 }
 vrrp_instance VI_1 {       
@@ -100,24 +132,20 @@ virtual_server 192.168.2.175 80 {
         connect_port 80
         }
     }
-}&lt;/code&gt;&lt;/pre&gt;
-      &lt;/div&gt;
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;realserver side&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;
-      &lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# add vip
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# add vip
 ifconfig lo:0 192.168.2.175 netmask 255.255.255.255 broadcast 192.168.2.175 
 
 # disable VIP arp
 echo &amp;quot;1&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/lo/arp_ignore
 echo &amp;quot;2&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/lo/arp_announce
 echo &amp;quot;1&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/all/arp_ignore
-echo &amp;quot;2&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/all/arp_announce&lt;/code&gt;&lt;/pre&gt;
-      &lt;/div&gt;</content:encoded></item><item><title><![CDATA[Using MathJax and Graphviz with Hugo]]></title><description><![CDATA[MathJax support configuration Hugo doc MathJax doc       example code      result graphviz support configuration example code…]]></description><link>https://zhoumingjun.github.io/blog/2017-03-10-using-mathjax-viz-with-hugo/</link><guid isPermaLink="false">https://zhoumingjun.github.io/blog/2017-03-10-using-mathjax-viz-with-hugo/</guid><pubDate>Fri, 10 Mar 2017 03:40:12 GMT</pubDate><content:encoded>&lt;h1&gt;MathJax support&lt;/h1&gt;
+echo &amp;quot;2&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/all/arp_announce&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Using MathJax and Graphviz with Hugo]]></title><description><![CDATA[MathJax support configuration Hugo doc MathJax doc       example code      result graphviz support configuration example code…]]></description><link>https://zhoumingjun.github.io/blog/2017-03-10-using-mathjax-viz-with-hugo/</link><guid isPermaLink="false">https://zhoumingjun.github.io/blog/2017-03-10-using-mathjax-viz-with-hugo/</guid><pubDate>Fri, 10 Mar 2017 03:40:12 GMT</pubDate><content:encoded>&lt;h1&gt;MathJax support&lt;/h1&gt;
 &lt;h2&gt;configuration&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://gohugo.io/tutorials/mathjax/&quot;&gt;Hugo doc&lt;/a&gt;&lt;br&gt;
 &lt;a href=&quot;http://docs.mathjax.org/en/latest/configuration.html?#using-plain-javascript&quot;&gt;MathJax doc&lt;/a&gt;     &lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;
-      &lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;!-- LaTeX math rendering --&amp;gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;!-- LaTeX math rendering --&amp;gt;
 {{ if  .Params.math   }}
 &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
     window.MathJax = {
@@ -145,19 +173,15 @@ echo &amp;quot;2&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/all/arp_announce&lt;
 &amp;lt;script  type=&amp;quot;text/javascript&amp;quot;
     src=&amp;quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML&amp;quot;&amp;gt;
 &amp;lt;/script&amp;gt;
-{{ end }}&lt;/code&gt;&lt;/pre&gt;
-      &lt;/div&gt;
+{{ end }}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;example&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;code&lt;/strong&gt;    &lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;
-      &lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;    `$ v_\pi(s) = \sum_{a \in \mathcal{A}} \pi(a|s) q_\pi(s,a)  $`&lt;/code&gt;&lt;/pre&gt;
-      &lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;    `$ v_\pi(s) = \sum_{a \in \mathcal{A}} \pi(a|s) q_\pi(s,a)  $`&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;result&lt;/strong&gt;&lt;br&gt;
 &lt;code class=&quot;language-text&quot;&gt;$ v_\pi(s) = \sum_{a \in \mathcal{A}} \pi(a|s) q_\pi(s,a)  $&lt;/code&gt;&lt;/p&gt;
 &lt;h1&gt;graphviz support&lt;/h1&gt;
 &lt;h2&gt;configuration&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;
-      &lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;&amp;lt;!-- graphviz renderring --&gt;&lt;/span&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;&amp;lt;!-- graphviz renderring --&gt;&lt;/span&gt;
 {{ if  .Params.viz}}
 &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;script&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;text/javascript&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;//cdnjs.cloudflare.com/ajax/libs/viz.js/1.7.1/viz.js&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt; &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;script&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;text/javascript&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;
@@ -177,12 +201,10 @@ echo &amp;quot;2&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/all/arp_announce&lt;
     &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-{{ end }}&lt;/code&gt;&lt;/pre&gt;
-      &lt;/div&gt;
+{{ end }}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;example&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;code&lt;/strong&gt;        &lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;
-      &lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;    ```viz-dot
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;    ```viz-dot
     digraph g { 
     node[shape=&amp;quot;circle&amp;quot; , label=&amp;quot;&amp;quot;, width=0.2, height=0.2]
     l1[xlabel=&amp;quot;v\(s\)&amp;quot;]
@@ -197,11 +219,9 @@ echo &amp;quot;2&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/all/arp_announce&lt;
     l22 -&amp;gt; l33
     l22 -&amp;gt; l34
     }
-    ```&lt;/code&gt;&lt;/pre&gt;
-      &lt;/div&gt;
+    ```&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;result&lt;/strong&gt;   &lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;viz-dot&quot;&gt;
-      &lt;pre class=&quot;language-viz-dot&quot;&gt;&lt;code class=&quot;language-viz-dot&quot;&gt;digraph g { 
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;viz-dot&quot;&gt;&lt;pre class=&quot;language-viz-dot&quot;&gt;&lt;code class=&quot;language-viz-dot&quot;&gt;digraph g { 
    node[shape=&amp;quot;circle&amp;quot; , label=&amp;quot;&amp;quot;, width=0.2, height=0.2]
    l1[xlabel=&amp;quot;v\(s\)&amp;quot;]
    l21[xlabel=&amp;quot;a&amp;quot;, width=0.1, height=0.1 , style=filled]
@@ -214,6 +234,5 @@ echo &amp;quot;2&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/all/arp_announce&lt;
    l21 -&amp;gt; l32
    l22 -&amp;gt; l33
    l22 -&amp;gt; l34
-}&lt;/code&gt;&lt;/pre&gt;
-      &lt;/div&gt;</content:encoded></item><item><title><![CDATA[First Post]]></title><description><![CDATA[I build this site to boost my daily work.  This website is powered by  Academic ,  Hugo , and  GitHub Pages .   ]]></description><link>https://zhoumingjun.github.io/blog/2017-03-06-first-post/</link><guid isPermaLink="false">https://zhoumingjun.github.io/blog/2017-03-06-first-post/</guid><pubDate>Mon, 06 Mar 2017 08:03:35 GMT</pubDate><content:encoded>&lt;p&gt;I build this site to boost my daily work. &lt;/p&gt;
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[First Post]]></title><description><![CDATA[I build this site to boost my daily work.  This website is powered by  Academic ,  Hugo , and  GitHub Pages .   ]]></description><link>https://zhoumingjun.github.io/blog/2017-03-06-first-post/</link><guid isPermaLink="false">https://zhoumingjun.github.io/blog/2017-03-06-first-post/</guid><pubDate>Mon, 06 Mar 2017 08:03:35 GMT</pubDate><content:encoded>&lt;p&gt;I build this site to boost my daily work. &lt;/p&gt;
 &lt;p&gt;This website is powered by &lt;a href=&quot;https://github.com/gcushen/hugo-academic&quot;&gt;Academic&lt;/a&gt;, &lt;a href=&quot;https://gohugo.io&quot;&gt;Hugo&lt;/a&gt;, and &lt;a href=&quot;https://github.com/&quot;&gt;GitHub Pages&lt;/a&gt;.   &lt;/p&gt;</content:encoded></item></channel></rss>
