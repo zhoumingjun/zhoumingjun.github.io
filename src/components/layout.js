@@ -1,5 +1,7 @@
 import React from 'react';
 import 'prismjs/themes/prism-okaidia.css';
+import Helmet from 'react-helmet';
+import {StaticQuery, graphql} from 'gatsby';
 import {
   Heading,
   Text,
