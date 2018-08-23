@@ -37,7 +37,7 @@
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
 
-var precacheConfig = [["/0-b4f8724d67807c66f69b.js","a0afea702f844a98bafb787f8f645b8e"],["/7-af3555a6f1f7ce52d295.js","ffe612688d3edb85063058484795433c"],["/app-f90730dffb857dfddab6.js","56dc830551f5407041cd463266f99189"],["/component---node-modules-gatsby-plugin-offline-app-shell-js-5dbc227512e50b9d2981.js","39b105b035b5b7433d84f7966373b5fb"],["/component---src-pages-index-js-c2354adee3ee5c5bc770.js","6636120dbcc2e99eaebb403fd6a7ace5"],["/index.html","9c62bf5475f4593e056a87dbf98f41a5"],["/manifest.webmanifest","3435901834b88a2def90ccbdf3c28302"],["/offline-plugin-app-shell-fallback/index.html","1aeecf23fa940d8fb4041e93e623aa15"],["/static/d/5/path---index-6a9-Q2G4T2YBNCBYW16nxqb9SAPaQCg.json","54824f452d4f497e9f12d8a2d7818629"],["/webpack-runtime-ca6fbd80f6a56ef7a076.js","ec0520f5447f896b18377e2a3cd101e9"]];
+var precacheConfig = [["/0-822c170b1fe0b1376c31.js","206c521167bd709ead830621c2552166"],["/0.6df7eca0845926237ea0.css","9b7bbfcbe4fcb25a32f0c385e9283e94"],["/1-7cf1ddf271b188a7526b.js","cb11e88bcca37a7d73a04cddf7ad049a"],["/app-33f95565265fd92319b3.js","e600146ebba0ceac60d28a5c8f7a3072"],["/component---node-modules-gatsby-plugin-offline-app-shell-js-42ec4dd489814b2d8005.js","818f715c5d41086a31e37bb6de6ff71b"],["/component---src-pages-404-js-5402c28206907492d88f.js","b9e65c1cc547da101c6036bafb61c9d6"],["/component---src-pages-index-js-2c5c5a8ef5e6650c945c.js","a727b4010070f6ef28581f261d059d64"],["/index.html","32ad2f84b99e1053b093afe1099a365c"],["/manifest.webmanifest","3435901834b88a2def90ccbdf3c28302"],["/offline-plugin-app-shell-fallback/index.html","16299c4eca8b78fb564bf59f47c5187b"],["/static/d/164/path---404-html-516-62a-NZuapzHg3X9TaN1iIixfv1W23E.json","c2508676a2f33ea9f1f0bf472997f9a0"],["/static/d/520/path---offline-plugin-app-shell-fallback-a-30-c5a-NZuapzHg3X9TaN1iIixfv1W23E.json","c2508676a2f33ea9f1f0bf472997f9a0"],["/static/d/69/path---index-6a9-JBnSp3PVCySmnXbTbPEBb5wDQ.json","426e89653a49284de7aca1ef5e040f6d"],["/webpack-runtime-dec9f5880ceb6a13ed2d.js","75cc2947790be9b0c4a5b374cc270e8b"]];
 var cacheName = 'sw-precache-v3-gatsby-plugin-offline-' + (self.registration ? self.registration.scope : '');
 
 
@@ -45,7 +45,7 @@ var ignoreUrlParametersMatching = [/^utm_/];
 
 
 
-var addDirectoryIndex = function (originalUrl, index) {
+var addDirectoryIndex = function(originalUrl, index) {
     var url = new URL(originalUrl);
     if (url.pathname.slice(-1) === '/') {
       url.pathname += index;
@@ -53,7 +53,7 @@ var addDirectoryIndex = function (originalUrl, index) {
     return url.toString();
   };
 
-var cleanResponse = function (originalResponse) {
+var cleanResponse = function(originalResponse) {
     // If this is not a redirected response, then we don't have to do anything.
     if (!originalResponse.redirected) {
       return Promise.resolve(originalResponse);
@@ -75,7 +75,7 @@ var cleanResponse = function (originalResponse) {
     });
   };
 
-var createCacheKey = function (originalUrl, paramName, paramValue,
+var createCacheKey = function(originalUrl, paramName, paramValue,
                            dontCacheBustUrlsMatching) {
     // Create a new URL object to avoid modifying originalUrl.
     var url = new URL(originalUrl);
@@ -91,20 +91,20 @@ var createCacheKey = function (originalUrl, paramName, paramValue,
     return url.toString();
   };
 
-var isPathWhitelisted = function (whitelist, absoluteUrlString) {
+var isPathWhitelisted = function(whitelist, absoluteUrlString) {
     // If the whitelist is empty, then consider all URLs to be whitelisted.
     if (whitelist.length === 0) {
       return true;
     }
 
     // Otherwise compare each path regex to the path of the URL passed in.
-    var path = (new URL(absoluteUrlString)).pathname;
+    var url = new URL(absoluteUrlString), path = url.pathname + url.search;
     return whitelist.some(function(whitelistedPathRegex) {
       return path.match(whitelistedPathRegex);
     });
   };
 
-var stripIgnoredUrlParameters = function (originalUrl,
+var stripIgnoredUrlParameters = function(originalUrl,
     ignoreUrlParametersMatching) {
     var url = new URL(originalUrl);
     // Remove the hash; see https://github.com/GoogleChrome/sw-precache/issues/290
@@ -233,7 +233,7 @@ self.addEventListener('fetch', function(event) {
     if (!shouldRespond &&
         navigateFallback &&
         (event.request.mode === 'navigate') &&
-        isPathWhitelisted(["^.*([^.]{5}|.html)$"], event.request.url)) {
+        isPathWhitelisted(["^.*([^.]{5}|.html)(?<!(\\?|&)no-cache=1)$"], event.request.url)) {
       url = new URL(navigateFallback, self.location).toString();
       shouldRespond = urlsToCacheKeys.has(url);
     }
@@ -285,7 +285,7 @@ self.addEventListener('fetch', function(event) {
 
 // Runtime cache configuration, using the sw-toolbox library.
 
-toolbox.router.get(/\.(?:png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2)$/, toolbox.fastest, {});
+toolbox.router.get(/\.(?:png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/, toolbox.fastest, {});
 
 
 

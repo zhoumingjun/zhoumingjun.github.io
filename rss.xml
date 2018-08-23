@@ -1,12 +1,73 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[zhoumingjun blog]]></title><description><![CDATA[personal blog]]></description><link>https://zhoumingjun.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 20 Aug 2018 09:58:56 GMT</lastBuildDate><item><title><![CDATA[GAN]]></title><description><![CDATA[refs https://medium.com/@jonathan_hui/gan-gan-series-2d279f906e7b https://www.datacamp.com/community/tutorials/generative-adversarial…]]></description><link>https://zhoumingjun.github.io/note/gan/</link><guid isPermaLink="false">https://zhoumingjun.github.io/note/gan/</guid><pubDate>Fri, 17 Aug 2018 06:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;refs&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mingjun Zhou's blog]]></title><description><![CDATA[personal blog]]></description><link>https://zhoumingjun.github.io</link><generator>RSS for Node</generator><lastBuildDate>Thu, 23 Aug 2018 18:12:53 GMT</lastBuildDate><item><title><![CDATA[Install cuda9.2 and cudnn7.2 on ubuntu 18.04]]></title><description><![CDATA[Overview To run tensorflow/pytorch with gpu, I need to install cuda and cudnn.
+It’s really tricky, but finally I found the method.  The…]]></description><link>https://zhoumingjun.github.io/post/2018-08-23-install-cuda-and-cudnn-on-ubuntu18.04/</link><guid isPermaLink="false">https://zhoumingjun.github.io/post/2018-08-23-install-cuda-and-cudnn-on-ubuntu18.04/</guid><pubDate>Thu, 23 Aug 2018 15:01:49 GMT</pubDate><content:encoded>&lt;h1&gt;Overview&lt;/h1&gt;
+&lt;p&gt;To run tensorflow/pytorch with gpu, I need to install cuda and cudnn.
+It’s really tricky, but finally I found the method. &lt;/p&gt;
+&lt;p&gt;The secret is   &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;install the graphics driver from a PPA &lt;/li&gt;
+&lt;li&gt;install the toolkit from the run file&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;packages&lt;/h1&gt;
+&lt;p&gt;The following packages need to be installed.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;nvidia graphics driver     &lt;/li&gt;
+&lt;li&gt;cuda 9.2  &lt;/li&gt;
+&lt;li&gt;cudnn 7.2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For nvidia graphics driver, there are two sources:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;raphics-drivers/ppa:&lt;br&gt;
+&lt;a href=&quot;https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa&quot;&gt;https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa&lt;/a&gt;&lt;br&gt;
+the package is nvidia-driver-396&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;nvidia official repo
+&lt;a href=&quot;https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1710/x86_64/cuda-drivers_396.44-1_amd64.deb&quot;&gt;https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1710/x86&lt;em&gt;64/cuda-drivers&lt;/em&gt;396.44-1_amd64.deb&lt;/a&gt;&lt;br&gt;
+the package is cuda-drivers&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In fact the nvidia cuda-drivers is for ubuntu 17.10, and there are no official nvidia repo for ubuntu 18.04 currently.&lt;br&gt;
+Here we need to select option 1, I have try option2, but there are conflict with other packages.&lt;br&gt;
+I install the cuda-drivers with “—force-overwrite”, but gdm can’t be launched normally.&lt;/p&gt;
+&lt;p&gt;For cuda 9.2, it can be download directly from nvidia website.&lt;/p&gt;
+&lt;p&gt;For cudnn7.2, &lt;strong&gt;it can be download from nvidia machine-learning repo without login&lt;/strong&gt;&lt;/p&gt;
+&lt;h1&gt;installation steps&lt;/h1&gt;
+&lt;p&gt;install nvidia graphics driver  &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; add-apt-repository ppa:graphics-drivers/ppa
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; apt update
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;apt-get&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; nvidia-driver-396&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;install cuda    &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# dowload installer&lt;/span&gt;
+aria2c https://developer.nvidia.com/compute/cuda/9.2/Prod2/local_installers/cuda_9.2.148_396.37_linux 
+
+aria2c https://developer.nvidia.com/compute/cuda/9.2/Prod2/patches/1/cuda_9.2.148.1_linux  
+
+&lt;span class=&quot;token comment&quot;&gt;# install cuda9.2 and patch&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;chmod&lt;/span&gt; +x cuda*
+
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; ./cuda_9.2.148_396.37_linux.run --verbose --silent --toolkit --override
+
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; ./cuda_9.2.148.1_linux.run --silent --accept-eula
+
+&lt;span class=&quot;token comment&quot;&gt;# add to ld&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;/usr/local/cuda-9.2/lib64&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt; /etc/ld.so.conf
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; ldconfig&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;install cudnn   &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;#download packages&lt;/span&gt;
+aria2c https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64/libcudnn7_7.2.1.38-1+cuda9.2_amd64.deb
+
+aria2c https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64/libcudnn7-dev_7.2.1.38-1+cuda9.2_amd64.deb    
+
+&lt;span class=&quot;token comment&quot;&gt;# install&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; dpkg -i libcudnn7_7.2.1.38-1+cuda9.2_amd64.deb
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; dpkg -i libcudnn7-dev_7.2.1.38-1+cuda9.2_amd64.deb&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[GAN]]></title><description><![CDATA[refs https://medium.com/@jonathan_hui/gan-gan-series-2d279f906e7b https://www.datacamp.com/community/tutorials/generative-adversarial…]]></description><link>https://zhoumingjun.github.io/note/gan/</link><guid isPermaLink="false">https://zhoumingjun.github.io/note/gan/</guid><pubDate>Fri, 17 Aug 2018 06:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;refs&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://medium.com/@jonathan_hui/gan-gan-series-2d279f906e7b&quot;&gt;https://medium.com/@jonathan_hui/gan-gan-series-2d279f906e7b&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.datacamp.com/community/tutorials/generative-adversarial-networks&quot;&gt;https://www.datacamp.com/community/tutorials/generative-adversarial-networks&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://medium.com/ai-society/gans-from-scratch-1-a-deep-introduction-with-code-in-pytorch-and-tensorflow-cb03cdcdba0f&quot;&gt;https://medium.com/ai-society/gans-from-scratch-1-a-deep-introduction-with-code-in-pytorch-and-tensorflow-cb03cdcdba0f&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;people&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;http://people.csail.mit.edu/junyanz/&quot;&gt;Jun-Yan Zhu&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Awesome AI]]></title><description><![CDATA[latest srnn Datasets https://medium.com/startup-grind/fueling-the-ai-gold-rush-7ae438505bc2 image PASCAL Visual Object Classification…]]></description><link>https://zhoumingjun.github.io/note/awesome-ai/</link><guid isPermaLink="false">https://zhoumingjun.github.io/note/awesome-ai/</guid><pubDate>Wed, 15 Aug 2018 04:12:07 GMT</pubDate><content:encoded>&lt;h2&gt;latest&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://people.csail.mit.edu/junyanz/&quot;&gt;Jun-Yan Zhu&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Awesome AI]]></title><description><![CDATA[latest srnn Datasets image PASCAL Visual Object Classification (PASCAL VOC) dataset ImageNet COCO nlp GloVe  Yelp ]]></description><link>https://zhoumingjun.github.io/note/awesome-ai/</link><guid isPermaLink="false">https://zhoumingjun.github.io/note/awesome-ai/</guid><pubDate>Wed, 15 Aug 2018 04:12:07 GMT</pubDate><content:encoded>&lt;h2&gt;latest&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/zepingyu0512/srnn&quot;&gt;srnn&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Datasets&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://medium.com/startup-grind/fueling-the-ai-gold-rush-7ae438505bc2&quot;&gt;https://medium.com/startup-grind/fueling-the-ai-gold-rush-7ae438505bc2&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;image&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://host.robots.ox.ac.uk/pascal/VOC/&quot;&gt;PASCAL Visual Object Classification (PASCAL VOC) dataset&lt;/a&gt;&lt;/li&gt;
@@ -15,9 +76,7 @@
 &lt;/ul&gt;
 &lt;h3&gt;nlp&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&quot;https://nlp.stanford.edu/projects/glove/&quot;&gt;GloVe&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt; Yelp &lt;/p&gt;
-&lt;h3&gt;blog&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;http://colah.github.io/&quot;&gt;&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Object Detection and Localization]]></title><description><![CDATA[References blogs Evolution of Object Detection and Localization Algorithms Review of Deep Learning Algorithms for Object Detection * yolo v…]]></description><link>https://zhoumingjun.github.io/note/object-detection-and-localization-algorithms/</link><guid isPermaLink="false">https://zhoumingjun.github.io/note/object-detection-and-localization-algorithms/</guid><pubDate>Wed, 15 Aug 2018 04:12:07 GMT</pubDate><content:encoded>&lt;h2&gt;References&lt;/h2&gt;
+&lt;p&gt; Yelp &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Object Detection and Localization]]></title><description><![CDATA[References blogs Evolution of Object Detection and Localization Algorithms Review of Deep Learning Algorithms for Object Detection * yolo v…]]></description><link>https://zhoumingjun.github.io/note/object-detection-and-localization-algorithms/</link><guid isPermaLink="false">https://zhoumingjun.github.io/note/object-detection-and-localization-algorithms/</guid><pubDate>Wed, 15 Aug 2018 04:12:07 GMT</pubDate><content:encoded>&lt;h2&gt;References&lt;/h2&gt;
 &lt;h3&gt;blogs&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://towardsdatascience.com/evolution-of-object-detection-and-localization-algorithms-e241021d8bad&quot;&gt;Evolution of Object Detection and Localization Algorithms&lt;/a&gt;&lt;/li&gt;
@@ -36,10 +95,10 @@
 &lt;li&gt;Object classification and localization  &lt;/li&gt;
 &lt;li&gt;Multiple objects detection and localization&lt;/li&gt;
 &lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Migrate from Hugo to Gatsby]]></title><description><![CDATA[I decided to migrate my blog from hugo to gatsby.
-Gatsby is based on react and misc plugins, and it works in the same way as normal web…]]></description><link>https://zhoumingjun.github.io/blog/2018-08-14-migrate-from-hugo-to-gatsby/</link><guid isPermaLink="false">https://zhoumingjun.github.io/blog/2018-08-14-migrate-from-hugo-to-gatsby/</guid><pubDate>Tue, 14 Aug 2018 10:52:17 GMT</pubDate><content:encoded>&lt;p&gt;I decided to migrate my blog from hugo to gatsby.
+Gatsby is based on react and misc plugins, and it works in the same way as normal web…]]></description><link>https://zhoumingjun.github.io/post/2018-08-14-migrate-from-hugo-to-gatsby/</link><guid isPermaLink="false">https://zhoumingjun.github.io/post/2018-08-14-migrate-from-hugo-to-gatsby/</guid><pubDate>Tue, 14 Aug 2018 10:52:17 GMT</pubDate><content:encoded>&lt;p&gt;I decided to migrate my blog from hugo to gatsby.
 Gatsby is based on react and misc plugins, and it works in the same way as normal web development.
 But there are still some works to do, such as mathjax support.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[About]]></title><description><![CDATA[This is the personal blog for teck stacks.]]></description><link>https://zhoumingjun.github.io/about/</link><guid isPermaLink="false">https://zhoumingjun.github.io/about/</guid><pubDate>Tue, 14 Aug 2018 10:43:09 GMT</pubDate><content:encoded>&lt;p&gt;This is the personal blog for teck stacks.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[lvs keepalived]]></title><description><![CDATA[introduction lvs: lvs  is a kind of L4 load balancer. some references here:
- howto  ( http://www.austintek.com/LVS/LVS-HOWTO/HOWTO/index…]]></description><link>https://zhoumingjun.github.io/blog/2017-03-22-lvs-keepalived/</link><guid isPermaLink="false">https://zhoumingjun.github.io/blog/2017-03-22-lvs-keepalived/</guid><pubDate>Wed, 22 Mar 2017 09:23:36 GMT</pubDate><content:encoded>&lt;h1&gt;introduction&lt;/h1&gt;
+ howto  ( http://www.austintek.com/LVS/LVS-HOWTO/HOWTO/index…]]></description><link>https://zhoumingjun.github.io/post/2017-03-22-lvs-keepalived/</link><guid isPermaLink="false">https://zhoumingjun.github.io/post/2017-03-22-lvs-keepalived/</guid><pubDate>Wed, 22 Mar 2017 09:23:36 GMT</pubDate><content:encoded>&lt;h1&gt;introduction&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;lvs:&lt;br&gt;
@@ -141,7 +200,7 @@ ifconfig lo:0 192.168.2.175 netmask 255.255.255.255 broadcast 192.168.2.175
 echo &amp;quot;1&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/lo/arp_ignore
 echo &amp;quot;2&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/lo/arp_announce
 echo &amp;quot;1&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/all/arp_ignore
-echo &amp;quot;2&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/all/arp_announce&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Using MathJax and Graphviz with Hugo]]></title><description><![CDATA[MathJax support configuration Hugo doc MathJax doc       example code      result graphviz support configuration example code…]]></description><link>https://zhoumingjun.github.io/blog/2017-03-10-using-mathjax-viz-with-hugo/</link><guid isPermaLink="false">https://zhoumingjun.github.io/blog/2017-03-10-using-mathjax-viz-with-hugo/</guid><pubDate>Fri, 10 Mar 2017 03:40:12 GMT</pubDate><content:encoded>&lt;h1&gt;MathJax support&lt;/h1&gt;
+echo &amp;quot;2&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/all/arp_announce&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Using MathJax and Graphviz with Hugo]]></title><description><![CDATA[MathJax support configuration Hugo doc MathJax doc       example code      result graphviz support configuration example code…]]></description><link>https://zhoumingjun.github.io/post/2017-03-10-using-mathjax-viz-with-hugo/</link><guid isPermaLink="false">https://zhoumingjun.github.io/post/2017-03-10-using-mathjax-viz-with-hugo/</guid><pubDate>Fri, 10 Mar 2017 03:40:12 GMT</pubDate><content:encoded>&lt;h1&gt;MathJax support&lt;/h1&gt;
 &lt;h2&gt;configuration&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://gohugo.io/tutorials/mathjax/&quot;&gt;Hugo doc&lt;/a&gt;&lt;br&gt;
 &lt;a href=&quot;http://docs.mathjax.org/en/latest/configuration.html?#using-plain-javascript&quot;&gt;MathJax doc&lt;/a&gt;     &lt;/p&gt;
@@ -234,5 +293,5 @@ echo &amp;quot;2&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/all/arp_announce&lt;
    l21 -&amp;gt; l32
    l22 -&amp;gt; l33
    l22 -&amp;gt; l34
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[First Post]]></title><description><![CDATA[I build this site to boost my daily work.  This website is powered by  Academic ,  Hugo , and  GitHub Pages .   ]]></description><link>https://zhoumingjun.github.io/blog/2017-03-06-first-post/</link><guid isPermaLink="false">https://zhoumingjun.github.io/blog/2017-03-06-first-post/</guid><pubDate>Mon, 06 Mar 2017 08:03:35 GMT</pubDate><content:encoded>&lt;p&gt;I build this site to boost my daily work. &lt;/p&gt;
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[First Post]]></title><description><![CDATA[I build this site to boost my daily work.  This website is powered by  Academic ,  Hugo , and  GitHub Pages .   ]]></description><link>https://zhoumingjun.github.io/post/2017-03-06-first-post/</link><guid isPermaLink="false">https://zhoumingjun.github.io/post/2017-03-06-first-post/</guid><pubDate>Mon, 06 Mar 2017 08:03:35 GMT</pubDate><content:encoded>&lt;p&gt;I build this site to boost my daily work. &lt;/p&gt;
 &lt;p&gt;This website is powered by &lt;a href=&quot;https://github.com/gcushen/hugo-academic&quot;&gt;Academic&lt;/a&gt;, &lt;a href=&quot;https://gohugo.io&quot;&gt;Hugo&lt;/a&gt;, and &lt;a href=&quot;https://github.com/&quot;&gt;GitHub Pages&lt;/a&gt;.   &lt;/p&gt;</content:encoded></item></channel></rss>
