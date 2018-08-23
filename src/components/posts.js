@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import groupBy from 'lodash/groupBy';
 import first from 'lodash/first';
 import TagsList from './tags-list';
-
+import {Heading} from 'grommet';
 const groupPosts = posts =>
   groupBy(posts, p => first(p.frontmatter.date.split('-')));
 
@@ -50,21 +50,20 @@ const Posts = ({posts}) => {
     <section>
       {years.map(year => (
         <section key={year}>
-          <H3>{year}</H3>
+          <Heading level={3}>{year}</Heading>
           {grouped[year].map(post => (
             <Article key={post.fields.slug}>
               <Header>
-                <H4>
+                <Heading level={3} margin="none">
                   <A href={post.fields.slug}>{post.frontmatter.title}</A>
-                </H4>
+                </Heading>
+
                 <time
                   dateTime={dateformat(post.frontmatter.date, 'isoDateTime')}>
                   {dateformat(post.frontmatter.date, 'yyyy-mm-dd')}
                 </time>
               </Header>
-              <footer>
-                <TagsList tags={post.frontmatter.tags} />
-              </footer>
+              <footer>{/* <TagsList tags={post.frontmatter.tags} /> */}</footer>
             </Article>
           ))}
         </section>

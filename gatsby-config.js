@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'zhoumingjun blog',
+    title: "Mingjun Zhou's blog",
     author: 'Mingjun Zhou',
     description: 'personal blog',
     siteUrl: 'https://zhoumingjun.github.io',
@@ -67,7 +67,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/assets/gatsby-icon.png`,
+        icon: `src/assets/logo.png`,
       },
     },
     `gatsby-plugin-offline`,

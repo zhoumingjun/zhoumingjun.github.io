@@ -29,7 +29,7 @@ const Tags = ({
 export default Tags;
 
 export const tagsQuery = graphql`
-  query TagsSiteMetadata {
+  query CategoriesSiteMetadata {
     site {
       siteMetadata {
         title
