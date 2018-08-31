@@ -1,7 +1,7 @@
 ---
 title : "Using MathJax and Graphviz with Hugo"
 date : "2017-03-10T11:40:12+08:00"
-tags : math
+ 
 ---
 
 # MathJax support

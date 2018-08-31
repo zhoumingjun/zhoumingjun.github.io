@@ -31,6 +31,22 @@ export default class Template extends React.Component {
             <Nav />
           </Section>
           <Section pad={{horizontal: 'xlarge'}}>{this.props.children}</Section>
+          <Section
+            pad={{horizontal: 'xlarge', top: 'large', justify: 'center'}}>
+            <Text>
+              Build with{' '}
+              <Anchor href="https://www.gatsbyjs.org/" title="GatsbyJS" /> and{' '}
+              <Anchor
+                href="https://reactjs.org/"
+                title={`React ${React.version}`}
+              />
+              . Hosted on{' '}
+              <Anchor href="https://www.netlify.com/" title="Netlify" />.<br />
+              The code is open source and available at{' '}
+              <Anchor href="https://github.com/calpa/blog" title="Github" />.
+            </Text>
+            <Text>Copyright &copy; {new Date().getFullYear()}</Text>
+          </Section>
         </Box>
       </Grommet>
     );

@@ -18,3 +18,7 @@ date : "2018-08-15T04:12:07Z"
 1. Image Classification    
 2. Object classification and localization  
 3. Multiple objects detection and localization
+
+
+
+

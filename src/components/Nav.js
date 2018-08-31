@@ -46,9 +46,10 @@ export default class extends Component {
             </Box>
           </RoutedAnchor>
           <Box direction="row" align="center" gap="medium">
-            <NavAnchor path="/categories/post" label="post" />
-            <NavAnchor path="/categories/note" label="note" />
-            <NavAnchor path="/categories/series" label="series" />
+            <NavAnchor path="/categories/post/page/0" label="post" />
+            <NavAnchor path="/categories/note/page/0" label="note" />
+            <NavAnchor path="/series" label="series" />
+            <NavAnchor path="/knowledgebase" label="kb" />
             <NavAnchor path="/about" label="about" />
           </Box>
         </Box>

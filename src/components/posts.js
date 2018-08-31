@@ -5,6 +5,7 @@ import groupBy from 'lodash/groupBy';
 import first from 'lodash/first';
 import TagsList from './tags-list';
 import {Heading} from 'grommet';
+
 const groupPosts = posts =>
   groupBy(posts, p => first(p.frontmatter.date.split('-')));
 

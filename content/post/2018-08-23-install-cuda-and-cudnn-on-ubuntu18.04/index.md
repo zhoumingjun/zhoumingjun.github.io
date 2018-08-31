@@ -1,7 +1,7 @@
 ---
 title : "Install cuda9.2 and cudnn7.2 on ubuntu 18.04"
 date : "2018-08-23T15:01:49Z"
-tags : ml
+ 
 ---
 
 # Overview

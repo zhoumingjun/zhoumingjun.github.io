@@ -1,8 +1,9 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import {graphql} from 'gatsby';
-import Posts from '../components/posts';
-import Layout from '../components/layout';
+import {Link, graphql} from 'gatsby';
+import PageLayout from '../components/layout';
+import {Box} from 'grommet';
+import get from 'lodash/get';
 
 const Tags = ({
   pageContext: {posts, tag},
@@ -10,29 +11,50 @@ const Tags = ({
     site: {siteMetadata: site},
   },
 }) => (
-  <Layout>
+  <PageLayout>
     <Helmet>
       <title>
         {tag} &middot; {site.title}
       </title>
     </Helmet>
-    <h2>{tag}</h2>
-    <section>
-      {posts.length} {posts.length !== 1 ? 'posts' : 'post'} in {tag}.
-    </section>
-    <section>
-      <Posts posts={posts} />
-    </section>
-  </Layout>
+    <Box
+      background="light-1"
+      direction="row"
+      wrap={true}
+      align="start"
+      justify="start"
+      alignContent="stretch"
+      pad="large"
+      round="large"
+      animation={{type: 'fadeIn', duration: '2000'}}>
+      {posts &&
+        posts.map(node => {
+          const title = get(node, 'frontmatter.title') || node.fields.slug;
+
+          return (
+            <Box key={node.fields.slug} basis="large" direction="column">
+              <h3>
+                <Link style={{boxShadow: 'none'}} to={node.fields.slug}>
+                  {title}
+                </Link>
+              </h3>
+              <small>{node.frontmatter.date}</small>
+              <p dangerouslySetInnerHTML={{__html: node.excerpt}} />
+            </Box>
+          );
+        })}
+    </Box>
+  </PageLayout>
 );
 
 export default Tags;
-
-export const tagsQuery = graphql`
-  query TagsSiteMetadata {
+export const pageQuery = graphql`
+  query BlogTagBySlug {
     site {
       siteMetadata {
         title
+        author
+        description
       }
     }
   }
