@@ -1,5 +1,6 @@
 import React from 'react';
 import {Grommet, grommet, Box, Anchor, Text} from 'grommet';
+import {withTheme} from 'grommet/components/hocs';
 import styled, {injectGlobal} from 'styled-components';
 import Section from './Section';
 
@@ -10,15 +11,9 @@ injectGlobal`
   }
 `;
 
-const HeaderBox = styled(Box)`
-  background: white;
-  position: fixed;
-  width: 100vw;
-`;
-
 const MyTheme = {
   global: {
-    colors: {brand: '#99cc33', accent: ['#7dc4e8', '#e87dc4']},
+    colors: {brand: '#61DAFB', accent: ['#921076', '#769210']},
     input: {border: {radius: '4px'}},
     font: {
       name: 'Fira Sans',
@@ -32,35 +27,64 @@ const MyTheme = {
   layer: {border: {radius: '4px'}},
 };
 
-const Header = props => (
-  <HeaderBox direction="row" justify="center" pad={{bottom: 'xsmall'}}>
-    <Box direction="row" justify="between" align="center" basis="xlarge">
-      <Anchor href="/">
-        <Text size="xlarge">Mingjun Zhou's Blog</Text>
-      </Anchor>
-      <Box direction="row" align="center" gap="medium">
-        <Anchor href="/categories/post/page/0">
-          <Text size="xlarge">post</Text>
-        </Anchor>
-        <Anchor href="/categories/note/page/0">
-          <Text size="xlarge">note</Text>
-        </Anchor>
-        <Anchor href="/series">
-          <Text size="xlarge">series</Text>
-        </Anchor>
-        <Anchor href="/knowledgebase">
-          <Text size="xlarge">kb</Text>
-        </Anchor>
-        <Anchor href="/about">
-          <Text size="xlarge">about</Text>
-        </Anchor>
-      </Box>
-    </Box>
-  </HeaderBox>
-);
+const HeaderBox = styled(Box)`
+  background: #333333;
+  position: fixed;
+  width: 100vw;
+  height: 60px;
+`;
+const ContentDiv = styled.div`
+  padding-top: 60px;
+`;
+const FooterBox = styled(Box)`
+  background: #eeeeee;
+  width: 100vw;
+`;
 
+const Header = props => {
+  console.log(props);
+
+  return (
+    <HeaderBox direction="row" justify="center" pad={{vertical: 'small'}}>
+      <Box direction="row" justify="between" align="center" basis="xlarge">
+        <a href="/">
+          <Text size="medium" color="#61DAFB">
+            Mingjun Zhou's Blog
+          </Text>
+        </a>
+        <Box direction="row" align="center" gap="medium">
+          <a href="/categories/post/page/0">
+            <Text size="medium" color="white">
+              post
+            </Text>
+          </a>
+          <a href="/categories/note/page/0">
+            <Text size="medium" color="white">
+              note
+            </Text>
+          </a>
+          <a href="/series">
+            <Text size="medium" color="white">
+              series
+            </Text>
+          </a>
+          <a href="/knowledgebase">
+            <Text size="medium" color="white">
+              kb
+            </Text>
+          </a>
+          <a href="/about">
+            <Text size="medium" color="white">
+              about
+            </Text>
+          </a>
+        </Box>
+      </Box>
+    </HeaderBox>
+  );
+};
 const Footer = () => (
-  <Section pad={{horizontal: 'xlarge', top: 'large'}}>
+  <FooterBox direction="row" justify="center" pad={{vertical: 'small'}}>
     <Box align="center">
       <Text>
         Build with <Anchor href="https://www.gatsbyjs.org/" label="GatsbyJS" />{' '}
@@ -77,13 +101,13 @@ const Footer = () => (
       </Text>
       <Text>Copyright &copy; 2017 - {new Date().getFullYear()}</Text>
     </Box>
-  </Section>
+  </FooterBox>
 );
 
 const PageLayout = props => (
   <Grommet theme={MyTheme} style={{minHeight: '100vh'}}>
     <Header />
-    {props.children}
+    <ContentDiv>{props.children}</ContentDiv>
     <Footer />
   </Grommet>
 );

@@ -10,7 +10,6 @@ import _ from 'lodash';
 import Section from '../components/Section';
 import PageLayout from '../components/Layout';
 ``;
-const themecolor = 'rgb(129,155,199)';
 
 const CategoryPostPage = ({
   pageContext: {prev, next},
@@ -27,7 +26,7 @@ const CategoryPostPage = ({
           meta={[{name: 'description', content: site.description}]}
           title={site.title}
         />
-        <Box background={{color: themecolor, dark: 'true'}}>
+        <Box>
           <Heading textAlign="center">{post.frontmatter.title}</Heading>
           <Box align="end">{post.frontmatter.date}</Box>
         </Box>

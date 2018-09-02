@@ -4,17 +4,21 @@ import Posts from '../components/posts';
 import Layout from '../components/Layout';
 import Section from '../components/Section';
 
-const Index = ({
-  data: {
-    allMarkdownRemark: {edges: posts},
-  },
-}) => (
-  <Layout>
-    <Section pad={{horizontal: 'xsmall', vertical: 'large'}}>
-      <Posts posts={posts.map(post => post.node)} />
-    </Section>
-  </Layout>
-);
+const Index = props => {
+  let {
+    data: {
+      allMarkdownRemark: {edges: posts},
+    },
+  } = props;
+
+  return (
+    <Layout>
+      <Section pad={{horizontal: 'xsmall', vertical: 'large'}}>
+        <Posts posts={posts.map(post => post.node)} />
+      </Section>
+    </Layout>
+  );
+};
 
 export default Index;
 
