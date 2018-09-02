@@ -1,23 +1,24 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import {Link, graphql} from 'gatsby';
-import PageLayout from '../components/layout';
+import PageLayout from '../components/Layout';
 import {Box} from 'grommet';
 import get from 'lodash/get';
 import Section from '../components/Section';
-const Tags = ({
+
+const CategoryPage = ({
   pageContext: {posts, tag},
   data: {
     site: {siteMetadata: site},
   },
 }) => (
   <PageLayout>
-    <Helmet
-      htmlAttributes={{lang: 'en'}}
-      meta={[{name: 'description', content: site.description}]}
-      title={site.title}
-    />
-    <Section pad={{horizontal: 'xlarge', top: 'large'}}>
+    <Section pad={{horizontal: 'xsmall', vertical: 'large'}}>
+      <Helmet
+        htmlAttributes={{lang: 'en'}}
+        meta={[{name: 'description', content: site.description}]}
+        title={site.title}
+      />
       {posts &&
         posts.map(node => {
           const title = get(node, 'frontmatter.title') || node.fields.slug;
@@ -38,7 +39,7 @@ const Tags = ({
   </PageLayout>
 );
 
-export default Tags;
+export default CategoryPage;
 
 export const pageQuery = graphql`
   query BlogPostBySlug {

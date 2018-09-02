@@ -1,7 +1,8 @@
 import React from 'react';
 import {graphql} from 'gatsby';
 import Posts from '../components/posts';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
+import Section from '../components/Section';
 
 const Index = ({
   data: {
@@ -9,8 +10,9 @@ const Index = ({
   },
 }) => (
   <Layout>
-    <h2>Blog</h2>
-    <Posts posts={posts.map(post => post.node)} />
+    <Section pad={{horizontal: 'xsmall', vertical: 'large'}}>
+      <Posts posts={posts.map(post => post.node)} />
+    </Section>
   </Layout>
 );
 

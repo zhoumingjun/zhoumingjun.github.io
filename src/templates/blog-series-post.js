@@ -1,14 +1,15 @@
 import React from 'react';
+
 import Helmet from 'react-helmet';
 import {Link} from 'gatsby';
-import get from 'lodash/get';
 
-import PageTemplate from '../components/layout';
-import {Box, Heading, Markdown} from 'grommet';
-import Section from '../components/Section';
+import {Box, Heading, Text, Markdown} from 'grommet';
+import 'prismjs/themes/prism-okaidia.css';
+
 import styled from 'styled-components';
 import _ from 'lodash';
-
+import Section from '../components/Section';
+import PageLayout from '../components/Layout';
 const ContentBox = styled.div`
   img {
     max-width: 100%;
@@ -29,12 +30,11 @@ const TreeNode = props => {
   aryChildren = _.sortBy(aryChildren, o => {
     return o.post.fields.slug;
   });
-  console.log('arychildren', aryChildren);
   return (
     <div>
       {post && (
         <Link to={post.fields.slug}>
-          <h3> {post.frontmatter.title}</h3>
+          <Text> {post.frontmatter.title}</Text>
         </Link>
       )}
 
@@ -46,28 +46,28 @@ const TreeNode = props => {
   );
 };
 
-export default class SeriesPost extends React.Component {
-  render() {
-    const post = this.props.data.markdownRemark;
-    const siteTitle = get(this.props, 'data.site.siteMetadata.title');
-    const siteDescription = post.excerpt;
-    const {outline, prev, next} = this.props.pageContext;
+const SeriesPostPage = ({
+  pageContext: {prev, next, outline},
+  data: {
+    site: {siteMetadata: site},
+    markdownRemark: post,
+  },
+}) => {
+  let series = JSON.parse(outline);
 
-    let series = JSON.parse(outline);
-    console.log('series', series);
-
-    return (
-      <PageTemplate>
+  return (
+    <PageLayout>
+      <Box width="full">
         <Helmet
           htmlAttributes={{lang: 'en'}}
-          meta={[{name: 'description', content: siteDescription}]}
-          title={siteTitle}
+          meta={[{name: 'description', content: site.description}]}
+          title={site.title}
         />
 
         <Box direction="row" justify="center" basis="auto">
           <Box basis="middle">{TreeNode(series)}</Box>
           <Box
-            basis="xsmall"
+            basis="xxsmall"
             border={{color: 'black', side: 'right', size: 'small'}}
           />
           <Box basis="xlarge">
@@ -110,10 +110,12 @@ export default class SeriesPost extends React.Component {
             )}
           </ul>
         </Section>
-      </PageTemplate>
-    );
-  }
-}
+      </Box>
+    </PageLayout>
+  );
+};
+
+export default SeriesPostPage;
 
 export const pageQuery = graphql`
   query BlogSeriesPostBySlug($slug: String!) {

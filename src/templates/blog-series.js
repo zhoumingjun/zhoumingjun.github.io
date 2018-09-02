@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import {Link, graphql} from 'gatsby';
-import PageLayout from '../components/layout';
+import PageLayout from '../components/Layout';
 import {Box} from 'grommet';
 import _ from 'lodash';
 import Section from '../components/Section';
@@ -21,12 +21,12 @@ const Tags = ({
   console.dir(outline, {depth: null});
   return (
     <PageLayout>
-      <Helmet
-        htmlAttributes={{lang: 'en'}}
-        meta={[{name: 'description', content: site.description}]}
-        title={site.title}
-      />
-      <Section pad={{horizontal: 'xlarge', top: 'large'}}>
+      <Section pad={{horizontal: 'xsmall', vertical: 'large'}}>
+        <Helmet
+          htmlAttributes={{lang: 'en'}}
+          meta={[{name: 'description', content: site.description}]}
+          title={site.title}
+        />
         {series &&
           series.map((post, idx) => {
             const title = post.frontmatter.title;
@@ -35,7 +35,7 @@ const Tags = ({
             return (
               <Box key={idx} direction="column">
                 <Link to={post.fields.slug}>
-                  <h1>{title}</h1>
+                  <h3>{title}</h3>
                 </Link>
 
                 <p>{content}</p>
