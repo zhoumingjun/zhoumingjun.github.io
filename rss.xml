@@ -1,4 +1,206 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mingjun Zhou's blog]]></title><description><![CDATA[personal blog]]></description><link>https://zhoumingjun.github.io</link><generator>RSS for Node</generator><lastBuildDate>Thu, 23 Aug 2018 18:12:53 GMT</lastBuildDate><item><title><![CDATA[Install cuda9.2 and cudnn7.2 on ubuntu 18.04]]></title><description><![CDATA[Overview To run tensorflow/pytorch with gpu, I need to install cuda and cudnn.
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mingjun Zhou's blog]]></title><description><![CDATA[personal blog]]></description><link>https://zhoumingjun.github.io</link><generator>RSS for Node</generator><lastBuildDate>Sun, 02 Sep 2018 02:42:39 GMT</lastBuildDate><item><title><![CDATA[inside shell]]></title><description><![CDATA[which foo >/dev/null
+command -v foo >/dev/null 2>&1
+type foo >/dev/null 2>&1
+hash foo 2>/dev/null if [[ -n ”${commands perlbrew }” ]] ; then…]]></description><link>https://zhoumingjun.github.io/note/inside-shell/</link><guid isPermaLink="false">https://zhoumingjun.github.io/note/inside-shell/</guid><pubDate>Fri, 31 Aug 2018 17:08:12 GMT</pubDate><content:encoded>&lt;p&gt;which foo &gt;/dev/null
+command -v foo &gt;/dev/null 2&gt;&amp;#x26;1
+type foo &gt;/dev/null 2&gt;&amp;#x26;1
+hash foo 2&gt;/dev/null&lt;/p&gt;
+&lt;p&gt;if [[ -n ”${commands[perlbrew]}” ]] ; then
+…
+fi&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://hyperpolyglot.org/unix-shells&quot;&gt;http://hyperpolyglot.org/unix-shells&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[No title]]></title><description><![CDATA[https://www.slideshare.net/ThomasGraf5/linux-networking-explained docker network https://success.docker.com/article/networking]]></description><link>https://zhoumingjun.github.io/knowledgebase/linux/networking/</link><guid isPermaLink="false">https://zhoumingjun.github.io/knowledgebase/linux/networking/</guid><pubDate>Fri, 31 Aug 2018 10:45:20 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://www.slideshare.net/ThomasGraf5/linux-networking-explained&quot;&gt;https://www.slideshare.net/ThomasGraf5/linux-networking-explained&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;docker network&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://success.docker.com/article/networking&quot;&gt;https://success.docker.com/article/networking&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[veth]]></title><description><![CDATA[https://gabhijit.github.io/linux-virtual-interfaces.html]]></description><link>https://zhoumingjun.github.io/knowledgebase/linux/networking/veth/</link><guid isPermaLink="false">https://zhoumingjun.github.io/knowledgebase/linux/networking/veth/</guid><pubDate>Fri, 31 Aug 2018 10:45:20 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://gabhijit.github.io/linux-virtual-interfaces.html&quot;&gt;https://gabhijit.github.io/linux-virtual-interfaces.html&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[networking]]></title><description><![CDATA[ref:  https://gist.github.com/fffaraz/2b86cf1f1a1f9564c51b Web Resources Course Textbooks Tim Jones homepage  (author of primary textbook…]]></description><link>https://zhoumingjun.github.io/knowledgebase/linux/networking/refs/</link><guid isPermaLink="false">https://zhoumingjun.github.io/knowledgebase/linux/networking/refs/</guid><pubDate>Fri, 31 Aug 2018 10:45:20 GMT</pubDate><content:encoded>&lt;p&gt;ref: &lt;a href=&quot;https://gist.github.com/fffaraz/2b86cf1f1a1f9564c51b&quot;&gt;https://gist.github.com/fffaraz/2b86cf1f1a1f9564c51b&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;Web Resources&lt;/h1&gt;
+&lt;h4&gt;Course Textbooks&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.mtjones.com/&quot;&gt;Tim Jones homepage&lt;/a&gt; (author of primary textbook, note that book code is only on cdrom with book)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://books.google.com/books?id=KjEq9Mua5TQC&amp;#x26;dq=gnu+linux+application+programming&amp;#x26;printsec=frontcover&amp;#x26;source=bn&amp;#x26;hl=en&amp;#x26;ei=wwxmSv-yLpW0NpXLwZYB&amp;#x26;sa=X&amp;#x26;oi=book_result&amp;#x26;ct=result&amp;#x26;resnum=4&quot;&gt;&lt;em&gt;GNU/Linux Application Programming (1st ed.)&lt;/em&gt; by Tim Jones&lt;/a&gt; (much of first edition of Jones text on Google Books)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.wrox.com/WileyCDA/WroxTitle/Beginning-Linux-Programming-4th-Edition.productCd-0470147628.html&quot;&gt;&lt;em&gt;Beginning Linux Programming (4th ed.)&lt;/em&gt; by Matthew and Stones&lt;/a&gt; (alternative text, can download code from this site)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.ebooksdownloadfree.com/Linux-Unix/Beginning-Linux-Programming-4th-Edition-BI750.html&quot;&gt;free download of &lt;em&gt;Beginning Linux Programming (4th ed.)&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Other Linux/UNIX Programming Books (w/code)&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://man7.org/tlpi/&quot;&gt;&lt;em&gt;The Linux Programming Interface&lt;/em&gt; by Kerrisk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.ladweb.net/&quot;&gt;&lt;em&gt;Linux Application Development (2nd ed)&lt;/em&gt; by Johnson and Troan&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.advancedlinuxprogramming.com/&quot;&gt;&lt;em&gt;Advanced Linux Programming&lt;/em&gt;&lt;/a&gt; (free online ebook)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://wps.prenhall.com/esm_molay_UNIXProg_1/0,6678,522376-,00.html&quot;&gt;&lt;em&gt;Understanding Unix/Linux Programming&lt;/em&gt; by Molay&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.basepath.com/aup/&quot;&gt;&lt;em&gt;Advanced UNIX Programming&lt;/em&gt; by Rochkind&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.apuebook.com/&quot;&gt;&lt;em&gt;Advanced Programming in the UNIX Environment&lt;/em&gt;, 2ed, by Stevens and Rago&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.kohala.com/start/unpv12e.html&quot;&gt;&lt;em&gt;UNIX Network Programming&lt;/em&gt; Vol 1, 2ed, by Stevens&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.kohala.com/start/unpv22e/unpv22e.html&quot;&gt;&lt;em&gt;UNIX Network Programming&lt;/em&gt; Vol 2, 2ed, by Stevens&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Linux Documentation and General Info/Help&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.tldp.org&quot;&gt;Linux Documentation Project (HowTo’s, etc.)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.tldp.org/LDP/intro-linux/html/index.html&quot;&gt;Introduction to Linux (Guide)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.tldp.org/LDP/Bash-Beginners-Guide/html/index.html&quot;&gt;Bash Guide for Beginners&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.tldp.org/LDP/GNU-Linux-Tools-Summary/html/index.html&quot;&gt;Linux Command-Line Tools Summary&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.tldp.org/LDP/sag/html/index.html&quot;&gt;The Linux System Administrator’s Guide&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.linuxquestions.org&quot;&gt;LinuxQuestions.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.linuxhelp.net&quot;&gt;Linuxhelp.net&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.icon.co.za/~psheer/book/rute.html.gz&quot;&gt;Rute User’s Tutorial (online/downloadable admin book)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.dwheeler.com/program-library/Program-Library-HOWTO/index.html&quot;&gt;Linux Program Library HowTo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.dwheeler.com/secure-programs/Secure-Programs-HOWTO/index.html&quot;&gt;Secure Programming for Linux HowTo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Bash (shell)&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.gnu.org/software/bash/bash.html&quot;&gt;Bash home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.gnu.org/software/bash/manual/bash.html&quot;&gt;Bash Reference Manual&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://en.tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html&quot;&gt;BASH Programming - Introduction HOW-TO&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://en.tldp.org/LDP/abs/html/index.html&quot;&gt;Advanced Bash-Scripting Guide&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.justlinux.com/nhf/Programming/Bash_Programming_Cheat_Sheet.html&quot;&gt;Bash Programming Cheat Sheet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.justlinux.com/nhf/Programming/Introduction_to_bash_Shell_Scripting.html&quot;&gt;Introduction to Bash Shell Scripting&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/library/l-bash.html&quot;&gt;IBM: Bash by example, Part 1/3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/library/l-bash2.html&quot;&gt;IBM: Bash by example, Part 2/3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/library/l-bash3.html&quot;&gt;IBM: Bash by example, Part 3/3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Emacs (extensible/customizable editor)&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.gnu.org/software/emacs/emacs.html&quot;&gt;GNU Emacs home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.gnu.org/software/emacs/manual/&quot;&gt;GNU Emacs manuals&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.xemacs.org/&quot;&gt;XEmacs home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.emacswiki.org/cgi-bin/wiki&quot;&gt;EmacsWiki (help materials)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Emacs&quot;&gt;Emacs Wikipedia entry&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Vi/Vim (editor)&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.thomer.com/thomer/vi/vi.html&quot;&gt;Vi lovers home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.vim.org/&quot;&gt;Vim home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.justlinux.com/nhf/Programming/Introduction_to_C_Programming.html&quot;&gt;Introduction to Programming in C/C++ with Vim&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Vi&quot;&gt;Vi Wikipedia entry&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;C Language Reference Cards and Overviews&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://math.brown.edu/~jhs/ReferenceCards/CRefCard.v2.2.pdf&quot;&gt;ANSI C Reference Card v2.2 (PDF)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;C Language Reference Material&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/C_(programming_language)&quot;&gt;C Overview (Wikipedia)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/C_syntax&quot;&gt;C Syntax (Wikipedia)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/C_variable_types_and_declarations&quot;&gt;C Variable Types (Wikipedia)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Operators_in_C_and_C%2B%2B&quot;&gt;Operators in C/C++ (Wikipedia)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/C_string&quot;&gt;C Strings (Wikipedia)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/C_standard_library&quot;&gt;C Standard Library (Wikipedia)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/List_of_C_functions&quot;&gt;C Library Functions (Wikipedia)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.open-std.org/JTC1/SC22/WG14/www/docs/n1256.pdf&quot;&gt;C99 (and beyond) Draft Standard&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://c-faq.com/&quot;&gt;C Language FAQ (comp.lang.c newsgroup)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.knosof.co.uk/cbook/&quot;&gt;The New C Standard (1600 page downloadable book covering C standards)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.theinquirer.net/inquirer/news/1016493/the-new-c-standard-free-ebook-c-coders&quot;&gt;The Inquirer article on above book&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.acm.uiuc.edu/webmonkeys/book/c_guide/&quot;&gt;The C Library Reference Guide&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.securecoding.cert.org/confluence/display/seccode/CERT+C+Secure+Coding+Standard&quot;&gt;CERT C Secure Coding Standard&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;C Language Help/Tutorials&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://publications.gbdirect.co.uk/c_book/&quot;&gt;The C Book (free online version of out-of-print book)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://claymore.engineer.gvsu.edu/~steriana/226/C.CheatSheet.pdf&quot;&gt;The C Cheat Sheet (PDF)&lt;/a&gt;[overview of C]&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.cprogramming.com/&quot;&gt;CProgramming.com, C/C++ programming help site&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://randu.org/tutorials/c/&quot;&gt;C Programming Tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.physics.drexel.edu/courses/Comp_Phys/General/C_basics/c_tutorial.html&quot;&gt;C Language Tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.its.strath.ac.uk/courses/c/&quot;&gt;C Programming&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://computer.howstuffworks.com/c.htm&quot;&gt;How C Programming Works&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://linux.oreillynet.com/pub/a/linux/2003/05/08/cpp_mm-1.html&quot;&gt;C++ Memory Management&lt;/a&gt; (many of the problems apply to C as well)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.eskimo.com/~scs/cclass/notes/top.html&quot;&gt;Steve Summit’s C Programming Notes (set 1)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.eskimo.com/~scs/cclass/int/top.html&quot;&gt;Steve Summit’s C Programming Notes (set 2)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.exforsys.com/tutorials/c-language.html&quot;&gt;Exforsys Inc C Language Tutorials&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;C Language Books&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://publications.gbdirect.co.uk/c_book/&quot;&gt;The C Book (free online version of out-of-print book)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www-personal.acfr.usyd.edu.au/tbailey/ctext/&quot;&gt;An Introduction to the C Programming Language and Software Design (Bailey)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://en.wikibooks.org/wiki/C_Programming&quot;&gt;C Programming (Wikibooks)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://markburgess.org/CTutorial/C-Tut-4.02.pdf&quot;&gt;C Programming Tutorial (Burgess)&gt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.codewithc.com/beginning-c-ivor-horton-pdf-download-4th-edition/&quot;&gt;Beginning C (Horton)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.e-reading.me/bookreader.php/138815/Linden_-_Expert_C_Programming__Deep_C_Secrets.pdf&quot;&gt;Expert C Programming (van der Linden)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Linux &amp;#x26; C Development Tutorials/Info&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.faqs.org/docs/ldev/&quot;&gt;The Linux Development Platform (book, online html version)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.agner.org/optimize/&quot;&gt;Software Optimization Resources&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;C Indentation Tools&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Indent_style&quot;&gt;Wikipedia: Indent Style&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.gnu.org/s/indent/&quot;&gt;GNU Indent&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://uncrustify.sourceforge.net/&quot;&gt;Uncrustify&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.emacswiki.org/emacs/IndentingC&quot;&gt;Emacs Wiki: Indenting C&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.riedquat.de/prog/style&quot;&gt;Brace and Indent Styles&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://universalindent.sourceforge.net/&quot;&gt;UniversalIndentGUI&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;GNU C/C++ Tools&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://gcc.gnu.org/&quot;&gt;GCC (GNU Compiler Collection) home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://gcc.gnu.org/onlinedocs/&quot;&gt;GCC manuals&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.network-theory.co.uk/docs/gccintro&quot;&gt;An Introduction to GCC (book, with online HTML version)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.gnu.org/software/libc/manual/&quot;&gt;The GNU C Library manuals&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.gnu.org/software/gdb/&quot;&gt;GDB (GNU Debugger) home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.gnu.org/software/gdb/documentation&quot;&gt;GDB manual&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.gnu.org/software/ddd/&quot;&gt;DDD (GNU Data Display Debugger) home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.gnu.org/manual/ddd/&quot;&gt;DDD manual&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.gnu.org/software/make/&quot;&gt;Make home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.gnu.org/manual/make/&quot;&gt;Make manual&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.network-theory.co.uk/docs/diff&quot;&gt;Comparing and Merging Files with GNU diff and patch (book, with online HTML version)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.cs.washington.edu/orgs/acm/tutorials/dev-in-unix/&quot;&gt;ACM Developing Software in UNIX Tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Eclispse IDE&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.eclipse.org&quot;&gt;Eclipse (main webpage)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.eclipse.org/cdt&quot;&gt;Eclipse CDT (C/C++ Development Tooling)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.math.ucla.edu/~anderson/UsingEclipseCPP/index.html&quot;&gt;Using Eclipse for C/C++ Programming&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.madirish.net/190&quot;&gt;Remote C Development Using Eclipse&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Netbeans IDE&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.netbeans.org&quot;&gt;Netbeans (main webpage)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.netbeans.org/features/cpp&quot;&gt;Netbeans C/C++ features&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.netbeans.org/kb/trails/cnd.html&quot;&gt;Netbeans C/C++ tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://cnd.netbeans.org/cnd-tutorial.html&quot;&gt;Getting Started With the NetBeans C/C++ Development Pack&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Other C/C++ Editors and IDEs for Linux&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.geany.org/&quot;&gt;Geany editor/IDE&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.kdevelop.org&quot;&gt;Kdevelop (KDE IDE)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://projects.gnome.org/anjuta/&quot;&gt;Anjuta IDE for GNOME&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://codelite.org/&quot;&gt;CodeLite IDE&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jedit.org/&quot;&gt;jEdit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Programming Analysis Tools for C/C++&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://valgrind.kde.org&quot;&gt;Valgrind (memory management debugging and profiling for x86-Linux programs)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.splint.org&quot;&gt;Splint (Secure Programming Lint — supersedes LCLint)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://doc.opensuse.org/documentation/html/openSUSE/opensuse-tuning/cha.tuning.tracing.html&quot;&gt;strace, ltrace tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;SSH/SFTP/SCP Software for Windows&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.chiark.greenend.org.uk/~sgtatham/putty/&quot;&gt;PuTTY and PSFTP (SSH terminal and command-line transfer)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://winscp.sourceforge.net/eng/index.php&quot;&gt;WinSCP (GUI secure copy/sftp software)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Linux Distributions (selective)&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://fedora.centos.org&quot;&gt;CentOS (free Redhat clone)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://fedora.redhat.com&quot;&gt;Fedora (free Redhat project)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.knoppix.org&quot;&gt;Knoppix (Linux on a CD)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.kubuntu.org&quot;&gt;Kubuntu (KDE-based Ubuntu distro)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.mageia.org&quot;&gt;Mageia (community Mandriva fork)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.redhat.com&quot;&gt;Redhat&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.linuxmint.com&quot;&gt;Mint&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://en.opensuse.org&quot;&gt;Suse (OpenSuse)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.ubuntu.com&quot;&gt;Ubuntu&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Linux Distributions Info Sites&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.distrowatch.com&quot;&gt;DistroWatch.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.livecdlist.com&quot;&gt;LiveCD Linux List&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Free Virtualization Software and Info&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.virtualbox.org/&quot;&gt;VirtualBox&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.vmware.com/&quot;&gt;VMWare&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.howtoforge.com/virtualbox_ubuntu&quot;&gt;Installing Ubuntu in VirtualBox on Windoze&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.simplehelp.net/2007/05/13/how-to-install-ubuntu-studio-in-windows-using-virtualbox-a-complete-walkthrough/&quot;&gt;Installing Ubuntu in VirtualBox on Windoze&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[visualization]]></title><description><![CDATA[Visualization]]></description><link>https://zhoumingjun.github.io/knowledgebase/visualization/</link><guid isPermaLink="false">https://zhoumingjun.github.io/knowledgebase/visualization/</guid><pubDate>Fri, 31 Aug 2018 10:44:53 GMT</pubDate><content:encoded>&lt;p&gt;Visualization&lt;/p&gt;</content:encoded></item><item><title><![CDATA[iptables]]></title><description><![CDATA[refs https://www.hostinger.com/tutorials/iptables-tutorial https://wiki.archlinux.org/index.php/iptables]]></description><link>https://zhoumingjun.github.io/note/iptables/</link><guid isPermaLink="false">https://zhoumingjun.github.io/note/iptables/</guid><pubDate>Fri, 24 Aug 2018 03:58:03 GMT</pubDate><content:encoded>&lt;h1&gt;refs&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.hostinger.com/tutorials/iptables-tutorial&quot;&gt;https://www.hostinger.com/tutorials/iptables-tutorial&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://wiki.archlinux.org/index.php/iptables&quot;&gt;https://wiki.archlinux.org/index.php/iptables&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Install cuda9.2 and cudnn7.2 on ubuntu 18.04]]></title><description><![CDATA[Overview To run tensorflow/pytorch with gpu, I need to install cuda and cudnn.
 It’s really tricky, but finally I found the method.  The…]]></description><link>https://zhoumingjun.github.io/post/2018-08-23-install-cuda-and-cudnn-on-ubuntu18.04/</link><guid isPermaLink="false">https://zhoumingjun.github.io/post/2018-08-23-install-cuda-and-cudnn-on-ubuntu18.04/</guid><pubDate>Thu, 23 Aug 2018 15:01:49 GMT</pubDate><content:encoded>&lt;h1&gt;Overview&lt;/h1&gt;
 &lt;p&gt;To run tensorflow/pytorch with gpu, I need to install cuda and cudnn.
 It’s really tricky, but finally I found the method. &lt;/p&gt;
@@ -65,18 +267,7 @@ aria2c https://developer.download.nvidia.com/compute/machine-learning/repos/ubun
 &lt;p&gt;&lt;a href=&quot;https://medium.com/@jonathan_hui/gan-gan-series-2d279f906e7b&quot;&gt;https://medium.com/@jonathan_hui/gan-gan-series-2d279f906e7b&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.datacamp.com/community/tutorials/generative-adversarial-networks&quot;&gt;https://www.datacamp.com/community/tutorials/generative-adversarial-networks&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;people&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;http://people.csail.mit.edu/junyanz/&quot;&gt;Jun-Yan Zhu&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Awesome AI]]></title><description><![CDATA[latest srnn Datasets image PASCAL Visual Object Classification (PASCAL VOC) dataset ImageNet COCO nlp GloVe  Yelp ]]></description><link>https://zhoumingjun.github.io/note/awesome-ai/</link><guid isPermaLink="false">https://zhoumingjun.github.io/note/awesome-ai/</guid><pubDate>Wed, 15 Aug 2018 04:12:07 GMT</pubDate><content:encoded>&lt;h2&gt;latest&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/zepingyu0512/srnn&quot;&gt;srnn&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Datasets&lt;/h2&gt;
-&lt;h3&gt;image&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://host.robots.ox.ac.uk/pascal/VOC/&quot;&gt;PASCAL Visual Object Classification (PASCAL VOC) dataset&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.image-net.org/&quot;&gt;ImageNet&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://cocodataset.org/#home&quot;&gt;COCO&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;nlp&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://nlp.stanford.edu/projects/glove/&quot;&gt;GloVe&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt; Yelp &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Object Detection and Localization]]></title><description><![CDATA[References blogs Evolution of Object Detection and Localization Algorithms Review of Deep Learning Algorithms for Object Detection * yolo v…]]></description><link>https://zhoumingjun.github.io/note/object-detection-and-localization-algorithms/</link><guid isPermaLink="false">https://zhoumingjun.github.io/note/object-detection-and-localization-algorithms/</guid><pubDate>Wed, 15 Aug 2018 04:12:07 GMT</pubDate><content:encoded>&lt;h2&gt;References&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://people.csail.mit.edu/junyanz/&quot;&gt;Jun-Yan Zhu&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Object Detection and Localization]]></title><description><![CDATA[References blogs Evolution of Object Detection and Localization Algorithms Review of Deep Learning Algorithms for Object Detection * yolo v…]]></description><link>https://zhoumingjun.github.io/note/object-detection-and-localization-algorithms/</link><guid isPermaLink="false">https://zhoumingjun.github.io/note/object-detection-and-localization-algorithms/</guid><pubDate>Wed, 15 Aug 2018 04:12:07 GMT</pubDate><content:encoded>&lt;h2&gt;References&lt;/h2&gt;
 &lt;h3&gt;blogs&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://towardsdatascience.com/evolution-of-object-detection-and-localization-algorithms-e241021d8bad&quot;&gt;Evolution of Object Detection and Localization Algorithms&lt;/a&gt;&lt;/li&gt;
@@ -94,7 +285,18 @@ aria2c https://developer.download.nvidia.com/compute/machine-learning/repos/ubun
 &lt;li&gt;Image Classification    &lt;/li&gt;
 &lt;li&gt;Object classification and localization  &lt;/li&gt;
 &lt;li&gt;Multiple objects detection and localization&lt;/li&gt;
-&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Migrate from Hugo to Gatsby]]></title><description><![CDATA[I decided to migrate my blog from hugo to gatsby.
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Awesome AI]]></title><description><![CDATA[latest srnn Datasets image PASCAL Visual Object Classification (PASCAL VOC) dataset ImageNet COCO nlp GloVe  Yelp ]]></description><link>https://zhoumingjun.github.io/note/awesome-ai/</link><guid isPermaLink="false">https://zhoumingjun.github.io/note/awesome-ai/</guid><pubDate>Wed, 15 Aug 2018 04:12:07 GMT</pubDate><content:encoded>&lt;h2&gt;latest&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/zepingyu0512/srnn&quot;&gt;srnn&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Datasets&lt;/h2&gt;
+&lt;h3&gt;image&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://host.robots.ox.ac.uk/pascal/VOC/&quot;&gt;PASCAL Visual Object Classification (PASCAL VOC) dataset&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.image-net.org/&quot;&gt;ImageNet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://cocodataset.org/#home&quot;&gt;COCO&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;nlp&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://nlp.stanford.edu/projects/glove/&quot;&gt;GloVe&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; Yelp &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Migrate from Hugo to Gatsby]]></title><description><![CDATA[I decided to migrate my blog from hugo to gatsby.
 Gatsby is based on react and misc plugins, and it works in the same way as normal web…]]></description><link>https://zhoumingjun.github.io/post/2018-08-14-migrate-from-hugo-to-gatsby/</link><guid isPermaLink="false">https://zhoumingjun.github.io/post/2018-08-14-migrate-from-hugo-to-gatsby/</guid><pubDate>Tue, 14 Aug 2018 10:52:17 GMT</pubDate><content:encoded>&lt;p&gt;I decided to migrate my blog from hugo to gatsby.
 Gatsby is based on react and misc plugins, and it works in the same way as normal web development.
 But there are still some works to do, such as mathjax support.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[About]]></title><description><![CDATA[This is the personal blog for teck stacks.]]></description><link>https://zhoumingjun.github.io/about/</link><guid isPermaLink="false">https://zhoumingjun.github.io/about/</guid><pubDate>Tue, 14 Aug 2018 10:43:09 GMT</pubDate><content:encoded>&lt;p&gt;This is the personal blog for teck stacks.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[lvs keepalived]]></title><description><![CDATA[introduction lvs: lvs  is a kind of L4 load balancer. some references here:
@@ -200,7 +402,688 @@ ifconfig lo:0 192.168.2.175 netmask 255.255.255.255 broadcast 192.168.2.175
 echo &amp;quot;1&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/lo/arp_ignore
 echo &amp;quot;2&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/lo/arp_announce
 echo &amp;quot;1&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/all/arp_ignore
-echo &amp;quot;2&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/all/arp_announce&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Using MathJax and Graphviz with Hugo]]></title><description><![CDATA[MathJax support configuration Hugo doc MathJax doc       example code      result graphviz support configuration example code…]]></description><link>https://zhoumingjun.github.io/post/2017-03-10-using-mathjax-viz-with-hugo/</link><guid isPermaLink="false">https://zhoumingjun.github.io/post/2017-03-10-using-mathjax-viz-with-hugo/</guid><pubDate>Fri, 10 Mar 2017 03:40:12 GMT</pubDate><content:encoded>&lt;h1&gt;MathJax support&lt;/h1&gt;
+echo &amp;quot;2&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/all/arp_announce&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[5 Model Free Control]]></title><description><![CDATA[Key Points Lecture Notes Introcution Model-free control can solve these problems    MDP model is unknown, but experience can be sampled…]]></description><link>https://zhoumingjun.github.io/series/rl/5_model_free_control/</link><guid isPermaLink="false">https://zhoumingjun.github.io/series/rl/5_model_free_control/</guid><pubDate>Tue, 14 Mar 2017 07:05:04 GMT</pubDate><content:encoded>&lt;h1&gt;Key Points&lt;/h1&gt;
+&lt;h1&gt;Lecture Notes&lt;/h1&gt;
+&lt;h2&gt;Introcution&lt;/h2&gt;
+&lt;p&gt;Model-free control can solve these problems   &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MDP model is unknown, but experience can be sampled           &lt;/li&gt;
+&lt;li&gt;MDP model is known, but is too big to use, except by samples          &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;On/Off policy learning              &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;On-policy learning              &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“Learn on the job”                &lt;/li&gt;
+&lt;li&gt;Learn about policy 𝛑 from experience sampled from 𝛑     &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Off-policy learning         &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“Look over someone’s shoulder”                &lt;/li&gt;
+&lt;li&gt;Learn about policy 𝛑 from experience sampled from μ                       &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;On-Policy MC Control&lt;/h2&gt;
+&lt;h3&gt;Generalised Policy Iteration with Action-Value Function&lt;/h3&gt;
+&lt;p&gt;Greedy policy improvement over V(s) requires model of MDP&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ \pi&amp;#39;(s) = \operatorname*{arg\,max}\limits_{a \in \mathcal{A}} \mathcal{R}_s^a + \mathcal{P}_{ss&amp;#39;}^aV(s&amp;#39;)    $&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Greedy policy improvement over Q(s,a) is model-free&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ \pi&amp;#39;(s) = \operatorname*{arg\,max}\limits_{a \in \mathcal{A}} \mathcal{Q}(s,a))    $&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Policy evaluation Monte-Carlo policy evaluation, &lt;code class=&quot;language-text&quot;&gt;$ Q = q_\pi$&lt;/code&gt;&lt;br&gt;
+Policy improvement Greedy policy improvement? (haha ,that is 𝝴-Greddy)&lt;/p&gt;
+&lt;h3&gt;Exploration&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;recall greedy&lt;/strong&gt;   &lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ 
+\pi_*(a|s) = 
+\begin{cases}
+    1, &amp;amp; \text{if }  a= \operatorname*{arg\,max}\limits_{a \in \mathcal{A}} q_*(s,a))    \\
+    0, &amp;amp; \text{otherwise}
+\end{cases}
+$&lt;/code&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;𝝴-Greddy Exploration&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Simplest idea for ensuring continual exploration          &lt;/li&gt;
+&lt;li&gt;All m actions are tried with non-zero probability             &lt;/li&gt;
+&lt;li&gt;With probability 1-𝝴  choose the greedy action           &lt;/li&gt;
+&lt;li&gt;With probability 𝝴 choose an action at random&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ 
+\pi(a|s) = 
+\begin{cases}
+\epsilon/m +1-\epsilon , &amp;amp; \text{if }  a^*= \operatorname*{arg\,max}\limits_{a \in \mathcal{A}} Q(s,a))    \\
+\epsilon/m, &amp;amp; \text{otherwise}
+\end{cases}
+$&lt;/code&gt; &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;𝝴-Greedy Policy Improvement&lt;/strong&gt;          &lt;/p&gt;
+&lt;p&gt;Theorem&lt;br&gt;
+For any 𝝴-Greedy Policy 𝛑 , the 𝝴-Greedy policy 𝛑’ with respect to q𝛑 is an improvement &lt;code class=&quot;language-text&quot;&gt;$ v_{\pi&amp;#39;}(s) \geqslant v_\pi(s)  $&lt;/code&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ 
+\begin{align*}
+q_\pi(s, \pi&amp;#39;(s)) &amp;amp;= \sum_{a}\pi&amp;#39;(a|s)q_\pi(s,a) \\
+                  &amp;amp;= \epsilon/m \sum_{a} q_\pi(s,a) + (1-\epsilon) \max_a q_\pi(s,a) \\
+                  &amp;amp;\geqslant  \epsilon/m \sum_{a} q_\pi(s,a) + + (1-\epsilon) \sum_{a} \frac{\pi(a|s) - \epsilon/m}{1-\epsilon} q_\pi(s,a) \\
+                  &amp;amp;= \sum_a \pi(a|s) q_\pi(s,a) \\
+                  &amp;amp;= v_\pi(s)
+\end{align*}
+$&lt;/code&gt; &lt;/p&gt;
+&lt;p&gt;Therefore from policy improvement theorem,  &lt;code class=&quot;language-text&quot;&gt;$ v_{\pi&amp;#39;}(s) \geqslant v_\pi(s)  $&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;GLIE&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Definition&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;Greedy in the Limit with Infinite Exploration&lt;/em&gt;(GLIE)   &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;All state-action pairs are explored infinitely many times,&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ \lim\limits_{k\rightarrow \infty} N_k(s,a)=\infty $&lt;/code&gt;             &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The policy converges on a greedy policy,&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ \lim\limits_{k\rightarrow \infty} \pi_k(a|s)=1(a=\operatorname*{arg\,max}\limits_{a&amp;#39;} Q_k(s,a&amp;#39;)) $&lt;/code&gt;          &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For example, 𝝴-greedy is GLIE if 𝝴 reduces to zero at &lt;code class=&quot;language-text&quot;&gt;$ \epsilon_k = \frac{1}{k}$&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;GLIE Monte-Carlo Control&lt;/strong&gt;        &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sample kth episode using 𝛑: {S1, A1, R2, …, ST } ∼ 𝛑          &lt;/li&gt;
+&lt;li&gt;For each state St and action At in the episode&lt;br&gt;
+recall &lt;em&gt;Incremental Mean&lt;/em&gt;          &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$
+\begin{align*}
+    N(S_t, A_t) &amp;amp;\leftarrow N(S_t, A_t) + 1 \\
+    Q(S_t, A_t) &amp;amp;\leftarrow Q(S_t, A_t) + \frac{1}{N(S_t, A_t)} (G_t - Q(S_t, A_t))   
+\end{align*}
+$&lt;/code&gt;      &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Improve policy based on new action-value function&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$
+\begin{align*}
+\epsilon    &amp;amp;\leftarrow 1/k \\
+\pi         &amp;amp;\leftarrow \epsilon-greedy(Q)
+\end{align*}
+$&lt;/code&gt;  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Theroem&lt;/strong&gt;&lt;br&gt;
+GLIE Monte-Carlo control converges to the optimal action-value function, &lt;code class=&quot;language-text&quot;&gt;$ Q(s,a) \rightarrow q_*(s,a) $&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;On-Policy TD Learning&lt;/h2&gt;
+&lt;h2&gt;Off-Policy Learning&lt;/h2&gt;
+&lt;h2&gt;Summary&lt;/h2&gt;
+&lt;h1&gt;Excises&lt;/h1&gt;</content:encoded></item><item><title><![CDATA[Reinforcement learning]]></title><description><![CDATA[have not been revised yet.]]></description><link>https://zhoumingjun.github.io/series/rl/</link><guid isPermaLink="false">https://zhoumingjun.github.io/series/rl/</guid><pubDate>Tue, 14 Mar 2017 07:05:04 GMT</pubDate><content:encoded>&lt;p&gt;have not been revised yet.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[RL Essence]]></title><description><![CDATA[Definition MDP A Markov decision process (MDP) is a Markov reward process with decisions. It is an environment in which all states are…]]></description><link>https://zhoumingjun.github.io/series/rl/rl_essence/</link><guid isPermaLink="false">https://zhoumingjun.github.io/series/rl/rl_essence/</guid><pubDate>Tue, 14 Mar 2017 06:37:32 GMT</pubDate><content:encoded>&lt;h1&gt;Definition&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;MDP&lt;br&gt;
+A Markov decision process (MDP) is a Markov reward process with decisions.&lt;br&gt;
+It is an environment in which all states are Markov.&lt;br&gt;
+A Markov Decision Process is a tuple  &lt;code class=&quot;language-text&quot;&gt;$ &amp;lt;\mathcal{S}, \mathcal{A}, \mathcal{P}, \mathcal{R}, \gamma&amp;gt; $&lt;/code&gt;    &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;$ \mathcal{S} $&lt;/code&gt; is a finite set of states   &lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;$ \mathcal{A} $&lt;/code&gt; is a finite set of actions&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;$ \mathcal{P} $&lt;/code&gt; is a state transition probability matrix,&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ \mathcal{P}_{ss&amp;#39;}^a = \mathbb{P}[S_{t+1} = s&amp;#39; | S_t=s, A_t = a] $&lt;/code&gt;  &lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;$ \mathcal{R} $&lt;/code&gt; is a reward function,&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ \mathcal{R}_s^a =  \mathbb{E}[R_{t+1} | S_t=s, A_t = a] $&lt;/code&gt;   &lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;$ \gamma $&lt;/code&gt; is a discount factor,  &lt;code class=&quot;language-text&quot;&gt;$ \gamma \in [0,1]$&lt;/code&gt;  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;state action relation&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$
+\begin{align*}
+v_\pi(s) &amp;amp;= \sum_{a \in \mathcal{A}} \pi(a|s) q_\pi(s,a)               \\
+q_\pi(s,a) &amp;amp;= \mathcal{R}_s^a + \gamma \sum_{s&amp;#39; \in \mathcal{S}} \mathcal{P}_{ss&amp;#39;}^a v_\pi(s&amp;#39;)  
+\end{align*}
+$&lt;/code&gt;    &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;state-value function&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ v_\pi(s)  = \sum_{a \in \mathcal{A}} \pi(a|s)  (\mathcal{R}_s^a + \gamma \sum_{s&amp;#39; \in \mathcal{S}} \mathcal{P}_{ss&amp;#39;}^a v_\pi(s&amp;#39;) ) $&lt;/code&gt; &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;action-value function&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ q_\pi(s,a)  = \mathcal{R}_s^a + \gamma \sum_{s&amp;#39; \in \mathcal{S}} \mathcal{P}_{ss&amp;#39;}^a \sum_{a \in \mathcal{A}} \pi(a&amp;#39;|s&amp;#39;) q_\pi(s&amp;#39;,a&amp;#39;) $&lt;/code&gt;  &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;return&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ G_t = R_{t+1} +  R_{t+2} + ... = \sum\limits_{k=0} ^\infty \gamma^kR_{t+k+1} $&lt;/code&gt;&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$
+\begin{align*}
+V_\pi(s) &amp;amp;= \mathbb{E}_\pi \left \{ {G_t | s_t = s} \right \}                                                   &amp;amp;  \color{red} {MC} \\
+     &amp;amp;= \mathbb{E}_\pi\left \{  R_{t+1} + \gamma V_\pi(s_{t+1}) | s_t = s\right \}                          &amp;amp;  \color{red} {TD(0)} \\
+     &amp;amp;= \sum_a\pi(s,a)\sum_{s&amp;#39;}\mathbb{P}_{ss&amp;#39;}^a [R_{ss&amp;#39;}^a + \gamma V_\pi(s&amp;#39;)]                            &amp;amp;  \color{red} {DP}
+\end{align*}
+$&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Method&lt;/h1&gt;
+&lt;h2&gt;DP&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ V(S_t) \leftarrow \mathbb{E}_\pi[ R_{t+1} + \gamma V(S_{t+1})] $&lt;/code&gt;    &lt;/p&gt;
+&lt;p&gt;The way to find a policy &lt;code class=&quot;language-text&quot;&gt;$ \pi_*$&lt;/code&gt; over &lt;code class=&quot;language-text&quot;&gt;$ \pi $&lt;/code&gt;&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ 
+\pi_*(a|s) = 
+\begin{cases}
+    1, &amp;amp; \text{if }  a= \operatorname*{arg\,max}\limits_{a \in \mathcal{A}} q_*(s,a))    \\
+    0, &amp;amp; \text{otherwise}
+\end{cases}
+$&lt;/code&gt;&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$  v_*(s) = \max\limits_a q_* (s,a)  \ \ \ \ \    q_*(s,a) = R_s^a + \gamma\sum_{s&amp;#39; \in \mathcal{S}} \mathcal{P}_{ss&amp;#39;}^a v_*(s&amp;#39;) $&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;MC&lt;/h2&gt;
+&lt;p&gt; &lt;code class=&quot;language-text&quot;&gt;$ V(S_t) \leftarrow V(S_t) + \alpha(G_t-V(S_t))$&lt;/code&gt;       &lt;/p&gt;
+&lt;h2&gt;TD&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ V(S_t) \leftarrow V(S_t) + \alpha(R_{t+1} + \gamma V(S_{t+1})-V(S_t))$&lt;/code&gt;            &lt;/p&gt;</content:encoded></item><item><title><![CDATA[4 Model Free Predication]]></title><description><![CDATA[Key Points Return Value function MC Backup:  TD Backup:  DP Backup:  Lecture Notes some reading https://www.tu-chemnitz.de/informatik/KI…]]></description><link>https://zhoumingjun.github.io/series/rl/4_model_free_predication/</link><guid isPermaLink="false">https://zhoumingjun.github.io/series/rl/4_model_free_predication/</guid><pubDate>Mon, 13 Mar 2017 06:23:47 GMT</pubDate><content:encoded>&lt;h1&gt;Key Points&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Return&lt;/strong&gt;&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$
+\begin{align*}
+V_\pi(s) &amp;amp;= \mathbb{E}_\pi\left \{ \sum_{k=0}^\infty \gamma_k R_{t+k+1} | s_t = s\right \}                      &amp;amp;  \color{red}  {Definition} \\
+         &amp;amp;= \mathbb{E}_\pi\left \{  R_{t+1} + \gamma \sum_{k=0}^\infty \gamma_k R_{t+k+2} | s_t = s\right \}    &amp;amp;  \color{red}  {Unfolding} \\
+         &amp;amp;= \mathbb{E}_\pi\left \{  R_{t+1} + \gamma G_{t+1} | s_t = s\right \}                                 &amp;amp;  \color{red}  {Recursive \ formula} 
+\end{align*}
+$&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Value function&lt;/strong&gt;&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$
+\begin{align*}
+V_\pi(s) &amp;amp;= \mathbb{E}_\pi \left \{ {G_t | s_t = s} \right \}                                                   &amp;amp;  \color{red} {MC} \\
+         &amp;amp;= \mathbb{E}_\pi\left \{  R_{t+1} + \gamma V_\pi(s_{t+1}) | s_t = s\right \}                          &amp;amp;  \color{red} {TD(0)} \\
+         &amp;amp;= \sum_a\pi(s,a)\sum_{s&amp;#39;}\mathbb{P}_{ss&amp;#39;}^a [R_{ss&amp;#39;}^a + \gamma V_\pi(s&amp;#39;)]                            &amp;amp;  \color{red} {DP}
+\end{align*}
+$&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;MC Backup: &lt;code class=&quot;language-text&quot;&gt;$ V(S_t) \leftarrow V(S_t) + \alpha(G_t-V(S_t))$&lt;/code&gt;&lt;br&gt;
+TD Backup: &lt;code class=&quot;language-text&quot;&gt;$ V(S_t) \leftarrow V(S_t) + \alpha(R_{t+1} + \gamma V(S_{t+1})-V(S_t))$&lt;/code&gt;&lt;br&gt;
+DP Backup: &lt;code class=&quot;language-text&quot;&gt;$ V(S_t) \leftarrow \mathbb{E}_\pi[ R_{t+1} + \gamma V(S_{t+1})] $&lt;/code&gt;&lt;/p&gt;
+&lt;h1&gt;Lecture Notes&lt;/h1&gt;
+&lt;p&gt;[some reading]&lt;a href=&quot;https://www.tu-chemnitz.de/informatik/KI/scripts/ws0910/ml09_6.pdf&quot;&gt;https://www.tu-chemnitz.de/informatik/KI/scripts/ws0910/ml09_6.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;introduction&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Model-free prediction&lt;/strong&gt;&lt;br&gt;
+Estimate the value function of an &lt;em&gt;unknown&lt;/em&gt; MDP&lt;/p&gt;
+&lt;h2&gt;Monte-Carlo Learning&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Monte_Carlo_method&quot;&gt;MC method&lt;/a&gt; &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MC methods learn directly from episodes of experience&lt;/li&gt;
+&lt;li&gt;MC is model-free: no knowledge of MDP transitions / rewards &lt;/li&gt;
+&lt;li&gt;MC learns from complete episodes: no bootstrapping&lt;/li&gt;
+&lt;li&gt;MC uses the simplest possible idea: value = mean return&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Caveat: can only apply MC to episodic MDPs &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;All episodes must terminate&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Some definition&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Goal: learn &lt;code class=&quot;language-text&quot;&gt;$v_\pi$&lt;/code&gt; from episodes of experience under policy &lt;code class=&quot;language-text&quot;&gt;$\pi$&lt;/code&gt;&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ S_1, A_1, R_2, \dots, S_k \sim \pi $&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Recall that the return is the total discounted reward:&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ G_t = R_{t+1} +  \gammaR_{t+2} + ... = \sum_{k=0} ^\infty \gamma^kR_{t+k+1} $&lt;/code&gt;     &lt;/li&gt;
+&lt;li&gt;Recall that the value function is the expected return:&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$  v(s) = \mathbb{E}[G_t | S_t =s] $&lt;/code&gt;    &lt;/li&gt;
+&lt;li&gt;Monte-Carlo policy evaluation uses &lt;strong&gt;empirical mean return&lt;/strong&gt; instead of expected return        &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;MC Policy Evaluation (algorithm)&lt;/h3&gt;
+&lt;p&gt;Thare are two kinds of evaluation method:  &lt;em&gt;the first time-step&lt;/em&gt; and &lt;em&gt;every time-step&lt;/em&gt;     &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The first/Every time-step  t that state s is visited in an episode,       &lt;/li&gt;
+&lt;li&gt;Increment counter ,     &lt;code class=&quot;language-text&quot;&gt;$ N(s) \leftarrow N(s) +1 $&lt;/code&gt;       &lt;/li&gt;
+&lt;li&gt;Increment total return, &lt;code class=&quot;language-text&quot;&gt;$ S(s) \leftarrow S(s) +G_t $&lt;/code&gt;     &lt;/li&gt;
+&lt;li&gt;Value is estimated by mean return &lt;code class=&quot;language-text&quot;&gt;$ V(s) = S(s)/N(s)$&lt;/code&gt;     &lt;/li&gt;
+&lt;li&gt;By law of large numbers, &lt;code class=&quot;language-text&quot;&gt;$ V(s) \rightarrow v_\pi(s) \text{  as  } N(s) \rightarrow \infty$&lt;/code&gt;       &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Incremental Mean and Incremental MC updates (practice)&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Incremental Mean&lt;/strong&gt;&lt;br&gt;
+The Mean &lt;code class=&quot;language-text&quot;&gt;$ \mu_1, \mu_2, \dots $&lt;/code&gt; of a sequence &lt;code class=&quot;language-text&quot;&gt;$x_1, x_2, \dots$&lt;/code&gt; can be computed incrementally,&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$
+\begin{align*}
+\mu_k &amp;amp;= \frac{1}{k}\sum_{j=1}^kx_j \\
+      &amp;amp;= \frac{1}{k}(x_k + \sum_{j=1}^{k-1}x_j)  \\
+      &amp;amp;= \frac{1}{k}(x_k + (k-1)\mu_{k-1})  \\
+      &amp;amp;= \frac{1}{k}x_k  +\mu_{k-1} - \frac{1}{k}\mu_{k-1} \\
+      &amp;amp;= \mu_{k-1} + \frac{1}{k}(x_k - \mu_{k-1}) \\
+\end{align*}
+$&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Incremental MC updates&lt;/strong&gt;         &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Update V(s) incrementally after episode &lt;code class=&quot;language-text&quot;&gt;$ S_1, A_1, R_2, \dots, S_k \sim \pi $&lt;/code&gt;          &lt;/li&gt;
+&lt;li&gt;For each state &lt;code class=&quot;language-text&quot;&gt;$S_t$&lt;/code&gt; with return &lt;code class=&quot;language-text&quot;&gt;$G_t$&lt;/code&gt;&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$
+\begin{align*}    
+N(s) &amp;amp; \leftarrow N(s) +1 \\
+V(S_t) &amp;amp; \leftarrow V(S_t) + \frac{1}{N(s)}(G_t - V(S_t))
+\end{align*}
+$&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;In non-stationary problems, it can be useful to track a running mean, i.e. forget old episodes.&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ V(S_t)  \leftarrow V(S_t) + \alpha(G_t - V(S_t)) $&lt;/code&gt;&lt;br&gt;
+&lt;span style=&quot;color:red&quot;&gt;what is stationary/non-stationary problems ???&lt;/span&gt;   &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Temporal-Difference Learning&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;TD methods learn directly from episodes of experience&lt;/li&gt;
+&lt;li&gt;TD is &lt;strong&gt;model-free&lt;/strong&gt;: no knowledge of MDP transitions / rewards &lt;/li&gt;
+&lt;li&gt;TD learns from incomplete episodes, by bootstrapping&lt;/li&gt;
+&lt;li&gt;TD updates a guess towards a guess&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;TD Policy Evaluation&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Simplest temporal-difference learning algorithm: TD(0) &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Update value &lt;code class=&quot;language-text&quot;&gt;$V(S_t)$&lt;/code&gt; toward estimated return &lt;code class=&quot;language-text&quot;&gt;$ R_{t+1} + \gamma V(S_{t+1})$&lt;/code&gt;&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ V(S_t) \leftarrow + \alpha(R_{t+1} + \gamma V(S_{t+1} - V(S_t))$&lt;/code&gt;    &lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;$ R_{t+1} + \gamma V(S_{t+1}$&lt;/code&gt; is called the TD target       &lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;$ \delta _t = R_{t+1} + \gamma V(S_{t+1} - V(S_t)$&lt;/code&gt; is called the TD error     &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;MC vs TD&lt;/h2&gt;
+&lt;h3&gt;Bias&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;TD can learn before knowing the final outcome&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;TD can learn online after every step&lt;/li&gt;
+&lt;li&gt;MC must wait until end of episode before return is known&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;TD can learn without the final outcome &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;TD can learn from incomplete sequences&lt;/li&gt;
+&lt;li&gt;MC can only learn from complete sequences&lt;/li&gt;
+&lt;li&gt;TD works in continuing (non-terminating) environments &lt;/li&gt;
+&lt;li&gt;MC only works for episodic (terminating) environments&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The return value&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Return &lt;code class=&quot;language-text&quot;&gt;$ G_t = R_{t+1} +  R_{t+2} + ... \gamma^{T-1}R_T $&lt;/code&gt;  is unbiased estimate of &lt;code class=&quot;language-text&quot;&gt;$ v_\pi(S_t)$&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;True TD target &lt;code class=&quot;language-text&quot;&gt;$ R_{t+1} + \gamma v_\pi(S_{t+1})$&lt;/code&gt; is is unbiased estimate of &lt;code class=&quot;language-text&quot;&gt;$ v_\pi(S_t)$&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;TD target &lt;code class=&quot;language-text&quot;&gt;$ R_{t+1} + \gamma V(S_{t+1})$&lt;/code&gt; is biased estimate of vπ(St)&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;TD target is much lower variance than the return:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Return depends on many random actions, transitions, rewards &lt;/li&gt;
+&lt;li&gt;TD target depends on one random action, transition, reward&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Variance&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;MC&lt;/th&gt;
+&lt;th&gt;TD&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;MC has high variance, zero bias&lt;/td&gt;
+&lt;td&gt;TD has low variance, some bias&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Good convergence properties&lt;/td&gt;
+&lt;td&gt;Usually more efficient than MC&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;(even with function approximation)&lt;/td&gt;
+&lt;td&gt;TD(0) converges to &lt;code class=&quot;language-text&quot;&gt;$v_\pi(s)$&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Not very sensitive to initial value&lt;/td&gt;
+&lt;td&gt;(but not always with function approximation)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Very simple to understand and use&lt;/td&gt;
+&lt;td&gt;More sensitive to initial value&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;markov property&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;TD exploits Markov property&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Usually more efficient in Markov environments&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MC does not exploit Markov property&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Usually more effective in non-Markov environments       &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;MC Backup: &lt;code class=&quot;language-text&quot;&gt;$ V(S_t) \leftarrow V(S_t) + \alpha(G_t-V(S_t))$&lt;/code&gt;&lt;br&gt;
+TD Backup: &lt;code class=&quot;language-text&quot;&gt;$ V(S_t) \leftarrow V(S_t) + \alpha(R_{t+1} + \gamma V(S_{t+1})-V(S_t))$&lt;/code&gt;&lt;br&gt;
+DP Backup: &lt;code class=&quot;language-text&quot;&gt;$ V(S_t) \leftarrow \mathbb{E}_\pi[ R_{t+1} + \gamma V(S_{t+1})] $&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;Unified view of reinforcement learning&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Bootstrapping: update involves an estimate &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MC does not bootstrap&lt;/li&gt;
+&lt;li&gt;DP bootstraps&lt;/li&gt;
+&lt;li&gt;TD bootstraps&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Sampling: update samples an expectation &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MC samples&lt;/li&gt;
+&lt;li&gt;DP does not sample &lt;/li&gt;
+&lt;li&gt;TD samples&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;/img/content/note/rl/unified_view_of_rl.png&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
+&lt;h2&gt;TD(λ)&lt;/h2&gt;
+&lt;h3&gt;n-step return&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Consider the followingn-step returns for &lt;code class=&quot;language-text&quot;&gt;$ n= 1,2,3, \dots, \infty$&lt;/code&gt;&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$
+\begin{align*}
+n=1          \ \ \ \ \ \      &amp;amp;  G_t^{(1)} =  R_{t+1} + \gamma V(S_{t+1})      \\
+n=2          \ \ \ \ \ \      &amp;amp;  G_t^{(2)} =  R_{t+1} + \gamma R_{t+2} + \gamma^2 V(S_{t+2})      \\
+\vdots       \ \ \ \ \ \      &amp;amp;  \vdots  \\
+n=\infty     \ \ \ \ \ \      &amp;amp;  G_t^{(\infty)} =   R_{t+1} + \gamma R_{t+2} + \dots +\gamma^{T-1}R_T      
+\end{align*}
+$&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Define the n-step return&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ G_t^{(n)} =  R_{t+1} + \gamma R_{t+2} + \dots + \gamma^n V(S_{t+n})   $&lt;/code&gt;         &lt;/li&gt;
+&lt;li&gt;n-step TD learning&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ V(S_t) \leftarrow V(S_t) + \alpha ( G_t^{(n)} - V(S_t)  )$&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Forward view of TD(λ)&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;averaging n-step returns&lt;/strong&gt;            &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;We can averagen-step returns over different n&lt;br&gt;
+e.g.  &lt;code class=&quot;language-text&quot;&gt;$ \frac{1}{2}G^{(2)} + \frac{1}{2}G^{(4)} $&lt;/code&gt;  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;λ-return&lt;/strong&gt;            &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The λ-return &lt;code class=&quot;language-text&quot;&gt;$G_t^\lambda$&lt;/code&gt; combines all n-step returns &lt;code class=&quot;language-text&quot;&gt;$G_t^{(n)}$&lt;/code&gt;        &lt;/li&gt;
+&lt;li&gt;Using weight &lt;code class=&quot;language-text&quot;&gt;$(1-\lambda)\lambda^{n-1}$&lt;/code&gt;&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ G_t^\lambda  = (1-\lambda)\sum_{n=1}^\infty \lambda^{n-1}G_t^{(n)} $&lt;/code&gt;       &lt;/li&gt;
+&lt;li&gt;Forward-view TD(λ)&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ V(S_t) \leftarrow V(S_t) + \alpha (G_t^\lambda - V(S_t)) $&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Update value function towards the λ-return&lt;br&gt;
+Forward-view looks into the future to compute &lt;code class=&quot;language-text&quot;&gt;$G_t^\lambda$&lt;/code&gt;&lt;br&gt;
+Like MC, can only be computed from complete episodes            &lt;/p&gt;
+&lt;h3&gt;Backward View TD(λ)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Forward view provides theory&lt;/li&gt;
+&lt;li&gt;Backward view provides mechanism&lt;/li&gt;
+&lt;li&gt;Update online, every step, from incomplete sequences&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Excises&lt;/h1&gt;</content:encoded></item><item><title><![CDATA[3 Planning by Dynamic Programming]]></title><description><![CDATA[Key Points Dynamic programming assumes full knowledge of the MDP value evaluation given MDP and policy  , compute the state value  just…]]></description><link>https://zhoumingjun.github.io/series/rl/3_planning_by_dynamic_programming/</link><guid isPermaLink="false">https://zhoumingjun.github.io/series/rl/3_planning_by_dynamic_programming/</guid><pubDate>Fri, 10 Mar 2017 04:03:48 GMT</pubDate><content:encoded>&lt;h1&gt;Key Points&lt;/h1&gt;
+&lt;p&gt;Dynamic programming assumes full knowledge of the MDP&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;value evaluation&lt;/strong&gt;&lt;br&gt;
+given MDP and policy &lt;code class=&quot;language-text&quot;&gt;$\pi$&lt;/code&gt;, compute the state value &lt;code class=&quot;language-text&quot;&gt;$v_\pi$&lt;/code&gt;&lt;br&gt;
+just follows the bellmen equation , and compute value of each state iteratively&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$
+\begin{align*}
+v_{k+1}(s)  &amp;amp;= \sum_{a \in \mathcal{A}} \pi(a|s)  (\mathcal{R}_s^a + \gamma \sum_{s&amp;#39; \in \mathcal{S}} \mathcal{P}_{ss&amp;#39;}^a v_k(s&amp;#39;) ) \\
+v_{k+1} &amp;amp;= \mathcal{R}^\pi + \gamma \mathcal{P}^\pi v_k
+\end{align*}
+$&lt;/code&gt;   &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;policy optimality&lt;/strong&gt;&lt;br&gt;
+given MDP, compute the optimal policy &lt;code class=&quot;language-text&quot;&gt;$\pi_*$&lt;/code&gt;           &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Policy iteration&lt;br&gt;
+Policy iteration try to find the optimal policy &lt;code class=&quot;language-text&quot;&gt;$\pi_*$&lt;/code&gt; by improving the current policy &lt;code class=&quot;language-text&quot;&gt;$\pi$&lt;/code&gt; step-by-step&lt;br&gt;
+The key is greedy algorithm&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ \pi&amp;#39;(s) = \operatorname*{arg\,max}\limits_{a \in \mathcal{A}} q_\pi(s,a))$&lt;/code&gt;      &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Value iteration&lt;br&gt;
+Value iteration try to find the optimal policy &lt;code class=&quot;language-text&quot;&gt;$\pi_*$&lt;/code&gt; by the known solutions to the sub problems&lt;br&gt;
+It is different to the policy iteration, and there is no explicit policy&lt;br&gt;
+The key is compute state value from all the successor states(the known solution of the subproblem)&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ 
+\begin{align*} v_{k+1}(s) &amp;amp;= \max\limits_{a \in \mathcal{A}} (\mathcal{R}_s^a + \gamma\sum_{s&amp;#39; \in \mathcal{S}} \mathcal{P}_{ss&amp;#39;}^a v_*(s&amp;#39;) ) \\
+              v_{k+1} &amp;amp;= \max\limits_{a \in \mathcal{A}} (\mathcal{R}^a + \gamma\mathcal{P}^av_k) 
+\end{align*} 
+$&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Lecture&lt;/h1&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Dynamic Programming is a very general solution method forproblems which have two properties:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Optimal substructure&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Principle of optimality applies&lt;/li&gt;
+&lt;li&gt;Optimal solution can be decomposed into subproblems&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Overlapping subproblems&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Subproblems recur many times&lt;/li&gt;
+&lt;li&gt;Solutions can be cached and reused&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Markov decision processes satisfy both properties&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bellman equation gives recursive decomposition&lt;/li&gt;
+&lt;li&gt;Value function stores and reuses solutions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Policy Evaluation&lt;/h2&gt;
+&lt;h3&gt;definition&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Problem:  evaluate a given policy       &lt;/li&gt;
+&lt;li&gt;Solution:  iterative application of Bellman expectation backup&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ v_1 -&amp;gt; v_2 -&amp;gt; v_3 $&lt;/code&gt;             &lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Using synchronous backups,          &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;At each iterationk+ 1&lt;/li&gt;
+&lt;li&gt;For all statess &lt;code class=&quot;language-text&quot;&gt;$ s \in \mathcal{S} $&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Update &lt;code class=&quot;language-text&quot;&gt;$ v_{k+1}(s) $&lt;/code&gt; from   &lt;code class=&quot;language-text&quot;&gt;$ v_{k}(s&amp;#39;)$&lt;/code&gt; wheres &lt;code class=&quot;language-text&quot;&gt;$s&amp;#39;$&lt;/code&gt; is a sucdessor state of s&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;equation&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;viz-dot&quot;&gt;&lt;pre class=&quot;language-viz-dot&quot;&gt;&lt;code class=&quot;language-viz-dot&quot;&gt;digraph g { 
+   node[shape=&amp;quot;circle&amp;quot; , label=&amp;quot;&amp;quot;, width=0.2, height=0.2]
+   l1[xlabel=&amp;quot;Vk+1\(s\)&amp;quot;]
+   l21[xlabel=&amp;quot;a&amp;quot;, width=0.1, height=0.1 , style=filled]
+   l22[width=0.1, height=0.1, style=filled]
+   l31[xlabel=&amp;quot;Vk\(s&amp;#39;\)&amp;quot;]
+
+   l1 -&amp;gt; l21
+   l1 -&amp;gt; l22
+   l21 -&amp;gt; l31 [xlabel=&amp;quot;r&amp;quot;]
+   l21 -&amp;gt; l32
+   l22 -&amp;gt; l33
+   l22 -&amp;gt; l34
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$
+\begin{align*}
+v_{k+1}(s)  &amp;amp;= \sum_{a \in \mathcal{A}} \pi(a|s)  (\mathcal{R}_s^a + \gamma \sum_{s&amp;#39; \in \mathcal{S}} \mathcal{P}_{ss&amp;#39;}^a v_k(s&amp;#39;) ) \\
+v_{k+1} &amp;amp;= \mathcal{R}^\pi + \gamma \mathcal{P}^\pi v_k
+\end{align*}
+$&lt;/code&gt;         &lt;/p&gt;
+&lt;h2&gt;Policy Iteration&lt;/h2&gt;
+&lt;h3&gt;definition&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Given a policy &lt;code class=&quot;language-text&quot;&gt;$ \pi $&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Evaluate the policy &lt;code class=&quot;language-text&quot;&gt;$ \pi $&lt;/code&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ v_\pi(s) = \mathcal{E}[R_{t+1} + \gamma$_{t+2} + ... | S_t=s ]$&lt;/code&gt;     &lt;/li&gt;
+&lt;li&gt;Improve the policy by acting greedily with respect to &lt;code class=&quot;language-text&quot;&gt;$ v_\pi $&lt;/code&gt;&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ \pi&amp;#39; = greedy(v_\pi) $&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;/img/content/note/rl/policy_iteration.png&quot; alt=&quot; policy iteration &quot;&gt; &lt;/p&gt;
+&lt;h3&gt;policy improvement&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Consider a deterministic policy, &lt;code class=&quot;language-text&quot;&gt;$ a=\pi(s)$&lt;/code&gt;      &lt;/li&gt;
+&lt;li&gt;We can improve the poilcy by acting greedily&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ \pi&amp;#39;(s) = \operatorname*{arg\,max}\limits_{a \in \mathcal{A}} q_\pi(s,a))$&lt;/code&gt;      &lt;/li&gt;
+&lt;li&gt;This improves the value from any state s over one step&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ q_\pi(s, \pi&amp;#39;(s)) = \max\limits_{a \in \mathcal{A}} q_\pi (s,a)   \geqslant q_\pi(s, \pi(s)) = v_\pi(s) $&lt;/code&gt;       &lt;/li&gt;
+&lt;li&gt;It therefore improves the value function, &lt;code class=&quot;language-text&quot;&gt;$ v_\pi&amp;#39;(s) \geqslant v_\pi(s) $&lt;/code&gt;&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$
+\begin{align*}
+v_\pi(s)&amp;amp; \leqslant q_\pi(s,\pi&amp;#39;(s))   \\
+    &amp;amp; \leqslant \mathbb{E}_{\pi&amp;#39;}[R_{t+1} + \gamma v_\pi(S_{t+1}) | S_t = s]    \\
+    &amp;amp; \leqslant \mathbb{E}_{\pi&amp;#39;}[R_{t+1} + \gamma q_\pi(S_{t+1}, \pi&amp;#39;(S_{t+1})) | S_t = s]    \\
+    &amp;amp; \leqslant \mathbb{E}_{\pi&amp;#39;}[R_{t+1} + \gamma R_{t+2} + \gamma^2 q_\pi(S_{t+2}, \pi&amp;#39;(S_{t+2})) | S_t = s]    \\
+    &amp;amp; \leqslant \mathbb{E}_{\pi&amp;#39;}[R_{t+1} + \gamma R_{t+2} + \dots| S_t = s]    \\
+    &amp;amp;= v_{\pi&amp;#39;}(s)
+\end{align*}
+$&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;if improvements stop,&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ q_\pi(s, \pi&amp;#39;(s)) = \max\limits_{a \in \mathcal{A}} q_\pi (s,a) = q_\pi(s, \pi(s)) = v_\pi(s) $&lt;/code&gt;         &lt;/li&gt;
+&lt;li&gt;Then the Bellman optimality equation has been satisfied&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ v_\pi(s) \max\limits_{a \in \mathbb{A}} q_\pi(s,a) $&lt;/code&gt;  &lt;/li&gt;
+&lt;li&gt;Therefore &lt;code class=&quot;language-text&quot;&gt;$ v_\pi(s) v_*(s)  \text{   for all} s \in \mathbb(S) $&lt;/code&gt;       &lt;/li&gt;
+&lt;li&gt;so &lt;code class=&quot;language-text&quot;&gt;$\pi$&lt;/code&gt; is an optimal policy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;extensions to policy iteration&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/img/content/note/rl/generalised_policy_iteration.png&quot; alt=&quot; generalised policy iteration &quot;&gt; &lt;/p&gt;
+&lt;h2&gt;Value Iteration&lt;/h2&gt;
+&lt;h3&gt;definition&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Problem:  find optimal policy &lt;code class=&quot;language-text&quot;&gt;$\pi$&lt;/code&gt;     &lt;/li&gt;
+&lt;li&gt;Solution:  iterative application of Bellman optimality backup&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ v_1 -&amp;gt; v_2 -&amp;gt; \dots -&amp;gt; v_* $&lt;/code&gt;             &lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Using synchronous backups,          &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;At each iteration k+1&lt;/li&gt;
+&lt;li&gt;For all statess &lt;code class=&quot;language-text&quot;&gt;$ s \in \mathcal{S} $&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Update &lt;code class=&quot;language-text&quot;&gt;$ v_{k+1}(s) $&lt;/code&gt; from   &lt;code class=&quot;language-text&quot;&gt;$ v_{k}(s&amp;#39;)$&lt;/code&gt; &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Convergence to &lt;code class=&quot;language-text&quot;&gt;$v_*$&lt;/code&gt;  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Unlike policy iteration, there is no explicit policy&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Intermediate value functions may not correspond to any policy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Principle of Optimality&lt;/h3&gt;
+&lt;p&gt;Any optimal policy can be subdivided into two components&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;An optimal first action &lt;code class=&quot;language-text&quot;&gt;$A_*$&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Followed by an optimal policy from successor state &lt;code class=&quot;language-text&quot;&gt;$\mathbb{S}&amp;#39;$&lt;/code&gt;        &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Theorem&lt;/strong&gt;&lt;br&gt;
+A policy &lt;code class=&quot;language-text&quot;&gt;$ \pi(a|s)$&lt;/code&gt; achieves the optimal value from state s, &lt;code class=&quot;language-text&quot;&gt;$v_\pi(s) = v_*(s)$&lt;/code&gt;, if and only if            &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;For any state &lt;code class=&quot;language-text&quot;&gt;$s&amp;#39;$&lt;/code&gt; reachable from s     &lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;$\pi$&lt;/code&gt; achieves the optimal value from state &lt;code class=&quot;language-text&quot;&gt;$s&amp;#39;$&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;$ v_\pi(s&amp;#39;) = v_*(s&amp;#39;) $&lt;/code&gt;       &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;so if we know the subproblem’s solution &lt;code class=&quot;language-text&quot;&gt;$v_*(s&amp;#39;)$&lt;/code&gt;,&lt;code class=&quot;language-text&quot;&gt;$v_*(s)$&lt;/code&gt; can be found by one-step lookahead&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ v_*(s) &amp;lt;- \max\limits_{a \in \mathbb{A}} R_s^a + \gamma\sum_{s&amp;#39; \in \mathcal{S}} \mathcal{P}_{ss&amp;#39;}^a v_*(s&amp;#39;) $&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Here is the final algorithm:&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$
+\begin{align*}
+v_{k+1}(s) &amp;amp;= \max\limits_{a \in \mathcal{A}} (\mathcal{R}_s^a + \gamma\sum_{s&amp;#39; \in \mathcal{S}} \mathcal{P}_{ss&amp;#39;}^a v_*(s&amp;#39;)  ) \\ 
+v_{k+1}    &amp;amp;= \max\limits_{a \in \mathcal{A}} (\mathcal{R}^a + \gamma\mathcal{P}^av_k)
+\end{align*}
+$&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;Extensions to Dynamic Programming&lt;/h2&gt;
+&lt;h2&gt;Contraction Mapping&lt;/h2&gt;
+&lt;h1&gt;Excises&lt;/h1&gt;
+&lt;h2&gt;Policy Evaluation Solution&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/zhoumingjun/reinforcement-learning/blob/master/DP/Policy%20Evaluation%20Solution%202.ipynb&quot;&gt;algorithm&lt;/a&gt;&lt;br&gt;
+This is a modified version, and I only make the bellman_equation as a function to make it easier to understand.&lt;br&gt;
+The key is the bellman equation .           &lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$
+\begin{align*}
+v_{k+1}(s)  &amp;amp;= \sum_{a \in \mathcal{A}} \pi(a|s)  (\mathcal{R}_s^a + \gamma \sum_{s&amp;#39; \in \mathcal{S}} \mathcal{P}_{ss&amp;#39;}^a v_k(s&amp;#39;) ) \\
+v_{k+1} &amp;amp;= \mathcal{R}^\pi + \gamma \mathcal{P}^\pi v_k
+\end{align*}
+$&lt;/code&gt;  &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;bellman_equation&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;policy&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; env&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; V&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; s&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; gamma &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token triple-quoted-string string&quot;&gt;&quot;&quot;&quot;
+    compute the state value according to the ballman equation
+
+    Args:
+        policy: [S, A] shaped matrix representing the policy.
+        env: OpenAI env. env.P represents the transition probabilities of the environment.
+            env.P[s][a] is a (prob, next_state, reward, done) tuple.
+        V: the values of the states
+        s: the state,
+        gamma: gamma discount factor.
+
+    Returns:
+        the value of the state s
+    &quot;&quot;&quot;&lt;/span&gt;    
+    v &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; action&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; action_prob &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;enumerate&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;policy&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;s&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt;  state_transition_prob&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; next_state&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; reward&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; done &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; env&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;P&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;s&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;action&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;token comment&quot;&gt;# Calculate the expected value&lt;/span&gt;
+            v &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; action_prob &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; state_transition_prob &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;reward &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; gamma &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; V&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;next_state&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; v&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;some explanation:   &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;action&lt;em&gt;prob
+action&lt;/em&gt;prob is action probability, which is  &lt;code class=&quot;language-text&quot;&gt;$\pi(a|s)$&lt;/code&gt;  &lt;/li&gt;
+&lt;li&gt;state&lt;em&gt;transition&lt;/em&gt;prob&lt;br&gt;
+state&lt;em&gt;transition&lt;/em&gt;prob is state transition probability, which is &lt;code class=&quot;language-text&quot;&gt;$P_(ss&amp;#39;)^\pi$&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;policy iteration&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/zhoumingjun/reinforcement-learning/blob/master/DP/Policy%20Iteration%20Solution%202.ipynb&quot;&gt;algorithm&lt;/a&gt;&lt;br&gt;
+The key is the greedy algorithm, that is&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ \pi&amp;#39;(s) = \operatorname*{arg\,max}\limits_{a \in \mathcal{A}} q_\pi(s,a))$&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;greedy&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;env&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; policy&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; V&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; discount_factor&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1.0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    policy_stable &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; s &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;env&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;nS&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;# The best action we would take under the currect policy&lt;/span&gt;
+        chosen_a &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; np&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;argmax&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;policy&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;s&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+        &lt;span class=&quot;token comment&quot;&gt;# Find the best action by one-step lookahead&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;# Ties are resolved arbitarily&lt;/span&gt;
+        action_values &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; np&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;zeros&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;env&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;nA&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; a &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;env&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;nA&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; prob&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; next_state&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; reward&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; done &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; env&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;P&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;s&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;a&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+                action_values&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;a&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; prob &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;reward &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; discount_factor &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; V&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;next_state&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        best_a &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; np&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;argmax&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;action_values&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+        &lt;span class=&quot;token comment&quot;&gt;# Greedily update the policy&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; chosen_a &lt;span class=&quot;token operator&quot;&gt;!=&lt;/span&gt; best_a&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+            policy_stable &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;False&lt;/span&gt;
+        policy&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;s&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; np&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;eye&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;env&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;nA&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;best_a&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+        
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt;   policy &lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; policy_stable&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;value iteration&lt;/h2&gt;
+&lt;p&gt;The key is one&lt;em&gt;step&lt;/em&gt;lookahead, that is compute the max value of the state from all the successor states&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ 
+\begin{align*} v_{k+1}(s) &amp;amp;= \max\limits_{a \in \mathcal{A}} (\mathcal{R}_s^a + \gamma\sum_{s&amp;#39; \in \mathcal{S}} \mathcal{P}_{ss&amp;#39;}^a v_*(s&amp;#39;) ) \\
+                  v_{k+1} &amp;amp;= \max\limits_{a \in \mathcal{A}} (\mathcal{R}^a + \gamma\mathcal{P}^av_k) 
+\end{align*} 
+$&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;    &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;one_step_lookahead&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;state&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; V&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token triple-quoted-string string&quot;&gt;&quot;&quot;&quot;
+        Helper function to calculate the value for all action in a given state.
+        
+        Args:
+            state: The state to consider (int)
+            V: The value to use as an estimator, Vector of length env.nS
+        
+        Returns:
+            A vector of length env.nA containing the expected value of each action.
+        &quot;&quot;&quot;&lt;/span&gt;
+        A &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; np&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;zeros&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;env&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;nA&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; a &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;env&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;nA&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; prob&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; next_state&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; reward&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; done &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; env&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;P&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;state&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;a&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+                A&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;a&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; prob &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;reward &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; discount_factor &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; V&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;next_state&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; A
+
+    A &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; one_step_lookahead&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;s&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; V&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;        
+    best_action_value &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; np&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;A&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;        &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Using MathJax and Graphviz with Hugo]]></title><description><![CDATA[MathJax support configuration Hugo doc MathJax doc       example code      result graphviz support configuration example code…]]></description><link>https://zhoumingjun.github.io/post/2017-03-10-using-mathjax-viz-with-hugo/</link><guid isPermaLink="false">https://zhoumingjun.github.io/post/2017-03-10-using-mathjax-viz-with-hugo/</guid><pubDate>Fri, 10 Mar 2017 03:40:12 GMT</pubDate><content:encoded>&lt;h1&gt;MathJax support&lt;/h1&gt;
 &lt;h2&gt;configuration&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://gohugo.io/tutorials/mathjax/&quot;&gt;Hugo doc&lt;/a&gt;&lt;br&gt;
 &lt;a href=&quot;http://docs.mathjax.org/en/latest/configuration.html?#using-plain-javascript&quot;&gt;MathJax doc&lt;/a&gt;     &lt;/p&gt;
@@ -293,5 +1176,312 @@ echo &amp;quot;2&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/all/arp_announce&lt;
    l21 -&amp;gt; l32
    l22 -&amp;gt; l33
    l22 -&amp;gt; l34
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[First Post]]></title><description><![CDATA[I build this site to boost my daily work.  This website is powered by  Academic ,  Hugo , and  GitHub Pages .   ]]></description><link>https://zhoumingjun.github.io/post/2017-03-06-first-post/</link><guid isPermaLink="false">https://zhoumingjun.github.io/post/2017-03-06-first-post/</guid><pubDate>Mon, 06 Mar 2017 08:03:35 GMT</pubDate><content:encoded>&lt;p&gt;I build this site to boost my daily work. &lt;/p&gt;
-&lt;p&gt;This website is powered by &lt;a href=&quot;https://github.com/gcushen/hugo-academic&quot;&gt;Academic&lt;/a&gt;, &lt;a href=&quot;https://gohugo.io&quot;&gt;Hugo&lt;/a&gt;, and &lt;a href=&quot;https://github.com/&quot;&gt;GitHub Pages&lt;/a&gt;.   &lt;/p&gt;</content:encoded></item></channel></rss>
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[2 Markov Decision Processes]]></title><description><![CDATA[Key points state action relation 
+This describe the relation between state and action.  Bellman equation
+Bellman equation is the key to the…]]></description><link>https://zhoumingjun.github.io/series/rl/2_markov_decision_processes/</link><guid isPermaLink="false">https://zhoumingjun.github.io/series/rl/2_markov_decision_processes/</guid><pubDate>Thu, 09 Mar 2017 03:26:55 GMT</pubDate><content:encoded>&lt;h1&gt;Key points&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;state action relation
+This describe the relation between state and action. &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;$ v_\pi(s) = \sum_{a \in \mathcal{A}} \pi(a|s) q_\pi(s,a)  $&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;$ q_\pi(s,a) = \mathcal{R}_s^a + \gamma \sum_{s&amp;#39; \in \mathcal{S}} \mathcal{P}_{ss&amp;#39;}^a v_\pi(s&amp;#39;) $&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;viz-dot&quot;&gt;&lt;pre class=&quot;language-viz-dot&quot;&gt;&lt;code class=&quot;language-viz-dot&quot;&gt;digraph g { 
+   node[shape=&amp;quot;circle&amp;quot; , label=&amp;quot;&amp;quot;, width=0.2, height=0.2]
+   l1[xlabel=&amp;quot;v\(s\)&amp;quot;]
+   l21[xlabel=&amp;quot;a&amp;quot;, width=0.1, height=0.1 , style=filled]
+   l22[width=0.1, height=0.1, style=filled]
+   l31[xlabel=&amp;quot;v\(s&amp;#39;\)&amp;quot;]
+
+   l1 -&amp;gt; l21
+   l1 -&amp;gt; l22
+   l21 -&amp;gt; l31 [xlabel=&amp;quot;r&amp;quot;]
+   l21 -&amp;gt; l32
+   l22 -&amp;gt; l33
+   l22 -&amp;gt; l34
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Bellman equation
+Bellman equation is the key to the MDP, and it describe the relation of the elements in MDP  &lt;code class=&quot;language-text&quot;&gt;$ &amp;lt;\mathcal{S}, \mathcal{A}, \mathcal{P}, \mathcal{R}, \gamma&amp;gt; $&lt;/code&gt;&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ v_\pi = \mathcal{R}_\pi + \gamma \mathcal{P}_\pi v  $&lt;/code&gt;&lt;br&gt;
+state-value function and action-value function can be described recursivly according to the state-action relation equation      &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;state-value function &lt;code class=&quot;language-text&quot;&gt;$ v_\pi(s)  = \sum_{a \in \mathcal{A}} \pi(a|s)  (\mathcal{R}_s^a + \gamma \sum_{s&amp;#39; \in \mathcal{S}} \mathcal{P}_{ss&amp;#39;}^a v_\pi(s&amp;#39;) ) $&lt;/code&gt;        &lt;/li&gt;
+&lt;li&gt;action-value function &lt;code class=&quot;language-text&quot;&gt;$ q_\pi(s,a)  = \mathcal{R}_s^a + \gamma \sum_{s&amp;#39; \in \mathcal{S}} \mathcal{P}_{ss&amp;#39;}^a \sum_{a \in \mathcal{A}} \pi(a&amp;#39;|s&amp;#39;) q_\pi(s&amp;#39;,a&amp;#39;) $&lt;/code&gt;     &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Optimal Policy&lt;br&gt;
+The way to find a policy &lt;code class=&quot;language-text&quot;&gt;$ \pi_*$&lt;/code&gt; over &lt;code class=&quot;language-text&quot;&gt;$ \pi $&lt;/code&gt;&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ 
+\pi_*(a|s) = 
+\begin{cases}
+1, &amp;amp; \text{if }  a= \operatorname*{arg\,max}\limits_{a \in \mathcal{A}} q_*(s,a))    \\
+0, &amp;amp; \text{otherwise}
+\end{cases}
+$&lt;/code&gt;
+&lt;code class=&quot;language-text&quot;&gt;$  v_*(s) = \max\limits_a q_* (s,a)  \ \ \ \ \    q_*(s,a) = R_s^a + \gamma\sum_{s&amp;#39; \in \mathcal{S}} \mathcal{P}_{ss&amp;#39;}^a v_*(s&amp;#39;) $&lt;/code&gt;&lt;br&gt;
+Then we get the following optimal policy            &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;state-value function: &lt;code class=&quot;language-text&quot;&gt;$ v_*(s) = \max\limits_a R_s^a + \gamma\sum_{s&amp;#39; \in \mathcal{S}} \mathcal{P}_{ss&amp;#39;}^a v_*(s&amp;#39;) $&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;action-value function: &lt;code class=&quot;language-text&quot;&gt;$ q_*(s,a) = R_s^a + \gamma\sum_{s&amp;#39; \in \mathcal{S}} \mathcal{P}_{ss&amp;#39;}^a \max\limits_a&amp;#39; q_*(s&amp;#39;,a&amp;#39;) $&lt;/code&gt;  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Lecture Notes&lt;/h1&gt;
+&lt;h2&gt;Markov Processes&lt;/h2&gt;
+&lt;p&gt;A state &lt;code class=&quot;language-text&quot;&gt;$S_t$&lt;/code&gt; is Markov if and only if &lt;code class=&quot;language-text&quot;&gt;$ \mathbb{P}[S_{t+1} | s_t] = \mathbb{P}[S_{t+1}|S_1, ... , S_t] $&lt;/code&gt;&lt;br&gt;
+A Markov Process (or Markov Chain) is a tuple &lt;code class=&quot;language-text&quot;&gt;$ &amp;lt;\mathcal{S}, \mathcal{P}&amp;gt; $&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;$\mathcal{S}$&lt;/code&gt; is a (finite) set of states&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;$\mathcal{P}$&lt;/code&gt; is a state transition probability matrix&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ \mathcal{P} = \mathbb{P}[S_{t+1} = s&amp;#39; | S_t = s] $&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Markov Reward Processes&lt;/h2&gt;
+&lt;h3&gt;definition&lt;/h3&gt;
+&lt;p&gt;A Markov reward process is a Markov chain with values.&lt;br&gt;
+A Markov Reward Process is a tuple  &lt;code class=&quot;language-text&quot;&gt;$ &amp;lt;\mathcal{S}, \mathcal{P}, \mathcal{R}, \gamma&amp;gt; $&lt;/code&gt;   &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;$ \mathcal{S} $&lt;/code&gt; is a finite set of states   &lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;$ \mathcal{P} $&lt;/code&gt; is a state transition probability matrix,&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ \mathcal{P}_{ss&amp;#39;} = \mathbb{P}[S_{t+1} = s&amp;#39; | S_t = s] $&lt;/code&gt;  &lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;$ \mathcal{R} $&lt;/code&gt; is a reward function,&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ \mathcal{R}_s =  \mathbb{E}[R_{t+1} | S_t=s]$&lt;/code&gt;   &lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;$ \gamma $&lt;/code&gt; is a discount factor,  &lt;code class=&quot;language-text&quot;&gt;$ \gamma \in [0,1]$&lt;/code&gt;     &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Return&lt;/h3&gt;
+&lt;p&gt;The return Gt is the total discounted reward from time-step t.&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ G_t = R_{t+1} +  R_{t+2} + ... = \sum_{k=0} ^\infty \gamma^kR_{t+k+1} $&lt;/code&gt;     &lt;/p&gt;
+&lt;h3&gt;Value Function&lt;/h3&gt;
+&lt;p&gt;The state value function v(s) of an MRP is the expected return starting from state s&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$  v(s) = \mathbb{E}[G_t | S_t =s] $&lt;/code&gt;    &lt;/p&gt;
+&lt;h3&gt;Bellman Equation for MRPs&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ 
+\begin{align*}
+    v(s) &amp;amp;= \mathbb{E}[G_t | S_t =s]  \\ 
+         &amp;amp;= \mathbb{E}[R_{t+1} + \gamma v(S_{t+1}) | S_t =s]     \\     
+         &amp;amp;= \mathcal{R}_s + \gamma \sum_{s&amp;#39; \in \mathcal{S}} \mathcal{P}_{ss&amp;#39;} v(s&amp;#39;)
+\end{align*}    
+$&lt;/code&gt;  &lt;/p&gt;
+&lt;h3&gt;Bellman Equation in Matrix Form&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ 
+\begin{align*}
+v &amp;amp;= \mathcal{R} + \gamma \mathcal{P}v \\
+v &amp;amp;= (1-\gamma\mathcal{P})^{-1}\mathcal{R}
+\end{align*}
+$&lt;/code&gt;&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ 
+\begin{bmatrix}
+    v_{1} \\
+    \vdots \\
+    v_{m}  
+\end{bmatrix} = 
+\begin{bmatrix}
+    \mathcal{R}_{1} \\
+    \vdots \\
+    \mathcal{R}_{m}  
+\end{bmatrix} + r
+\begin{bmatrix}
+    \mathcal{P}_{11} \dots \mathcal{P}_{1n} \\
+    \vdots \\
+    \mathcal{P}_{n1} \dots \mathcal{P}_{nn}  
+\end{bmatrix} 
+\begin{bmatrix}
+    v_{1} \\
+    \vdots \\
+    v_{m}  
+\end{bmatrix} 
+$&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;Markov Decision Processes&lt;/h2&gt;
+&lt;h3&gt;definition&lt;/h3&gt;
+&lt;p&gt;A Markov decision process (MDP) is a Markov reward process with decisions.&lt;br&gt;
+It is an environment in which all states are Markov.&lt;br&gt;
+A Markov Decision Process is a tuple  &lt;code class=&quot;language-text&quot;&gt;$ &amp;lt;\mathcal{S}, \mathcal{A}, \mathcal{P}, \mathcal{R}, \gamma&amp;gt; $&lt;/code&gt;    &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;$ \mathcal{S} $&lt;/code&gt; is a finite set of states   &lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;$ \mathcal{A} $&lt;/code&gt; is a finite set of actions&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;$ \mathcal{P} $&lt;/code&gt; is a state transition probability matrix,&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ \mathcal{P}_{ss&amp;#39;}^a = \mathbb{P}[S_{t+1} = s&amp;#39; | S_t=s, A_t = a] $&lt;/code&gt;  &lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;$ \mathcal{R} $&lt;/code&gt; is a reward function,&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ \mathcal{R}_s^a =  \mathbb{E}[R_{t+1} | S_t=s, A_t = a] $&lt;/code&gt;   &lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;$ \gamma $&lt;/code&gt; is a discount factor,  &lt;code class=&quot;language-text&quot;&gt;$ \gamma \in [0,1]$&lt;/code&gt;  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;policy&lt;/h3&gt;
+&lt;p&gt;A policy &lt;code class=&quot;language-text&quot;&gt;$ \pi $&lt;/code&gt; is a distribution over actions given states,&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ \pi(a|s) =\mathbb{P}[A_t=a|S_t=s] $&lt;/code&gt;&lt;br&gt;
+Policies are stationary (time-independent),&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ A_t \sim \pi(\cdot|S_t) $&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Given an MDP &lt;code class=&quot;language-text&quot;&gt;$ \mathcal{M} = &amp;lt;\mathcal{S}, \mathcal{A}, \mathcal{P}, \mathcal{R}, \gamma&amp;gt; $&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;The state sequence &lt;code class=&quot;language-text&quot;&gt;$ S_1, S_2, S_3, \dots $&lt;/code&gt; is a Markov process &lt;code class=&quot;language-text&quot;&gt;$ &amp;lt;\mathcal{S}, \mathcal{P^\pi}&amp;gt; $&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;The state and reward sequence &lt;code class=&quot;language-text&quot;&gt;$ S_1, S_2, S_3, \dots $&lt;/code&gt; is a Markov reward process  &lt;code class=&quot;language-text&quot;&gt;$ &amp;lt;\mathcal{S}, \mathcal{P}^\pi, \mathcal{R}^\pi, \gamma&amp;gt; $&lt;/code&gt;   &lt;/li&gt;
+&lt;li&gt;where
+&lt;code class=&quot;language-text&quot;&gt;$
+\begin{align*}
+\mathcal{P}_{ss&amp;#39;}^\pi &amp;amp;= \sum_{a \in \mathcal{A}} \pi(a|s)  \mathcal{P}_{ss&amp;#39;}^a \\
+\mathcal{R}_{s}^\pi &amp;amp;= \sum_{a \in \mathcal{A}} \pi(a|s)  \mathcal{R}_{s}^a
+\end{align*}
+$&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;value function&lt;/h3&gt;
+&lt;p&gt;The state-value function &lt;code class=&quot;language-text&quot;&gt;$ v_\pi(s) $&lt;/code&gt;  of an MDP is the expected return starting from state s, and then following policy &lt;code class=&quot;language-text&quot;&gt;$ \pi $&lt;/code&gt;&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$  v_\pi(s) = \mathbb{E}_\pi[G_t | S_t =s] $&lt;/code&gt;    &lt;/p&gt;
+&lt;p&gt;The action-value function &lt;code class=&quot;language-text&quot;&gt;$ q_\pi(s,a) $&lt;/code&gt; is the expected return starting from state s, taking action a, and then following policy &lt;code class=&quot;language-text&quot;&gt;$ \pi $&lt;/code&gt;&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$  q_\pi(s,a) = \mathbb{E}_\pi[G_t | S_t =s,A_t=a] $&lt;/code&gt;    &lt;/p&gt;
+&lt;h3&gt;Bellman Expectation Equation&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;state-value function&lt;/strong&gt;&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ 
+\begin{align*}
+v_\pi(s) &amp;amp;=\mathbb{E}_\pi[R_{t+1} + \gamma v_\pi(S_{t+1}) | S_t =s] \\
+v_\pi(s) &amp;amp;= \sum_{a \in \mathcal{A}} \pi(a|s) q_\pi(s,a) \\
+         &amp;amp;= \sum_{a \in \mathcal{A}} \pi(a|s)  (\mathcal{R}_s^a + \gamma \sum_{s&amp;#39; \in \mathcal{S}} \mathcal{P}_{ss&amp;#39;}^a v_\pi(s&amp;#39;) ) 
+\end{align*}
+$&lt;/code&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;action-value function&lt;/strong&gt;&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$
+\begin{align*}
+q_\pi(s,a) &amp;amp;= \mathbb{E}_\pi[R_{t+1} + \gamma q_\pi(S_{t+1}, A_{t+1})| S_t =s,A_t=a] \\
+q_\pi(s,a) &amp;amp;= \mathcal{R}_s^a + \gamma \sum_{s&amp;#39; \in \mathcal{S}} \mathcal{P}_{ss&amp;#39;}^a v_\pi(s&amp;#39;) \\
+           &amp;amp;= \mathcal{R}_s^a + \gamma \sum_{s&amp;#39; \in \mathcal{S}} \mathcal{P}_{ss&amp;#39;}^a \sum_{a \in \mathcal{A}} \pi(a&amp;#39;|s&amp;#39;) q_\pi(s&amp;#39;,a&amp;#39;)
+\end{align*}
+$&lt;/code&gt; &lt;/p&gt;
+&lt;h3&gt;Bellman Equation in Matrix Form&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ 
+\begin{align*}
+v_\pi &amp;amp;= \mathcal{R}_\pi + \gamma \mathcal{P}_\pi v \\
+v_\pi &amp;amp;= (1-\gamma\mathcal{P}_\pi)^{-1}\mathcal{R}_\pi
+\end{align*}
+$&lt;/code&gt;    &lt;/p&gt;
+&lt;h3&gt;Optimal Value Function&lt;/h3&gt;
+&lt;h4&gt;definition&lt;/h4&gt;
+&lt;p&gt;The optimal state-value function &lt;code class=&quot;language-text&quot;&gt;$ v_*(s)$&lt;/code&gt; is the maximum value function over all policies&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ v_*(s)=\max\limits_{\pi}v_{\pi}(s) $&lt;/code&gt;&lt;br&gt;
+The optimal action-value function q⇤(s,a) is the maximum action-value function over all policies&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ q_*(s,a)=\max\limits_{\pi}v_{\pi}(s,a) $&lt;/code&gt;    &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The optimal value function specifies the best possible performance in the MDP.&lt;/li&gt;
+&lt;li&gt;An MDP is “solved” when we know the optimal value fn. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Optimal policy&lt;/h4&gt;
+&lt;p&gt;Define a partial ordering over policies
+&lt;code class=&quot;language-text&quot;&gt;$ \pi \geqslant \pi&amp;#39; \ if\ v_\pi(s) \geqslant v_\pi&amp;#39;(s), \forall s $&lt;/code&gt;&lt;br&gt;
+&lt;strong&gt;Theorem&lt;/strong&gt;
+For any Markov Decision Process &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;There exists an optimal policy &lt;code class=&quot;language-text&quot;&gt;$ \pi_*$&lt;/code&gt; that is better than or equal to all other policies,&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ \pi_* \geqslant \pi, \forall \pi $&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;All optimal policies achieve the optimal value function&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ v_{\pi_*}(s) = v_*(s) $&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;All optimal policies achieve the optimal action-value function&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ q_{\pi_*}(s,a) = q_*(s,a) $&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Finding an Optimal Policy&lt;/h4&gt;
+&lt;p&gt;An optimal policy can be found by maximising over &lt;code class=&quot;language-text&quot;&gt;$ q_*(s,a) $&lt;/code&gt;,&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ 
+\pi_*(a|s) = 
+\begin{cases}
+    1, &amp;amp; \text{if }  a= \operatorname*{arg\,max}\limits_{a \in \mathcal{A}} q_*(s,a))    \\
+    0, &amp;amp; \text{otherwise}
+\end{cases}
+$&lt;/code&gt; &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;There is always a deterministic optimal policy for any MDP &lt;/li&gt;
+&lt;li&gt;If we know &lt;code class=&quot;language-text&quot;&gt;$ q_*(s,a) $&lt;/code&gt;, we immediately have the optimal policy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$  
+v_*(s) = \max\limits_a q_* (s,a)  \ \ \ \ \    q_*(s,a) = R_s^a + \gamma\sum_{s&amp;#39; \in \mathcal{S}} \mathcal{P}_{ss&amp;#39;}^a v_*(s&amp;#39;) \\ 
+v_*(s) = \max\limits_a R_s^a + \gamma\sum_{s&amp;#39; \in \mathcal{S}} \mathcal{P}_{ss&amp;#39;}^a v_*(s&amp;#39;) \\ 
+q_*(s,a) = R_s^a + \gamma\sum_{s&amp;#39; \in \mathcal{S}} \mathcal{P}_{ss&amp;#39;}^a \max\limits_a&amp;#39; q_*(s&amp;#39;,a&amp;#39;)
+$&lt;/code&gt;  &lt;/p&gt;
+&lt;h3&gt;Solving the Bellman Optimality Equation&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Bellman Optimality Equation is non-linear &lt;/li&gt;
+&lt;li&gt;No closed form solution (in general) &lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Many iterative solution methods&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Value Iteration &lt;/li&gt;
+&lt;li&gt;Policy Iteration &lt;/li&gt;
+&lt;li&gt;Q-learning &lt;/li&gt;
+&lt;li&gt;Sarsa&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Extensions to MDPs&lt;/h2&gt;
+&lt;p&gt;…&lt;/p&gt;</content:encoded></item><item><title><![CDATA[1 Introduction to Reinforcement Learning]]></title><description><![CDATA[About Reinforcement Learning What makes reinforcement learning different from other machine learning paradigms?    There is no supervisor…]]></description><link>https://zhoumingjun.github.io/series/rl/1_introduction_to_reinforcement_learning/</link><guid isPermaLink="false">https://zhoumingjun.github.io/series/rl/1_introduction_to_reinforcement_learning/</guid><pubDate>Wed, 08 Mar 2017 08:34:01 GMT</pubDate><content:encoded>&lt;h2&gt;About Reinforcement Learning&lt;/h2&gt;
+&lt;p&gt;What makes reinforcement learning different from other machine learning paradigms?   &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;There is no supervisor, only a reward signal&lt;/li&gt;
+&lt;li&gt;Feedback is delayed, not instantaneous&lt;/li&gt;
+&lt;li&gt;Time really matters (sequential, non i.i.d data)&lt;/li&gt;
+&lt;li&gt;Agent’s actions affect the subsequent data it receives&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;The Reinforcement Learning Problem&lt;/h2&gt;
+&lt;h3&gt;Rewards&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Definition (Reward Hypothesis)&lt;/strong&gt;&lt;br&gt;
+All goals can be described by the maximisation of expected cumulative reward&lt;/p&gt;
+&lt;h3&gt;Sequential Decision Making&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Goal: select actions to maximise total future reward&lt;/li&gt;
+&lt;li&gt;Actions may have long term consequences&lt;/li&gt;
+&lt;li&gt;Reward may be delayed&lt;/li&gt;
+&lt;li&gt;It may be better to sacrifice immediate reward to gain more long-term reward&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Inside An RL Agent&lt;/h2&gt;
+&lt;p&gt;An RL agent may include one or more of these components:   &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Policy: agent’s behaviour function  &lt;/li&gt;
+&lt;li&gt;Value function: how good is each state and/or action &lt;/li&gt;
+&lt;li&gt;Model: agent’s representation of the environment &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;policy&lt;/h3&gt;
+&lt;p&gt;A policy is the agent’s behaviour&lt;br&gt;
+It is a map from state to action, e.g. Deterministic policy: a = 𝜋(s)&lt;br&gt;
+Stochastic policy:   &lt;code class=&quot;language-text&quot;&gt;$ \pi(a|s) = \mathbb{P}[A_t=t |S_t=s] $&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;value function&lt;/h3&gt;
+&lt;p&gt;Value function is a prediction of future reward&lt;br&gt;
+Used to evaluate the goodness/badness of states&lt;br&gt;
+And therefore to select between actions, e.g.
+&lt;code class=&quot;language-text&quot;&gt;$ v_{\pi}(s) = \mathbb{E}[R_{t+1} + \gamma R_{t+2} +\gamma^{t+2} R_{t+3} + .. | S_{t} = s] $&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;model&lt;/h3&gt;
+&lt;p&gt;A model predicts what the environment will do next P predicts the next state&lt;br&gt;
+R predicts the next (immediate) reward, e.g.&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ P_{ss{}&amp;#39;}^{\alpha }=\mathbb{P}[S_{t+1}=s{}&amp;#39;|S_{t} =s,A_{t} =a] $&lt;/code&gt;&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ R_{s}^{\alpha }=\mathbb{E}[R_{t+1} |S_{t} =s,A_{t} =a] $&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;Problems within Reinforcement Learning&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[0 Preface]]></title><description><![CDATA[Introduction This is a series of reinforcement learning materials book:  Reinforcement Learning: An Introduction (2nd Edition) lectures…]]></description><link>https://zhoumingjun.github.io/series/rl/0_preface/</link><guid isPermaLink="false">https://zhoumingjun.github.io/series/rl/0_preface/</guid><pubDate>Tue, 07 Mar 2017 08:34:01 GMT</pubDate><content:encoded>&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;This is a series of reinforcement learning materials&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;book: &lt;a href=&quot;https://webdocs.cs.ualberta.ca/~sutton/book/bookdraft2016sep.pdf&quot;&gt;Reinforcement Learning: An Introduction (2nd Edition)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;lectures: &lt;a href=&quot;http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html&quot;&gt;David Silver’s Reinforcement Learning Course&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;exercises: &lt;a href=&quot;https://github.com/dennybritz/reinforcement-learning&quot;&gt;Reinforcement learning&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[linux]]></title><link>https://zhoumingjun.github.io/knowledgebase/linux/</link><guid isPermaLink="false">https://zhoumingjun.github.io/knowledgebase/linux/</guid><pubDate>Mon, 06 Mar 2017 08:03:35 GMT</pubDate><content:encoded></content:encoded></item><item><title><![CDATA[First Post]]></title><description><![CDATA[https://medium.com/@teddyking/namespaces-in-go-basics-e3f0fc1ff69a view docker container’s namespace ]]></description><link>https://zhoumingjun.github.io/knowledgebase/linux/namespace/</link><guid isPermaLink="false">https://zhoumingjun.github.io/knowledgebase/linux/namespace/</guid><pubDate>Mon, 06 Mar 2017 08:03:35 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://medium.com/@teddyking/namespaces-in-go-basics-e3f0fc1ff69a&quot;&gt;https://medium.com/@teddyking/namespaces-in-go-basics-e3f0fc1ff69a&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;view docker container’s namespace &lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;pid&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;docker inspect -f &lt;span class=&quot;token string&quot;&gt;&apos;{{.State.Pid}}&apos;&lt;/span&gt; $container_id&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;ln&lt;/span&gt; -s /proc/&lt;span class=&quot;token variable&quot;&gt;$pid&lt;/span&gt;/ns/net /var/run/netns/&lt;span class=&quot;token variable&quot;&gt;$container_id&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[First Post]]></title><description><![CDATA[I build this site to boost my daily work.  This website is powered by  Academic ,  Hugo , and  GitHub Pages .   ]]></description><link>https://zhoumingjun.github.io/post/2017-03-06-first-post/</link><guid isPermaLink="false">https://zhoumingjun.github.io/post/2017-03-06-first-post/</guid><pubDate>Mon, 06 Mar 2017 08:03:35 GMT</pubDate><content:encoded>&lt;p&gt;I build this site to boost my daily work. &lt;/p&gt;
+&lt;p&gt;This website is powered by &lt;a href=&quot;https://github.com/gcushen/hugo-academic&quot;&gt;Academic&lt;/a&gt;, &lt;a href=&quot;https://gohugo.io&quot;&gt;Hugo&lt;/a&gt;, and &lt;a href=&quot;https://github.com/&quot;&gt;GitHub Pages&lt;/a&gt;.   &lt;/p&gt;</content:encoded></item><item><title><![CDATA[network in deep]]></title><description><![CDATA[docker int details https://docker-k8s-lab.readthedocs.io/en/latest/index.html Container Namespaces – Deep Dive into Container Networking…]]></description><link>https://zhoumingjun.github.io/knowledgebase/visualization/docker/deep/</link><guid isPermaLink="false">https://zhoumingjun.github.io/knowledgebase/visualization/docker/deep/</guid><pubDate>Mon, 06 Mar 2017 08:03:35 GMT</pubDate><content:encoded>&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;docker int details&lt;br&gt;
+&lt;a href=&quot;https://docker-k8s-lab.readthedocs.io/en/latest/index.html&quot;&gt;https://docker-k8s-lab.readthedocs.io/en/latest/index.html&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Container Namespaces – Deep Dive into Container Networking&lt;br&gt;
+&lt;a href=&quot;https://platform9.com/blog/container-namespaces-deep-dive-container-networking/&quot;&gt;https://platform9.com/blog/container-namespaces-deep-dive-container-networking/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;container_name&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;xxx
+pid&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;$(&lt;/span&gt;docker inspect -f &lt;span class=&quot;token string&quot;&gt;&apos;{{.State.Pid}}&apos;&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;$container_name&lt;/span&gt;&quot;&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;mkdir&lt;/span&gt; -p /var/run/netns
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;ln&lt;/span&gt; -sf /proc/&lt;span class=&quot;token variable&quot;&gt;$pid&lt;/span&gt;/ns/net &lt;span class=&quot;token string&quot;&gt;&quot;/var/run/netns/&lt;span class=&quot;token variable&quot;&gt;$container_name&lt;/span&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; ip netns
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; ip netns &lt;span class=&quot;token function&quot;&gt;exec&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;$container_name&lt;/span&gt;&quot;&lt;/span&gt; ip a&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;netadmin
+Docker containers do not have full privileges by default. Try adding this to the docker run command:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;  —cap-add=NET_ADMIN&lt;/p&gt;</content:encoded></item><item><title><![CDATA[docker]]></title><description><![CDATA[xx]]></description><link>https://zhoumingjun.github.io/knowledgebase/visualization/docker/</link><guid isPermaLink="false">https://zhoumingjun.github.io/knowledgebase/visualization/docker/</guid><pubDate>Mon, 06 Mar 2017 08:03:35 GMT</pubDate><content:encoded>&lt;p&gt;xx&lt;/p&gt;</content:encoded></item></channel></rss>
