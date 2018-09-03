@@ -39,18 +39,20 @@ An RL agent may include one or more of these components:
 ### policy
 A policy is the agent’s behaviour   
 It is a map from state to action, e.g. Deterministic policy: a = 𝜋(s)   
-Stochastic policy:   `$ \pi(a|s) = \mathbb{P}[A_t=t |S_t=s] $`
+Stochastic policy:   $ \pi(a|s) = \mathbb{P}[A_t=t |S_t=s] $
  
 ### value function
 Value function is a prediction of future reward    
 Used to evaluate the goodness/badness of states    
 And therefore to select between actions, e.g.
-`$ v_{\pi}(s) = \mathbb{E}[R_{t+1} + \gamma R_{t+2} +\gamma^{t+2} R_{t+3} + .. | S_{t} = s] $`
+$$ 
+v_{\pi}(s) = \mathbb{E}[R_{t+1} + \gamma R_{t+2} +\gamma^{t+2} R_{t+3} + .. | S_{t} = s] 
+$$
 
 ### model 
 A model predicts what the environment will do next P predicts the next state  
 R predicts the next (immediate) reward, e.g.  
-` $ P_{ss{}'}^{\alpha }=\mathbb{P}[S_{t+1}=s{}'|S_{t} =s,A_{t} =a] $`   
-` $ R_{s}^{\alpha }=\mathbb{E}[R_{t+1} |S_{t} =s,A_{t} =a] $  `
+$ P_{ss{}'}^{\alpha }=\mathbb{P}[S_{t+1}=s{}'|S_{t} =s,A_{t} =a] $
+$ R_{s}^{\alpha }=\mathbb{E}[R_{t+1} |S_{t} =s,A_{t} =a] $
 
 ## Problems within Reinforcement Learning

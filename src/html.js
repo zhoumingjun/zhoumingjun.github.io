@@ -1,6 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+const MathJaxConfig = `
+MathJax.Hub.Config({
+  messageStyle: 'none',
+  showProcessingMessages: false,
+  extensions: ['[a11y]/auto-collapse.js'],
+  'auto-collapse': {
+    disabled: false
+  },
+  SVG: {
+    linebreaks: {
+      automatic: true,
+      width: 'container'
+    }
+  },
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+    processEscapes: true
+  }
+});`;
+
 export default class HTML extends React.Component {
   render() {
     return (
@@ -23,33 +43,12 @@ export default class HTML extends React.Component {
           />
           {this.props.postBodyComponents}
           <script
-            type="text/javascript"
-            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
-            dangerouslySetInnerHTML={{
-              __html: `
-              window.MathJax = {
-                tex2jax: {
-                    inlineMath: [['$','$'], ['\\(','\\)']],
-                    displayMath: [['$$','$$'], ['\[','\]']],
-                    processEscapes: true,
-                    processEnvironments: true,
-                    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-                    TeX: { equationNumbers: { autoNumber: "AMS" },
-                        extensions: ["AMSmath.js", "AMSsymbols.js", "color.js"] }
-                },
-                AuthorInit: function () {
-                    MathJax.Hub.Register.StartupHook("Begin",function () {
-                        MathJax.Hub.Queue(function() {
-                            var all = MathJax.Hub.getAllJax(), i;
-                            for(i = 0; i < all.length; i += 1) {
-                                all[i].SourceElement().parentNode.className += ' has-jax';
-                            }
-                        })
-                    });
-                }
-            };
-        `,
-            }}
+            type="text/x-mathjax-config"
+            dangerouslySetInnerHTML={{__html: MathJaxConfig}}
+          />
+          <script
+            defer
+            src="https://cdn.bootcss.com/mathjax/2.7.4/latest.js?config=TeX-AMS_SVG"
           />
         </body>
       </html>
