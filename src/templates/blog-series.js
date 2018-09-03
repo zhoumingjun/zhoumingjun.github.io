@@ -18,7 +18,6 @@ const Tags = ({
     series.push(post);
   });
 
-  console.dir(outline, {depth: null});
   return (
     <PageLayout>
       <Section pad={{horizontal: 'xsmall', vertical: 'large'}}>

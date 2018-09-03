@@ -10,6 +10,8 @@ import styled from 'styled-components';
 import _ from 'lodash';
 import Section from '../components/Section';
 import PageLayout from '../components/Layout';
+import MathJax from '../components/MathJax';
+
 const ContentBox = styled.div`
   img {
     max-width: 100%;
@@ -19,7 +21,6 @@ const themecolor = 'rgb(129,155,199)';
 
 const TreeNode = props => {
   let {post, children} = props;
-  console.log('treenode', post, children);
 
   let aryChildren = [];
 
@@ -46,74 +47,87 @@ const TreeNode = props => {
   );
 };
 
-const SeriesPostPage = ({
-  pageContext: {prev, next, outline},
-  data: {
-    site: {siteMetadata: site},
-    markdownRemark: post,
-  },
-}) => {
-  let series = JSON.parse(outline);
+class SeriesPostPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {loaded: false};
+  }
 
-  return (
-    <PageLayout>
-      <Box width="full">
-        <Helmet
-          htmlAttributes={{lang: 'en'}}
-          meta={[{name: 'description', content: site.description}]}
-          title={site.title}
-        />
+  componentDidMount() {
+    this.setState({loaded: true});
+  }
+  render() {
+    let {
+      pageContext: {prev, next, outline},
+      data: {
+        site: {siteMetadata: site},
+        markdownRemark: post,
+      },
+    } = this.props;
 
-        <Box direction="row" justify="center" basis="auto">
-          <Box basis="middle">{TreeNode(series)}</Box>
-          <Box
-            basis="xxsmall"
-            border={{color: 'black', side: 'right', size: 'small'}}
+    let series = JSON.parse(outline);
+
+    return (
+      <PageLayout>
+        <Box width="full">
+          <Helmet
+            htmlAttributes={{lang: 'en'}}
+            meta={[{name: 'description', content: site.description}]}
+            title={site.title}
           />
-          <Box basis="xlarge">
-            <Box pad="small">
-              <Heading textAlign="center">{post.frontmatter.title}</Heading>
-              <Box align="end">{post.frontmatter.date}</Box>
-            </Box>
-            <Box direction="row" pad="small">
-              <ContentBox>
-                <div dangerouslySetInnerHTML={{__html: post.html}} />
-              </ContentBox>
+
+          <Box direction="row" justify="center" basis="auto">
+            <Box basis="middle">{TreeNode(series)}</Box>
+            <Box
+              basis="xxsmall"
+              border={{color: 'black', side: 'right', size: 'small'}}
+            />
+            <Box basis="xlarge">
+              <Box pad="small">
+                <Heading textAlign="center">{post.frontmatter.title}</Heading>
+                <Box align="end">{post.frontmatter.date}</Box>
+              </Box>
+              <Box direction="row" pad="small">
+                <ContentBox>
+                  <div dangerouslySetInnerHTML={{__html: post.html}} />
+                </ContentBox>
+              </Box>
             </Box>
           </Box>
+          <Section pad={{horizontal: 'xlarge', top: 'large'}}>
+            <hr />
+
+            <ul
+              style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                justifyContent: 'space-between',
+                listStyle: 'none',
+                padding: 0,
+              }}>
+              {prev && (
+                <li>
+                  <Link to={prev.fields.slug} rel="prev">
+                    <span>←</span> {prev.frontmatter.title}
+                  </Link>
+                </li>
+              )}
+
+              {next && (
+                <li>
+                  <Link to={next.fields.slug} rel="next">
+                    {next.frontmatter.title} →
+                  </Link>
+                </li>
+              )}
+            </ul>
+          </Section>
         </Box>
-        <Section pad={{horizontal: 'xlarge', top: 'large'}}>
-          <hr />
-
-          <ul
-            style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              justifyContent: 'space-between',
-              listStyle: 'none',
-              padding: 0,
-            }}>
-            {prev && (
-              <li>
-                <Link to={prev.fields.slug} rel="prev">
-                  <span>←</span> {prev.frontmatter.title}
-                </Link>
-              </li>
-            )}
-
-            {next && (
-              <li>
-                <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} →
-                </Link>
-              </li>
-            )}
-          </ul>
-        </Section>
-      </Box>
-    </PageLayout>
-  );
-};
+        {this.state.loaded && <MathJax />}
+      </PageLayout>
+    );
+  }
+}
 
 export default SeriesPostPage;
 

@@ -41,9 +41,7 @@ const FooterBox = styled(Box)`
   width: 100vw;
 `;
 
-const Header = props => {
-  console.log(props);
-
+const Header = () => {
   return (
     <HeaderBox direction="row" justify="center" pad={{vertical: 'small'}}>
       <Box direction="row" justify="between" align="center" basis="xlarge">
