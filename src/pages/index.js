@@ -1,8 +1,8 @@
 import React from 'react';
 import {graphql} from 'gatsby';
+import {Box} from 'grommet';
 import Posts from '../components/posts';
 import Layout from '../components/Layout';
-import Section from '../components/Section';
 
 const Index = props => {
   let {
@@ -13,9 +13,14 @@ const Index = props => {
 
   return (
     <Layout>
-      <Section pad={{horizontal: 'xsmall', vertical: 'large'}}>
-        <Posts posts={posts.map(post => post.node)} />
-      </Section>
+      <Box direction="row" basis="xlarge" justify="center">
+        <Box direction="column" width="large">
+          <Posts posts={posts.map(post => post.node)} />
+        </Box>
+        <Box direction="column" width="small">
+          ...
+        </Box>
+      </Box>
     </Layout>
   );
 };

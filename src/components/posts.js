@@ -64,7 +64,9 @@ const Posts = ({posts}) => {
                   {dateformat(post.frontmatter.date, 'yyyy-mm-dd')}
                 </time>
               </Header>
-              <footer>{/* <TagsList tags={post.frontmatter.tags} /> */}</footer>
+              <footer>
+                <TagsList tags={post.frontmatter.tags} />
+              </footer>
             </Article>
           ))}
         </section>
