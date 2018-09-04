@@ -1,12 +1,12 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import {Link, graphql} from 'gatsby';
-import PageLayout from '../components/Layout';
 import {Box} from 'grommet';
 import get from 'lodash/get';
 import Section from '../components/Section';
+import PageLayout from '../components/Layout';
 
-const CategoryPage = ({
+const BlogCategory = ({
   pageContext: {posts, tag},
   data: {
     site: {siteMetadata: site},
@@ -39,7 +39,7 @@ const CategoryPage = ({
   </PageLayout>
 );
 
-export default CategoryPage;
+export default BlogCategory;
 
 export const pageQuery = graphql`
   query BlogPostBySlug {

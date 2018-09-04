@@ -1,10 +1,9 @@
 import React from 'react';
-import {Grommet, grommet, Box, Anchor, Text} from 'grommet';
-import {withTheme} from 'grommet/components/hocs';
+import {Grommet, Box, Anchor, Text} from 'grommet';
 import styled, {injectGlobal} from 'styled-components';
-import Section from './Section';
 
-import logo from '../assets/logo.png';
+import 'prismjs/themes/prism-okaidia.css';
+
 injectGlobal`
   body {
     margin: 0;

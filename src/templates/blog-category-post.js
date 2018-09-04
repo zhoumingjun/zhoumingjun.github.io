@@ -1,17 +1,13 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import {Link} from 'gatsby';
-import 'prismjs/themes/prism-okaidia.css';
-
-import {Box, Heading, Markdown} from 'grommet';
-
-import styled from 'styled-components';
+import {Link, graphql} from 'gatsby';
+import {Box, Heading} from 'grommet';
 import _ from 'lodash';
+
 import Section from '../components/Section';
 import PageLayout from '../components/Layout';
-``;
 
-const CategoryPostPage = ({
+const BlogCategoryPost = ({
   pageContext: {prev, next},
   data: {
     site: {siteMetadata: site},
@@ -61,7 +57,8 @@ const CategoryPostPage = ({
     </PageLayout>
   );
 };
-export default CategoryPostPage;
+export default BlogCategoryPost;
+
 export const pageQuery = graphql`
   query BlogCategoryPostBySlug($slug: String!) {
     site {

@@ -1,23 +1,18 @@
 import React from 'react';
-
 import Helmet from 'react-helmet';
-import {Link} from 'gatsby';
-
-import {Box, Heading, Text, Markdown} from 'grommet';
-import 'prismjs/themes/prism-okaidia.css';
-import loadScript from 'load-script';
+import {Link, graphql} from 'gatsby';
+import {Box, Heading, Text} from 'grommet';
 import styled from 'styled-components';
 import _ from 'lodash';
+
 import Section from '../components/Section';
 import PageLayout from '../components/Layout';
-import MathJax from '../components/MathJax';
 
 const ContentBox = styled.div`
   img {
     max-width: 100%;
   }
 `;
-const themecolor = 'rgb(129,155,199)';
 
 const TreeNode = props => {
   let {post, children} = props;
@@ -47,7 +42,7 @@ const TreeNode = props => {
   );
 };
 
-const SeriesPostPage = ({
+const BlogSeriesPost = ({
   pageContext: {prev, next, outline},
   data: {
     site: {siteMetadata: site},
@@ -116,7 +111,7 @@ const SeriesPostPage = ({
   );
 };
 
-export default SeriesPostPage;
+export default BlogSeriesPost;
 
 export const pageQuery = graphql`
   query BlogSeriesPostBySlug($slug: String!) {

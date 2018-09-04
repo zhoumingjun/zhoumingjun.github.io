@@ -1,12 +1,13 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import {Link, graphql} from 'gatsby';
-import PageLayout from '../components/Layout';
 import {Box} from 'grommet';
 import _ from 'lodash';
-import Section from '../components/Section';
 
-const Tags = ({
+import Section from '../components/Section';
+import PageLayout from '../components/Layout';
+
+const BlogSeries = ({
   pageContext: {outline},
   data: {
     site: {siteMetadata: site},
@@ -46,7 +47,7 @@ const Tags = ({
   );
 };
 
-export default Tags;
+export default BlogSeries;
 
 export const pageQuery = graphql`
   query BlogSeriesBySlug {
