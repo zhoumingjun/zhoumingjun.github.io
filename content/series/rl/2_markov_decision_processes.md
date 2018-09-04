@@ -2,7 +2,7 @@
 title : "2 Markov Decision Processes"
 date : "2017-03-09T11:26:55+08:00"
 series : ["reinforcement learning"]
-tags : ["ml","rl"]
+tags : ["machine learning","reinforcement learning"]
 math : true
 viz : true
 ---

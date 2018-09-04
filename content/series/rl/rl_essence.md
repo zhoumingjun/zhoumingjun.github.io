@@ -2,7 +2,7 @@
 title : "RL Essence"
 date : "2017-03-14T14:37:32+08:00"
 series : ["reinforcement learning"]
-tags : ["ml","rl"]
+tags : ["machine learning","reinforcement learning"]
 math : true
 viz : true
 ---

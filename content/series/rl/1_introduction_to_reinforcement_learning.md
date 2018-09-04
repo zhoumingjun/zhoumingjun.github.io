@@ -2,7 +2,7 @@
 title : "1 Introduction to Reinforcement Learning"
 date : "2017-03-08T16:34:01+08:00"
 series : ["reinforcement learning"]
-tags : ["ml","rl"]
+tags : ["machine learning","reinforcement learning"]
 math : true
 ---
 

@@ -1,7 +1,7 @@
 ---
-title : "index"
+title : "networking"
 date: '2018-08-31T10:45:20Z'
-tags : ['misc']
+tags : ['misc', 'network']
 ---
 https://www.slideshare.net/ThomasGraf5/linux-networking-explained
 

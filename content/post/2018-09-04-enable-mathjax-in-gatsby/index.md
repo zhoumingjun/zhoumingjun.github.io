@@ -1,6 +1,7 @@
 ---
 title : "Enable mathjax in gatsby"
 date : "2018-09-04T06:30:28Z"
+tags : ["gatsby", "mathjax"]
 ---
 
 # how to enable mathjax in gatsby
@@ -25,7 +26,7 @@ plugins: [
 ## 2. Customize html.js
 Follows the [official document](https://www.gatsbyjs.org/docs/custom-html/)   
 
-Here is my [html.js](https://github.com/zhoumingjun/zhoumingjun.github.io/blob/develop/src/html.js)
+Here is my [html.js](https://github.com/zhoumingjun/zhoumingjun.github.io/blob/source/src/html.js)
 
 ```javascript
 import React from 'react';
@@ -100,7 +101,7 @@ HTML.propTypes = {
 ## 3. Configure gatsby-browser.js
 MathJax will process all math equations when the location changed.
 
-Here is my [gatsby-brower.js](https://github.com/zhoumingjun/zhoumingjun.github.io/blob/develop/gatsby-browser.js)
+Here is my [gatsby-brower.js](https://github.com/zhoumingjun/zhoumingjun.github.io/blob/source/gatsby-browser.js)
 
 ```
 exports.onRouteUpdate = ({location}) => {

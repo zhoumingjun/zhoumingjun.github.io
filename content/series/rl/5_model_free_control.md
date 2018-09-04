@@ -2,7 +2,7 @@
 title : "5 Model Free Control"
 date : "2017-03-14T15:05:04+08:00"
 series : ["reinforcement learning"]
-tags : ["ml","rl"]
+tags : ["machine learning","reinforcement learning"]
 math : true
 viz : true
 ---

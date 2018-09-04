@@ -2,7 +2,7 @@
 title: "0 Preface"
 date: "2017-03-07T16:34:01+08:00"
 series: ["reinforcement learning"]
-tags: ["ml","rl"]
+tags: ["machine learning","reinforcement learning"]
 ---
 
 # Introduction

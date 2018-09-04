@@ -3,6 +3,8 @@ import {graphql} from 'gatsby';
 import {Box} from 'grommet';
 import Posts from '../components/posts';
 import Layout from '../components/Layout';
+import TagCloud from '../components/TagCloud';
+import {tag} from 'postcss-selector-parser';
 
 const Index = props => {
   let {
@@ -14,11 +16,9 @@ const Index = props => {
   return (
     <Layout>
       <Box direction="row" basis="xlarge" justify="center">
-        <Box direction="column" width="large">
+        <Box direction="column" width="xlarge">
+          <TagCloud />
           <Posts posts={posts.map(post => post.node)} />
-        </Box>
-        <Box direction="column" width="small">
-          ...
         </Box>
       </Box>
     </Layout>

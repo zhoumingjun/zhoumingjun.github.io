@@ -6,7 +6,7 @@ import _ from 'lodash';
 
 import Section from '../components/Section';
 import PageLayout from '../components/Layout';
-
+import Posts from '../components/posts';
 const BlogSeries = ({
   pageContext: {outline},
   data: {
@@ -27,21 +27,7 @@ const BlogSeries = ({
           meta={[{name: 'description', content: site.description}]}
           title={site.title}
         />
-        {series &&
-          series.map((post, idx) => {
-            const title = post.frontmatter.title;
-            const content = post.internal.content;
-
-            return (
-              <Box key={idx} direction="column">
-                <Link to={post.fields.slug}>
-                  <h3>{title}</h3>
-                </Link>
-
-                <p>{content}</p>
-              </Box>
-            );
-          })}
+        {series && <Posts posts={series} />}
       </Section>
     </PageLayout>
   );

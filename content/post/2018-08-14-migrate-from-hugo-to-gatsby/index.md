@@ -1,7 +1,7 @@
 ---
 title : "Migrate from Hugo to Gatsby"
 date : "2018-08-14T10:52:17Z"
- 
+
 ---
 
 I decided to migrate my blog from hugo to gatsby.

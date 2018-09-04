@@ -2,7 +2,7 @@
 title : "3 Planning by Dynamic Programming"
 date : "2017-03-10T12:03:48+08:00"
 series : ["reinforcement learning"]
-tags : ["ml","rl"]
+tags : ["machine learning","reinforcement learning"]
 math : true
 viz : true
 ---

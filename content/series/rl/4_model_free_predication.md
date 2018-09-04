@@ -2,7 +2,7 @@
 title : "4 Model Free Predication"
 date : "2017-03-13T14:23:47+08:00"
 series : ["reinforcement learning"]
-tags : ["ml","rl"]
+tags : ["machine learning","reinforcement learning"]
 math : true
 viz : true
 ---

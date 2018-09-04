@@ -25,7 +25,7 @@ const CommaSeparatedTags = ({tags}) =>
         //   <Text>{tag}</Text>
         // </Tag>
 
-        <Tag key={tag} href={`/tags/${tag}/`}>
+        <Tag key={tag} href={`/tags/${tag}/page/0`}>
           <Text size="small">{tag}</Text>
         </Tag>
       ))}
