@@ -15,11 +15,9 @@ const Posts = ({posts}) => {
           <Text color="#818181" margin={{right: 'medium'}}>
             {dateformat(post.frontmatter.date, 'mmm dd, yyyy  ')}
           </Text>
-          <Anchor href={post.fields.slug}>
-            <Heading level={3} margin="none">
-              {post.frontmatter.title}
-            </Heading>
-          </Anchor>
+          <Heading level={3} margin="none">
+            <Anchor href={post.fields.slug}>{post.frontmatter.title}</Anchor>
+          </Heading>
           <TagsList tags={post.frontmatter.tags} />
 
           <Text>{post.frontmatter.desc}</Text>

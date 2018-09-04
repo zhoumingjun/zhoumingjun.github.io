@@ -23,7 +23,10 @@ export default props => (
       _.each(data.allMarkdownRemark.group, tag => {
         tags.push({value: tag.fieldValue, count: tag.totalCount});
       });
-
+      const options = {
+        luminosity: 'bright',
+        hue: 'random',
+      };
       return (
         <Box
           margin={{vertical: 'small'}}
@@ -32,6 +35,7 @@ export default props => (
           <TagCloud
             minSize={20}
             maxSize={40}
+            colorOptions={options}
             tags={tags}
             onClick={tag => {
               push(`/tags/${tag.value}/page/0`);
