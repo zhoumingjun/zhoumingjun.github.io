@@ -2,6 +2,7 @@
 title : "Enable mathjax in gatsby"
 date : "2018-09-04T06:30:28Z"
 tags : ["gatsby", "mathjax"]
+desc: "Mathjax was used in some old posts, and it can't work correctly in gastby now. "
 ---
 
 # how to enable mathjax in gatsby

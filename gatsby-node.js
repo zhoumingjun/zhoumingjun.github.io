@@ -57,6 +57,7 @@ exports.createPages = ({graphql, actions}) => {
                   title
                   date
                   tags
+                  desc
                 }
               }
             }
