@@ -5,7 +5,7 @@ import {Link} from 'gatsby';
 
 import {Box, Heading, Text, Markdown} from 'grommet';
 import 'prismjs/themes/prism-okaidia.css';
-
+import loadScript from 'load-script';
 import styled from 'styled-components';
 import _ from 'lodash';
 import Section from '../components/Section';
@@ -47,87 +47,74 @@ const TreeNode = props => {
   );
 };
 
-class SeriesPostPage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {loaded: false};
-  }
+const SeriesPostPage = ({
+  pageContext: {prev, next, outline},
+  data: {
+    site: {siteMetadata: site},
+    markdownRemark: post,
+  },
+}) => {
+  let series = JSON.parse(outline);
+  console.log(series);
+  return (
+    <PageLayout>
+      <Box width="full">
+        <Helmet
+          htmlAttributes={{lang: 'en'}}
+          meta={[{name: 'description', content: site.description}]}
+          title={site.title}
+        />
 
-  componentDidMount() {
-    this.setState({loaded: true});
-  }
-  render() {
-    let {
-      pageContext: {prev, next, outline},
-      data: {
-        site: {siteMetadata: site},
-        markdownRemark: post,
-      },
-    } = this.props;
-
-    let series = JSON.parse(outline);
-
-    return (
-      <PageLayout>
-        <Box width="full">
-          <Helmet
-            htmlAttributes={{lang: 'en'}}
-            meta={[{name: 'description', content: site.description}]}
-            title={site.title}
+        <Box direction="row" justify="center" basis="auto">
+          <Box basis="middle">{TreeNode(series)}</Box>
+          <Box
+            basis="xxsmall"
+            border={{color: 'black', side: 'right', size: 'small'}}
           />
-
-          <Box direction="row" justify="center" basis="auto">
-            <Box basis="middle">{TreeNode(series)}</Box>
-            <Box
-              basis="xxsmall"
-              border={{color: 'black', side: 'right', size: 'small'}}
-            />
-            <Box basis="xlarge">
-              <Box pad="small">
-                <Heading textAlign="center">{post.frontmatter.title}</Heading>
-                <Box align="end">{post.frontmatter.date}</Box>
-              </Box>
-              <Box direction="row" pad="small">
-                <ContentBox>
-                  <div dangerouslySetInnerHTML={{__html: post.html}} />
-                </ContentBox>
-              </Box>
+          <Box basis="xlarge">
+            <Box pad="small">
+              <Heading textAlign="center">{post.frontmatter.title}</Heading>
+              <Box align="end">{post.frontmatter.date}</Box>
+            </Box>
+            <Box direction="row" pad="small">
+              <ContentBox>
+                <div dangerouslySetInnerHTML={{__html: post.html}} />
+              </ContentBox>
             </Box>
           </Box>
-          <Section pad={{horizontal: 'xlarge', top: 'large'}}>
-            <hr />
-
-            <ul
-              style={{
-                display: 'flex',
-                flexWrap: 'wrap',
-                justifyContent: 'space-between',
-                listStyle: 'none',
-                padding: 0,
-              }}>
-              {prev && (
-                <li>
-                  <Link to={prev.fields.slug} rel="prev">
-                    <span>←</span> {prev.frontmatter.title}
-                  </Link>
-                </li>
-              )}
-
-              {next && (
-                <li>
-                  <Link to={next.fields.slug} rel="next">
-                    {next.frontmatter.title} →
-                  </Link>
-                </li>
-              )}
-            </ul>
-          </Section>
         </Box>
-        {this.state.loaded && <MathJax />}
-      </PageLayout>
-    );
-  }
-}
+        <Section pad={{horizontal: 'xlarge', top: 'large'}}>
+          <hr />
+
+          <ul
+            style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              justifyContent: 'space-between',
+              listStyle: 'none',
+              padding: 0,
+            }}>
+            {prev && (
+              <li>
+                <Link to={prev.fields.slug} rel="prev">
+                  <span>←</span> {prev.frontmatter.title}
+                </Link>
+              </li>
+            )}
+
+            {next && (
+              <li>
+                <Link to={next.fields.slug} rel="next">
+                  {next.frontmatter.title} →
+                </Link>
+              </li>
+            )}
+          </ul>
+        </Section>
+      </Box>
+    </PageLayout>
+  );
+};
 
 export default SeriesPostPage;
 

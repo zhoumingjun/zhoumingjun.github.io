@@ -44,10 +44,10 @@ date : "2017-03-10T11:40:12+08:00"
 ## example 
 **code**    
 ```
-    `$ v_\pi(s) = \sum_{a \in \mathcal{A}} \pi(a|s) q_\pi(s,a)  $`
+    $ v_\pi(s) = \sum_{a \in \mathcal{A}} \pi(a|s) q_\pi(s,a)  $
 ```
 **result**  
-`$ v_\pi(s) = \sum_{a \in \mathcal{A}} \pi(a|s) q_\pi(s,a)  $`
+$ v_\pi(s) = \sum_{a \in \mathcal{A}} \pi(a|s) q_\pi(s,a)  $
 
 # graphviz support
 
