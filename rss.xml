@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mingjun Zhou's blog]]></title><description><![CDATA[personal blog]]></description><link>https://zhoumingjun.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 05 Sep 2018 16:08:03 GMT</lastBuildDate><item><title><![CDATA[Enable mathjax in gatsby]]></title><description><![CDATA[how to enable mathjax in gatsby Steps 1. Configure gatsby-config.js 2. Customize html.js Follows the  official document     Here is my  html…]]></description><link>https://zhoumingjun.github.io/post/2018-09-04-enable-mathjax-in-gatsby/</link><guid isPermaLink="false">https://zhoumingjun.github.io/post/2018-09-04-enable-mathjax-in-gatsby/</guid><pubDate>Tue, 04 Sep 2018 06:30:28 GMT</pubDate><content:encoded>&lt;h1&gt;how to enable mathjax in gatsby&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mingjun Zhou's blog]]></title><description><![CDATA[personal blog]]></description><link>https://zhoumingjun.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 05 Sep 2018 17:18:19 GMT</lastBuildDate><item><title><![CDATA[Enable mathjax in gatsby]]></title><description><![CDATA[how to enable mathjax in gatsby Steps 1. Configure gatsby-config.js 2. Customize html.js Follows the  official document     Here is my  html…]]></description><link>https://zhoumingjun.github.io/post/2018-09-04-enable-mathjax-in-gatsby/</link><guid isPermaLink="false">https://zhoumingjun.github.io/post/2018-09-04-enable-mathjax-in-gatsby/</guid><pubDate>Tue, 04 Sep 2018 06:30:28 GMT</pubDate><content:encoded>&lt;h1&gt;how to enable mathjax in gatsby&lt;/h1&gt;
 &lt;h1&gt;Steps&lt;/h1&gt;
 &lt;h2&gt;1. Configure gatsby-config.js&lt;/h2&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// In your gatsby-config.js
@@ -19,24 +19,20 @@ plugins: [
 &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; PropTypes &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;prop-types&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; MathJaxConfig &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`
-MathJax.Hub.Config({
-  messageStyle: &apos;none&apos;,
-  showProcessingMessages: false,
-  extensions: [&apos;[a11y]/auto-collapse.js&apos;],
-  &apos;auto-collapse&apos;: {
-    disabled: false
-  },
-  SVG: {
-    linebreaks: {
-      automatic: true,
-      width: &apos;container&apos;
-    }
-  },
+window.MathJax = {
   tex2jax: {
-    inlineMath: [ [&apos;$&apos;,&apos;$&apos;], [&apos;\\(&apos;,&apos;\\)&apos;] ],
-    processEscapes: true
+    inlineMath: [[&apos;$&apos;, &apos;$&apos;] ],
+    displayMath: [[&apos;$$&apos;, &apos;$$&apos;] ],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: [&apos;script&apos;, &apos;noscript&apos;, &apos;style&apos;, &apos;textarea&apos;, &apos;pre&apos;],
+    TeX: {
+      equationNumbers: {autoNumber: &apos;AMS&apos;},
+      extensions: [&apos;AMSmath.js&apos;, &apos;AMSsymbols.js&apos;, &apos;color.js&apos;],
+    },
   }
-});`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+};
+`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;HTML&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;React&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Component&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;token function&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
@@ -59,10 +55,7 @@ MathJax.Hub.Config({
             dangerouslySetInnerHTML&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;__html&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;props&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;body&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
           &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
           &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;props&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;postBodyComponents&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-          &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;script
-            type&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;text/x-mathjax-config&quot;&lt;/span&gt;
-            dangerouslySetInnerHTML&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;__html&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; MathJaxConfig&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-          &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+          &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;script dangerouslySetInnerHTML&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;__html&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; MathJaxConfig&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
           &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;script
             defer
             src&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;https://cdn.bootcss.com/mathjax/2.7.4/latest.js?config=TeX-AMS_SVG&quot;&lt;/span&gt;
@@ -562,7 +555,7 @@ ifconfig lo:0 192.168.2.175 netmask 255.255.255.255 broadcast 192.168.2.175
 echo &amp;quot;1&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/lo/arp_ignore
 echo &amp;quot;2&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/lo/arp_announce
 echo &amp;quot;1&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/all/arp_ignore
-echo &amp;quot;2&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/all/arp_announce&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Reinforcement learning]]></title><description><![CDATA[have not been revised yet.]]></description><link>https://zhoumingjun.github.io/series/rl/</link><guid isPermaLink="false">https://zhoumingjun.github.io/series/rl/</guid><pubDate>Tue, 14 Mar 2017 07:05:04 GMT</pubDate><content:encoded>&lt;p&gt;have not been revised yet.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[5 Model Free Control]]></title><description><![CDATA[Key Points Lecture Notes Introcution Model-free control can solve these problems    MDP model is unknown, but experience can be sampled…]]></description><link>https://zhoumingjun.github.io/series/rl/5_model_free_control/</link><guid isPermaLink="false">https://zhoumingjun.github.io/series/rl/5_model_free_control/</guid><pubDate>Tue, 14 Mar 2017 07:05:04 GMT</pubDate><content:encoded>&lt;h1&gt;Key Points&lt;/h1&gt;
+echo &amp;quot;2&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/all/arp_announce&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[5 Model Free Control]]></title><description><![CDATA[Key Points Lecture Notes Introcution Model-free control can solve these problems    MDP model is unknown, but experience can be sampled…]]></description><link>https://zhoumingjun.github.io/series/rl/5_model_free_control/</link><guid isPermaLink="false">https://zhoumingjun.github.io/series/rl/5_model_free_control/</guid><pubDate>Tue, 14 Mar 2017 07:05:04 GMT</pubDate><content:encoded>&lt;h1&gt;Key Points&lt;/h1&gt;
 &lt;h1&gt;Lecture Notes&lt;/h1&gt;
 &lt;h2&gt;Introcution&lt;/h2&gt;
 &lt;p&gt;Model-free control can solve these problems   &lt;/p&gt;
@@ -661,7 +654,7 @@ GLIE Monte-Carlo control converges to the optimal action-value function, $Q(s,a)
 &lt;h2&gt;On-Policy TD Learning&lt;/h2&gt;
 &lt;h2&gt;Off-Policy Learning&lt;/h2&gt;
 &lt;h2&gt;Summary&lt;/h2&gt;
-&lt;h1&gt;Excises&lt;/h1&gt;</content:encoded></item><item><title><![CDATA[RL Essence]]></title><description><![CDATA[Definition MDP A Markov decision process (MDP) is a Markov reward process with decisions. It is an environment in which all states are…]]></description><link>https://zhoumingjun.github.io/series/rl/rl_essence/</link><guid isPermaLink="false">https://zhoumingjun.github.io/series/rl/rl_essence/</guid><pubDate>Tue, 14 Mar 2017 06:37:32 GMT</pubDate><content:encoded>&lt;h1&gt;Definition&lt;/h1&gt;
+&lt;h1&gt;Excises&lt;/h1&gt;</content:encoded></item><item><title><![CDATA[Reinforcement learning]]></title><description><![CDATA[have not been revised yet.]]></description><link>https://zhoumingjun.github.io/series/rl/</link><guid isPermaLink="false">https://zhoumingjun.github.io/series/rl/</guid><pubDate>Tue, 14 Mar 2017 07:05:04 GMT</pubDate><content:encoded>&lt;p&gt;have not been revised yet.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[RL Essence]]></title><description><![CDATA[Definition MDP A Markov decision process (MDP) is a Markov reward process with decisions. It is an environment in which all states are…]]></description><link>https://zhoumingjun.github.io/series/rl/rl_essence/</link><guid isPermaLink="false">https://zhoumingjun.github.io/series/rl/rl_essence/</guid><pubDate>Tue, 14 Mar 2017 06:37:32 GMT</pubDate><content:encoded>&lt;h1&gt;Definition&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;MDP&lt;br&gt;
@@ -1560,12 +1553,12 @@ $R_{s}^{\alpha }=\mathbb{E}[R_{t+1} |S_{t} =s,A_{t} =a]$&lt;/p&gt;
 &lt;li&gt;book: &lt;a href=&quot;https://webdocs.cs.ualberta.ca/~sutton/book/bookdraft2016sep.pdf&quot;&gt;Reinforcement Learning: An Introduction (2nd Edition)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;lectures: &lt;a href=&quot;http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html&quot;&gt;David Silver’s Reinforcement Learning Course&lt;/a&gt; &lt;/li&gt;
 &lt;li&gt;exercises: &lt;a href=&quot;https://github.com/dennybritz/reinforcement-learning&quot;&gt;Reinforcement learning&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[namespace]]></title><description><![CDATA[https://medium.com/@teddyking/namespaces-in-go-basics-e3f0fc1ff69a view docker container’s namespace ]]></description><link>https://zhoumingjun.github.io/knowledgebase/linux/namespace/</link><guid isPermaLink="false">https://zhoumingjun.github.io/knowledgebase/linux/namespace/</guid><pubDate>Mon, 06 Mar 2017 08:03:35 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://medium.com/@teddyking/namespaces-in-go-basics-e3f0fc1ff69a&quot;&gt;https://medium.com/@teddyking/namespaces-in-go-basics-e3f0fc1ff69a&lt;/a&gt;&lt;/p&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[linux]]></title><link>https://zhoumingjun.github.io/knowledgebase/linux/</link><guid isPermaLink="false">https://zhoumingjun.github.io/knowledgebase/linux/</guid><pubDate>Mon, 06 Mar 2017 08:03:35 GMT</pubDate><content:encoded></content:encoded></item><item><title><![CDATA[namespace]]></title><description><![CDATA[https://medium.com/@teddyking/namespaces-in-go-basics-e3f0fc1ff69a view docker container’s namespace ]]></description><link>https://zhoumingjun.github.io/knowledgebase/linux/namespace/</link><guid isPermaLink="false">https://zhoumingjun.github.io/knowledgebase/linux/namespace/</guid><pubDate>Mon, 06 Mar 2017 08:03:35 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://medium.com/@teddyking/namespaces-in-go-basics-e3f0fc1ff69a&quot;&gt;https://medium.com/@teddyking/namespaces-in-go-basics-e3f0fc1ff69a&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;view docker container’s namespace &lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;pid&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;docker inspect -f &lt;span class=&quot;token string&quot;&gt;&apos;{{.State.Pid}}&apos;&lt;/span&gt; $container_id&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;token function&quot;&gt;ln&lt;/span&gt; -s /proc/&lt;span class=&quot;token variable&quot;&gt;$pid&lt;/span&gt;/ns/net /var/run/netns/&lt;span class=&quot;token variable&quot;&gt;$container_id&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[linux]]></title><link>https://zhoumingjun.github.io/knowledgebase/linux/</link><guid isPermaLink="false">https://zhoumingjun.github.io/knowledgebase/linux/</guid><pubDate>Mon, 06 Mar 2017 08:03:35 GMT</pubDate><content:encoded></content:encoded></item><item><title><![CDATA[First Post]]></title><description><![CDATA[I build this site to boost my daily work.  This website is powered by  Academic ,  Hugo , and  GitHub Pages .   ]]></description><link>https://zhoumingjun.github.io/post/2017-03-06-first-post/</link><guid isPermaLink="false">https://zhoumingjun.github.io/post/2017-03-06-first-post/</guid><pubDate>Mon, 06 Mar 2017 08:03:35 GMT</pubDate><content:encoded>&lt;p&gt;I build this site to boost my daily work. &lt;/p&gt;
+&lt;span class=&quot;token function&quot;&gt;ln&lt;/span&gt; -s /proc/&lt;span class=&quot;token variable&quot;&gt;$pid&lt;/span&gt;/ns/net /var/run/netns/&lt;span class=&quot;token variable&quot;&gt;$container_id&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[First Post]]></title><description><![CDATA[I build this site to boost my daily work.  This website is powered by  Academic ,  Hugo , and  GitHub Pages .   ]]></description><link>https://zhoumingjun.github.io/post/2017-03-06-first-post/</link><guid isPermaLink="false">https://zhoumingjun.github.io/post/2017-03-06-first-post/</guid><pubDate>Mon, 06 Mar 2017 08:03:35 GMT</pubDate><content:encoded>&lt;p&gt;I build this site to boost my daily work. &lt;/p&gt;
 &lt;p&gt;This website is powered by &lt;a href=&quot;https://github.com/gcushen/hugo-academic&quot;&gt;Academic&lt;/a&gt;, &lt;a href=&quot;https://gohugo.io&quot;&gt;Hugo&lt;/a&gt;, and &lt;a href=&quot;https://github.com/&quot;&gt;GitHub Pages&lt;/a&gt;.   &lt;/p&gt;</content:encoded></item><item><title><![CDATA[network in deep]]></title><description><![CDATA[docker int details https://docker-k8s-lab.readthedocs.io/en/latest/index.html Container Namespaces – Deep Dive into Container Networking…]]></description><link>https://zhoumingjun.github.io/knowledgebase/visualization/docker/deep/</link><guid isPermaLink="false">https://zhoumingjun.github.io/knowledgebase/visualization/docker/deep/</guid><pubDate>Mon, 06 Mar 2017 08:03:35 GMT</pubDate><content:encoded>&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;docker int details&lt;br&gt;
