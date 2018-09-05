@@ -5,6 +5,7 @@ import {Box, Anchor, Heading} from 'grommet';
 import Section from '../components/Section';
 import PageLayout from '../components/Layout';
 import _ from 'lodash';
+import PrevNext from '../components/PrevNext';
 
 const BlogCategoryPost = ({
   pageContext: {prev, next},
@@ -25,40 +26,17 @@ const BlogCategoryPost = ({
           title={site.title}
         />
         <Box>
-          <Heading textAlign="center">{post.frontmatter.title}</Heading>
+          <Heading textAlign="center" margin="small">
+            {post.frontmatter.title}
+          </Heading>
           <Box align="end">
             {post.frontmatter.date}
             <Anchor href={onlinePath} label="View page source" />
           </Box>
         </Box>
         <div dangerouslySetInnerHTML={{__html: post.html}} />
-        <hr />
-
-        <ul
-          style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'space-between',
-            listStyle: 'none',
-            padding: 0,
-          }}>
-          {prev && (
-            <li>
-              <Link to={prev.fields.slug} rel="prev">
-                <span>←</span> {prev.frontmatter.title}
-              </Link>
-            </li>
-          )}
-
-          {next && (
-            <li>
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            </li>
-          )}
-        </ul>
       </Section>
+      <PrevNext prev={prev} next={next} />
     </PageLayout>
   );
 };

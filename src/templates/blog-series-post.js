@@ -7,6 +7,7 @@ import _ from 'lodash';
 
 import Section from '../components/Section';
 import PageLayout from '../components/Layout';
+import PrevNext from '../components/PrevNext';
 
 const ContentBox = styled.div`
   img {
@@ -14,6 +15,13 @@ const ContentBox = styled.div`
   }
 `;
 
+const StyledUL = styled.ul`
+  list-style: none;
+  padding-left: 1em;
+  margin: 0px;
+`;
+
+const StyledLI = styled.li``;
 const TreeNode = props => {
   let {post, children} = props;
 
@@ -34,10 +42,12 @@ const TreeNode = props => {
         </Link>
       )}
 
-      <ul>
+      <StyledUL>
         {aryChildren &&
-          aryChildren.map((child, idx) => <li key={idx}>{TreeNode(child)}</li>)}
-      </ul>
+          aryChildren.map((child, idx) => (
+            <StyledLI key={idx}>{TreeNode(child)}</StyledLI>
+          ))}
+      </StyledUL>
     </div>
   );
 };
@@ -56,63 +66,44 @@ const BlogSeriesPost = ({
 
   return (
     <PageLayout>
-      <Box width="full">
-        <Helmet
-          htmlAttributes={{lang: 'en'}}
-          meta={[{name: 'description', content: site.description}]}
-          title={site.title}
-        />
+      <Helmet
+        htmlAttributes={{lang: 'en'}}
+        meta={[{name: 'description', content: site.description}]}
+        title={site.title}
+      />
 
-        <Box direction="row" justify="center" basis="auto">
-          <Box basis="middle">{TreeNode(series)}</Box>
-          <Box
-            basis="xxsmall"
-            border={{color: 'black', side: 'right', size: 'small'}}
-          />
-          <Box basis="xlarge">
-            <Box pad="small">
-              <Heading textAlign="center">{post.frontmatter.title}</Heading>
-              <Box align="end">
-                {post.frontmatter.date}{' '}
-                <Anchor href={onlinePath} label="View page source" />
-              </Box>
-            </Box>
-            <Box direction="row" pad="small">
-              <ContentBox>
-                <div dangerouslySetInnerHTML={{__html: post.html}} />
-              </ContentBox>
+      <Box direction="row" justify="center" basis="auto">
+        <Box basis="xlarge">
+          <Box pad="small">
+            <Heading textAlign="center" margin="small">
+              {post.frontmatter.title}
+            </Heading>
+            <Box align="end">
+              {post.frontmatter.date}{' '}
+              <Anchor href={onlinePath} label="View page source" />
             </Box>
           </Box>
+          <Box direction="row" pad="small">
+            <ContentBox>
+              <div dangerouslySetInnerHTML={{__html: post.html}} />
+            </ContentBox>
+          </Box>
         </Box>
-        <Section pad={{horizontal: 'xlarge', top: 'large'}}>
-          <hr />
 
-          <ul
-            style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              justifyContent: 'space-between',
-              listStyle: 'none',
-              padding: 0,
-            }}>
-            {prev && (
-              <li>
-                <Link to={prev.fields.slug} rel="prev">
-                  <span>←</span> {prev.frontmatter.title}
-                </Link>
-              </li>
-            )}
-
-            {next && (
-              <li>
-                <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} →
-                </Link>
-              </li>
-            )}
-          </ul>
-        </Section>
+        <Box
+          basis="medium"
+          pad="small"
+          border={{color: 'lightgrey', side: 'left', size: 'small'}}>
+          <Box align="center">
+            <Heading level={3} margin="small">
+              TOC
+            </Heading>
+          </Box>
+          {TreeNode(series)}
+        </Box>
       </Box>
+
+      <PrevNext prev={prev} next={next} />
     </PageLayout>
   );
 };

@@ -1,8 +1,6 @@
 import React from 'react';
-import {graphql} from 'gatsby';
 import Layout from '../components/Layout';
 import {Box, Heading, Text} from 'grommet';
-import {styled} from 'styled-components';
 import _ from 'lodash';
 
 const logs = [
@@ -11,18 +9,34 @@ const logs = [
   {date: '2018-08-14', content: 'build blog with gatsby/grommet'},
 ];
 
+const features = [
+  'Build with gatsbyjs/grommet/styled-components',
+  'TOC of series',
+  'Tag cloud',
+  'MathJax enabled',
+];
+
+const todos = ['beautify toc'];
 const Index = props => {
   return (
     <Layout>
       <Box direction="column" pad="xlarge" width="xlarge">
         <Text>This is my personal blog for technical things.</Text>
+
         <Heading level={3}>Features:</Heading>
         <Box margin={{left: 'medium'}}>
-          <Text>Build with gatsbyjs/grommet/styled-components</Text>
-          <Text>TOC of series</Text>
-          <Text>Tag cloud</Text>
-          <Text>MathJax enabled</Text>
+          {features.map((feature, key) => (
+            <Text key={key}>{feature}</Text>
+          ))}
         </Box>
+
+        <Heading level={3}>Todos:</Heading>
+        <Box margin={{left: 'medium'}}>
+          {todos.map((todo, key) => (
+            <Text key={key}>{todo}</Text>
+          ))}
+        </Box>
+
         <Heading level={3}>History:</Heading>
         <Box margin={{left: 'medium'}}>
           {logs.map((log, key) => {
