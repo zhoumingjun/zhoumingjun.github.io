@@ -1,7 +1,17 @@
 import React from 'react';
 import Section from './Section';
 import {Link, graphql} from 'gatsby';
+import styled from 'styled-components';
 
+const StyledLink = styled(Link)`
+  border-color: grey;
+  border-style: solid;
+  border-width: 1px;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+`;
 const PrevNext = ({prev, next}) => (
   <Section pad={{horizontal: 'xlarge', top: 'small'}}>
     <hr />
@@ -16,17 +26,17 @@ const PrevNext = ({prev, next}) => (
       }}>
       <li>
         {prev && (
-          <Link to={prev.fields.slug} rel="prev">
-            <span>←</span> {prev.frontmatter.title}
-          </Link>
+          <StyledLink to={prev.fields.slug} rel="prev">
+            <span>{'<-'}</span> {prev.frontmatter.title}
+          </StyledLink>
         )}
       </li>
 
       <li>
         {next && (
-          <Link to={next.fields.slug} rel="next">
-            {next.frontmatter.title} →
-          </Link>
+          <StyledLink to={next.fields.slug} rel="next">
+            {next.frontmatter.title} <span>{'->'}</span>
+          </StyledLink>
         )}
       </li>
     </ul>
