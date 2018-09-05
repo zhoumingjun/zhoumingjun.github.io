@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import {Link, graphql} from 'gatsby';
-import {Box, Heading, Text} from 'grommet';
+import {Box, Anchor, Heading, Text} from 'grommet';
 import styled from 'styled-components';
 import _ from 'lodash';
 
@@ -50,7 +50,10 @@ const BlogSeriesPost = ({
   },
 }) => {
   let series = JSON.parse(outline);
-  console.log(series);
+  let localPath = post.fileAbsolutePath;
+  let onlinePath =
+    site.sourceUrl + localPath.substr(localPath.indexOf('content'));
+
   return (
     <PageLayout>
       <Box width="full">
@@ -69,7 +72,10 @@ const BlogSeriesPost = ({
           <Box basis="xlarge">
             <Box pad="small">
               <Heading textAlign="center">{post.frontmatter.title}</Heading>
-              <Box align="end">{post.frontmatter.date}</Box>
+              <Box align="end">
+                {post.frontmatter.date}{' '}
+                <Anchor href={onlinePath} label="View page source" />
+              </Box>
             </Box>
             <Box direction="row" pad="small">
               <ContentBox>
@@ -119,12 +125,14 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         author
+        sourceUrl
       }
     }
     markdownRemark(fields: {slug: {eq: $slug}}) {
       id
       excerpt
       html
+      fileAbsolutePath
       fields {
         slug
         category

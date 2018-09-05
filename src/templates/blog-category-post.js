@@ -1,11 +1,10 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import {Link, graphql} from 'gatsby';
-import {Box, Heading} from 'grommet';
-import _ from 'lodash';
-
+import {Box, Anchor, Heading} from 'grommet';
 import Section from '../components/Section';
 import PageLayout from '../components/Layout';
+import _ from 'lodash';
 
 const BlogCategoryPost = ({
   pageContext: {prev, next},
@@ -14,6 +13,10 @@ const BlogCategoryPost = ({
     markdownRemark: post,
   },
 }) => {
+  let localPath = post.fileAbsolutePath;
+  let onlinePath =
+    site.sourceUrl + localPath.substr(localPath.indexOf('content'));
+  console.log('onlinepath', onlinePath);
   return (
     <PageLayout>
       <Section pad={{horizontal: 'xsmall', vertical: 'large'}}>
@@ -24,7 +27,10 @@ const BlogCategoryPost = ({
         />
         <Box>
           <Heading textAlign="center">{post.frontmatter.title}</Heading>
-          <Box align="end">{post.frontmatter.date}</Box>
+          <Box align="end">
+            {post.frontmatter.date}
+            <Anchor href={onlinePath} label="View page source" />
+          </Box>
         </Box>
         <div dangerouslySetInnerHTML={{__html: post.html}} />
         <hr />
@@ -65,12 +71,14 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         author
+        sourceUrl
       }
     }
     markdownRemark(fields: {slug: {eq: $slug}}) {
       id
       excerpt
       html
+      fileAbsolutePath
       fields {
         slug
         category

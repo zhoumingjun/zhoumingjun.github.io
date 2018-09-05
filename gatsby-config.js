@@ -4,6 +4,8 @@ module.exports = {
     author: 'Mingjun Zhou',
     description: 'personal blog',
     siteUrl: 'https://zhoumingjun.github.io',
+    sourceUrl:
+      'https://github.com/zhoumingjun/zhoumingjun.github.io/blob/source/',
   },
   pathPrefix: '/',
   plugins: [
