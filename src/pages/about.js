@@ -4,6 +4,7 @@ import {Box, Heading, Text} from 'grommet';
 import _ from 'lodash';
 
 const logs = [
+  {date: '2018-09-05', content: 'add disqus'},
   {date: '2018-09-05', content: 'add page source link'},
   {date: '2018-09-04', content: 'add tag cloud'},
   {date: '2018-08-14', content: 'build blog with gatsby/grommet'},

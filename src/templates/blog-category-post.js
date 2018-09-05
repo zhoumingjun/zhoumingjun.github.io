@@ -6,6 +6,7 @@ import Section from '../components/Section';
 import PageLayout from '../components/Layout';
 import _ from 'lodash';
 import PrevNext from '../components/PrevNext';
+import Disqus from 'disqus-react';
 
 const BlogCategoryPost = ({
   pageContext: {prev, next},
@@ -17,6 +18,15 @@ const BlogCategoryPost = ({
   let localPath = post.fileAbsolutePath;
   let onlinePath =
     site.sourceUrl + localPath.substr(localPath.indexOf('content'));
+
+  const disqusShortname = site.disqusShortname;
+  const disqusConfig = {
+    url: site.siteUrl + post.fields.slug,
+    identifier: post.id,
+    title: post.frontmatter.title,
+  };
+  console.log('disqus', site, disqusShortname, disqusConfig);
+
   return (
     <PageLayout>
       <Section pad={{horizontal: 'xsmall', vertical: 'large'}}>
@@ -37,6 +47,10 @@ const BlogCategoryPost = ({
         <div dangerouslySetInnerHTML={{__html: post.html}} />
       </Section>
       <PrevNext prev={prev} next={next} />
+      <Disqus.DiscussionEmbed
+        shortname={disqusShortname}
+        config={disqusConfig}
+      />
     </PageLayout>
   );
 };
@@ -49,6 +63,8 @@ export const pageQuery = graphql`
         title
         author
         sourceUrl
+        siteUrl
+        disqusShortname
       }
     }
     markdownRemark(fields: {slug: {eq: $slug}}) {

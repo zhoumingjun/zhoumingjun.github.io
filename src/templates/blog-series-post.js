@@ -5,9 +5,9 @@ import {Box, Anchor, Heading, Text} from 'grommet';
 import styled from 'styled-components';
 import _ from 'lodash';
 
-import Section from '../components/Section';
 import PageLayout from '../components/Layout';
 import PrevNext from '../components/PrevNext';
+import Disqus from 'disqus-react';
 
 const ContentBox = styled.div`
   img {
@@ -64,6 +64,14 @@ const BlogSeriesPost = ({
   let onlinePath =
     site.sourceUrl + localPath.substr(localPath.indexOf('content'));
 
+  const disqusShortname = site.disqusShortname;
+  const disqusConfig = {
+    url: site.siteUrl + post.fields.slug,
+    identifier: post.id,
+    title: post.frontmatter.title,
+  };
+
+  console.log('disqus', site, disqusShortname, disqusConfig);
   return (
     <PageLayout>
       <Helmet
@@ -71,7 +79,6 @@ const BlogSeriesPost = ({
         meta={[{name: 'description', content: site.description}]}
         title={site.title}
       />
-
       <Box direction="row" justify="center" basis="auto">
         <Box basis="xlarge">
           <Box pad="small">
@@ -102,8 +109,11 @@ const BlogSeriesPost = ({
           {TreeNode(series)}
         </Box>
       </Box>
-
       <PrevNext prev={prev} next={next} />
+      <Disqus.DiscussionEmbed
+        shortname={disqusShortname}
+        config={disqusConfig}
+      />{' '}
     </PageLayout>
   );
 };
@@ -117,6 +127,8 @@ export const pageQuery = graphql`
         title
         author
         sourceUrl
+        siteUrl
+        disqusShortname
       }
     }
     markdownRemark(fields: {slug: {eq: $slug}}) {

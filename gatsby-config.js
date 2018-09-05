@@ -6,6 +6,7 @@ module.exports = {
     siteUrl: 'https://zhoumingjun.github.io',
     sourceUrl:
       'https://github.com/zhoumingjun/zhoumingjun.github.io/blob/source/',
+    disqusShortname: 'zhoumingjun',
   },
   pathPrefix: '/',
   plugins: [
