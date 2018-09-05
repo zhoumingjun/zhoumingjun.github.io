@@ -1,6 +1,6 @@
 import React from 'react';
-import {StaticQuery} from 'gatsby';
-import {Box, Anchor, Heading, Text} from 'grommet';
+import {StaticQuery, graphql} from 'gatsby';
+import {Box} from 'grommet';
 import {TagCloud} from 'react-tagcloud';
 import {push} from 'gatsby-link';
 

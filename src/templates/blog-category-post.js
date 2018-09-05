@@ -16,7 +16,6 @@ const BlogCategoryPost = ({
   let localPath = post.fileAbsolutePath;
   let onlinePath =
     site.sourceUrl + localPath.substr(localPath.indexOf('content'));
-  console.log('onlinepath', onlinePath);
   return (
     <PageLayout>
       <Section pad={{horizontal: 'xsmall', vertical: 'large'}}>

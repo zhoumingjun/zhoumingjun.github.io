@@ -154,7 +154,6 @@ function createKBPages(createPage, seriesPosts) {
   });
   // console.dir(seriesTree, { depth: null })
 
-  console.log('create knowledgebase');
   createPage({
     path: `/knowledgebase`,
     component: tmplSeries,
@@ -176,7 +175,6 @@ function createKBPages(createPage, seriesPosts) {
       const next = index === posts.length - 1 ? null : posts[index + 1];
       const prev = index === 0 ? null : posts[index - 1];
 
-      console.log('create page', post.fields.slug);
       createPage({
         path: post.fields.slug,
         component: tmplSeriesPost,
@@ -249,7 +247,6 @@ function createSeriesPages(createPage, seriesPosts) {
       const next = index === posts.length - 1 ? null : posts[index + 1];
       const prev = index === 0 ? null : posts[index - 1];
 
-      console.log('create page', post.fields.slug);
       createPage({
         path: post.fields.slug,
         component: tmplSeriesPost,
@@ -276,8 +273,6 @@ function createCategoryPages(createPage, categoryPosts) {
 
     const pagesSum = Math.ceil(posts.length / pageSize);
     for (let page = 0; page < pagesSum; page++) {
-      console.log('create page', `/categories/${category}/page/${page}`);
-
       createPage({
         path: `/categories/${category}/page/${page}`,
         component: tmplCategory,
@@ -294,8 +289,6 @@ function createCategoryPages(createPage, categoryPosts) {
     _.each(posts, (post, index) => {
       const next = index === posts.length - 1 ? null : posts[index + 1];
       const prev = index === 0 ? null : posts[index - 1];
-
-      console.log('create page', post.fields.slug);
 
       createPage({
         path: post.fields.slug,
@@ -330,8 +323,6 @@ function createTagPages(createPage, edges) {
     const pagesSum = Math.ceil(posts[tag].length / pageSize);
 
     for (let page = 0; page < pagesSum; page++) {
-      console.log('create page', `/tags/${tag}/page/${page}`);
-
       createPage({
         path: `/tags/${tag}/page/${page}`,
         component: template,
