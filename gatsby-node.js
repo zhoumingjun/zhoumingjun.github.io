@@ -118,7 +118,7 @@ exports.createPages = ({graphql, actions}) => {
 
 function createKBPages(createPage, seriesPosts) {
   const tmplSeries = path.resolve('./src/templates/blog-series.js');
-  const tmplSeriesPost = path.resolve('./src/templates/blog-series-post.js');
+  const tmplPost = path.resolve('./src/templates/blog-post.js');
 
   // generate series summary
   let seriesTree = {};
@@ -177,10 +177,10 @@ function createKBPages(createPage, seriesPosts) {
 
       createPage({
         path: post.fields.slug,
-        component: tmplSeriesPost,
+        component: tmplPost,
         context: {
           slug: post.fields.slug,
-          outline: JSON.stringify(seriesTree.children[seriesName]),
+          toc: JSON.stringify(seriesTree.children[seriesName]),
           next,
           prev,
         },
@@ -191,7 +191,7 @@ function createKBPages(createPage, seriesPosts) {
 
 function createSeriesPages(createPage, seriesPosts) {
   const tmplSeries = path.resolve('./src/templates/blog-series.js');
-  const tmplSeriesPost = path.resolve('./src/templates/blog-series-post.js');
+  const tmplPost = path.resolve('./src/templates/blog-post.js');
 
   // generate series summary
   let seriesTree = {};
@@ -249,10 +249,10 @@ function createSeriesPages(createPage, seriesPosts) {
 
       createPage({
         path: post.fields.slug,
-        component: tmplSeriesPost,
+        component: tmplPost,
         context: {
           slug: post.fields.slug,
-          outline: JSON.stringify(seriesTree.children[seriesName]),
+          toc: JSON.stringify(seriesTree.children[seriesName]),
           next,
           prev,
         },
@@ -263,9 +263,7 @@ function createSeriesPages(createPage, seriesPosts) {
 
 function createCategoryPages(createPage, categoryPosts) {
   const tmplCategory = path.resolve('./src/templates/blog-category.js');
-  const tmplCategoryPost = path.resolve(
-    './src/templates/blog-category-post.js',
-  );
+  const tmplPost = path.resolve('./src/templates/blog-post.js');
 
   // generate categories & page
   _.each(_.keys(categoryPosts), category => {
@@ -292,10 +290,9 @@ function createCategoryPages(createPage, categoryPosts) {
 
       createPage({
         path: post.fields.slug,
-        component: tmplCategoryPost,
+        component: tmplPost,
         context: {
           slug: post.fields.slug,
-          category: post.fields.category,
           prev,
           next,
         },

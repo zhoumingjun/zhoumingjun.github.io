@@ -34,24 +34,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const MathJaxConfig = `
-MathJax.Hub.Config({
-  messageStyle: 'none',
-  showProcessingMessages: false,
-  extensions: ['[a11y]/auto-collapse.js'],
-  'auto-collapse': {
-    disabled: false
-  },
-  SVG: {
-    linebreaks: {
-      automatic: true,
-      width: 'container'
-    }
-  },
+window.MathJax = {
   tex2jax: {
-    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
-    processEscapes: true
+    inlineMath: [['$', '$'] ],
+    displayMath: [['$$', '$$'] ],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: {
+      equationNumbers: {autoNumber: 'AMS'},
+      extensions: ['AMSmath.js', 'AMSsymbols.js', 'color.js'],
+    },
   }
-});`;
+};
+`;
 
 export default class HTML extends React.Component {
   render() {
@@ -74,10 +70,7 @@ export default class HTML extends React.Component {
             dangerouslySetInnerHTML={{__html: this.props.body}}
           />
           {this.props.postBodyComponents}
-          <script
-            type="text/x-mathjax-config"
-            dangerouslySetInnerHTML={{__html: MathJaxConfig}}
-          />
+          <script dangerouslySetInnerHTML={{__html: MathJaxConfig}} />
           <script
             defer
             src="https://cdn.bootcss.com/mathjax/2.7.4/latest.js?config=TeX-AMS_SVG"

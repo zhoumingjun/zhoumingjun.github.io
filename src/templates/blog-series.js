@@ -36,7 +36,7 @@ const BlogSeries = ({
 export default BlogSeries;
 
 export const pageQuery = graphql`
-  query BlogSeriesBySlug {
+  query BlogSeries {
     site {
       siteMetadata {
         title

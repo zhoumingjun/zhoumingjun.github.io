@@ -26,7 +26,7 @@ const BlogCategory = ({
 export default BlogCategory;
 
 export const pageQuery = graphql`
-  query BlogPostBySlug {
+  query BlogCategory {
     site {
       siteMetadata {
         title

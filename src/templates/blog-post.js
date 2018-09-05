@@ -8,7 +8,7 @@ import _ from 'lodash';
 import PageLayout from '../components/Layout';
 import PrevNext from '../components/PrevNext';
 import Disqus from 'disqus-react';
-
+import Section from '../components/Section';
 const ContentBox = styled.div`
   img {
     max-width: 100%;
@@ -53,13 +53,14 @@ const TreeNode = props => {
 };
 
 const BlogSeriesPost = ({
-  pageContext: {prev, next, outline},
+  pageContext: {prev, next, toc},
   data: {
     site: {siteMetadata: site},
     markdownRemark: post,
   },
 }) => {
-  let series = JSON.parse(outline);
+  let parsedTOC = toc ? JSON.parse(toc) : undefined;
+
   let localPath = post.fileAbsolutePath;
   let onlinePath =
     site.sourceUrl + localPath.substr(localPath.indexOf('content'));
@@ -96,24 +97,27 @@ const BlogSeriesPost = ({
             </ContentBox>
           </Box>
         </Box>
-
-        <Box
-          basis="medium"
-          pad="small"
-          border={{color: 'lightgrey', side: 'left', size: 'small'}}>
-          <Box align="center">
-            <Heading level={3} margin="small">
-              TOC
-            </Heading>
+        {toc && (
+          <Box
+            basis="medium"
+            pad="small"
+            border={{color: 'lightgrey', side: 'left', size: 'small'}}>
+            <Box align="center">
+              <Heading level={3} margin="small">
+                TOC
+              </Heading>
+            </Box>
+            {TreeNode(parsedTOC)}
           </Box>
-          {TreeNode(series)}
-        </Box>
+        )}
       </Box>
       <PrevNext prev={prev} next={next} />
-      <Disqus.DiscussionEmbed
-        shortname={disqusShortname}
-        config={disqusConfig}
-      />{' '}
+      <Section pad={{horizontal: 'xlarge', top: 'small'}}>
+        <Disqus.DiscussionEmbed
+          shortname={disqusShortname}
+          config={disqusConfig}
+        />
+      </Section>
     </PageLayout>
   );
 };
@@ -121,7 +125,7 @@ const BlogSeriesPost = ({
 export default BlogSeriesPost;
 
 export const pageQuery = graphql`
-  query BlogSeriesPostBySlug($slug: String!) {
+  query BlogPostBySlug($slug: String!) {
     site {
       siteMetadata {
         title

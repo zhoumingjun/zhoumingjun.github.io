@@ -5,8 +5,8 @@ function onMathJaxLoad() {
   console.log('onLoad MathJax');
   window.MathJax = {
     tex2jax: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$', '$$'], ['[', ']']],
+      inlineMath: [['$', '$']],
+      displayMath: [['$$', '$$']],
       processEscapes: true,
       processEnvironments: true,
       skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],

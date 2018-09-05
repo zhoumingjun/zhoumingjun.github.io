@@ -49,7 +49,7 @@ const Tags = ({
 
 export default Tags;
 export const pageQuery = graphql`
-  query BlogTagBySlug {
+  query BlogTag {
     site {
       siteMetadata {
         title
