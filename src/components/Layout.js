@@ -7,6 +7,7 @@ import 'prismjs/themes/prism-okaidia.css';
 injectGlobal`
   body {
     margin: 0;
+    background-color: #e8e8e8;
   }
 `;
 
@@ -36,7 +37,6 @@ const ContentDiv = styled.div`
   padding-top: 60px;
 `;
 const FooterBox = styled(Box)`
-  background: #eeeeee;
   width: 100vw;
 `;
 
@@ -81,7 +81,13 @@ const Header = () => {
   );
 };
 const Footer = () => (
-  <FooterBox direction="row" justify="center" pad={{vertical: 'small'}}>
+  <FooterBox
+    direction="column"
+    justify="center"
+    margin={{top: 'small'}}
+    pad={{top: 'small'}}
+    border="top"
+    fill>
     <Box align="center">
       <Text>
         Build with <Anchor href="https://www.gatsbyjs.org/" label="GatsbyJS" />{' '}

@@ -1,10 +1,24 @@
 import React from 'react';
 import {StaticQuery, graphql} from 'gatsby';
-import {Box} from 'grommet';
+import {Box, Anchor, Text} from 'grommet';
 import {TagCloud} from 'react-tagcloud';
 import {push} from 'gatsby-link';
-
+import styled from 'styled-components';
 import _ from 'lodash';
+
+const Small = styled.small({
+  textTransform: 'lowercase',
+});
+
+const Tag = styled(Anchor)`
+  border-color: green;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  padding-left: 2px;
+  padding-right: 2px;
+  margin-right: 10px;
+`;
 
 export default props => (
   <StaticQuery

@@ -1,24 +1,25 @@
 import React from 'react';
-import {graphql} from 'gatsby';
-import {Box} from 'grommet';
-import Posts from '../components/posts';
+import {Box, Heading, Anchor} from 'grommet';
 import Layout from '../components/Layout';
-import TagCloud from '../components/TagCloud';
-import {tag} from 'postcss-selector-parser';
-
-const Index = props => {
-  let {
-    data: {
-      allMarkdownRemark: {edges: posts},
-    },
-  } = props;
-
+import TagList from '../components/widgets/TagList';
+import LatestPosts from '../components/widgets/LatestPosts';
+import {CategoryList} from '../components/widgets';
+const Index = () => {
   return (
     <Layout>
       <Box direction="row" basis="xlarge" justify="center">
         <Box direction="column" width="xlarge">
-          <TagCloud />
-          <Posts posts={posts.map(post => post.node)} />
+          <Box direction="row">
+            <Box direction="row" basis="2/3">
+              <LatestPosts />
+            </Box>
+            <Box direction="row" basis="1/3">
+              <Box>
+                <TagList />
+                <CategoryList />
+              </Box>
+            </Box>
+          </Box>
         </Box>
       </Box>
     </Layout>
@@ -26,24 +27,3 @@ const Index = props => {
 };
 
 export default Index;
-
-export const pageQuery = graphql`
-  query IndexQuery {
-    allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}) {
-      edges {
-        node {
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            date(formatString: "YYYY-MM-DD")
-            tags
-            desc
-          }
-        }
-      }
-    }
-  }
-`;
