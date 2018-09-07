@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mingjun Zhou's blog]]></title><description><![CDATA[personal blog]]></description><link>https://zhoumingjun.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 07 Sep 2018 02:58:00 GMT</lastBuildDate><item><title><![CDATA[Unicode]]></title><description><![CDATA[unicode nomalization Canonical and Compatibility Equivalence http://www.unicode.org/reports/tr15/#Canon Compat Equivalence Examples of…]]></description><link>https://zhoumingjun.github.io/note/unicode/</link><guid isPermaLink="false">https://zhoumingjun.github.io/note/unicode/</guid><pubDate>Thu, 06 Sep 2018 02:12:39 GMT</pubDate><content:encoded>&lt;h1&gt;unicode nomalization&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mingjun Zhou's blog]]></title><description><![CDATA[personal blog]]></description><link>https://zhoumingjun.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 07 Sep 2018 03:29:31 GMT</lastBuildDate><item><title><![CDATA[Unicode]]></title><description><![CDATA[unicode nomalization Canonical and Compatibility Equivalence http://www.unicode.org/reports/tr15/#Canon Compat Equivalence Examples of…]]></description><link>https://zhoumingjun.github.io/note/unicode/</link><guid isPermaLink="false">https://zhoumingjun.github.io/note/unicode/</guid><pubDate>Thu, 06 Sep 2018 02:12:39 GMT</pubDate><content:encoded>&lt;h1&gt;unicode nomalization&lt;/h1&gt;
 &lt;h2&gt;Canonical and Compatibility Equivalence&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;http://www.unicode.org/reports/tr15/#Canon_Compat_Equivalence&quot;&gt;http://www.unicode.org/reports/tr15/#Canon&lt;em&gt;Compat&lt;/em&gt;Equivalence&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Examples of Canonical Equivalence&lt;/strong&gt;&lt;/p&gt;
@@ -28,19 +28,63 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Examples of Compatibility Equivalence&lt;/strong&gt;
-Subtype | Examples
-------- | -----
-Font variants               |	ℌ	→	H
-Linebreaking differences    |	[NBSP]	→	[SPACE]
-Positional variant forms    |	ﻉ	→	‌ع‌
-Circled variants            | 	①	→	1
-Width variants              | 	ｶ	→	カ
-Rotated variants            | 	︷	→	{
-Superscripts/subscripts     |	i⁹	→	i9
-Squared characters          |	㌀	→	アパート
-Fractions                   |	¼	→	1/4
-Other                       |	ǆ	→	dž&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Examples of Compatibility Equivalence&lt;/strong&gt;       &lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Subtype&lt;/th&gt;
+&lt;th&gt;Examples&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Font variants&lt;/td&gt;
+&lt;td&gt;ℌ	→	H&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Linebreaking differences&lt;/td&gt;
+&lt;td&gt;[
+NBSP
+]
+	→	
+[
+SPACE
+]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Positional variant forms&lt;/td&gt;
+&lt;td&gt;ﻉ	→	‌ع‌&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Circled variants&lt;/td&gt;
+&lt;td&gt;①	→	1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Width variants&lt;/td&gt;
+&lt;td&gt;ｶ	→	カ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Rotated variants&lt;/td&gt;
+&lt;td&gt;︷	→	{&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Superscripts/subscripts&lt;/td&gt;
+&lt;td&gt;i⁹	→	i9&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Squared characters&lt;/td&gt;
+&lt;td&gt;㌀	→	アパート&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Fractions&lt;/td&gt;
+&lt;td&gt;¼	→	1/4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Other&lt;/td&gt;
+&lt;td&gt;ǆ	→	dž&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;h2&gt;Normalization Forms&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
