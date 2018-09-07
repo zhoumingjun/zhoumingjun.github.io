@@ -140,13 +140,7 @@ const BlogSeriesPost = ({
             </StyledLink>
           )}
         </Box>
-        <Box
-          direction="row"
-          fill="horizontal"
-          justify="center"
-          border="xsmall"
-          margin="xsmall"
-          pad="small">
+        <Box border fill="horizontal" margin="xsmall" pad="small">
           <Disqus.DiscussionEmbed
             shortname={disqusShortname}
             config={disqusConfig}
