@@ -1,12 +1,12 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import {Link, graphql} from 'gatsby';
-import {Box} from 'grommet';
+import {graphql} from 'gatsby';
 import _ from 'lodash';
 
-import Section from '../components/Section';
+import Section from '../components/ui/Section';
 import PageLayout from '../components/Layout';
-import Posts from '../components/posts';
+import Posts from '../components/content/Posts';
+
 const BlogSeries = ({
   pageContext: {outline},
   data: {

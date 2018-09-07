@@ -1,9 +1,8 @@
 import React from 'react';
 import {graphql} from 'gatsby';
 import {Box, Heading} from 'grommet';
-import Posts from '../components/posts';
+import Posts from '../components/content/Posts';
 import Layout from '../components/Layout';
-import TagCloud from '../components/widgets/TagCloud';
 
 const All = props => {
   let {

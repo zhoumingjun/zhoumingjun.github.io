@@ -17,14 +17,10 @@ const Tag = styled(Anchor)`
   margin-right: 10px;
 `;
 
-const CommaSeparatedTags = ({tags}) =>
+const SeparatedTags = ({tags}) =>
   !_.isEmpty(tags) && (
     <Small>
       {tags.map((tag, index, array) => (
-        // <Tag key={tag} href={`/tags/${tag}/`}>
-        //   <Text>{tag}</Text>
-        // </Tag>
-
         <Tag key={tag} href={`/tags/${tag}/page/0`}>
           <Text size="small">{tag}</Text>
         </Tag>
@@ -32,4 +28,4 @@ const CommaSeparatedTags = ({tags}) =>
     </Small>
   );
 
-export default CommaSeparatedTags;
+export default SeparatedTags;

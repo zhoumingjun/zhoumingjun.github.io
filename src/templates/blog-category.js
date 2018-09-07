@@ -1,9 +1,11 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import {Link, graphql} from 'gatsby';
-import Section from '../components/Section';
+
+import Section from '../components/ui/Section';
 import PageLayout from '../components/Layout';
-import Posts from '../components/posts';
+import Posts from '../components/content/Posts';
+
 const BlogCategory = ({
   pageContext: {posts, tag},
   data: {

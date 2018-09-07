@@ -1,7 +1,11 @@
+export {default as Layout} from 'Layout';
 import React from 'react';
 import {Grommet, Box, Anchor, Text} from 'grommet';
 import styled, {injectGlobal} from 'styled-components';
 
+import Header from './Header';
+import Footer from './Footer';
+import Content from './Main';
 import 'prismjs/themes/prism-okaidia.css';
 
 injectGlobal`
@@ -27,94 +31,6 @@ const MyTheme = {
   layer: {border: {radius: '4px'}},
 };
 
-const HeaderBox = styled(Box)`
-  background: #333333;
-  position: fixed;
-  width: 100vw;
-  height: 60px;
-`;
-
-const ContentBox = styled(Box)`
-  width: 100vw;
-  padding-top: 60px;
-`;
-
-const FooterBox = styled(Box)`
-  background: #333333;
-  width: 100vw;
-`;
-
-const Header = () => {
-  return (
-    <HeaderBox direction="row" justify="center" pad={{vertical: 'small'}}>
-      <Box direction="row" justify="between" align="center" basis="xlarge">
-        <a href="/">
-          <Text size="medium" color="#61DAFB">
-            Mingjun Zhou's Blog
-          </Text>
-        </a>
-        <Box direction="row" align="center" gap="medium">
-          <a href="/categories/post/page/0">
-            <Text size="medium" color="white">
-              post
-            </Text>
-          </a>
-          <a href="/categories/note/page/0">
-            <Text size="medium" color="white">
-              note
-            </Text>
-          </a>
-          <a href="/series">
-            <Text size="medium" color="white">
-              series
-            </Text>
-          </a>
-          <a href="/knowledgebase">
-            <Text size="medium" color="white">
-              kb
-            </Text>
-          </a>
-          <a href="/about">
-            <Text size="medium" color="white">
-              about
-            </Text>
-          </a>
-        </Box>
-      </Box>
-    </HeaderBox>
-  );
-};
-
-const Footer = () => (
-  <FooterBox
-    direction="column"
-    justify="center"
-    margin={{top: 'small'}}
-    pad={{top: 'small'}}
-    border="top">
-    <Box align="center">
-      <Text color="white">
-        Build with <Anchor href="https://www.gatsbyjs.org/" label="GatsbyJS" />{' '}
-        <Anchor href="https://reactjs.org/" label={`React ${React.version}`} />
-        {' and '}
-        <Anchor href="https://v2.grommet.io" label={`Grommet`} />. Hosted on{' '}
-        <Anchor
-          href="https://github.com/zhoumingjun/zhoumingjun.github.io"
-          label="Github"
-        />
-        .<br />
-        The code is open source and available at{' '}
-        <Anchor href="https://github.com/calpa/blog" label="Github" />.
-      </Text>
-      <Text color="white">
-        Copyright &copy; 2017 - {new Date().getFullYear()}
-      </Text>
-    </Box>
-  </FooterBox>
-);
-
-const Content = props => <ContentBox>{props.children}</ContentBox>;
-
 const PageLayout = props => (
   <Grommet theme={MyTheme}>
     <Box justify="between" style={{minHeight: '100vh'}}>
@@ -127,4 +43,5 @@ const PageLayout = props => (
     </Box>
   </Grommet>
 );
+
 export default PageLayout;

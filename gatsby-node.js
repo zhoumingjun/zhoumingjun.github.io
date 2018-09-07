@@ -100,96 +100,21 @@ exports.createPages = ({graphql, actions}) => {
           }
         });
 
-        // for tags
+        // tags
         createTagPages(createPage, edges);
 
-        // for categories
+        // Normal pages
         createCategoryPages(createPage, categoryPosts);
 
-        // for series
-        createSeriesPages(createPage, seriesPosts);
-
-        // for kb
-        createKBPages(createPage, kbPosts);
+        // TOC pages
+        createTOCPages(createPage, seriesPosts, '/series');
+        createTOCPages(createPage, kbPosts, '/knowledgebase');
       }),
     );
   });
 };
 
-function createKBPages(createPage, seriesPosts) {
-  const tmplSeries = path.resolve('./src/templates/blog-series.js');
-  const tmplPost = path.resolve('./src/templates/blog-post.js');
-
-  // generate series summary
-  let seriesTree = {};
-  _.each(_.keys(seriesPosts), (seriesName, seriesIndex) => {
-    posts = seriesPosts[seriesName];
-    _.sortBy(posts, [
-      function(o) {
-        return o.fields.slug;
-      },
-    ]);
-    _.each(posts, post => {
-      items = post.fields.slug.split('/');
-      items = items.slice(2, items.length - 1);
-      let path = [];
-      for (idx = 0; idx < items.length; idx++) {
-        path = _.concat(path, ['children'], [items[idx]]);
-
-        if (idx != items.length - 1) {
-          // middle node
-          if (!_.get(seriesTree, path)) {
-            _.set(seriesTree, path, {});
-          }
-        } else {
-          // leaf node
-          if (!_.get(seriesTree, path)) {
-            _.set(seriesTree, path, {post});
-          } else {
-            _.set(seriesTree, _.concat(path, ['post']), post);
-          }
-        }
-      }
-    });
-  });
-  // console.dir(seriesTree, { depth: null })
-
-  createPage({
-    path: `/knowledgebase`,
-    component: tmplSeries,
-    context: {
-      outline: JSON.stringify(seriesTree.children),
-    },
-  });
-
-  // generate page
-  _.each(_.keys(seriesPosts), (seriesName, seriesIndex) => {
-    posts = seriesPosts[seriesName];
-    posts = _.sortBy(posts, [
-      function(o) {
-        return o.fields.slug;
-      },
-    ]);
-
-    _.each(posts, (post, index) => {
-      const next = index === posts.length - 1 ? null : posts[index + 1];
-      const prev = index === 0 ? null : posts[index - 1];
-
-      createPage({
-        path: post.fields.slug,
-        component: tmplPost,
-        context: {
-          slug: post.fields.slug,
-          toc: JSON.stringify(seriesTree.children[seriesName]),
-          next,
-          prev,
-        },
-      });
-    });
-  });
-}
-
-function createSeriesPages(createPage, seriesPosts) {
+function createTOCPages(createPage, seriesPosts, base) {
   const tmplSeries = path.resolve('./src/templates/blog-series.js');
   const tmplPost = path.resolve('./src/templates/blog-post.js');
 
@@ -227,7 +152,7 @@ function createSeriesPages(createPage, seriesPosts) {
   });
 
   createPage({
-    path: `/series`,
+    path: base,
     component: tmplSeries,
     context: {
       outline: JSON.stringify(seriesTree.children),

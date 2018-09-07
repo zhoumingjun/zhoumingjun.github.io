@@ -1,5 +1,5 @@
 import React from 'react';
-import Section from './Section';
+import Section from '../ui/Section';
 import {Link, graphql} from 'gatsby';
 import styled from 'styled-components';
 
@@ -12,7 +12,7 @@ const StyledLink = styled(Link)`
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 `;
-const PrevNext = ({prev, next}) => (
+const PostNav = ({prev, next}) => (
   <Section pad={{horizontal: 'xlarge', top: 'small'}}>
     <hr />
 
@@ -43,4 +43,4 @@ const PrevNext = ({prev, next}) => (
   </Section>
 );
 
-export default PrevNext;
+export default PostNav;

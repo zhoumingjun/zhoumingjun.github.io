@@ -1,9 +1,7 @@
 import React from 'react';
 import {Box, Heading, Anchor} from 'grommet';
 import Layout from '../components/Layout';
-import TagList from '../components/widgets/TagList';
-import LatestPosts from '../components/widgets/LatestPosts';
-import {CategoryList} from '../components/widgets';
+import {TagSection, LatestPosts, CategorySection} from '../components/widgets';
 const Index = () => {
   return (
     <Layout>
@@ -15,8 +13,8 @@ const Index = () => {
             </Box>
             <Box direction="row" basis="1/3">
               <Box>
-                <TagList />
-                <CategoryList />
+                <TagSection />
+                <CategorySection />
               </Box>
             </Box>
           </Box>

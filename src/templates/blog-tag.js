@@ -1,9 +1,10 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import {Link, graphql} from 'gatsby';
-import PageLayout from '../components/Layout';
 import {Box} from 'grommet';
 import get from 'lodash/get';
+
+import PageLayout from '../components/Layout';
 
 const Tags = ({
   pageContext: {posts, tag},

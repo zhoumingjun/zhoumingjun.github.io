@@ -3,7 +3,7 @@ import {StaticQuery, graphql} from 'gatsby';
 import {Box, Anchor, Text, Heading} from 'grommet';
 import styled from 'styled-components';
 import _ from 'lodash';
-import Posts from '../posts';
+import Posts from '../content/Posts';
 
 const LatestPosts = () => (
   <StaticQuery

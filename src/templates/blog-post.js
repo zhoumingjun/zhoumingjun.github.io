@@ -3,12 +3,13 @@ import Helmet from 'react-helmet';
 import {Link, graphql} from 'gatsby';
 import {Box, Anchor, Heading, Text} from 'grommet';
 import styled from 'styled-components';
+import Disqus from 'disqus-react';
 import _ from 'lodash';
 
 import PageLayout from '../components/Layout';
-import PrevNext from '../components/PrevNext';
-import Disqus from 'disqus-react';
-import Section from '../components/Section';
+import PrevNext from '../components/content/PostNav';
+import Section from '../components/ui/Section';
+
 const ContentBox = styled.div`
   img {
     max-width: 100%;

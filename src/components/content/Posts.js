@@ -3,10 +3,10 @@ import dateformat from 'dateformat';
 import styled from 'styled-components';
 import groupBy from 'lodash/groupBy';
 import first from 'lodash/first';
-import TagsList from './tags-list';
+import TagsList from './SeparatedTags';
 import {Heading, Anchor, Text} from 'grommet';
 import {Box} from 'grommet';
-import Section from '../components/Section';
+import Section from '../ui/Section';
 
 const Posts = ({posts}) => {
   return (
