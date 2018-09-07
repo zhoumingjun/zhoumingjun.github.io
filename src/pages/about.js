@@ -22,40 +22,42 @@ const todos = ['beautify toc'];
 const Index = props => {
   return (
     <Layout>
-      <Box direction="column" pad="xlarge" width="xlarge">
-        <Text>This is my personal blog for technical things.</Text>
+      <Box direction="row" basis="xlarge" justify="start">
+        <Box margin="xsmall" pad="small">
+          <Text>This is my personal blog for technical things.</Text>
 
-        <Heading level={3}>Features:</Heading>
-        <Box margin={{left: 'medium'}}>
-          {features.map((feature, key) => (
-            <Text key={key}>{feature}</Text>
-          ))}
-        </Box>
+          <Heading level={3}>Features:</Heading>
+          <Box margin={{left: 'medium'}}>
+            {features.map((feature, key) => (
+              <Text key={key}>{feature}</Text>
+            ))}
+          </Box>
 
-        <Heading level={3}>Todos:</Heading>
-        <Box margin={{left: 'medium'}}>
-          {todos.map((todo, key) => (
-            <Text key={key}>{todo}</Text>
-          ))}
-        </Box>
+          <Heading level={3}>Todos:</Heading>
+          <Box margin={{left: 'medium'}}>
+            {todos.map((todo, key) => (
+              <Text key={key}>{todo}</Text>
+            ))}
+          </Box>
 
-        <Heading level={3}>History:</Heading>
-        <Box margin={{left: 'medium'}}>
-          {logs.map((log, key) => {
-            return (
-              <Box
-                key={key}
-                direction="row"
-                justify="start"
-                align="start"
-                gap="medium">
-                <Heading level={4} margin="none">
-                  {log.date} :
-                </Heading>
-                <Text>{log.content}</Text>
-              </Box>
-            );
-          })}
+          <Heading level={3}>History:</Heading>
+          <Box margin={{left: 'medium'}}>
+            {logs.map((log, key) => {
+              return (
+                <Box
+                  key={key}
+                  direction="row"
+                  justify="start"
+                  align="start"
+                  gap="medium">
+                  <Heading level={4} margin="none">
+                    {log.date} :
+                  </Heading>
+                  <Text>{log.content}</Text>
+                </Box>
+              );
+            })}
+          </Box>
         </Box>
       </Box>
     </Layout>

@@ -2,9 +2,10 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import {graphql} from 'gatsby';
 import _ from 'lodash';
+import {Box} from 'grommet';
 
 import Section from '../components/ui/Section';
-import PageLayout from '../components/Layout';
+import Layout from '../components/Layout';
 import Posts from '../components/content/Posts';
 
 const BlogSeries = ({
@@ -20,16 +21,16 @@ const BlogSeries = ({
   });
 
   return (
-    <PageLayout>
-      <Section pad={{horizontal: 'xsmall', vertical: 'large'}}>
-        <Helmet
-          htmlAttributes={{lang: 'en'}}
-          meta={[{name: 'description', content: site.description}]}
-          title={site.title}
-        />
+    <Layout>
+      <Helmet
+        htmlAttributes={{lang: 'en'}}
+        meta={[{name: 'description', content: site.description}]}
+        title={site.title}
+      />
+      <Box direction="row" basis="xlarge" justify="start">
         {series && <Posts posts={series} />}
-      </Section>
-    </PageLayout>
+      </Box>
+    </Layout>
   );
 };
 

@@ -13,10 +13,8 @@ const All = props => {
 
   return (
     <Layout>
-      <Box direction="row" justify="center">
-        <Box width="xlarge" margin="xsmall" pad="small">
-          <Posts posts={posts.map(post => post.node)} />
-        </Box>
+      <Box direction="row" basis="xlarge" justify="start">
+        <Posts posts={posts.map(post => post.node)} />
       </Box>
     </Layout>
   );

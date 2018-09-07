@@ -1,9 +1,8 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import {Link, graphql} from 'gatsby';
-
-import Section from '../components/ui/Section';
-import PageLayout from '../components/Layout';
+import {Box} from 'grommet';
+import Layout from '../components/Layout';
 import Posts from '../components/content/Posts';
 
 const BlogCategory = ({
@@ -12,17 +11,16 @@ const BlogCategory = ({
     site: {siteMetadata: site},
   },
 }) => (
-  <PageLayout>
-    <Section pad={{horizontal: 'xsmall', vertical: 'large'}}>
-      <Helmet
-        htmlAttributes={{lang: 'en'}}
-        meta={[{name: 'description', content: site.description}]}
-        title={site.title}
-      />
-
+  <Layout>
+    <Helmet
+      htmlAttributes={{lang: 'en'}}
+      meta={[{name: 'description', content: site.description}]}
+      title={site.title}
+    />
+    <Box direction="row" basis="xlarge" justify="start">
       <Posts posts={posts} />
-    </Section>
-  </PageLayout>
+    </Box>
+  </Layout>
 );
 
 export default BlogCategory;

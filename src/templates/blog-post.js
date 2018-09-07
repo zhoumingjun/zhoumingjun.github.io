@@ -6,15 +6,12 @@ import styled from 'styled-components';
 import Disqus from 'disqus-react';
 import _ from 'lodash';
 
-import PageLayout from '../components/Layout';
+import Layout from '../components/Layout';
 import PrevNext from '../components/content/PostNav';
 import Section from '../components/ui/Section';
 
-const ContentBox = styled.div`
-  img {
-    max-width: 100%;
-  }
-`;
+import 'github-markdown-css/github-markdown.css';
+import 'prismjs/themes/prism-okaidia.css';
 
 const StyledUL = styled.ul`
   list-style: none;
@@ -22,7 +19,20 @@ const StyledUL = styled.ul`
   margin: 0px;
 `;
 
-const StyledLI = styled.li``;
+const ContentWrapper = styled.div`
+  width: 100%;
+`;
+
+const StyledLink = styled(Link)`
+  border-color: grey;
+  border-style: solid;
+  border-width: 1px;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+`;
+
 const TreeNode = props => {
   let {post, children} = props;
 
@@ -73,53 +83,77 @@ const BlogSeriesPost = ({
     title: post.frontmatter.title,
   };
 
-  console.log('disqus', site, disqusShortname, disqusConfig);
   return (
-    <PageLayout>
+    <Layout>
       <Helmet
         htmlAttributes={{lang: 'en'}}
         meta={[{name: 'description', content: site.description}]}
         title={site.title}
       />
-      <Box direction="row" justify="center">
-        <Box basis="xlarge">
-          <Box pad="small">
-            <Heading textAlign="center" margin="small">
-              {post.frontmatter.title}
-            </Heading>
+      <Box basis="xlarge" justify="start">
+        <Box
+          direction="row"
+          fill="horizontal"
+          border="xsmall"
+          margin="xsmall"
+          justify="center"
+          pad="small">
+          <Box fill="horizontal">
+            <Box align="center">
+              <Heading level={2} margin="small">
+                {post.frontmatter.title}
+              </Heading>
+            </Box>
             <Box align="end">
               {post.frontmatter.date}{' '}
               <Anchor href={onlinePath} label="View page source" />
             </Box>
           </Box>
-          <Box direction="row" pad="small">
-            <ContentBox>
-              <div dangerouslySetInnerHTML={{__html: post.html}} />
-            </ContentBox>
-          </Box>
         </Box>
-        {toc && (
-          <Box
-            basis="medium"
-            pad="small"
-            border={{color: 'lightgrey', side: 'left', size: 'small'}}>
-            <Box align="center">
-              <Heading level={3} margin="small">
-                TOC
-              </Heading>
-            </Box>
-            {TreeNode(parsedTOC)}
-          </Box>
-        )}
+
+        <Box
+          direction="row"
+          fill="horizontal"
+          border="xsmall"
+          margin="xsmall"
+          pad="small">
+          <ContentWrapper
+            className="markdown-body"
+            dangerouslySetInnerHTML={{__html: post.html}}
+          />
+        </Box>
+
+        <Box
+          direction="row"
+          fill="horizontal"
+          justify="between"
+          margin="xsmall">
+          {prev && (
+            <StyledLink to={prev.fields.slug} rel="prev">
+              <span>{'<-'}</span> {prev.frontmatter.title}
+            </StyledLink>
+          )}
+          <div />
+          {next && (
+            <StyledLink to={next.fields.slug} rel="next">
+              {next.frontmatter.title} <span>{'->'}</span>
+            </StyledLink>
+          )}
+        </Box>
+        <Box
+          direction="row"
+          fill="horizontal"
+          justify="center"
+          border="xsmall"
+          margin="xsmall"
+          pad="small">
+          <Disqus.DiscussionEmbed
+            shortname={disqusShortname}
+            config={disqusConfig}
+          />
+        </Box>
       </Box>
-      <PrevNext prev={prev} next={next} />
-      <Section pad={{horizontal: 'xlarge', top: 'small'}} border="top">
-        <Disqus.DiscussionEmbed
-          shortname={disqusShortname}
-          config={disqusConfig}
-        />
-      </Section>
-    </PageLayout>
+    </Layout>
   );
 };
 

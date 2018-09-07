@@ -6,5 +6,9 @@ const ContentBox = styled(Box)`
   width: 100vw;
   padding-top: 60px;
 `;
-const Content = props => <ContentBox>{props.children}</ContentBox>;
+const Content = props => (
+  <ContentBox direction="row" justify="center">
+    {props.children}
+  </ContentBox>
+);
 export default Content;
