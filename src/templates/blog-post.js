@@ -113,7 +113,7 @@ const BlogSeriesPost = ({
         )}
       </Box>
       <PrevNext prev={prev} next={next} />
-      <Section pad={{horizontal: 'xlarge', top: 'small'}}>
+      <Section pad={{horizontal: 'xlarge', top: 'small'}} border="top">
         <Disqus.DiscussionEmbed
           shortname={disqusShortname}
           config={disqusConfig}
