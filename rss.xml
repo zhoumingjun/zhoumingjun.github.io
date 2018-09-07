@@ -1,4 +1,128 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mingjun Zhou's blog]]></title><description><![CDATA[personal blog]]></description><link>https://zhoumingjun.github.io</link><generator>RSS for Node</generator><lastBuildDate>Thu, 06 Sep 2018 18:53:28 GMT</lastBuildDate><item><title><![CDATA[Enable mathjax in gatsby]]></title><description><![CDATA[how to enable mathjax in gatsby Steps 1. Configure gatsby-config.js 2. Customize html.js Follows the  official document     Here is my  html…]]></description><link>https://zhoumingjun.github.io/post/2018-09-04-enable-mathjax-in-gatsby/</link><guid isPermaLink="false">https://zhoumingjun.github.io/post/2018-09-04-enable-mathjax-in-gatsby/</guid><pubDate>Tue, 04 Sep 2018 06:30:28 GMT</pubDate><content:encoded>&lt;h1&gt;how to enable mathjax in gatsby&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mingjun Zhou's blog]]></title><description><![CDATA[personal blog]]></description><link>https://zhoumingjun.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 07 Sep 2018 02:58:00 GMT</lastBuildDate><item><title><![CDATA[Unicode]]></title><description><![CDATA[unicode nomalization Canonical and Compatibility Equivalence http://www.unicode.org/reports/tr15/#Canon Compat Equivalence Examples of…]]></description><link>https://zhoumingjun.github.io/note/unicode/</link><guid isPermaLink="false">https://zhoumingjun.github.io/note/unicode/</guid><pubDate>Thu, 06 Sep 2018 02:12:39 GMT</pubDate><content:encoded>&lt;h1&gt;unicode nomalization&lt;/h1&gt;
+&lt;h2&gt;Canonical and Compatibility Equivalence&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.unicode.org/reports/tr15/#Canon_Compat_Equivalence&quot;&gt;http://www.unicode.org/reports/tr15/#Canon&lt;em&gt;Compat&lt;/em&gt;Equivalence&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Examples of Canonical Equivalence&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Subtype&lt;/th&gt;
+&lt;th&gt;Examples&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Combining sequence&lt;/td&gt;
+&lt;td&gt;Ç	↔	C+◌̧&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ordering of combining marks&lt;/td&gt;
+&lt;td&gt;q+◌̇+◌̣	↔	q+◌̣+◌̇&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Hangul &amp;#x26; conjoining jamo&lt;/td&gt;
+&lt;td&gt;가	↔	ᄀ +ᅡ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Singleton equivalence&lt;/td&gt;
+&lt;td&gt;Ω	↔	Ω&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Examples of Compatibility Equivalence&lt;/strong&gt;
+Subtype | Examples
+------- | -----
+Font variants               |	ℌ	→	H
+Linebreaking differences    |	[NBSP]	→	[SPACE]
+Positional variant forms    |	ﻉ	→	‌ع‌
+Circled variants            | 	①	→	1
+Width variants              | 	ｶ	→	カ
+Rotated variants            | 	︷	→	{
+Superscripts/subscripts     |	i⁹	→	i9
+Squared characters          |	㌀	→	アパート
+Fractions                   |	¼	→	1/4
+Other                       |	ǆ	→	dž&lt;/p&gt;
+&lt;h2&gt;Normalization Forms&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Form&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Normalization Form D (NFD)&lt;/td&gt;
+&lt;td&gt;Canonical Decomposition&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Normalization Form C (NFC)&lt;/td&gt;
+&lt;td&gt;Canonical Decomposition,followed by Canonical Composition&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Normalization Form KD (NFKD)&lt;/td&gt;
+&lt;td&gt;Compatibility Decomposition&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Normalization Form KC (NFKC)&lt;/td&gt;
+&lt;td&gt;Compatibility Decomposition,followed by Canonical Composition&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h1&gt;unicode charater category&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Unicode_character_property#General_Category&quot;&gt;https://en.wikipedia.org/wiki/Unicode&lt;em&gt;character&lt;/em&gt;property#General_Category&lt;/a&gt;
+&lt;a href=&quot;http://www.fileformat.info/info/unicode/category/index.htm&quot;&gt;http://www.fileformat.info/info/unicode/category/index.htm&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Code	Description
+[Cc]	Other, Control
+[Cf]	Other, Format
+[Cn]	Other, Not Assigned (no characters in the file have this property)
+[Co]	Other, Private Use
+[Cs]	Other, Surrogate
+[LC]	Letter, Cased
+[Ll]	Letter, Lowercase
+[Lm]	Letter, Modifier
+[Lo]	Letter, Other
+[Lt]	Letter, Titlecase
+[Lu]	Letter, Uppercase
+[Mc]	Mark, Spacing Combining
+[Me]	Mark, Enclosing
+[Mn]	Mark, Nonspacing
+[Nd]	Number, Decimal Digit
+[Nl]	Number, Letter
+[No]	Number, Other
+[Pc]	Punctuation, Connector
+[Pd]	Punctuation, Dash
+[Pe]	Punctuation, Close
+[Pf]	Punctuation, Final quote (may behave like Ps or Pe depending on usage)
+[Pi]	Punctuation, Initial quote (may behave like Ps or Pe depending on usage)
+[Po]	Punctuation, Other
+[Ps]	Punctuation, Open
+[Sc]	Symbol, Currency
+[Sk]	Symbol, Modifier
+[Sm]	Symbol, Math
+[So]	Symbol, Other
+[Zl]	Separator, Line
+[Zp]	Separator, Paragraph
+[Zs]	Separator, Space&lt;/p&gt;
+&lt;h1&gt;python code&lt;/h1&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; unicodedata
+all_letters &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; string&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ascii_letters &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot; .,;&apos;&quot;&lt;/span&gt;
+n_letters &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;all_letters&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# Turn a Unicode string to plain ASCII, thanks to http://stackoverflow.com/a/518232/2809427&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;unicodeToAscii&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;s&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;join&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;c &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; c &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; unicodedata&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;normalize&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;NFD&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; s&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; unicodedata&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;category&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;c&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Mn&apos;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;and&lt;/span&gt; c &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; all_letters&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# show case&lt;/span&gt;
+&lt;span class=&quot;token builtin&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Abelló&apos;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;c &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; c &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;c &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; c &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; unicodedata&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;normalize&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;NFD&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;c &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; c &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; unicodedata&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;normalize&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;NFD&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; unicodedata&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;category&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;c&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Mn&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;c &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; c &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; unicodedata&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;normalize&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;NFD&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; unicodedata&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;category&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;c&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Mn&apos;&lt;/span&gt;  &lt;span class=&quot;token operator&quot;&gt;and&lt;/span&gt; c &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; all_letters&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# result &lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;A&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;b&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;e&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;l&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;l&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;ó&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;A&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;b&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;e&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;l&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;l&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;o&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;́&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;A&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;b&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;e&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;l&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;l&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;o&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;A&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;b&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;e&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;l&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;l&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;o&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Enable mathjax in gatsby]]></title><description><![CDATA[how to enable mathjax in gatsby Steps 1. Configure gatsby-config.js 2. Customize html.js Follows the  official document     Here is my  html…]]></description><link>https://zhoumingjun.github.io/post/2018-09-04-enable-mathjax-in-gatsby/</link><guid isPermaLink="false">https://zhoumingjun.github.io/post/2018-09-04-enable-mathjax-in-gatsby/</guid><pubDate>Tue, 04 Sep 2018 06:30:28 GMT</pubDate><content:encoded>&lt;h1&gt;how to enable mathjax in gatsby&lt;/h1&gt;
 &lt;h1&gt;Steps&lt;/h1&gt;
 &lt;h2&gt;1. Configure gatsby-config.js&lt;/h2&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// In your gatsby-config.js
@@ -163,7 +287,7 @@ hash foo 2&gt;/dev/null&lt;/p&gt;
 fi&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://hyperpolyglot.org/unix-shells&quot;&gt;http://hyperpolyglot.org/unix-shells&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[networking]]></title><description><![CDATA[https://www.slideshare.net/ThomasGraf5/linux-networking-explained docker network https://success.docker.com/article/networking]]></description><link>https://zhoumingjun.github.io/knowledgebase/linux/networking/</link><guid isPermaLink="false">https://zhoumingjun.github.io/knowledgebase/linux/networking/</guid><pubDate>Fri, 31 Aug 2018 10:45:20 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://www.slideshare.net/ThomasGraf5/linux-networking-explained&quot;&gt;https://www.slideshare.net/ThomasGraf5/linux-networking-explained&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;docker network&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://success.docker.com/article/networking&quot;&gt;https://success.docker.com/article/networking&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[veth]]></title><description><![CDATA[https://gabhijit.github.io/linux-virtual-interfaces.html]]></description><link>https://zhoumingjun.github.io/knowledgebase/linux/networking/veth/</link><guid isPermaLink="false">https://zhoumingjun.github.io/knowledgebase/linux/networking/veth/</guid><pubDate>Fri, 31 Aug 2018 10:45:20 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://gabhijit.github.io/linux-virtual-interfaces.html&quot;&gt;https://gabhijit.github.io/linux-virtual-interfaces.html&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[references]]></title><description><![CDATA[ref:  https://gist.github.com/fffaraz/2b86cf1f1a1f9564c51b Web Resources Course Textbooks Tim Jones homepage  (author of primary textbook…]]></description><link>https://zhoumingjun.github.io/knowledgebase/linux/networking/refs/</link><guid isPermaLink="false">https://zhoumingjun.github.io/knowledgebase/linux/networking/refs/</guid><pubDate>Fri, 31 Aug 2018 10:45:20 GMT</pubDate><content:encoded>&lt;p&gt;ref: &lt;a href=&quot;https://gist.github.com/fffaraz/2b86cf1f1a1f9564c51b&quot;&gt;https://gist.github.com/fffaraz/2b86cf1f1a1f9564c51b&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://success.docker.com/article/networking&quot;&gt;https://success.docker.com/article/networking&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[references]]></title><description><![CDATA[ref:  https://gist.github.com/fffaraz/2b86cf1f1a1f9564c51b Web Resources Course Textbooks Tim Jones homepage  (author of primary textbook…]]></description><link>https://zhoumingjun.github.io/knowledgebase/linux/networking/refs/</link><guid isPermaLink="false">https://zhoumingjun.github.io/knowledgebase/linux/networking/refs/</guid><pubDate>Fri, 31 Aug 2018 10:45:20 GMT</pubDate><content:encoded>&lt;p&gt;ref: &lt;a href=&quot;https://gist.github.com/fffaraz/2b86cf1f1a1f9564c51b&quot;&gt;https://gist.github.com/fffaraz/2b86cf1f1a1f9564c51b&lt;/a&gt;&lt;/p&gt;
 &lt;h1&gt;Web Resources&lt;/h1&gt;
 &lt;h4&gt;Course Textbooks&lt;/h4&gt;
 &lt;ul&gt;
@@ -351,7 +475,7 @@ fi&lt;/p&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.vmware.com/&quot;&gt;VMWare&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.howtoforge.com/virtualbox_ubuntu&quot;&gt;Installing Ubuntu in VirtualBox on Windoze&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.simplehelp.net/2007/05/13/how-to-install-ubuntu-studio-in-windows-using-virtualbox-a-complete-walkthrough/&quot;&gt;Installing Ubuntu in VirtualBox on Windoze&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[visualization]]></title><description><![CDATA[Visualization]]></description><link>https://zhoumingjun.github.io/knowledgebase/visualization/</link><guid isPermaLink="false">https://zhoumingjun.github.io/knowledgebase/visualization/</guid><pubDate>Fri, 31 Aug 2018 10:44:53 GMT</pubDate><content:encoded>&lt;p&gt;Visualization&lt;/p&gt;</content:encoded></item><item><title><![CDATA[iptables]]></title><description><![CDATA[refs https://www.hostinger.com/tutorials/iptables-tutorial https://wiki.archlinux.org/index.php/iptables]]></description><link>https://zhoumingjun.github.io/note/iptables/</link><guid isPermaLink="false">https://zhoumingjun.github.io/note/iptables/</guid><pubDate>Fri, 24 Aug 2018 03:58:03 GMT</pubDate><content:encoded>&lt;h1&gt;refs&lt;/h1&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[veth]]></title><description><![CDATA[https://gabhijit.github.io/linux-virtual-interfaces.html]]></description><link>https://zhoumingjun.github.io/knowledgebase/linux/networking/veth/</link><guid isPermaLink="false">https://zhoumingjun.github.io/knowledgebase/linux/networking/veth/</guid><pubDate>Fri, 31 Aug 2018 10:45:20 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://gabhijit.github.io/linux-virtual-interfaces.html&quot;&gt;https://gabhijit.github.io/linux-virtual-interfaces.html&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[visualization]]></title><description><![CDATA[Visualization]]></description><link>https://zhoumingjun.github.io/knowledgebase/visualization/</link><guid isPermaLink="false">https://zhoumingjun.github.io/knowledgebase/visualization/</guid><pubDate>Fri, 31 Aug 2018 10:44:53 GMT</pubDate><content:encoded>&lt;p&gt;Visualization&lt;/p&gt;</content:encoded></item><item><title><![CDATA[iptables]]></title><description><![CDATA[refs https://www.hostinger.com/tutorials/iptables-tutorial https://wiki.archlinux.org/index.php/iptables]]></description><link>https://zhoumingjun.github.io/note/iptables/</link><guid isPermaLink="false">https://zhoumingjun.github.io/note/iptables/</guid><pubDate>Fri, 24 Aug 2018 03:58:03 GMT</pubDate><content:encoded>&lt;h1&gt;refs&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.hostinger.com/tutorials/iptables-tutorial&quot;&gt;https://www.hostinger.com/tutorials/iptables-tutorial&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://wiki.archlinux.org/index.php/iptables&quot;&gt;https://wiki.archlinux.org/index.php/iptables&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Install cuda9.2 and cudnn7.2 on ubuntu 18.04]]></title><description><![CDATA[Overview To run tensorflow/pytorch with gpu, I need to install cuda and cudnn.
 It’s really tricky, but finally I found the method.  The…]]></description><link>https://zhoumingjun.github.io/post/2018-08-23-install-cuda-and-cudnn-on-ubuntu18.04/</link><guid isPermaLink="false">https://zhoumingjun.github.io/post/2018-08-23-install-cuda-and-cudnn-on-ubuntu18.04/</guid><pubDate>Thu, 23 Aug 2018 15:01:49 GMT</pubDate><content:encoded>&lt;h1&gt;Overview&lt;/h1&gt;
