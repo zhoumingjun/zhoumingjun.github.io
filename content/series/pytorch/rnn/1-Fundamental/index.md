@@ -22,7 +22,7 @@ https://docs.scipy.org/doc/numpy/user/basics.indexing.html
 Refer to https://pytorch.org/docs/stable/nn.html#lstm
 
 Andrej Karpathy’s diagram shows the different pattern in RNN        
-![RNN](./rnn.jpg)
+![RNN](rnn.jpg)
 
 ### Sequence 
 The following code show the concept about sequence. 
