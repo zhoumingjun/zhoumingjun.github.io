@@ -113,7 +113,7 @@ const Footer = () => (
   </FooterBox>
 );
 
-const Content = props => <ContentBox flex="grow">{props.children}</ContentBox>;
+const Content = props => <ContentBox>{props.children}</ContentBox>;
 
 const PageLayout = props => (
   <Grommet theme={MyTheme}>

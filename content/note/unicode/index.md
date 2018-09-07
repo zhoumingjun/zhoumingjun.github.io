@@ -17,9 +17,10 @@ Ordering of combining marks	| q+◌̇+◌̣	↔	q+◌̣+◌̇
 Hangul & conjoining jamo	| 가	↔	ᄀ +ᅡ
 Singleton equivalence	    | Ω	↔	Ω
 
-**Examples of Compatibility Equivalence**
-Subtype | Examples
-------- | -----
+**Examples of Compatibility Equivalence**       
+
+Subtype | Examples      
+------- | -----     
 Font variants               |	ℌ	→	H
 Linebreaking differences    |	[NBSP]	→	[SPACE]
 Positional variant forms    |	ﻉ	→	‌ع‌

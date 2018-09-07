@@ -14,8 +14,8 @@ const All = props => {
 
   return (
     <Layout>
-      <Box direction="row" basis="xlarge" justify="center">
-        <Box direction="column" width="xlarge">
+      <Box direction="row" justify="center">
+        <Box width="xlarge" margin="xsmall" pad="small">
           <Posts posts={posts.map(post => post.node)} />
         </Box>
       </Box>

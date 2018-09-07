@@ -6,12 +6,13 @@ import first from 'lodash/first';
 import TagsList from './tags-list';
 import {Heading, Anchor, Text} from 'grommet';
 import {Box} from 'grommet';
+import Section from '../components/Section';
 
 const Posts = ({posts}) => {
   return (
-    <section>
+    <div>
       {posts.map(post => (
-        <Box key={post.fields.slug} margin={{bottom: 'medium'}}>
+        <Box key={post.fields.slug} margin="xsmall" border="bottom" pad="small">
           <Text color="#818181" margin={{right: 'medium'}}>
             {dateformat(post.frontmatter.date, 'mmm dd, yyyy  ')}
           </Text>
@@ -23,7 +24,7 @@ const Posts = ({posts}) => {
           <Text>{post.frontmatter.desc}</Text>
         </Box>
       ))}
-    </section>
+    </div>
   );
 };
 
