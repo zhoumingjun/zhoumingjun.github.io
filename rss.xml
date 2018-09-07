@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mingjun Zhou's blog]]></title><description><![CDATA[personal blog]]></description><link>https://zhoumingjun.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 07 Sep 2018 17:25:34 GMT</lastBuildDate><item><title><![CDATA[pytorch]]></title><description><![CDATA[Pytorch]]></description><link>https://zhoumingjun.github.io/series/pytorch/</link><guid isPermaLink="false">https://zhoumingjun.github.io/series/pytorch/</guid><pubDate>Fri, 07 Sep 2018 10:16:47 GMT</pubDate><content:encoded>&lt;p&gt;Pytorch&lt;/p&gt;</content:encoded></item><item><title><![CDATA[RNN]]></title><description><![CDATA[RNN todo:
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mingjun Zhou's blog]]></title><description><![CDATA[personal blog]]></description><link>https://zhoumingjun.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 07 Sep 2018 17:38:49 GMT</lastBuildDate><item><title><![CDATA[pytorch]]></title><description><![CDATA[Pytorch]]></description><link>https://zhoumingjun.github.io/series/pytorch/</link><guid isPermaLink="false">https://zhoumingjun.github.io/series/pytorch/</guid><pubDate>Fri, 07 Sep 2018 10:16:47 GMT</pubDate><content:encoded>&lt;p&gt;Pytorch&lt;/p&gt;</content:encoded></item><item><title><![CDATA[RNN]]></title><description><![CDATA[RNN todo:
 seq2seq:
  https://www.microsoft.com/en-us/cognitive-toolkit/blog/2016/11/sequence-to-sequence-deep-recurrent-neural-networks-in…]]></description><link>https://zhoumingjun.github.io/series/pytorch/rnn/</link><guid isPermaLink="false">https://zhoumingjun.github.io/series/pytorch/rnn/</guid><pubDate>Fri, 07 Sep 2018 10:16:47 GMT</pubDate><content:encoded>&lt;p&gt;RNN&lt;/p&gt;
 &lt;p&gt;todo:
@@ -12,7 +12,7 @@ seq2seq:
 &lt;h2&gt;RNN&lt;/h2&gt;
 &lt;p&gt;Refer to &lt;a href=&quot;https://pytorch.org/docs/stable/nn.html#lstm&quot;&gt;https://pytorch.org/docs/stable/nn.html#lstm&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Andrej Karpathy’s diagram shows the different pattern in RNN&lt;br&gt;
-&lt;img src=&quot;./rnn.jpg&quot; alt=&quot;RNN&quot;&gt;&lt;/p&gt;
+&lt;img src=&quot;rnn.jpg&quot; alt=&quot;RNN&quot;&gt;&lt;/p&gt;
 &lt;h3&gt;Sequence&lt;/h3&gt;
 &lt;p&gt;The following code show the concept about sequence.
 torch.nn.LSTM can handle the sequence automatically, but we can feed it step-by-step also.  &lt;/p&gt;
