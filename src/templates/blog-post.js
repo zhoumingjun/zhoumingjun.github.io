@@ -80,7 +80,7 @@ const BlogSeriesPost = ({
         meta={[{name: 'description', content: site.description}]}
         title={site.title}
       />
-      <Box direction="row" justify="center" basis="auto">
+      <Box direction="row" justify="center">
         <Box basis="xlarge">
           <Box pad="small">
             <Heading textAlign="center" margin="small">

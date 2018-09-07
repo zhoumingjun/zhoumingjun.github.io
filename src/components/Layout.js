@@ -33,10 +33,14 @@ const HeaderBox = styled(Box)`
   width: 100vw;
   height: 60px;
 `;
-const ContentDiv = styled.div`
+
+const ContentBox = styled(Box)`
+  width: 100vw;
   padding-top: 60px;
 `;
+
 const FooterBox = styled(Box)`
+  background: #333333;
   width: 100vw;
 `;
 
@@ -80,16 +84,16 @@ const Header = () => {
     </HeaderBox>
   );
 };
+
 const Footer = () => (
   <FooterBox
     direction="column"
     justify="center"
     margin={{top: 'small'}}
     pad={{top: 'small'}}
-    border="top"
-    fill>
+    border="top">
     <Box align="center">
-      <Text>
+      <Text color="white">
         Build with <Anchor href="https://www.gatsbyjs.org/" label="GatsbyJS" />{' '}
         <Anchor href="https://reactjs.org/" label={`React ${React.version}`} />
         {' and '}
@@ -102,16 +106,25 @@ const Footer = () => (
         The code is open source and available at{' '}
         <Anchor href="https://github.com/calpa/blog" label="Github" />.
       </Text>
-      <Text>Copyright &copy; 2017 - {new Date().getFullYear()}</Text>
+      <Text color="white">
+        Copyright &copy; 2017 - {new Date().getFullYear()}
+      </Text>
     </Box>
   </FooterBox>
 );
 
+const Content = props => <ContentBox flex="grow">{props.children}</ContentBox>;
+
 const PageLayout = props => (
-  <Grommet theme={MyTheme} style={{minHeight: '100vh'}}>
-    <Header />
-    <ContentDiv>{props.children}</ContentDiv>
-    <Footer />
+  <Grommet theme={MyTheme}>
+    <Box justify="between" style={{minHeight: '100vh'}}>
+      <Box>
+        <Header />
+        <Content>{props.children}</Content>
+      </Box>
+
+      <Footer />
+    </Box>
   </Grommet>
 );
 export default PageLayout;
