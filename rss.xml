@@ -1,4 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mingjun Zhou's blog]]></title><description><![CDATA[personal blog]]></description><link>https://zhoumingjun.github.io</link><generator>RSS for Node</generator><lastBuildDate>Sat, 08 Sep 2018 13:42:38 GMT</lastBuildDate><item><title><![CDATA[pytorch]]></title><description><![CDATA[Pytorch]]></description><link>https://zhoumingjun.github.io/series/pytorch/</link><guid isPermaLink="false">https://zhoumingjun.github.io/series/pytorch/</guid><pubDate>Fri, 07 Sep 2018 10:16:47 GMT</pubDate><content:encoded>&lt;p&gt;Pytorch&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Fundamental]]></title><description><![CDATA[python3 star operator map zip lambda NDArray Indexing https://docs.scipy.org/doc/numpy/user/basics.indexing.html pytorch RNN Refer to  https…]]></description><link>https://zhoumingjun.github.io/series/pytorch/rnn/1-Fundamental/</link><guid isPermaLink="false">https://zhoumingjun.github.io/series/pytorch/rnn/1-Fundamental/</guid><pubDate>Fri, 07 Sep 2018 10:16:47 GMT</pubDate><content:encoded>&lt;h1&gt;python3&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mingjun Zhou's blog]]></title><description><![CDATA[personal blog]]></description><link>https://zhoumingjun.github.io</link><generator>RSS for Node</generator><lastBuildDate>Sat, 08 Sep 2018 19:19:08 GMT</lastBuildDate><item><title><![CDATA[pytorch]]></title><description><![CDATA[Pytorch]]></description><link>https://zhoumingjun.github.io/series/pytorch/</link><guid isPermaLink="false">https://zhoumingjun.github.io/series/pytorch/</guid><pubDate>Fri, 07 Sep 2018 10:16:47 GMT</pubDate><content:encoded>&lt;p&gt;Pytorch&lt;/p&gt;</content:encoded></item><item><title><![CDATA[RNN]]></title><description><![CDATA[RNN todo:
+seq2seq:
+ https://www.microsoft.com/en-us/cognitive-toolkit/blog/2016/11/sequence-to-sequence-deep-recurrent-neural-networks-in…]]></description><link>https://zhoumingjun.github.io/series/pytorch/rnn/</link><guid isPermaLink="false">https://zhoumingjun.github.io/series/pytorch/rnn/</guid><pubDate>Fri, 07 Sep 2018 10:16:47 GMT</pubDate><content:encoded>&lt;p&gt;RNN&lt;/p&gt;
+&lt;p&gt;todo:
+seq2seq:
+&lt;a href=&quot;https://www.microsoft.com/en-us/cognitive-toolkit/blog/2016/11/sequence-to-sequence-deep-recurrent-neural-networks-in-cntk-part-1/&quot;&gt;https://www.microsoft.com/en-us/cognitive-toolkit/blog/2016/11/sequence-to-sequence-deep-recurrent-neural-networks-in-cntk-part-1/&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Fundamental]]></title><description><![CDATA[python3 star operator map zip lambda NDArray Indexing https://docs.scipy.org/doc/numpy/user/basics.indexing.html pytorch RNN Refer to  https…]]></description><link>https://zhoumingjun.github.io/series/pytorch/rnn/1-Fundamental/</link><guid isPermaLink="false">https://zhoumingjun.github.io/series/pytorch/rnn/1-Fundamental/</guid><pubDate>Fri, 07 Sep 2018 10:16:47 GMT</pubDate><content:encoded>&lt;h1&gt;python3&lt;/h1&gt;
 &lt;h2&gt;star operator&lt;/h2&gt;
 &lt;h2&gt;map zip lambda&lt;/h2&gt;
 &lt;h2&gt;NDArray Indexing&lt;/h2&gt;
@@ -7,7 +12,39 @@
 &lt;h2&gt;RNN&lt;/h2&gt;
 &lt;p&gt;Refer to &lt;a href=&quot;https://pytorch.org/docs/stable/nn.html#lstm&quot;&gt;https://pytorch.org/docs/stable/nn.html#lstm&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Andrej Karpathy’s diagram shows the different pattern in RNN&lt;br&gt;
-&lt;img src=&quot;rnn.jpg&quot; alt=&quot;RNN&quot;&gt;&lt;/p&gt;
+&lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/rnn-215fcabac4361840573d5f3123d532d0-cf2b7.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 31.34535367545076%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAGABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAEF/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEAMQAAAB24FB/8QAFBABAAAAAAAAAAAAAAAAAAAAEP/aAAgBAQABBQJ//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFhAAAwAAAAAAAAAAAAAAAAAAAAEQ/9oACAEBAAY/AhT/xAAZEAABBQAAAAAAAAAAAAAAAAAAARExQXH/2gAIAQEAAT8hYkJen//aAAwDAQACAAMAAAAQ9B//xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAwEBPxCI/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAHBABAAIBBQAAAAAAAAAAAAAAAQARITFBcaHB/9oACAEBAAE/ENQmw+wFC6xfcOeSf//Z&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;RNN&quot;
+        title=&quot;&quot;
+        src=&quot;/static/rnn-215fcabac4361840573d5f3123d532d0-f8fb9.jpg&quot;
+        srcset=&quot;/static/rnn-215fcabac4361840573d5f3123d532d0-e8976.jpg 148w,
+/static/rnn-215fcabac4361840573d5f3123d532d0-63df2.jpg 295w,
+/static/rnn-215fcabac4361840573d5f3123d532d0-f8fb9.jpg 590w,
+/static/rnn-215fcabac4361840573d5f3123d532d0-cf2b7.jpg 721w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
 &lt;h3&gt;Sequence&lt;/h3&gt;
 &lt;p&gt;The following code show the concept about sequence.
 torch.nn.LSTM can handle the sequence automatically, but we can feed it step-by-step also.  &lt;/p&gt;
@@ -79,12 +116,7 @@ True
 &lt;h1&gt;refs&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.pythonlikeyoumeanit.com/intro.html&quot;&gt;https://www.pythonlikeyoumeanit.com/intro.html&lt;/a&gt;
 &lt;a href=&quot;https://djosix.github.io/Variable-Sequence-Lengths-for-PyTorch-RNNs/&quot;&gt;https://djosix.github.io/Variable-Sequence-Lengths-for-PyTorch-RNNs/&lt;/a&gt;
-&lt;a href=&quot;https://medium.com/understand-the-python/understanding-the-asterisk-of-python-8b9daaa4a558&quot;&gt;https://medium.com/understand-the-python/understanding-the-asterisk-of-python-8b9daaa4a558&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[RNN]]></title><description><![CDATA[RNN todo:
-seq2seq:
- https://www.microsoft.com/en-us/cognitive-toolkit/blog/2016/11/sequence-to-sequence-deep-recurrent-neural-networks-in…]]></description><link>https://zhoumingjun.github.io/series/pytorch/rnn/</link><guid isPermaLink="false">https://zhoumingjun.github.io/series/pytorch/rnn/</guid><pubDate>Fri, 07 Sep 2018 10:16:47 GMT</pubDate><content:encoded>&lt;p&gt;RNN&lt;/p&gt;
-&lt;p&gt;todo:
-seq2seq:
-&lt;a href=&quot;https://www.microsoft.com/en-us/cognitive-toolkit/blog/2016/11/sequence-to-sequence-deep-recurrent-neural-networks-in-cntk-part-1/&quot;&gt;https://www.microsoft.com/en-us/cognitive-toolkit/blog/2016/11/sequence-to-sequence-deep-recurrent-neural-networks-in-cntk-part-1/&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Unicode]]></title><description><![CDATA[unicode nomalization Canonical and Compatibility Equivalence http://www.unicode.org/reports/tr15/#Canon Compat Equivalence Examples of…]]></description><link>https://zhoumingjun.github.io/note/unicode/</link><guid isPermaLink="false">https://zhoumingjun.github.io/note/unicode/</guid><pubDate>Thu, 06 Sep 2018 02:12:39 GMT</pubDate><content:encoded>&lt;h1&gt;unicode nomalization&lt;/h1&gt;
+&lt;a href=&quot;https://medium.com/understand-the-python/understanding-the-asterisk-of-python-8b9daaa4a558&quot;&gt;https://medium.com/understand-the-python/understanding-the-asterisk-of-python-8b9daaa4a558&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Unicode]]></title><description><![CDATA[unicode nomalization Canonical and Compatibility Equivalence http://www.unicode.org/reports/tr15/#Canon Compat Equivalence Examples of…]]></description><link>https://zhoumingjun.github.io/note/unicode/</link><guid isPermaLink="false">https://zhoumingjun.github.io/note/unicode/</guid><pubDate>Thu, 06 Sep 2018 02:12:39 GMT</pubDate><content:encoded>&lt;h1&gt;unicode nomalization&lt;/h1&gt;
 &lt;h2&gt;Canonical and Compatibility Equivalence&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;http://www.unicode.org/reports/tr15/#Canon_Compat_Equivalence&quot;&gt;http://www.unicode.org/reports/tr15/#Canon&lt;em&gt;Compat&lt;/em&gt;Equivalence&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Examples of Canonical Equivalence&lt;/strong&gt;&lt;/p&gt;
@@ -129,13 +161,7 @@ seq2seq:
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Linebreaking differences&lt;/td&gt;
-&lt;td&gt;[
-NBSP
-]
-	→	
-[
-SPACE
-]&lt;/td&gt;
+&lt;td&gt;[NBSP]	→	[SPACE]&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Positional variant forms&lt;/td&gt;
@@ -415,9 +441,9 @@ hash foo 2&gt;/dev/null&lt;/p&gt;
 &lt;p&gt;if [[ -n ”${commands[perlbrew]}” ]] ; then
 …
 fi&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://hyperpolyglot.org/unix-shells&quot;&gt;http://hyperpolyglot.org/unix-shells&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[networking]]></title><description><![CDATA[https://www.slideshare.net/ThomasGraf5/linux-networking-explained docker network https://success.docker.com/article/networking]]></description><link>https://zhoumingjun.github.io/knowledgebase/linux/networking/</link><guid isPermaLink="false">https://zhoumingjun.github.io/knowledgebase/linux/networking/</guid><pubDate>Fri, 31 Aug 2018 10:45:20 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://www.slideshare.net/ThomasGraf5/linux-networking-explained&quot;&gt;https://www.slideshare.net/ThomasGraf5/linux-networking-explained&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://hyperpolyglot.org/unix-shells&quot;&gt;http://hyperpolyglot.org/unix-shells&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[veth]]></title><description><![CDATA[https://gabhijit.github.io/linux-virtual-interfaces.html]]></description><link>https://zhoumingjun.github.io/knowledgebase/linux/networking/veth/</link><guid isPermaLink="false">https://zhoumingjun.github.io/knowledgebase/linux/networking/veth/</guid><pubDate>Fri, 31 Aug 2018 10:45:20 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://gabhijit.github.io/linux-virtual-interfaces.html&quot;&gt;https://gabhijit.github.io/linux-virtual-interfaces.html&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[networking]]></title><description><![CDATA[https://www.slideshare.net/ThomasGraf5/linux-networking-explained docker network https://success.docker.com/article/networking]]></description><link>https://zhoumingjun.github.io/knowledgebase/linux/networking/</link><guid isPermaLink="false">https://zhoumingjun.github.io/knowledgebase/linux/networking/</guid><pubDate>Fri, 31 Aug 2018 10:45:20 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://www.slideshare.net/ThomasGraf5/linux-networking-explained&quot;&gt;https://www.slideshare.net/ThomasGraf5/linux-networking-explained&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;docker network&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://success.docker.com/article/networking&quot;&gt;https://success.docker.com/article/networking&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[veth]]></title><description><![CDATA[https://gabhijit.github.io/linux-virtual-interfaces.html]]></description><link>https://zhoumingjun.github.io/knowledgebase/linux/networking/veth/</link><guid isPermaLink="false">https://zhoumingjun.github.io/knowledgebase/linux/networking/veth/</guid><pubDate>Fri, 31 Aug 2018 10:45:20 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://gabhijit.github.io/linux-virtual-interfaces.html&quot;&gt;https://gabhijit.github.io/linux-virtual-interfaces.html&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[references]]></title><description><![CDATA[ref:  https://gist.github.com/fffaraz/2b86cf1f1a1f9564c51b Web Resources Course Textbooks Tim Jones homepage  (author of primary textbook…]]></description><link>https://zhoumingjun.github.io/knowledgebase/linux/networking/refs/</link><guid isPermaLink="false">https://zhoumingjun.github.io/knowledgebase/linux/networking/refs/</guid><pubDate>Fri, 31 Aug 2018 10:45:20 GMT</pubDate><content:encoded>&lt;p&gt;ref: &lt;a href=&quot;https://gist.github.com/fffaraz/2b86cf1f1a1f9564c51b&quot;&gt;https://gist.github.com/fffaraz/2b86cf1f1a1f9564c51b&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://success.docker.com/article/networking&quot;&gt;https://success.docker.com/article/networking&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[references]]></title><description><![CDATA[ref:  https://gist.github.com/fffaraz/2b86cf1f1a1f9564c51b Web Resources Course Textbooks Tim Jones homepage  (author of primary textbook…]]></description><link>https://zhoumingjun.github.io/knowledgebase/linux/networking/refs/</link><guid isPermaLink="false">https://zhoumingjun.github.io/knowledgebase/linux/networking/refs/</guid><pubDate>Fri, 31 Aug 2018 10:45:20 GMT</pubDate><content:encoded>&lt;p&gt;ref: &lt;a href=&quot;https://gist.github.com/fffaraz/2b86cf1f1a1f9564c51b&quot;&gt;https://gist.github.com/fffaraz/2b86cf1f1a1f9564c51b&lt;/a&gt;&lt;/p&gt;
 &lt;h1&gt;Web Resources&lt;/h1&gt;
 &lt;h4&gt;Course Textbooks&lt;/h4&gt;
 &lt;ul&gt;
@@ -674,18 +700,7 @@ aria2c https://developer.download.nvidia.com/compute/machine-learning/repos/ubun
 &lt;p&gt;&lt;a href=&quot;https://medium.com/@jonathan_hui/gan-gan-series-2d279f906e7b&quot;&gt;https://medium.com/@jonathan_hui/gan-gan-series-2d279f906e7b&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.datacamp.com/community/tutorials/generative-adversarial-networks&quot;&gt;https://www.datacamp.com/community/tutorials/generative-adversarial-networks&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;people&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;http://people.csail.mit.edu/junyanz/&quot;&gt;Jun-Yan Zhu&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Awesome AI]]></title><description><![CDATA[latest srnn Datasets image PASCAL Visual Object Classification (PASCAL VOC) dataset ImageNet COCO nlp GloVe  Yelp ]]></description><link>https://zhoumingjun.github.io/note/awesome-ai/</link><guid isPermaLink="false">https://zhoumingjun.github.io/note/awesome-ai/</guid><pubDate>Wed, 15 Aug 2018 04:12:07 GMT</pubDate><content:encoded>&lt;h2&gt;latest&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/zepingyu0512/srnn&quot;&gt;srnn&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Datasets&lt;/h2&gt;
-&lt;h3&gt;image&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://host.robots.ox.ac.uk/pascal/VOC/&quot;&gt;PASCAL Visual Object Classification (PASCAL VOC) dataset&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.image-net.org/&quot;&gt;ImageNet&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://cocodataset.org/#home&quot;&gt;COCO&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;nlp&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://nlp.stanford.edu/projects/glove/&quot;&gt;GloVe&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt; Yelp &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Object Detection and Localization]]></title><description><![CDATA[References blogs Evolution of Object Detection and Localization Algorithms Review of Deep Learning Algorithms for Object Detection * yolo v…]]></description><link>https://zhoumingjun.github.io/note/object-detection-and-localization-algorithms/</link><guid isPermaLink="false">https://zhoumingjun.github.io/note/object-detection-and-localization-algorithms/</guid><pubDate>Wed, 15 Aug 2018 04:12:07 GMT</pubDate><content:encoded>&lt;h2&gt;References&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://people.csail.mit.edu/junyanz/&quot;&gt;Jun-Yan Zhu&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Object Detection and Localization]]></title><description><![CDATA[References blogs Evolution of Object Detection and Localization Algorithms Review of Deep Learning Algorithms for Object Detection * yolo v…]]></description><link>https://zhoumingjun.github.io/note/object-detection-and-localization-algorithms/</link><guid isPermaLink="false">https://zhoumingjun.github.io/note/object-detection-and-localization-algorithms/</guid><pubDate>Wed, 15 Aug 2018 04:12:07 GMT</pubDate><content:encoded>&lt;h2&gt;References&lt;/h2&gt;
 &lt;h3&gt;blogs&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://towardsdatascience.com/evolution-of-object-detection-and-localization-algorithms-e241021d8bad&quot;&gt;Evolution of Object Detection and Localization Algorithms&lt;/a&gt;&lt;/li&gt;
@@ -703,17 +718,28 @@ aria2c https://developer.download.nvidia.com/compute/machine-learning/repos/ubun
 &lt;li&gt;Image Classification    &lt;/li&gt;
 &lt;li&gt;Object classification and localization  &lt;/li&gt;
 &lt;li&gt;Multiple objects detection and localization&lt;/li&gt;
-&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Migrate from Hugo to Gatsby]]></title><description><![CDATA[I decided to migrate my blog from hugo to gatsby.
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Awesome AI]]></title><description><![CDATA[latest srnn Datasets image PASCAL Visual Object Classification (PASCAL VOC) dataset ImageNet COCO nlp GloVe  Yelp ]]></description><link>https://zhoumingjun.github.io/note/awesome-ai/</link><guid isPermaLink="false">https://zhoumingjun.github.io/note/awesome-ai/</guid><pubDate>Wed, 15 Aug 2018 04:12:07 GMT</pubDate><content:encoded>&lt;h2&gt;latest&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/zepingyu0512/srnn&quot;&gt;srnn&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Datasets&lt;/h2&gt;
+&lt;h3&gt;image&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://host.robots.ox.ac.uk/pascal/VOC/&quot;&gt;PASCAL Visual Object Classification (PASCAL VOC) dataset&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.image-net.org/&quot;&gt;ImageNet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://cocodataset.org/#home&quot;&gt;COCO&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;nlp&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://nlp.stanford.edu/projects/glove/&quot;&gt;GloVe&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; Yelp &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Migrate from Hugo to Gatsby]]></title><description><![CDATA[I decided to migrate my blog from hugo to gatsby.
 Gatsby is based on react and misc plugins, and it works in the same way as normal web…]]></description><link>https://zhoumingjun.github.io/post/2018-08-14-migrate-from-hugo-to-gatsby/</link><guid isPermaLink="false">https://zhoumingjun.github.io/post/2018-08-14-migrate-from-hugo-to-gatsby/</guid><pubDate>Tue, 14 Aug 2018 10:52:17 GMT</pubDate><content:encoded>&lt;p&gt;I decided to migrate my blog from hugo to gatsby.
 Gatsby is based on react and misc plugins, and it works in the same way as normal web development.
 But there are still some works to do, such as mathjax support.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[lvs keepalived]]></title><description><![CDATA[introduction lvs: lvs  is a kind of L4 load balancer. some references here:
- howto keepalived: keepalived  is a facilitator for lvs…]]></description><link>https://zhoumingjun.github.io/post/2017-03-22-lvs-keepalived/</link><guid isPermaLink="false">https://zhoumingjun.github.io/post/2017-03-22-lvs-keepalived/</guid><pubDate>Wed, 22 Mar 2017 09:23:36 GMT</pubDate><content:encoded>&lt;h1&gt;introduction&lt;/h1&gt;
+ howto  ( http://www.austintek.com/LVS/LVS-HOWTO/HOWTO/index…]]></description><link>https://zhoumingjun.github.io/post/2017-03-22-lvs-keepalived/</link><guid isPermaLink="false">https://zhoumingjun.github.io/post/2017-03-22-lvs-keepalived/</guid><pubDate>Wed, 22 Mar 2017 09:23:36 GMT</pubDate><content:encoded>&lt;h1&gt;introduction&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;lvs:&lt;br&gt;
 &lt;a href=&quot;http://www.linuxvirtualserver.org/&quot;&gt;lvs&lt;/a&gt; is a kind of L4 load balancer.&lt;br&gt;
 some references here:
-&lt;a href=&quot;http://www.austintek.com/LVS/LVS-HOWTO/HOWTO/index.html&quot;&gt;howto&lt;/a&gt;&lt;/p&gt;
+[howto] (&lt;a href=&quot;http://www.austintek.com/LVS/LVS-HOWTO/HOWTO/index.html&quot;&gt;http://www.austintek.com/LVS/LVS-HOWTO/HOWTO/index.html&lt;/a&gt;)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;keepalived:&lt;br&gt;
@@ -1112,8 +1138,7 @@ $V(S_t) \leftarrow + \alpha(R_{t+1} + \gamma V(S_{t+1} - V(S_t))$    &lt;/li&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;(even with function approximation)&lt;/td&gt;
-&lt;td&gt;TD(0) converges to 
-$v_\pi(s)$&lt;/td&gt;
+&lt;td&gt;TD(0) converges to $v_\pi(s)$&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Not very sensitive to initial value&lt;/td&gt;
