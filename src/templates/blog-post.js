@@ -127,6 +127,7 @@ const BlogSeriesPost = ({
               disqusConfig={disqusConfig}
             />
           </Box>
+          <Box margin="xsmall" />
         </Box>
       ) : (
         <Box direction="row" fill="horizontal" justify="center">
