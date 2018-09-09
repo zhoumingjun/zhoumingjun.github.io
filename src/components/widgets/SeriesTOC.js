@@ -13,6 +13,18 @@ const StyledUL = styled.ul`
   margin: 0px;
 `;
 
+const StyledLink = styled.a`
+  border-radius: ${0}px;
+  color: #2c3e50;
+  font-size: 0.8em;
+  &:link {
+    text-decoration: none;
+  }
+  &:hover {
+    color: rgb(62, 175, 124);
+  }
+`;
+
 const StyledLI = styled.li``;
 
 const TreeNode = props => {
@@ -29,9 +41,7 @@ const TreeNode = props => {
   });
   return (
     <Box>
-      <Link to={post.fields.slug}>
-        <Text> {post.frontmatter.title}</Text>
-      </Link>
+      <StyledLink href={post.fields.slug}>{post.frontmatter.title}</StyledLink>
 
       {aryChildren.map((child, idx) => (
         <Box pad={{left: 'small'}} key={idx}>

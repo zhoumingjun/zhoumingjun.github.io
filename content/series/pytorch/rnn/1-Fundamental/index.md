@@ -2,10 +2,11 @@
 title: "Fundamental"
 date: "2018-09-07T10:16:47Z"
 tags: ["machine learning","pytorch", "rnn"]
+state: "wip"
 ---
 
 
-# python3
+# Python3
 
 ## star operator
 
@@ -15,7 +16,7 @@ tags: ["machine learning","pytorch", "rnn"]
 https://docs.scipy.org/doc/numpy/user/basics.indexing.html
 
 
-# pytorch
+# Pytorch
 
 
 ## RNN
