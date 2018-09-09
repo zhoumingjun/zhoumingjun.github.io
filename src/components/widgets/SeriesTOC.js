@@ -7,12 +7,6 @@ import _ from 'lodash';
 import 'github-markdown-css/github-markdown.css';
 import 'prismjs/themes/prism-okaidia.css';
 
-const StyledUL = styled.ul`
-  list-style: none;
-  padding-left: 1em;
-  margin: 0px;
-`;
-
 const StyledLink = styled.a`
   border-radius: ${0}px;
   color: #2c3e50;
@@ -25,11 +19,12 @@ const StyledLink = styled.a`
   }
 `;
 
-const StyledLI = styled.li``;
-
 const TreeNode = props => {
-  let {post, children} = props;
+  let {post, children, fontsize} = props;
 
+  if (fontsize === undefined) {
+    fontsize = 1;
+  }
   let aryChildren = [];
 
   _.forOwn(children, (value, key) => {
@@ -41,13 +36,19 @@ const TreeNode = props => {
   });
   return (
     <Box>
-      <StyledLink href={post.fields.slug}>{post.frontmatter.title}</StyledLink>
+      <StyledLink href={post.fields.slug} style={{fontSize: `${fontsize}em`}}>
+        {post.frontmatter.title}
+      </StyledLink>
 
-      {aryChildren.map((child, idx) => (
-        <Box pad={{left: 'small'}} key={idx}>
-          {TreeNode(child)}
-        </Box>
-      ))}
+      {aryChildren.map((child, idx) => {
+        child.fontsize = fontsize * 0.9;
+
+        return (
+          <Box pad={{left: 'small'}} key={idx}>
+            {TreeNode(child)}
+          </Box>
+        );
+      })}
     </Box>
   );
 };
