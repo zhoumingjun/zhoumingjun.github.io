@@ -10,12 +10,16 @@ https://pytorch.org/tutorials/intermediate/char_rnn_classification_tutorial.html
 
 Here I will implement it by using lstm
 
-# Basic Points
+# Points
 1. Classifying Names is a kind of many-to-one RNN task
 2. The Inputs' length are variable  
 3. It's better to handle the data in batch to boost the training
 4. Use dataset and dataloader to handle the raw data
    
+
+# Task definition
+Training data is collection of (name, language)
+The task is to preidct the language of the given name
 
 # Details
 
@@ -174,56 +178,56 @@ for epoch in range(10):
 Here is the training output
 
 ```
-epoch 0 i_batch 0 loss 2.9128077030181885
-epoch 0 i_batch 50 loss 1.6704312562942505
-epoch 0 i_batch 100 loss 1.440101981163025
-epoch 0 i_batch 150 loss 1.3050810098648071
-epoch 0 acc:12182/16406 
-epoch 1 i_batch 0 loss 0.8428565859794617
-epoch 1 i_batch 50 loss 0.8336539268493652
-epoch 1 i_batch 100 loss 0.7949255108833313
-epoch 1 i_batch 150 loss 0.7666547894477844
-epoch 1 acc:13227/16406 
-epoch 2 i_batch 0 loss 0.6228170990943909
-epoch 2 i_batch 50 loss 0.6274971961975098
-epoch 2 i_batch 100 loss 0.6237800121307373
-epoch 2 i_batch 150 loss 0.6122254729270935
-epoch 2 acc:13737/16406 
-epoch 3 i_batch 0 loss 0.5636349320411682
-epoch 3 i_batch 50 loss 0.5250101685523987
-epoch 3 i_batch 100 loss 0.5150720477104187
-epoch 3 i_batch 150 loss 0.5117108225822449
-epoch 3 acc:14008/16406 
-epoch 4 i_batch 0 loss 0.48472052812576294
-epoch 4 i_batch 50 loss 0.44357186555862427
-epoch 4 i_batch 100 loss 0.4550507664680481
-epoch 4 i_batch 150 loss 0.4460631012916565
-epoch 4 acc:14387/16406 
-epoch 5 i_batch 0 loss 0.225796639919281
-epoch 5 i_batch 50 loss 0.39754441380500793
-epoch 5 i_batch 100 loss 0.4006364941596985
-epoch 5 i_batch 150 loss 0.4059876799583435
-epoch 5 acc:14484/16406 
-epoch 6 i_batch 0 loss 0.36545485258102417
-epoch 6 i_batch 50 loss 0.3650299608707428
-epoch 6 i_batch 100 loss 0.3646186292171478
-epoch 6 i_batch 150 loss 0.36661288142204285
-epoch 6 acc:14699/16406 
-epoch 7 i_batch 0 loss 0.42295753955841064
-epoch 7 i_batch 50 loss 0.3185514807701111
-epoch 7 i_batch 100 loss 0.3292921483516693
-epoch 7 i_batch 150 loss 0.3317612409591675
-epoch 7 acc:14859/16406 
-epoch 8 i_batch 0 loss 0.40569090843200684
-epoch 8 i_batch 50 loss 0.28691983222961426
-epoch 8 i_batch 100 loss 0.2941666543483734
-epoch 8 i_batch 150 loss 0.30278101563453674
-epoch 8 acc:14966/16406 
-epoch 9 i_batch 0 loss 0.24612517654895782
-epoch 9 i_batch 50 loss 0.2607012093067169
-epoch 9 i_batch 100 loss 0.2631416916847229
-epoch 9 i_batch 150 loss 0.27081555128097534
-epoch 9 acc:15141/16406 
+epoch 0 i_batch 0 loss 2.942514419555664
+epoch 0 i_batch 50 loss 1.760701298713684
+epoch 0 i_batch 100 loss 1.5069572925567627
+epoch 0 i_batch 150 loss 1.3581050634384155
+epoch 0 acc:14758/20074 
+epoch 1 i_batch 0 loss 0.8439935445785522
+epoch 1 i_batch 50 loss 0.8764864802360535
+epoch 1 i_batch 100 loss 0.8679843544960022
+epoch 1 i_batch 150 loss 0.836237907409668
+epoch 1 acc:15769/20074 
+epoch 2 i_batch 0 loss 0.6725496649742126
+epoch 2 i_batch 50 loss 0.6784597635269165
+epoch 2 i_batch 100 loss 0.6801468729972839
+epoch 2 i_batch 150 loss 0.6713106632232666
+epoch 2 acc:16419/20074 
+epoch 3 i_batch 0 loss 0.7285385131835938
+epoch 3 i_batch 50 loss 0.5921918749809265
+epoch 3 i_batch 100 loss 0.5902780294418335
+epoch 3 i_batch 150 loss 0.5864360928535461
+epoch 3 acc:16829/20074 
+epoch 4 i_batch 0 loss 0.5711963176727295
+epoch 4 i_batch 50 loss 0.5279501676559448
+epoch 4 i_batch 100 loss 0.521149218082428
+epoch 4 i_batch 150 loss 0.5309893488883972
+epoch 4 acc:17058/20074 
+epoch 5 i_batch 0 loss 0.5366474390029907
+epoch 5 i_batch 50 loss 0.46456900238990784
+epoch 5 i_batch 100 loss 0.47316044569015503
+epoch 5 i_batch 150 loss 0.4669898450374603
+epoch 5 acc:17373/20074 
+epoch 6 i_batch 0 loss 0.4217735528945923
+epoch 6 i_batch 50 loss 0.4200931489467621
+epoch 6 i_batch 100 loss 0.43043628334999084
+epoch 6 i_batch 150 loss 0.4396715462207794
+epoch 6 acc:17447/20074 
+epoch 7 i_batch 0 loss 0.31758126616477966
+epoch 7 i_batch 50 loss 0.38675254583358765
+epoch 7 i_batch 100 loss 0.399675190448761
+epoch 7 i_batch 150 loss 0.4018913507461548
+epoch 7 acc:17867/20074 
+epoch 8 i_batch 0 loss 0.3606557548046112
+epoch 8 i_batch 50 loss 0.33634153008461
+epoch 8 i_batch 100 loss 0.34979167580604553
+epoch 8 i_batch 150 loss 0.36078399419784546
+epoch 8 acc:18013/20074 
+epoch 9 i_batch 0 loss 0.31942570209503174
+epoch 9 i_batch 50 loss 0.30287066102027893
+epoch 9 i_batch 100 loss 0.31636151671409607
+epoch 9 i_batch 150 loss 0.33173689246177673
+epoch 9 acc:18151/20074 
 ```
 
 ## Predict
@@ -245,106 +249,107 @@ for i_batch, batch in enumerate(dataloader):
 
 Here is the result
 ```
-input Talypin, label Russian, predict Russian, result: True
-input Hamada, label Japanese, predict Japanese, result: True
-input Schermer, label Dutch, predict German, result: False
-input Kabachev, label Russian, predict Russian, result: True
-input Maroun, label Arabic, predict Arabic, result: True
-input Close, label Greek, predict Greek, result: True
-input Jabykin, label Russian, predict Russian, result: True
-input Handal, label Arabic, predict Arabic, result: True
-input Veltistov, label Russian, predict Russian, result: True
-input Pavlinsky, label Russian, predict Russian, result: True
-input Djumabaev, label Russian, predict Russian, result: True
-input Balavensky, label Russian, predict Russian, result: True
-input O'Meara, label Irish, predict Irish, result: True
-input Kalogeria, label Greek, predict Greek, result: True
-input Paisar, label Czech, predict Czech, result: True
-input Sfakianos, label Greek, predict Greek, result: True
-input Jeryapin, label Russian, predict Russian, result: True
-input Agoev, label Russian, predict Russian, result: True
+input Purse, label English, predict English, result: True
+input Teague, label Irish, predict English, result: False
 input Daher, label Arabic, predict Arabic, result: True
-input Barabolya, label Russian, predict Russian, result: True
-input Zasuhin, label Russian, predict Russian, result: True
-input Zhevlakov, label Russian, predict Russian, result: True
-input Babinoff, label Russian, predict Russian, result: True
-input Villevalde, label Russian, predict Italian, result: False
-input Tchartorizhsky, label Russian, predict Russian, result: True
-input Behmetiev, label Russian, predict Russian, result: True
-input Plank, label German, predict German, result: True
-input Almondinov, label Russian, predict Russian, result: True
-input Cuocco, label Italian, predict Italian, result: True
-input Pyanov, label Russian, predict Russian, result: True
-input Bakhmatov, label Russian, predict Russian, result: True
-input Nizhegorodov, label Russian, predict Russian, result: True
+input Soma, label Japanese, predict Japanese, result: True
+input Mikhail, label Arabic, predict Arabic, result: True
+input Pawluk, label Russian, predict Russian, result: True
+input Bakaleinikov, label Russian, predict Russian, result: True
+input Zhaivoronok, label Russian, predict Russian, result: True
+input Fujiwara, label Japanese, predict Japanese, result: True
+input Jachikov, label Russian, predict Russian, result: True
+input Sardelis, label Greek, predict Greek, result: True
+input Yatzenko, label Russian, predict Russian, result: True
+input Kabalevsky, label Russian, predict Russian, result: True
+input Godo, label Japanese, predict Japanese, result: True
+input Imran, label English, predict English, result: True
+input Kokkali, label Greek, predict Greek, result: True
+input Adam, label Russian, predict English, result: False
+input Todorov, label Russian, predict Russian, result: True
+input Bastian, label Russian, predict Russian, result: True
+input Samson, label French, predict French, result: True
+input Bereznitsky, label Russian, predict Russian, result: True
+input Bakhmetiev, label Russian, predict Russian, result: True
+input Hadad, label Arabic, predict Arabic, result: True
+input Sung, label Korean, predict Chinese, result: False
+input Oishi, label Japanese, predict Japanese, result: True
+input Baidin, label Russian, predict Russian, result: True
+input Pavlyuchkov, label Russian, predict Russian, result: True
+input Sarkis, label Arabic, predict Arabic, result: True
+input Kirwin, label English, predict English, result: True
+input Pokhis, label Russian, predict Russian, result: True
+input Granitov, label Russian, predict Russian, result: True
+input Wirner, label German, predict German, result: True
+input Jamburg, label Russian, predict Russian, result: True
+input Lowe, label German, predict English, result: False
+input Nespola, label Italian, predict Italian, result: True
+input Maclean, label Scottish, predict English, result: False
+input St martin, label French, predict French, result: True
+input Langer, label German, predict English, result: False
+input Shaikin, label Russian, predict Russian, result: True
+input Podsevalov, label Russian, predict Russian, result: True
+input Romano, label Italian, predict Italian, result: True
+input Hadad, label Arabic, predict Arabic, result: True
+input Hoshino, label Japanese, predict Japanese, result: True
+input Morra, label Italian, predict Italian, result: True
+input Ashwell, label English, predict English, result: True
+input Awad, label Arabic, predict Arabic, result: True
+input Okubo, label Japanese, predict Japanese, result: True
+input Ametistov, label Russian, predict Russian, result: True
+input Jachmenev, label Russian, predict Russian, result: True
+input Lodygin, label Russian, predict Russian, result: True
+input Vikulov, label Russian, predict Russian, result: True
+input Prokoshin, label Russian, predict Russian, result: True
+input Deulin, label Russian, predict Russian, result: True
+input Zhdankov, label Russian, predict Russian, result: True
+input Antyufeev, label Russian, predict Russian, result: True
+input Babayan, label Russian, predict Russian, result: True
+input Khouri, label Arabic, predict Arabic, result: True
+input Dizhbak, label Russian, predict Russian, result: True
+input Ogterop, label Dutch, predict Dutch, result: True
+input Minitsky, label Russian, predict Russian, result: True
+input Dobrynsky, label Russian, predict Russian, result: True
+input Mikheev, label Russian, predict Russian, result: True
+input Kelly, label Irish, predict English, result: False
+input Martoyas, label Russian, predict Greek, result: False
+input Koning, label Dutch, predict German, result: False
+input Manfredi, label Italian, predict Italian, result: True
+input Bakh, label Russian, predict Russian, result: True
+input Foran, label English, predict English, result: True
+input Nelson, label English, predict English, result: True
+input Hapitsky, label Russian, predict Russian, result: True
+input To The First Page, label Russian, predict Russian, result: True
 input Basara, label Arabic, predict Arabic, result: True
-input Haitsin, label Russian, predict Russian, result: True
-input Agliullin, label Russian, predict Russian, result: True
-input Denzel, label German, predict Russian, result: False
-input Jivotovsky, label Russian, predict Russian, result: True
-input Lichman, label Russian, predict Russian, result: True
-input Awetyan, label Russian, predict Russian, result: True
-input Akutagawa, label Japanese, predict Japanese, result: True
-input Averkiev, label Russian, predict Russian, result: True
-input Luzzatto, label Italian, predict Italian, result: True
-input Homa, label Russian, predict Japanese, result: False
-input Vilonov, label Russian, predict Russian, result: True
-input Avalyan, label Russian, predict Russian, result: True
-input Jordan, label German, predict Russian, result: False
-input Xing, label Chinese, predict Chinese, result: True
-input Tulub, label Russian, predict Russian, result: True
-input Gluhov, label Russian, predict Russian, result: True
-input Korycan, label Czech, predict Czech, result: True
-input Matocha, label Czech, predict Czech, result: True
-input Pak, label Korean, predict Korean, result: True
-input Hamikoev, label Russian, predict Russian, result: True
-input Ichikawa, label Japanese, predict Japanese, result: True
-input Balasoglo, label Russian, predict Russian, result: True
-input Grossman, label Russian, predict Russian, result: True
-input Jaruev, label Russian, predict Russian, result: True
-input Gartner, label German, predict Russian, result: False
-input Likhodeev, label Russian, predict Russian, result: True
-input Bitar, label Arabic, predict Arabic, result: True
-input Caro, label Italian, predict Italian, result: True
-input Hou, label Chinese, predict Chinese, result: True
-input Zhulebin, label Russian, predict Russian, result: True
-input Marmazov, label Russian, predict Russian, result: True
-input Abdrahimov, label Russian, predict Russian, result: True
-input Mar, label Chinese, predict Chinese, result: True
-input Accursio, label Italian, predict Italian, result: True
-input Aliberti, label Italian, predict Italian, result: True
-input Raimondi, label Italian, predict Italian, result: True
-input Gulkevich, label Russian, predict Russian, result: True
-input Andruhovich, label Russian, predict Russian, result: True
-input Kataoka, label Japanese, predict Japanese, result: True
-input Adabash, label Russian, predict Russian, result: True
-input Zou, label Chinese, predict Chinese, result: True
-input Gudoshin, label Russian, predict Russian, result: True
-input Marievsky, label Russian, predict Russian, result: True
-input Jeltov, label Russian, predict Russian, result: True
-input Jukovets, label Russian, predict Russian, result: True
-input Hofer, label German, predict German, result: True
-input Elensky, label Russian, predict Russian, result: True
-input Comtois, label French, predict French, result: True
-input Saliba, label Arabic, predict Arabic, result: True
-input Deeb, label Arabic, predict Arabic, result: True
-input Otyaev, label Russian, predict Russian, result: True
-input Fadzaev, label Russian, predict Russian, result: True
-input Shalhoub, label Arabic, predict Arabic, result: True
-input Jalovenko, label Russian, predict Russian, result: True
-input Kruger, label German, predict German, result: True
-input Cham, label Arabic, predict Arabic, result: True
-input Rojo, label Spanish, predict Spanish, result: True
-input Zhen, label Chinese, predict Chinese, result: True
-input Lapkin, label Russian, predict Russian, result: True
-input Fakhoury, label Arabic, predict Arabic, result: True
-input Dehanov, label Russian, predict Russian, result: True
-input Grobivker, label Russian, predict Russian, result: True
-input Avinovitski, label Russian, predict Russian, result: True
-input Likutov, label Russian, predict Russian, result: True
-input Valkin, label Russian, predict Russian, result: True
-input Raikhert, label Russian, predict Russian, result: True
-input Andel, label Dutch, predict Dutch, result: True
+input Coffey, label English, predict English, result: True
+input Kenyon, label English, predict English, result: True
+input Ichisada, label Japanese, predict Japanese, result: True
+input Alves, label Portuguese, predict Spanish, result: False
+input Awdiysky, label Russian, predict Russian, result: True
+input Lecce, label Italian, predict Italian, result: True
+input Gosselin, label French, predict French, result: True
+input Rettig, label German, predict German, result: True
+input Hudoshin, label Russian, predict Russian, result: True
+input Yushkevich, label Russian, predict Russian, result: True
+input Anderson, label Scottish, predict English, result: False
+input Bassin, label Russian, predict Russian, result: True
+input Bavilin, label Russian, predict Russian, result: True
+input Altshuler, label Russian, predict German, result: False
+input Hafizov, label Russian, predict Russian, result: True
+input Holland, label English, predict English, result: True
+input Lodyjensky, label Russian, predict Russian, result: True
+input Matsura, label Japanese, predict Japanese, result: True
+input Kalb, label Arabic, predict Arabic, result: True
+input Daniau, label French, predict French, result: True
+input Napoletani, label Italian, predict Italian, result: True
+input Renov, label Russian, predict Russian, result: True
+input Traversini, label Italian, predict Italian, result: True
+input Ba, label Arabic, predict Arabic, result: True
+input Nakamura, label Japanese, predict Japanese, result: True
+input Gimondi, label Italian, predict Italian, result: True
+input Lohanov, label Russian, predict Russian, result: True
+input Lezhenko, label Russian, predict Russian, result: True
+
 ```
 
 # The source code 
