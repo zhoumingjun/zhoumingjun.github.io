@@ -7,6 +7,8 @@ import _ from 'lodash';
 import 'github-markdown-css/github-markdown.css';
 import 'prismjs/themes/prism-okaidia.css';
 
+const windowGlobal = typeof window !== 'undefined' && window;
+
 const StyledLink = styled.a`
   border-radius: ${0}px;
   color: #2c3e50;
@@ -40,10 +42,13 @@ const TreeNode = props => {
   aryChildren = _.sortBy(aryChildren, o => {
     return o.post.fields.slug;
   });
+
+  let isCurrent =
+    windowGlobal && windowGlobal.location.pathname == post.fields.slug;
   return (
     <Box>
       <StyledLink
-        current={window.location.pathname == post.fields.slug}
+        current={isCurrent}
         href={post.fields.slug}
         style={{fontSize: `${fontsize}em`}}>
         {post.frontmatter.title}
