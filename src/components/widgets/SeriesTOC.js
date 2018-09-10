@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'gatsby';
 import {Text, Box, Accordion, AccordionPanel} from 'grommet';
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 import _ from 'lodash';
 
 import 'github-markdown-css/github-markdown.css';
@@ -17,6 +17,12 @@ const StyledLink = styled.a`
   &:hover {
     color: rgb(62, 175, 124);
   }
+
+  ${props =>
+    props.current &&
+    css`
+      color: rgb(62, 175, 124);
+    `};
 `;
 
 const TreeNode = props => {
@@ -36,7 +42,10 @@ const TreeNode = props => {
   });
   return (
     <Box>
-      <StyledLink href={post.fields.slug} style={{fontSize: `${fontsize}em`}}>
+      <StyledLink
+        current={window.location.pathname == post.fields.slug}
+        href={post.fields.slug}
+        style={{fontSize: `${fontsize}em`}}>
         {post.frontmatter.title}
       </StyledLink>
 
