@@ -6,52 +6,79 @@ import styled from 'styled-components';
 import Disqus from 'disqus-react';
 import _ from 'lodash';
 
-import PageLayout from '../components/Layout';
-import PrevNext from '../components/content/PostNav';
-import Section from '../components/ui/Section';
+import 'github-markdown-css/github-markdown.css';
+import 'prismjs/themes/prism-okaidia.css';
 
-const ContentBox = styled.div`
-  img {
-    max-width: 100%;
-  }
+import Layout from '../components/Layout';
+import SeriesTOC from '../components/widgets/SeriesTOC';
+
+const StyledLink = styled(Link)`
+  border-color: grey;
+  border-style: solid;
+  border-width: 1px;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 `;
 
-const StyledUL = styled.ul`
-  list-style: none;
-  padding-left: 1em;
-  margin: 0px;
-`;
+const Header = ({post, onlinePath}) => (
+  <Box
+    direction="row"
+    fill="horizontal"
+    border="xsmall"
+    margin="xsmall"
+    justify="center"
+    pad="small">
+    <Box fill="horizontal">
+      <Box align="center">
+        <Heading level={2} margin="small">
+          {post.frontmatter.title}
+        </Heading>
+      </Box>
+      <Box align="end">
+        {post.frontmatter.date}{' '}
+        <Anchor href={onlinePath} label="View page source" />
+      </Box>
+    </Box>
+  </Box>
+);
 
-const StyledLI = styled.li``;
-const TreeNode = props => {
-  let {post, children} = props;
+const Content = ({post}) => (
+  <Box
+    direction="row"
+    fill="horizontal"
+    border="xsmall"
+    margin="xsmall"
+    pad="small">
+    <div
+      className="markdown-body"
+      dangerouslySetInnerHTML={{__html: post.html}}
+    />
+  </Box>
+);
 
-  let aryChildren = [];
+const PostNav = ({prev, next}) => (
+  <Box direction="row" fill="horizontal" justify="between" margin="xsmall">
+    {prev && (
+      <StyledLink to={prev.fields.slug} rel="prev">
+        <span>{'<-'}</span> {prev.frontmatter.title}
+      </StyledLink>
+    )}
+    <div />
+    {next && (
+      <StyledLink to={next.fields.slug} rel="next">
+        {next.frontmatter.title} <span>{'->'}</span>
+      </StyledLink>
+    )}
+  </Box>
+);
 
-  _.forOwn(children, (value, key) => {
-    aryChildren.push(value);
-  });
-
-  aryChildren = _.sortBy(aryChildren, o => {
-    return o.post.fields.slug;
-  });
-  return (
-    <div>
-      {post && (
-        <Link to={post.fields.slug}>
-          <Text> {post.frontmatter.title}</Text>
-        </Link>
-      )}
-
-      <StyledUL>
-        {aryChildren &&
-          aryChildren.map((child, idx) => (
-            <StyledLI key={idx}>{TreeNode(child)}</StyledLI>
-          ))}
-      </StyledUL>
-    </div>
-  );
-};
+const Comment = ({disqusShortname, disqusConfig}) => (
+  <Box border fill="horizontal" margin="xsmall" pad="small">
+    <Disqus.DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
+  </Box>
+);
 
 const BlogSeriesPost = ({
   pageContext: {prev, next, toc},
@@ -60,12 +87,15 @@ const BlogSeriesPost = ({
     markdownRemark: post,
   },
 }) => {
+  // series toc
   let parsedTOC = toc ? JSON.parse(toc) : undefined;
 
+  // get github source link
   let localPath = post.fileAbsolutePath;
   let onlinePath =
     site.sourceUrl + localPath.substr(localPath.indexOf('content'));
 
+  // disqus
   const disqusShortname = site.disqusShortname;
   const disqusConfig = {
     url: site.siteUrl + post.fields.slug,
@@ -73,53 +103,46 @@ const BlogSeriesPost = ({
     title: post.frontmatter.title,
   };
 
-  console.log('disqus', site, disqusShortname, disqusConfig);
   return (
-    <PageLayout>
+    <Layout>
       <Helmet
         htmlAttributes={{lang: 'en'}}
         meta={[{name: 'description', content: site.description}]}
         title={site.title}
       />
-      <Box direction="row" justify="center">
-        <Box basis="xlarge">
-          <Box pad="small">
-            <Heading textAlign="center" margin="small">
-              {post.frontmatter.title}
+      {parsedTOC ? (
+        <Box direction="row" fill="horizontal">
+          <Box basis="medium" pad="small" margin="xsmall" border>
+            <Heading level={2} margin="small">
+              TOC
             </Heading>
-            <Box align="end">
-              {post.frontmatter.date}{' '}
-              <Anchor href={onlinePath} label="View page source" />
-            </Box>
+            {SeriesTOC(parsedTOC)}
           </Box>
-          <Box direction="row" pad="small">
-            <ContentBox>
-              <div dangerouslySetInnerHTML={{__html: post.html}} />
-            </ContentBox>
+          <Box basis="full" justify="center">
+            <Header post={post} onlinePath={onlinePath} />
+            <Content post={post} />
+            <PostNav prev={prev} next={next} />
+            <Comment
+              disqusShortname={disqusShortname}
+              disqusConfig={disqusConfig}
+            />
+          </Box>
+          <Box margin="xsmall" />
+        </Box>
+      ) : (
+        <Box direction="row" fill="horizontal" justify="center">
+          <Box basis="xlarge" justify="center">
+            <Header post={post} onlinePath={onlinePath} />
+            <Content post={post} />
+            <PostNav prev={prev} next={next} />
+            <Comment
+              disqusShortname={disqusShortname}
+              disqusConfig={disqusConfig}
+            />
           </Box>
         </Box>
-        {toc && (
-          <Box
-            basis="medium"
-            pad="small"
-            border={{color: 'lightgrey', side: 'left', size: 'small'}}>
-            <Box align="center">
-              <Heading level={3} margin="small">
-                TOC
-              </Heading>
-            </Box>
-            {TreeNode(parsedTOC)}
-          </Box>
-        )}
-      </Box>
-      <PrevNext prev={prev} next={next} />
-      <Section pad={{horizontal: 'xlarge', top: 'small'}} border="top">
-        <Disqus.DiscussionEmbed
-          shortname={disqusShortname}
-          config={disqusConfig}
-        />
-      </Section>
-    </PageLayout>
+      )}
+    </Layout>
   );
 };
 
@@ -138,7 +161,6 @@ export const pageQuery = graphql`
     }
     markdownRemark(fields: {slug: {eq: $slug}}) {
       id
-      excerpt
       html
       fileAbsolutePath
       fields {

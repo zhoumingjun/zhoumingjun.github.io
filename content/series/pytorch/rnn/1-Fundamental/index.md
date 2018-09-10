@@ -2,6 +2,7 @@
 title: "Fundamental"
 date: "2018-09-07T10:16:47Z"
 tags: ["machine learning","pytorch", "rnn"]
+state: "wip"
 ---
 
 
@@ -133,11 +134,11 @@ tensor(5.1223e-08, grad_fn=<SumBackward0>)
 """
 
 ```
-The above code process inputs in batch.
-Output of shape is (seq_len, batch, num_directions * hidden_size)
-We can get the output according to the seq and batch
-output[i,j,:]: get the i iteration output of the sample j
-output[-1,j,:] get the last output of the sample j
+The above code process inputs in batch. 
+Output of shape is (seq_len, batch, num_directions * hidden_size)   
+We can get the output according to the seq and batch    
+output[i,j,:]: get the i iteration output of the sample j   
+output[-1,j,:] get the last output of the sample j  
 
 ### Batch processing with variable length sequences
 Many real cases need to handle variable length sequences.
@@ -292,7 +293,7 @@ option1
 [(9, 9, tensor([ 0.0294,  0.0873, -0.0887, -0.0701,  0.3412], grad_fn=<SelectBackward>)), 
 (7, 7, tensor([ 0.0291,  0.0860, -0.0887, -0.0693,  0.3403], grad_fn=<SelectBackward>)), 
 (10, 10, tensor([ 0.0294,  0.0876, -0.0887, -0.0704,  0.3413], grad_fn=<SelectBackward>)), 
-(8, 8, tensor([ 0.0293,  0.0868, -0.0887, -0.0698,  0.3409], grad_fn=<SelectBackward>)), 
+(8, 8, tensor([ 0.0293,  0.0868, -0.0887, -0.0698,  0.3409], grad_fn=<SelectBackward>)), 0
 (6, 6, tensor([ 0.0288,  0.0847, -0.0884, -0.0685,  0.3390], grad_fn=<SelectBackward>)), 
 (8, 8, tensor([ 0.0293,  0.0868, -0.0887, -0.0698,  0.3409], grad_fn=<SelectBackward>)), 
 (5, 5, tensor([ 0.0283,  0.0823, -0.0877, -0.0673,  0.3362], grad_fn=<SelectBackward>)), 
@@ -313,9 +314,18 @@ option2
 (3, 3, tensor([ 0.0248,  0.0718, -0.0820, -0.0617,  0.3169], grad_fn=<SelectBackward>))]
 """
 ```
-The sample sequence result show the result of sample[1,1,1,1,1,1,1,1,1,1], so we can get the output of each iteration .
-In option 1: the outputs' order are restored, and it's the same as the orgin data
-In option 2: the outputs' order are sorted(not restored), and it's the same as the sorted data
+The sample sequence result show the result of sample[1,1,1,1,1,1,1,1,1,1], so we can get the output of each iteration .     
+In option 1: the outputs' order are restored, and it's the same as the orgin data           
+In option 2: the outputs' order are sorted(not restored), and it's the same as the sorted data      
+
+# The source code
+The soure code can be found on github
+
+[basic](https://github.com/zhoumingjun/pytorch_learning/blob/master/rnn/1.basic.py) 
+
+[batch](https://github.com/zhoumingjun/pytorch_learning/blob/master/rnn/2.batch.py) 
+
+[variable length](https://github.com/zhoumingjun/pytorch_learning/blob/master/rnn/3.variable%20length.py)   
 
 # refs
 

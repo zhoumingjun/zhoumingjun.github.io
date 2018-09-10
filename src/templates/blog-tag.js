@@ -1,10 +1,9 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import {Link, graphql} from 'gatsby';
-import {Box} from 'grommet';
-import get from 'lodash/get';
-
-import PageLayout from '../components/Layout';
+import {Box, Heading} from 'grommet';
+import Layout from '../components/Layout';
+import Posts from '../components/content/Posts';
 
 const Tags = ({
   pageContext: {posts, tag},
@@ -12,40 +11,16 @@ const Tags = ({
     site: {siteMetadata: site},
   },
 }) => (
-  <PageLayout>
-    <Helmet>
-      <title>
-        {tag} &middot; {site.title}
-      </title>
-    </Helmet>
-    <Box
-      background="light-1"
-      direction="row"
-      wrap={true}
-      align="start"
-      justify="start"
-      alignContent="stretch"
-      pad="large"
-      round="large"
-      animation={{type: 'fadeIn', duration: '2000'}}>
-      {posts &&
-        posts.map(node => {
-          const title = get(node, 'frontmatter.title') || node.fields.slug;
-
-          return (
-            <Box key={node.fields.slug} basis="large" direction="column">
-              <h3>
-                <Link style={{boxShadow: 'none'}} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-              <p dangerouslySetInnerHTML={{__html: node.excerpt}} />
-            </Box>
-          );
-        })}
+  <Layout>
+    <Helmet
+      htmlAttributes={{lang: 'en'}}
+      meta={[{name: 'description', content: site.description}]}
+      title={site.title}
+    />
+    <Box direction="row" basis="xlarge" justify="start">
+      <Posts posts={posts} />
     </Box>
-  </PageLayout>
+  </Layout>
 );
 
 export default Tags;

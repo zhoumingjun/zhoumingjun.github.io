@@ -1,7 +1,7 @@
 import React from 'react';
-import Section from '../ui/Section';
-import {Link, graphql} from 'gatsby';
+import {Link} from 'gatsby';
 import styled from 'styled-components';
+import {Box} from 'grommet';
 
 const StyledLink = styled(Link)`
   border-color: grey;
@@ -13,34 +13,19 @@ const StyledLink = styled(Link)`
   padding-bottom: 0.5em;
 `;
 const PostNav = ({prev, next}) => (
-  <Section pad={{horizontal: 'xlarge', top: 'small'}}>
-    <hr />
-
-    <ul
-      style={{
-        display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'space-between',
-        listStyle: 'none',
-        padding: 0,
-      }}>
-      <li>
-        {prev && (
-          <StyledLink to={prev.fields.slug} rel="prev">
-            <span>{'<-'}</span> {prev.frontmatter.title}
-          </StyledLink>
-        )}
-      </li>
-
-      <li>
-        {next && (
-          <StyledLink to={next.fields.slug} rel="next">
-            {next.frontmatter.title} <span>{'->'}</span>
-          </StyledLink>
-        )}
-      </li>
-    </ul>
-  </Section>
+  <Box direction="row" justify="between" margin="xsmall">
+    {prev && (
+      <StyledLink to={prev.fields.slug} rel="prev">
+        <span>{'<-'}</span> {prev.frontmatter.title}
+      </StyledLink>
+    )}
+    <div />
+    {next && (
+      <StyledLink to={next.fields.slug} rel="next">
+        {next.frontmatter.title} <span>{'->'}</span>
+      </StyledLink>
+    )}
+  </Box>
 );
 
 export default PostNav;

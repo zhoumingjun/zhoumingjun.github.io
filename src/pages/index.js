@@ -6,7 +6,7 @@ const Index = () => {
   return (
     <Layout>
       <Box direction="row" basis="xlarge" justify="center">
-        <Box direction="column" width="xlarge">
+        <Box direction="row">
           <Box direction="row">
             <Box direction="row" basis="2/3">
               <LatestPosts />

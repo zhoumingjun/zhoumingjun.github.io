@@ -106,18 +106,34 @@ exports.createPages = ({graphql, actions}) => {
         // Normal pages
         createCategoryPages(createPage, categoryPosts);
 
+        const tmplSeries = path.resolve('./src/templates/blog-series.js');
+        const tmplKnowledgeBase = path.resolve(
+          './src/templates/blog-knowledgebase.js',
+        );
+        const tmplPost = path.resolve('./src/templates/blog-post.js');
+
         // TOC pages
-        createTOCPages(createPage, seriesPosts, '/series');
-        createTOCPages(createPage, kbPosts, '/knowledgebase');
+        createTOCPages(
+          createPage,
+          seriesPosts,
+          '/series',
+          tmplSeries,
+          tmplPost,
+        );
+
+        createTOCPages(
+          createPage,
+          kbPosts,
+          '/knowledgebase',
+          tmplKnowledgeBase,
+          tmplPost,
+        );
       }),
     );
   });
 };
 
-function createTOCPages(createPage, seriesPosts, base) {
-  const tmplSeries = path.resolve('./src/templates/blog-series.js');
-  const tmplPost = path.resolve('./src/templates/blog-post.js');
-
+function createTOCPages(createPage, seriesPosts, base, tmplSeries, tmplPost) {
   // generate series summary
   let seriesTree = {};
   _.each(_.keys(seriesPosts), (seriesName, seriesIndex) => {

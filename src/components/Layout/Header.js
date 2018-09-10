@@ -7,6 +7,7 @@ const HeaderBox = styled(Box)`
   position: fixed;
   width: 100vw;
   height: 60px;
+  z-index: 1;
 `;
 
 const Header = () => {

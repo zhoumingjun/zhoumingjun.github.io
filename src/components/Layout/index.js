@@ -6,12 +6,11 @@ import styled, {injectGlobal} from 'styled-components';
 import Header from './Header';
 import Footer from './Footer';
 import Content from './Main';
-import 'prismjs/themes/prism-okaidia.css';
 
 injectGlobal`
   body {
     margin: 0;
-    background-color: #e8e8e8;
+    background-color: white;
   }
 `;
 
