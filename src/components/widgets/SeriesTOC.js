@@ -1,11 +1,13 @@
 import React from 'react';
 import {Link} from 'gatsby';
 import {Text, Box, Accordion, AccordionPanel} from 'grommet';
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 import _ from 'lodash';
 
 import 'github-markdown-css/github-markdown.css';
 import 'prismjs/themes/prism-okaidia.css';
+
+const windowGlobal = typeof window !== 'undefined' && window;
 
 const StyledLink = styled.a`
   border-radius: ${0}px;
@@ -17,6 +19,12 @@ const StyledLink = styled.a`
   &:hover {
     color: rgb(62, 175, 124);
   }
+
+  ${props =>
+    props.current &&
+    css`
+      color: rgb(62, 175, 124);
+    `};
 `;
 
 const TreeNode = props => {
@@ -34,9 +42,15 @@ const TreeNode = props => {
   aryChildren = _.sortBy(aryChildren, o => {
     return o.post.fields.slug;
   });
+
+  let isCurrent =
+    windowGlobal && windowGlobal.location.pathname == post.fields.slug;
   return (
     <Box>
-      <StyledLink href={post.fields.slug} style={{fontSize: `${fontsize}em`}}>
+      <StyledLink
+        current={isCurrent}
+        href={post.fields.slug}
+        style={{fontSize: `${fontsize}em`}}>
         {post.frontmatter.title}
       </StyledLink>
 
