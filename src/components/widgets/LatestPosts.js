@@ -4,15 +4,12 @@ import {Box, Anchor, Text, Heading} from 'grommet';
 import styled from 'styled-components';
 import _ from 'lodash';
 import Posts from '../content/Posts';
-
+import CalendarHeatMap from './CalendarHeatMap';
 const LatestPosts = () => (
   <StaticQuery
     query={graphql`
       query {
-        allMarkdownRemark(
-          sort: {order: DESC, fields: [frontmatter___date]}
-          limit: 5
-        ) {
+        allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}) {
           edges {
             node {
               id
@@ -44,7 +41,8 @@ const LatestPosts = () => (
           <Heading level={3} margin={{top: 'none'}}>
             Latest Posts:
           </Heading>
-          <Posts posts={posts.map(post => post.node)} />
+          {CalendarHeatMap({edges: posts})}
+          <Posts posts={posts.slice(0, 3).map(post => post.node)} />
           <Anchor href="/all" label="more ..." />
         </Box>
       );
