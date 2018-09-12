@@ -6,6 +6,7 @@ import {
   LatestPosts,
   CategorySection,
   CalendarHeatMap,
+  UsefulLinks,
 } from '../components/widgets';
 const Index = () => {
   return (
@@ -21,6 +22,7 @@ const Index = () => {
                 <Box>
                   <TagSection />
                   <CategorySection />
+                  <UsefulLinks />
                 </Box>
               </Box>
             </Box>
