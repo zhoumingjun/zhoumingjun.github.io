@@ -9,26 +9,37 @@ import {Box} from 'grommet';
 import Section from '../ui/Section';
 
 const Posts = ({posts, filter}) => {
-  let filterPosts = posts.filter(v => {
-    return v.frontmatter.date == filter;
-  });
-  return (
-    <div>
-      {filterPosts.map(post => (
-        <Box key={post.fields.slug} margin="xsmall" pad="small">
-          <Text color="#818181" margin={{right: 'medium'}}>
-            {dateformat(post.frontmatter.date, 'mmm dd, yyyy  ')}
-          </Text>
-          <Heading level={3} margin="none">
-            <Anchor href={post.fields.slug}>{post.frontmatter.title}</Anchor>
-          </Heading>
-          <TagsList tags={post.frontmatter.tags} />
+  let filterPosts = filter
+    ? posts.filter(v => {
+        return v.frontmatter.date == filter;
+      })
+    : posts;
 
-          <Text>{post.frontmatter.desc}</Text>
-        </Box>
-      ))}
-    </div>
-  );
+  if (filterPosts.length == 0) {
+    return (
+      <Heading level={3} textAlign="center">
+        no posts on {filter}
+      </Heading>
+    );
+  } else {
+    return (
+      <div>
+        {filterPosts.map(post => (
+          <Box key={post.fields.slug} margin="xsmall" pad="small">
+            <Text color="#818181" margin={{right: 'medium'}}>
+              {dateformat(post.frontmatter.date, 'mmm dd, yyyy  ')}
+            </Text>
+            <Heading level={3} margin="none">
+              <Anchor href={post.fields.slug}>{post.frontmatter.title}</Anchor>
+            </Heading>
+            <TagsList tags={post.frontmatter.tags} />
+
+            <Text>{post.frontmatter.desc}</Text>
+          </Box>
+        ))}
+      </div>
+    );
+  }
 };
 
 export default Posts;

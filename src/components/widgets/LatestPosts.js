@@ -79,9 +79,12 @@ class LatestPosts extends React.Component {
               background={{color: '#ffffff'}}
               border
               fill>
-              <Heading level={3} margin={{top: 'none'}}>
-                Latest Posts:
-              </Heading>
+              <Box direction="row" justify="between">
+                <Heading level={3} margin={{top: 'none'}}>
+                  Latest Posts:
+                </Heading>
+                <Anchor href="/all" label="more" />
+              </Box>
               <CalendarHeatMap
                 posts={posts}
                 actions={{
@@ -94,7 +97,6 @@ class LatestPosts extends React.Component {
                 posts={edges.map(post => post.node)}
                 filter={this.state.date}
               />
-              <Anchor href="/all" label="more ..." />
             </Box>
           );
         }}
