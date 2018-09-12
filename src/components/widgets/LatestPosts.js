@@ -32,7 +32,9 @@ class LatestPosts extends React.Component {
               edges {
                 node {
                   id
-
+                  fields {
+                    permalink
+                  }
                   frontmatter {
                     title
                     date(formatString: "YYYY-MM-DD")
