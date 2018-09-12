@@ -40,16 +40,16 @@ const TreeNode = props => {
   });
 
   aryChildren = _.sortBy(aryChildren, o => {
-    return o.post.fields.slug;
+    return o.post.fields.permalink;
   });
 
   let isCurrent =
-    windowGlobal && windowGlobal.location.pathname == post.fields.slug;
+    windowGlobal && windowGlobal.location.pathname == post.fields.permalink;
   return (
     <Box>
       <StyledLink
         current={isCurrent}
-        href={post.fields.slug}
+        href={post.fields.permalink}
         style={{fontSize: `${fontsize}em`}}>
         {post.frontmatter.title}
       </StyledLink>

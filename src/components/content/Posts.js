@@ -25,12 +25,14 @@ const Posts = ({posts, filter}) => {
     return (
       <div>
         {filterPosts.map(post => (
-          <Box key={post.fields.slug} margin="xsmall" pad="small">
+          <Box key={post.fields.permalink} margin="xsmall" pad="small">
             <Text color="#818181" margin={{right: 'medium'}}>
               {dateformat(post.frontmatter.date, 'mmm dd, yyyy  ')}
             </Text>
             <Heading level={3} margin="none">
-              <Anchor href={post.fields.slug}>{post.frontmatter.title}</Anchor>
+              <Anchor href={post.fields.permalink}>
+                {post.frontmatter.title}
+              </Anchor>
             </Heading>
             <TagsList tags={post.frontmatter.tags} />
 

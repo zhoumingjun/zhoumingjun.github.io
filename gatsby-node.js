@@ -9,14 +9,35 @@ exports.onCreateNode = ({node, actions, getNode}) => {
   const {createNodeField} = actions;
 
   if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({node, getNode});
+    const fpath = createFilePath({node, getNode});
+
+    createNodeField({
+      name: `fpath`,
+      node,
+      value: fpath,
+    });
+
+    // permalink : date+slug
+
+    let slug =
+      node.frontmatter.slug || node.frontmatter.title.replace(/\W/g, '-');
+
+    let date = node.frontmatter.date.slice(0, 10);
+    let permalink = `/${date.replace(/-/g, '/')}/${slug}`;
+
+    createNodeField({
+      name: `permalink`,
+      node,
+      value: permalink,
+    });
+
+    // for feed rss
     createNodeField({
       name: `slug`,
       node,
-      value: slug,
+      value: permalink,
     });
-
-    const category = _.split(slug, '/')[1];
+    const category = _.split(fpath, '/')[1];
     createNodeField({
       name: `category`,
       node,
@@ -50,14 +71,16 @@ exports.createPages = ({graphql, actions}) => {
                   content
                 }
                 fields {
-                  slug
+                  fpath
+                  permalink
                   category
                 }
                 frontmatter {
                   title
-                  date
+                  date(formatString: "YYYY-MM-DD")
                   tags
                   desc
+                  slug
                 }
               }
             }
@@ -78,14 +101,14 @@ exports.createPages = ({graphql, actions}) => {
           category = node.fields.category;
           if (category) {
             if (category === 'series') {
-              const seriesName = _.split(node.fields.slug, '/')[2];
+              const seriesName = _.split(node.fields.fpath, '/')[2];
               if (!seriesPosts[seriesName]) {
                 seriesPosts[seriesName] = [];
               }
 
               seriesPosts[seriesName].push(node);
             } else if (category === 'knowledgebase') {
-              const baseName = _.split(node.fields.slug, '/')[2];
+              const baseName = _.split(node.fields.fpath, '/')[2];
               if (!kbPosts[baseName]) {
                 kbPosts[baseName] = [];
               }
@@ -140,11 +163,11 @@ function createTOCPages(createPage, seriesPosts, base, tmplSeries, tmplPost) {
     posts = seriesPosts[seriesName];
     _.sortBy(posts, [
       function(o) {
-        return o.fields.slug;
+        return o.fields.fpath;
       },
     ]);
     _.each(posts, post => {
-      items = post.fields.slug.split('/');
+      items = post.fields.fpath.split('/');
       items = items.slice(2, items.length - 1);
       let path = [];
       for (idx = 0; idx < items.length; idx++) {
@@ -171,7 +194,7 @@ function createTOCPages(createPage, seriesPosts, base, tmplSeries, tmplPost) {
     path: base,
     component: tmplSeries,
     context: {
-      outline: JSON.stringify(seriesTree.children),
+      toc: JSON.stringify(seriesTree.children),
     },
   });
 
@@ -180,7 +203,7 @@ function createTOCPages(createPage, seriesPosts, base, tmplSeries, tmplPost) {
     posts = seriesPosts[seriesName];
     posts = _.sortBy(posts, [
       function(o) {
-        return o.fields.slug;
+        return o.fields.fpath;
       },
     ]);
 
@@ -189,10 +212,10 @@ function createTOCPages(createPage, seriesPosts, base, tmplSeries, tmplPost) {
       const prev = index === 0 ? null : posts[index - 1];
 
       createPage({
-        path: post.fields.slug,
+        path: post.fields.permalink,
         component: tmplPost,
         context: {
-          slug: post.fields.slug,
+          permalink: post.fields.permalink,
           toc: JSON.stringify(seriesTree.children[seriesName]),
           next,
           prev,
@@ -230,10 +253,10 @@ function createCategoryPages(createPage, categoryPosts) {
       const prev = index === 0 ? null : posts[index - 1];
 
       createPage({
-        path: post.fields.slug,
+        path: post.fields.permalink,
         component: tmplPost,
         context: {
-          slug: post.fields.slug,
+          permalink: post.fields.permalink,
           prev,
           next,
         },

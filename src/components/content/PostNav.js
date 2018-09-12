@@ -15,13 +15,13 @@ const StyledLink = styled(Link)`
 const PostNav = ({prev, next}) => (
   <Box direction="row" justify="between" margin="xsmall">
     {prev && (
-      <StyledLink to={prev.fields.slug} rel="prev">
+      <StyledLink to={prev.fields.permalink} rel="prev">
         <span>{'<-'}</span> {prev.frontmatter.title}
       </StyledLink>
     )}
     <div />
     {next && (
-      <StyledLink to={next.fields.slug} rel="next">
+      <StyledLink to={next.fields.permalink} rel="next">
         {next.frontmatter.title} <span>{'->'}</span>
       </StyledLink>
     )}

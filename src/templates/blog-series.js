@@ -9,14 +9,14 @@ import Layout from '../components/Layout';
 import Posts from '../components/content/Posts';
 
 const BlogSeries = ({
-  pageContext: {outline},
+  pageContext: {toc},
   data: {
     site: {siteMetadata: site},
   },
 }) => {
-  outline = JSON.parse(outline);
+  toc = JSON.parse(toc);
   let series = [];
-  _.forOwn(outline, ({post}) => {
+  _.forOwn(toc, ({post}) => {
     series.push(post);
   });
 

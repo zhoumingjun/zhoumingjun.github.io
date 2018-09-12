@@ -21,8 +21,8 @@ const UsefulLinks = () => (
       Links:
     </Heading>
     <Box direction="row" gap="small">
-      {Links.map((link, index) => (
-        <div key={index}>
+      {Links.map(link => (
+        <div key={link.name}>
           <Anchor href={link.url}>{link.name}</Anchor>
         </div>
       ))}

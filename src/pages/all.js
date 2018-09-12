@@ -29,7 +29,7 @@ export const pageQuery = graphql`
         node {
           id
           fields {
-            slug
+            permalink
           }
           frontmatter {
             title

@@ -61,13 +61,13 @@ const Content = ({post}) => (
 const PostNav = ({prev, next}) => (
   <Box direction="row" fill="horizontal" justify="between" margin="xsmall">
     {prev && (
-      <StyledLink to={prev.fields.slug} rel="prev">
+      <StyledLink to={prev.fields.permalink} rel="prev">
         <span>{'<-'}</span> {prev.frontmatter.title}
       </StyledLink>
     )}
     <div />
     {next && (
-      <StyledLink to={next.fields.slug} rel="next">
+      <StyledLink to={next.fields.permalink} rel="next">
         {next.frontmatter.title} <span>{'->'}</span>
       </StyledLink>
     )}
@@ -98,7 +98,7 @@ const BlogSeriesPost = ({
   // disqus
   const disqusShortname = site.disqusShortname;
   const disqusConfig = {
-    url: site.siteUrl + post.fields.slug,
+    url: site.siteUrl + post.fields.permalink,
     identifier: post.id,
     title: post.frontmatter.title,
   };
@@ -149,7 +149,7 @@ const BlogSeriesPost = ({
 export default BlogSeriesPost;
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query BlogPostBypermalink($permalink: String!) {
     site {
       siteMetadata {
         title
@@ -159,12 +159,12 @@ export const pageQuery = graphql`
         disqusShortname
       }
     }
-    markdownRemark(fields: {slug: {eq: $slug}}) {
+    markdownRemark(fields: {permalink: {eq: $permalink}}) {
       id
       html
       fileAbsolutePath
       fields {
-        slug
+        permalink
         category
       }
       frontmatter {

@@ -33,11 +33,13 @@ const mapTOC = props => {
   });
 
   aryChildren = _.sortBy(aryChildren, o => {
-    return o.post.fields.slug;
+    return o.post.fields.permalink;
   });
   return (
     <Box>
-      <StyledLink href={post.fields.slug} style={{fontSize: `${fontsize}em`}}>
+      <StyledLink
+        href={post.fields.permalink}
+        style={{fontSize: `${fontsize}em`}}>
         {post.frontmatter.title}
       </StyledLink>
       <Box direction="row">
@@ -55,14 +57,14 @@ const mapTOC = props => {
 };
 
 const BlogSeries = ({
-  pageContext: {outline},
+  pageContext: {toc},
   data: {
     site: {siteMetadata: site},
   },
 }) => {
-  outline = JSON.parse(outline);
+  toc = JSON.parse(toc);
   let series = [];
-  _.forOwn(outline, kk => {
+  _.forOwn(toc, kk => {
     series.push(kk);
   });
 

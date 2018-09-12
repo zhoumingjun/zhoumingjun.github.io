@@ -6,7 +6,7 @@ import Layout from '../components/Layout';
 import Posts from '../components/content/Posts';
 
 const Tags = ({
-  pageContext: {posts, tag},
+  pageContext: {posts},
   data: {
     site: {siteMetadata: site},
   },
