@@ -2,6 +2,7 @@
 title: "Generating Names with a Character-Level RNN"
 date: "2018-09-11T02:14:13Z"
 tags: ["machine learning","pytorch", "rnn"]
+draft: false
 ---
 
 # Introduction
