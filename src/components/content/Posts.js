@@ -8,10 +8,13 @@ import {Heading, Anchor, Text} from 'grommet';
 import {Box} from 'grommet';
 import Section from '../ui/Section';
 
-const Posts = ({posts}) => {
+const Posts = ({posts, filter}) => {
+  let filterPosts = posts.filter(v => {
+    return v.frontmatter.date == filter;
+  });
   return (
     <div>
-      {posts.map(post => (
+      {filterPosts.map(post => (
         <Box key={post.fields.slug} margin="xsmall" pad="small">
           <Text color="#818181" margin={{right: 'medium'}}>
             {dateformat(post.frontmatter.date, 'mmm dd, yyyy  ')}
