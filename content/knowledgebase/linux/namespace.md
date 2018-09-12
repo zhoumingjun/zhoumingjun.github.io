@@ -1,6 +1,6 @@
 ---
 title : "namespace"
-date : "2017-03-06T16:03:35+08:00"
+date : "2018-08-27T05:22:27Z"
 tags : ['misc']
 ---
 https://medium.com/@teddyking/namespaces-in-go-basics-e3f0fc1ff69a

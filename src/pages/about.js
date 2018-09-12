@@ -4,6 +4,7 @@ import {Box, Heading, Text} from 'grommet';
 import _ from 'lodash';
 
 const logs = [
+  {date: '2018-09-12', content: 'add calendar heatmap'},
   {date: '2018-09-07', content: 'refine homepage'},
   {date: '2018-09-05', content: 'add disqus'},
   {date: '2018-09-05', content: 'add page source link'},
@@ -18,7 +19,7 @@ const features = [
   'MathJax enabled',
 ];
 
-const todos = ['beautify toc'];
+const todos = [];
 const Index = props => {
   return (
     <Layout>
