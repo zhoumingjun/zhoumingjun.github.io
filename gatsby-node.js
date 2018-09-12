@@ -20,7 +20,8 @@ exports.onCreateNode = ({node, actions, getNode}) => {
     // permalink : date+slug
 
     let slug =
-      node.frontmatter.slug || node.frontmatter.title.replace(/\W/g, '-');
+      node.frontmatter.slug ||
+      node.frontmatter.title.replace(/\W/g, '-').toLowerCase();
 
     let date = node.frontmatter.date.slice(0, 10);
     let permalink = `/${date.replace(/-/g, '/')}/${slug}`;
