@@ -1,4 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mingjun Zhou's blog]]></title><description><![CDATA[personal blog]]></description><link>https://zhoumingjun.github.io</link><generator>RSS for Node</generator><lastBuildDate>Thu, 13 Sep 2018 08:15:50 GMT</lastBuildDate><item><title><![CDATA[grub2]]></title><description><![CDATA[Boot system from grub2 cli Install grub2 via livecd from ubuntu offical site  https://help.ubuntu.com/community/Grub2/Installing   Install…]]></description><link>https://zhoumingjun.github.io/2018/09/11/grub2</link><guid isPermaLink="false">https://zhoumingjun.github.io/2018/09/11/grub2</guid><pubDate>Tue, 11 Sep 2018 09:28:01 GMT</pubDate><content:encoded>&lt;h1&gt;Boot system from grub2 cli&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mingjun Zhou's blog]]></title><description><![CDATA[personal blog]]></description><link>https://zhoumingjun.github.io</link><generator>RSS for Node</generator><lastBuildDate>Thu, 13 Sep 2018 08:19:28 GMT</lastBuildDate><item><title><![CDATA[BIOS vs UEFI & MBR vs GPT]]></title><description><![CDATA[Introduction refer to manjaro wiki https://wiki.manjaro.org/index.php?title=Some basics of MBR v/s GPT and BIOS v/s_UEFI efibootmgr]]></description><link>https://zhoumingjun.github.io/2018/09/13/bios-vs-uefi-and-mbr-vs-gpt</link><guid isPermaLink="false">https://zhoumingjun.github.io/2018/09/13/bios-vs-uefi-and-mbr-vs-gpt</guid><pubDate>Thu, 13 Sep 2018 08:19:01 GMT</pubDate><content:encoded>&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;refer to manjaro wiki&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://wiki.manjaro.org/index.php?title=Some_basics_of_MBR_v/s_GPT_and_BIOS_v/s_UEFI&quot;&gt;https://wiki.manjaro.org/index.php?title=Some&lt;em&gt;basics&lt;/em&gt;of&lt;em&gt;MBR&lt;/em&gt;v/s&lt;em&gt;GPT&lt;/em&gt;and&lt;em&gt;BIOS&lt;/em&gt;v/s_UEFI&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;efibootmgr&lt;/h1&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# check &lt;/span&gt;
+efibootmgr -v
+
+&lt;span class=&quot;token comment&quot;&gt;# remove&lt;/span&gt;
+efibootmgr -b 0001 -B
+
+&lt;span class=&quot;token comment&quot;&gt;# create&lt;/span&gt;
+efibootmgr -c  -L &lt;span class=&quot;token string&quot;&gt;&quot;os name&quot;&lt;/span&gt; -d /dev/sda -p 1 -l \\EFI\\ubuntu\\shimx64.efi&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[grub2]]></title><description><![CDATA[Boot system from grub2 cli Install grub2 via livecd from ubuntu offical site  https://help.ubuntu.com/community/Grub2/Installing   Install…]]></description><link>https://zhoumingjun.github.io/2018/09/11/grub2</link><guid isPermaLink="false">https://zhoumingjun.github.io/2018/09/11/grub2</guid><pubDate>Tue, 11 Sep 2018 09:28:01 GMT</pubDate><content:encoded>&lt;h1&gt;Boot system from grub2 cli&lt;/h1&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# check the fs and content of the disk&lt;/span&gt;
 &lt;span class=&quot;token function&quot;&gt;ls&lt;/span&gt;
 &lt;span class=&quot;token function&quot;&gt;ls&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;hd0,2&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;/
@@ -15,20 +28,7 @@ boot&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1&gt;Install grub2 from the running ubuntu&lt;/h1&gt;
 &lt;p&gt;make sure to mount the efi partition first,
 grub-isntall will install bootable efi files under /boot/efi/EFI/{BOOT,ubuntu}&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;grub-install /dev/sdX&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[BIOS vs UEFI & MBR vs GPT]]></title><description><![CDATA[Introduction refer to manjaro wiki https://wiki.manjaro.org/index.php?title=Some basics of MBR v/s GPT and BIOS v/s_UEFI efibootmgr]]></description><link>https://zhoumingjun.github.io/2018/09/11/bios-vs-uefi-and-mbr-vs-gpt</link><guid isPermaLink="false">https://zhoumingjun.github.io/2018/09/11/bios-vs-uefi-and-mbr-vs-gpt</guid><pubDate>Tue, 11 Sep 2018 09:28:01 GMT</pubDate><content:encoded>&lt;h1&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;refer to manjaro wiki&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https://wiki.manjaro.org/index.php?title=Some_basics_of_MBR_v/s_GPT_and_BIOS_v/s_UEFI&quot;&gt;https://wiki.manjaro.org/index.php?title=Some&lt;em&gt;basics&lt;/em&gt;of&lt;em&gt;MBR&lt;/em&gt;v/s&lt;em&gt;GPT&lt;/em&gt;and&lt;em&gt;BIOS&lt;/em&gt;v/s_UEFI&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1&gt;efibootmgr&lt;/h1&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# check &lt;/span&gt;
-efibootmgr -v
-
-&lt;span class=&quot;token comment&quot;&gt;# remove&lt;/span&gt;
-efibootmgr -b 0001 -B
-
-&lt;span class=&quot;token comment&quot;&gt;# create&lt;/span&gt;
-efibootmgr -c  -L &lt;span class=&quot;token string&quot;&gt;&quot;os name&quot;&lt;/span&gt; -d /dev/sda -p 1 -l \\EFI\\ubuntu\\shimx64.efi&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Generating Names with a Character-Level RNN]]></title><description><![CDATA[Introduction This is following the idea of  https://pytorch.org/tutorials/intermediate/char rnn generation_tutorial.html#generating-names…]]></description><link>https://zhoumingjun.github.io/2018/09/11/generating-names-with-a-character-level-rnn</link><guid isPermaLink="false">https://zhoumingjun.github.io/2018/09/11/generating-names-with-a-character-level-rnn</guid><pubDate>Tue, 11 Sep 2018 02:14:13 GMT</pubDate><content:encoded>&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;grub-install /dev/sdX&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Generating Names with a Character-Level RNN]]></title><description><![CDATA[Introduction This is following the idea of  https://pytorch.org/tutorials/intermediate/char rnn generation_tutorial.html#generating-names…]]></description><link>https://zhoumingjun.github.io/2018/09/11/generating-names-with-a-character-level-rnn</link><guid isPermaLink="false">https://zhoumingjun.github.io/2018/09/11/generating-names-with-a-character-level-rnn</guid><pubDate>Tue, 11 Sep 2018 02:14:13 GMT</pubDate><content:encoded>&lt;h1&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;This is following the idea of &lt;a href=&quot;https://pytorch.org/tutorials/intermediate/char_rnn_generation_tutorial.html#generating-names-with-a-character-level-rnn&quot;&gt;https://pytorch.org/tutorials/intermediate/char&lt;em&gt;rnn&lt;/em&gt;generation_tutorial.html#generating-names-with-a-character-level-rnn&lt;/a&gt;&lt;/p&gt;
 &lt;h1&gt;Task definition&lt;/h1&gt;
 &lt;p&gt;In training phase, It’s a kind of many-to-many task.
