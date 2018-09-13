@@ -13,18 +13,13 @@ const Index = () => {
     <Layout>
       <Box direction="row" basis="xlarge" justify="center">
         <Box direction="row">
-          <Box>
-            <Box direction="row">
-              <Box direction="row" basis="2/3">
-                <LatestPosts />
-              </Box>
-              <Box direction="row" basis="1/3">
-                <Box>
-                  <TagSection />
-                  <CategorySection />
-                  <UsefulLinks />
-                </Box>
-              </Box>
+          <Box direction="row" basis="2/3">
+            <LatestPosts />
+          </Box>
+          <Box direction="row" basis="1/3">
+            <Box>
+              <TagSection />
+              <UsefulLinks />
             </Box>
           </Box>
         </Box>

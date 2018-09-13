@@ -5,6 +5,7 @@ import {Box, Anchor, Heading, Text} from 'grommet';
 import styled from 'styled-components';
 import Disqus from 'disqus-react';
 import _ from 'lodash';
+import {LinkPrevious, LinkNext} from 'grommet-icons';
 
 import 'github-markdown-css/github-markdown.css';
 import 'prismjs/themes/prism-okaidia.css';

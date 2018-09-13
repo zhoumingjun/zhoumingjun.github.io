@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import _ from 'lodash';
 import Posts from '../content/Posts';
 import CalendarHeatMap from './CalendarHeatMap';
-
+import {More} from 'grommet-icons';
 const today = new Date().toISOString().slice(0, 10);
 const interval = 365;
 
@@ -77,11 +77,10 @@ class LatestPosts extends React.Component {
               margin="xsmall"
               pad="small"
               background={{color: '#ffffff'}}
-              border
               fill>
               <Box direction="row" justify="between">
                 <Heading level={3} margin={{top: 'none'}}>
-                  Latest Posts:
+                  Latest:
                 </Heading>
                 <Anchor href="/all" label="more" />
               </Box>

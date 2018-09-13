@@ -4,9 +4,7 @@ import ReactTooltip from 'react-tooltip';
 import {Box, Text} from 'grommet';
 import './CalendarHeatMap.css';
 import _ from 'lodash';
-import {StaticQuery} from 'gatsby';
 import styled, {css} from 'styled-components';
-const today = new Date();
 
 function shiftDate(date, numDays) {
   const newDate = new Date(date);
@@ -25,6 +23,8 @@ const Legend = styled.li`
     `};
 `;
 const MyCalendarHeatmap = ({posts, actions: {onClick}}) => {
+  const today = new Date();
+
   return (
     <Box>
       <CalendarHeatmap

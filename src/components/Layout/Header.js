@@ -16,7 +16,7 @@ const Header = () => {
       <Box direction="row" justify="between" align="center" basis="xlarge">
         <a href="/">
           <Text size="medium" color="#61DAFB">
-            Mingjun Zhou's Blog
+            Mingjun Zhou blog
           </Text>
         </a>
         <Box direction="row" align="center" gap="medium">

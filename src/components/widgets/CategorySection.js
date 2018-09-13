@@ -13,9 +13,7 @@ let categories = [
 
 const CategoryList = () => (
   <Box margin="xsmall" pad="small" background={{color: '#ffffff'}} border>
-    <Heading level={3} margin={{top: 'none'}}>
-      Categories:
-    </Heading>
+    <Heading level={3}>Categories:</Heading>
     <Box direction="column">
       {categories.map((category, index) => (
         <div key={index}>
