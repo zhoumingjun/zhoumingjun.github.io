@@ -4,7 +4,7 @@ date : "2018-09-11T09:28:01Z"
 tags : ['linux', 'grub2']
 ---
 
-# In Grub2 cli
+# Boot system from grub2 cli
 
 ```bash
 # check the fs and content of the disk
@@ -19,7 +19,7 @@ boot
 ```
 
 
-# install grub2 via livecd
+# Install grub2 via livecd
 from ubuntu offical site https://help.ubuntu.com/community/Grub2/Installing 
 
 ```bash
@@ -27,7 +27,7 @@ sudo mount /dev/sdXY /mnt # Example: sudo mount /dev/sda5 /mnt
 sudo grub-install --boot-directory=/mnt/boot /dev/sdX # Example: sudo grub-install --boot-directory=/mnt/boot /dev/sda
 ```
 
-# install grub2 from the running ubuntu
+# Install grub2 from the running ubuntu
 make sure to mount the efi partition first,
 grub-isntall will install bootable efi files under /boot/efi/EFI/{BOOT,ubuntu}
 
