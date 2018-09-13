@@ -2,7 +2,7 @@
 title : "BIOS vs UEFI & MBR vs GPT"
 date : "2018-09-11T09:28:01Z"
 tags : ['linux', 'system', 'uefi']
-slug: 'bios-vs-uefi-and-mbr-vs-gtp
+slug: 'bios-vs-uefi-and-mbr-vs-gpt'
 ---
 
 # Introduction
