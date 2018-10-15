@@ -2,7 +2,6 @@
 title : "RaspberryPi zero w"
 date : "2018-10-15T08:10:38Z"
 tags : ["rpi"]
-
 ---
 
 # introduction
