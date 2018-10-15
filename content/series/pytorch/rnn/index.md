@@ -7,3 +7,5 @@ tags: ["machine learning","pytorch", "rnn"]
 # RNN
 
  
+
+ 

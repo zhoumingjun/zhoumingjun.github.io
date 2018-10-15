@@ -12,6 +12,8 @@ import Posts from '../components/content/Posts';
 const StyledLink = styled.a`
   border-radius: ${0}px;
   color: #2c3e50;
+  border-left: 1px solid rgb(62, 175, 124);
+  border-bottom: 1px solid rgb(62, 175, 124);
   &:link {
     text-decoration: none;
   }

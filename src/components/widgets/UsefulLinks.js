@@ -16,7 +16,7 @@ let Links = [
 ];
 
 const UsefulLinks = () => (
-  <Box margin="xsmall" pad="small">
+  <Box margin="xsmall" pad="small" border="top">
     <Heading level={3} margin={{top: 'none'}}>
       Links:
     </Heading>

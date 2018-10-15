@@ -38,7 +38,7 @@ const TagList = props => (
       });
 
       return (
-        <Box margin="xsmall" pad="small">
+        <Box margin="xsmall" pad="small" border="top">
           <Heading level={3} margin={{top: 'none'}}>
             Tags:
           </Heading>
