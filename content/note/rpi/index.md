@@ -68,5 +68,6 @@ static domain_name_servers=10.0.0.99
 ## share network from usb0
 ```
 sudo ip addr change 192.168.7.1/24 dev usb0
+echo 1 > /proc/sys/net/ipv4/ip_forward
 sudo iptables -t nat -A POSTROUTING -o enp4s0 -j MASQUERADE
 ```
