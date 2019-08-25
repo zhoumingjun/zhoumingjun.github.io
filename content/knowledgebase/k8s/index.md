@@ -47,3 +47,7 @@ curl -sSL "https://raw.githubusercontent.com/kubernetes/kubernetes/${RELEASE}/bu
 
 ## errors
 unknown flag: --Authorization.Mode
+
+
+## tutorial
+http://baijiahao.baidu.com/s?id=1602795888204860650&wfr=spider&for=pc
