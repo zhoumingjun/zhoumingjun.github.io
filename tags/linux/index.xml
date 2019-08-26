@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux | zhoumingjun&#39;s website</title>
+    <link>/tags/linux/</link>
+      <atom:link href="/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <description>linux</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 27 Aug 2018 05:20:27 +0000</lastBuildDate>
+    <image>
+      <url>/img/logo.png</url>
+      <title>linux</title>
+      <link>/tags/linux/</link>
+    </image>
+    
+    <item>
+      <title>linux</title>
+      <link>/kb/linux/</link>
+      <pubDate>Mon, 27 Aug 2018 05:20:27 +0000</pubDate>
+      <guid>/kb/linux/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

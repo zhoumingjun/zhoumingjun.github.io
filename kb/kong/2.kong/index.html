@@ -28,10 +28,13 @@
   
     
   
-  <meta name="description" content="">
+  <meta name="description" content="install  install official distribution git clone kong
+# clone the Kong repo (inside the vagrant one) git clone https://github.com/Kong/kong # only if you want to develop a custom plugin, also clone the plugin template git clone https://github.com/Kong/kong-plugin  define env
+export KONG_PLUGINS=bundled,myplugin  db schema
+psql -U postgres &lt;&lt;EOF \x CREATE ROLE kong; ALTER ROLE kong WITH login; CREATE DATABASE kong OWNER kong; CREATE DATABASE kong_tests OWNER kong; EOF psql -d kong -U postgres &lt;&lt;EOF \x DROP SCHEMA IF EXISTS public CASCADE; CREATE SCHEMA IF NOT EXISTS public AUTHORIZATION kong; GRANT ALL ON SCHEMA public TO kong; EOF CREATE USER konga; CREATE DATABASE konga OWNER konga; ALTER USER konga WITH PASSWORD &#39;new_password&#39;;  start">
 
   
-  <link rel="alternate" hreflang="en-us" href="/404.html">
+  <link rel="alternate" hreflang="en-us" href="/kb/kong/2.kong/">
 
   
 
@@ -96,7 +99,7 @@
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/404.html">
+  <link rel="canonical" href="/kb/kong/2.kong/">
 
   
   
@@ -109,11 +112,15 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="zhoumingjun&#39;s website">
-  <meta property="og:url" content="/404.html">
-  <meta property="og:title" content="404 Page not found | zhoumingjun&#39;s website">
-  <meta property="og:description" content=""><meta property="og:image" content="/img/logo.png">
+  <meta property="og:url" content="/kb/kong/2.kong/">
+  <meta property="og:title" content=" | zhoumingjun&#39;s website">
+  <meta property="og:description" content="install  install official distribution git clone kong
+# clone the Kong repo (inside the vagrant one) git clone https://github.com/Kong/kong # only if you want to develop a custom plugin, also clone the plugin template git clone https://github.com/Kong/kong-plugin  define env
+export KONG_PLUGINS=bundled,myplugin  db schema
+psql -U postgres &lt;&lt;EOF \x CREATE ROLE kong; ALTER ROLE kong WITH login; CREATE DATABASE kong OWNER kong; CREATE DATABASE kong_tests OWNER kong; EOF psql -d kong -U postgres &lt;&lt;EOF \x DROP SCHEMA IF EXISTS public CASCADE; CREATE SCHEMA IF NOT EXISTS public AUTHORIZATION kong; GRANT ALL ON SCHEMA public TO kong; EOF CREATE USER konga; CREATE DATABASE konga OWNER konga; ALTER USER konga WITH PASSWORD &#39;new_password&#39;;  start"><meta property="og:image" content="/img/logo.png">
   <meta property="twitter:image" content="/img/logo.png"><meta property="og:locale" content="en-us">
   
+    
     
   
 
@@ -126,7 +133,7 @@
 
 
 
-  <title>404 Page not found | zhoumingjun&#39;s website</title>
+  <title> | zhoumingjun&#39;s website</title>
 
 </head>
 
@@ -315,51 +322,312 @@
 </nav>
 
 
-  <div class="universal-wrapper pt-3">
-
-  <h1>Page not found</h1>
-
-  
-  
-  <form class="d-flex align-items-center mb-3">
-    <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
-  </form>
-  
+  <article class="article" itemscope itemtype="http://schema.org/Article">
 
   
 
-  <p>Perhaps you were looking for one of these?</p>
+
+
+
+
+
+
+
+
+
+
+
+  
 
   
   
   
-  <h2>Latest</h2>
-  <ul>
+<div class="article-container pt-3">
+  <h1 itemprop="name"></h1>
+
+  
+
+  
     
-      <li><a href="/project/dotfiles/">dotfiles</a></li>
+
+
+
+<meta content="" itemprop="datePublished">
+<meta content="" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
     
-      <li><a href="/project/adr-tools/">Adr-Tools</a></li>
     
-      <li><a href="/project/darwin-ansible-playbooks/">Darwin Ansible Playbooks</a></li>
+      
     
-      <li><a href="/project/rock64-ansible-playbooks/">Rock64 Ansible Playbooks</a></li>
+    <time>Jan 1, 0001</time>
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+  
     
-      <li><a href="/project/ubuntu-ansible-playbooks/">Ubuntu Ansible Playbooks</a></li>
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
     
-      <li><a href="/project/arch-ansible-playbook/">Arch Ansible Playbook</a></li>
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/kb/kong/2.kong/&amp;text=" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
     
-      <li><a href="/kb/golang/">golang</a></li>
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/kb/kong/2.kong/&amp;t=" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
     
-      <li><a href="/kb/openapi/">openapi</a></li>
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=&amp;body=/kb/kong/2.kong/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
     
-      <li><a href="/kb/k8s/">k8s</a></li>
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/kb/kong/2.kong/&amp;title=" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
     
-      <li><a href="/note/rpi/">RaspberryPi zero w</a></li>
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=%20/kb/kong/2.kong/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/kb/kong/2.kong/&amp;title=" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
     
   </ul>
+</div>
+
+
   
 
 </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<h1 id="install">install</h1>
+
+<ol>
+<li>install official distribution</li>
+
+<li><p>git clone kong</p>
+
+<pre><code class="language-bash"># clone the Kong repo (inside the vagrant one)
+git clone https://github.com/Kong/kong
+
+# only if you want to develop a custom plugin, also clone the plugin template
+git clone https://github.com/Kong/kong-plugin
+</code></pre></li>
+
+<li><p>define env</p>
+
+<pre><code class="language-bash">export KONG_PLUGINS=bundled,myplugin
+</code></pre></li>
+
+<li><p>db schema</p>
+
+<pre><code class="language-bash">
+psql -U postgres &lt;&lt;EOF
+\x
+CREATE ROLE kong;
+ALTER ROLE kong WITH login;
+CREATE DATABASE kong OWNER kong;
+CREATE DATABASE kong_tests OWNER kong;
+EOF
+
+psql -d kong -U postgres &lt;&lt;EOF
+\x
+DROP SCHEMA IF EXISTS public CASCADE;
+CREATE SCHEMA IF NOT EXISTS public AUTHORIZATION kong;
+GRANT ALL ON SCHEMA public TO kong;
+EOF
+
+CREATE USER konga; CREATE DATABASE konga OWNER konga;
+ALTER USER konga WITH PASSWORD 'new_password';
+
+
+
+</code></pre></li>
+
+<li><p>start</p>
+
+<pre><code class="language-bash">bin/kong migrations bootstrap
+# if you are running Kong &lt; 0.15.0, run this instead of bootstrap:
+# $ bin/kong migrations up
+bin/kong start
+</code></pre></li>
+
+<li><p>sample</p>
+
+<pre><code class="language-bash">$ curl -i -X POST \
+--url http://localhost:8001/services/ \
+--data 'name=mockbin' \
+--data 'url=http://mockbin.org/request'
+
+$ curl -i -X POST \
+--url http://localhost:8001/services/mockbin/routes \
+--data 'paths=/'
+
+# add the custom plugin, to our new api
+$ curl -i -X POST \
+--url http://localhost:8001/services/mockbin/plugins \
+--data 'name=myplugin'
+
+</code></pre></li>
+</ol>
+
+    </div>
+
+    
+
+
+    
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="/">zhoumingjun</a></h5>
+      
+      <p class="card-text" itemprop="description">My work interests include devops, gaming and programmable matter.</p>
+      <ul class="network-icon" aria-hidden="true">
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
 
       
 

@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Notes | zhoumingjun&#39;s website</title>
+    <link>/note/</link>
+      <atom:link href="/note/index.xml" rel="self" type="application/rss+xml" />
+    <description>Notes</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 15 Oct 2018 08:10:38 +0000</lastBuildDate>
+    <image>
+      <url>/img/logo.png</url>
+      <title>Notes</title>
+      <link>/note/</link>
+    </image>
+    
+    <item>
+      <title>RaspberryPi zero w</title>
+      <link>/note/rpi/</link>
+      <pubDate>Mon, 15 Oct 2018 08:10:38 +0000</pubDate>
+      <guid>/note/rpi/</guid>
+      <description>
+
+&lt;h1 id=&#34;introduction&#34;&gt;introduction&lt;/h1&gt;
+
+&lt;h1 id=&#34;config&#34;&gt;config&lt;/h1&gt;
+
+&lt;h2 id=&#34;enable-ssh&#34;&gt;enable ssh&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;cd boot
+touch ssh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;hack-config-txt&#34;&gt;hack config.txt&lt;/h2&gt;
+
+&lt;p&gt;/boot/config.txt&lt;/p&gt;
+
+&lt;p&gt;dtoverlay=dwc2&lt;/p&gt;
+
+&lt;h2 id=&#34;hack-cmdline-txt&#34;&gt;hack cmdline.txt&lt;/h2&gt;
+
+&lt;p&gt;/boot/cmdline.txt&lt;/p&gt;
+
+&lt;p&gt;modules-load=dwc2,g_ether&lt;/p&gt;
+
+&lt;h1 id=&#34;network&#34;&gt;network&lt;/h1&gt;
+
+&lt;h2 id=&#34;set-wireless-configuration&#34;&gt;set wireless configuration&lt;/h2&gt;
+
+&lt;p&gt;find the available wireless ap
+&lt;code&gt;iw dev wlan0 scan&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;cat /etc/wpa_supplicant/wpa_supplicant.conf&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+country=CN
+
+network={
+	ssid=&amp;quot;BBHome&amp;quot;
+	psk=&amp;quot;--&amp;quot;
+}
+
+network={
+	ssid=&amp;quot;Boxin2.4G_2&amp;quot;
+	psk=&amp;quot;--&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;set-static-address&#34;&gt;set static address&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;interface usb0
+metric 300
+static ip_address=192.168.7.2
+static routers=192.168.7.1
+static domain_name_servers=192.168.7.1
+
+interface wlan0
+metric 200
+static ip_address=10.0.0.200/24
+static routers=10.0.0.99
+static domain_name_servers=10.0.0.99
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;share-network-from-usb0&#34;&gt;share network from usb0&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo ip addr change 192.168.7.1/24 dev usb0
+echo 1 &amp;gt; /proc/sys/net/ipv4/ip_forward
+sudo iptables -t nat -A POSTROUTING -o enp4s0 -j MASQUERADE
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Unicode</title>
+      <link>/note/unicode/</link>
+      <pubDate>Thu, 06 Sep 2018 02:12:39 +0000</pubDate>
+      <guid>/note/unicode/</guid>
+      <description>
+
+&lt;h1 id=&#34;unicode-nomalization&#34;&gt;unicode nomalization&lt;/h1&gt;
+
+&lt;h2 id=&#34;canonical-and-compatibility-equivalence&#34;&gt;Canonical and Compatibility Equivalence&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.unicode.org/reports/tr15/#Canon_Compat_Equivalence&#34; target=&#34;_blank&#34;&gt;http://www.unicode.org/reports/tr15/#Canon_Compat_Equivalence&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Examples of Canonical Equivalence&lt;/strong&gt;&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Subtype&lt;/th&gt;
+&lt;th&gt;Examples&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Combining sequence&lt;/td&gt;
+&lt;td&gt;Ç ↔   C+◌̧&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Ordering of combining marks&lt;/td&gt;
+&lt;td&gt;q+◌̇+◌̣   ↔   q+◌̣+◌̇&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Hangul &amp;amp; conjoining jamo&lt;/td&gt;
+&lt;td&gt;가 ↔   ᄀ +ᅡ&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Singleton equivalence&lt;/td&gt;
+&lt;td&gt;Ω ↔   Ω&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;Examples of Compatibility Equivalence&lt;/strong&gt;&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Subtype&lt;/th&gt;
+&lt;th&gt;Examples&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Font variants&lt;/td&gt;
+&lt;td&gt;ℌ   →   H&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Linebreaking differences&lt;/td&gt;
+&lt;td&gt;[NBSP]  →   [SPACE]&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Positional variant forms&lt;/td&gt;
+&lt;td&gt;ﻉ   →   ‌ع‌&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Circled variants&lt;/td&gt;
+&lt;td&gt;①   →   1&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Width variants&lt;/td&gt;
+&lt;td&gt;ｶ   →   カ&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Rotated variants&lt;/td&gt;
+&lt;td&gt;︷   →   {&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Superscripts/subscripts&lt;/td&gt;
+&lt;td&gt;i⁹  →   i9&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Squared characters&lt;/td&gt;
+&lt;td&gt;㌀   →   アパート&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Fractions&lt;/td&gt;
+&lt;td&gt;¼   →   &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;4&lt;/sub&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Other&lt;/td&gt;
+&lt;td&gt;ǆ   →   dž&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;normalization-forms&#34;&gt;Normalization Forms&lt;/h2&gt;
+
+&lt;p&gt;Form    |   Description
+&amp;ndash; |  &amp;ndash;
+Normalization Form D (NFD)      |Canonical Decomposition
+Normalization Form C (NFC)      |Canonical Decomposition,followed by Canonical Composition
+Normalization Form KD (NFKD)    |Compatibility Decomposition
+Normalization Form KC (NFKC)    |Compatibility Decomposition,followed by Canonical Composition&lt;/p&gt;
+
+&lt;h1 id=&#34;unicode-charater-category&#34;&gt;unicode charater category&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Unicode_character_property#General_Category&#34; target=&#34;_blank&#34;&gt;https://en.wikipedia.org/wiki/Unicode_character_property#General_Category&lt;/a&gt;
+&lt;a href=&#34;http://www.fileformat.info/info/unicode/category/index.htm&#34; target=&#34;_blank&#34;&gt;http://www.fileformat.info/info/unicode/category/index.htm&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Code    Description
+[Cc]    Other, Control
+[Cf]    Other, Format
+[Cn]    Other, Not Assigned (no characters in the file have this property)
+[Co]    Other, Private Use
+[Cs]    Other, Surrogate
+[LC]    Letter, Cased
+[Ll]    Letter, Lowercase
+[Lm]    Letter, Modifier
+[Lo]    Letter, Other
+[Lt]    Letter, Titlecase
+[Lu]    Letter, Uppercase
+[Mc]    Mark, Spacing Combining
+[Me]    Mark, Enclosing
+[Mn]    Mark, Nonspacing
+[Nd]    Number, Decimal Digit
+[Nl]    Number, Letter
+[No]    Number, Other
+[Pc]    Punctuation, Connector
+[Pd]    Punctuation, Dash
+[Pe]    Punctuation, Close
+[Pf]    Punctuation, Final quote (may behave like Ps or Pe depending on usage)
+[Pi]    Punctuation, Initial quote (may behave like Ps or Pe depending on usage)
+[Po]    Punctuation, Other
+[Ps]    Punctuation, Open
+[Sc]    Symbol, Currency
+[Sk]    Symbol, Modifier
+[Sm]    Symbol, Math
+[So]    Symbol, Other
+[Zl]    Separator, Line
+[Zp]    Separator, Paragraph
+[Zs]    Separator, Space&lt;/p&gt;
+
+&lt;h1 id=&#34;python-code&#34;&gt;python code&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import unicodedata
+all_letters = string.ascii_letters + &amp;quot; .,;&#39;&amp;quot;
+n_letters = len(all_letters)
+# Turn a Unicode string to plain ASCII, thanks to http://stackoverflow.com/a/518232/2809427
+def unicodeToAscii(s):
+    return &#39;&#39;.join(c for c in unicodedata.normalize(&#39;NFD&#39;, s) if unicodedata.category(c) != &#39;Mn&#39; and c in all_letters)
+
+# show case
+str = &#39;Abelló&#39;
+print([c for c in str])
+print([c for c in unicodedata.normalize(&#39;NFD&#39;, str)])
+print([c for c in unicodedata.normalize(&#39;NFD&#39;, str) if unicodedata.category(c)!= &#39;Mn&#39;])
+print([c for c in unicodedata.normalize(&#39;NFD&#39;, str) if unicodedata.category(c)!= &#39;Mn&#39;  and c in all_letters])
+
+# result 
+[&#39;A&#39;, &#39;b&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;ó&#39;]
+[&#39;A&#39;, &#39;b&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;, &#39;́&#39;]
+[&#39;A&#39;, &#39;b&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;]
+[&#39;A&#39;, &#39;b&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;]
+
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>inside shell</title>
+      <link>/note/inside-shell/</link>
+      <pubDate>Fri, 31 Aug 2018 17:08:12 +0000</pubDate>
+      <guid>/note/inside-shell/</guid>
+      <description>&lt;p&gt;which foo &amp;gt;/dev/null
+command -v foo &amp;gt;/dev/null 2&amp;gt;&amp;amp;1
+type foo &amp;gt;/dev/null 2&amp;gt;&amp;amp;1
+hash foo 2&amp;gt;/dev/null&lt;/p&gt;
+
+&lt;p&gt;if [[ -n &amp;ldquo;${commands[perlbrew]}&amp;rdquo; ]] ; then
+  &amp;hellip;
+fi&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://hyperpolyglot.org/unix-shells&#34; target=&#34;_blank&#34;&gt;http://hyperpolyglot.org/unix-shells&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>iptables</title>
+      <link>/note/iptables/</link>
+      <pubDate>Fri, 24 Aug 2018 03:58:03 +0000</pubDate>
+      <guid>/note/iptables/</guid>
+      <description>
+
+&lt;h1 id=&#34;refs&#34;&gt;refs&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.hostinger.com/tutorials/iptables-tutorial&#34; target=&#34;_blank&#34;&gt;https://www.hostinger.com/tutorials/iptables-tutorial&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://wiki.archlinux.org/index.php/iptables&#34; target=&#34;_blank&#34;&gt;https://wiki.archlinux.org/index.php/iptables&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>GAN</title>
+      <link>/note/gan/</link>
+      <pubDate>Fri, 17 Aug 2018 06:00:00 +0000</pubDate>
+      <guid>/note/gan/</guid>
+      <description>
+
+&lt;h2 id=&#34;refs&#34;&gt;refs&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/@jonathan_hui/gan-gan-series-2d279f906e7b&#34; target=&#34;_blank&#34;&gt;https://medium.com/@jonathan_hui/gan-gan-series-2d279f906e7b&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.datacamp.com/community/tutorials/generative-adversarial-networks&#34; target=&#34;_blank&#34;&gt;https://www.datacamp.com/community/tutorials/generative-adversarial-networks&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;people&#34;&gt;people&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://people.csail.mit.edu/junyanz/&#34; target=&#34;_blank&#34;&gt;Jun-Yan Zhu&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Awesome AI</title>
+      <link>/note/awesome-ai/</link>
+      <pubDate>Wed, 15 Aug 2018 04:12:07 +0000</pubDate>
+      <guid>/note/awesome-ai/</guid>
+      <description>
+
+&lt;h2 id=&#34;latest&#34;&gt;latest&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/zepingyu0512/srnn&#34; target=&#34;_blank&#34;&gt;srnn&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;datasets&#34;&gt;Datasets&lt;/h2&gt;
+
+&lt;h3 id=&#34;image&#34;&gt;image&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://host.robots.ox.ac.uk/pascal/VOC/&#34; target=&#34;_blank&#34;&gt;PASCAL Visual Object Classification (PASCAL VOC) dataset&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.image-net.org/&#34; target=&#34;_blank&#34;&gt;ImageNet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://cocodataset.org/#home&#34; target=&#34;_blank&#34;&gt;COCO&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;nlp&#34;&gt;nlp&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://nlp.stanford.edu/projects/glove/&#34; target=&#34;_blank&#34;&gt;GloVe&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Yelp&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Object Detection and Localization</title>
+      <link>/note/object-detection-and-localization-algorithms/</link>
+      <pubDate>Wed, 15 Aug 2018 04:12:07 +0000</pubDate>
+      <guid>/note/object-detection-and-localization-algorithms/</guid>
+      <description>
+
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+
+&lt;h3 id=&#34;blogs&#34;&gt;blogs&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://towardsdatascience.com/evolution-of-object-detection-and-localization-algorithms-e241021d8bad&#34; target=&#34;_blank&#34;&gt;Evolution of Object Detection and Localization Algorithms&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/comet-app/review-of-deep-learning-algorithms-for-object-detection-c1f3d437b852&#34; target=&#34;_blank&#34;&gt;Review of Deep Learning Algorithms for Object Detection&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;*&lt;a href=&#34;https://www.kdnuggets.com/2018/05/implement-yolo-v3-object-detector-pytorch-part-1.html&#34; target=&#34;_blank&#34;&gt;yolo v3&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;papers&#34;&gt;papers&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/pdf/1506.02640.pdf&#34; target=&#34;_blank&#34;&gt;You Only Look Once: Unified, Real-Time Object Detection&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/pdf/1612.08242.pdf&#34; target=&#34;_blank&#34;&gt;YOLO9000: Better, Faster, Stronger&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.coursera.org/learn/convolutional-neural-networks&#34; target=&#34;_blank&#34;&gt;Convolutional Neural Networks by Andrew Ng (deeplearning.ai)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;problems&#34;&gt;Problems&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Image Classification&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Object classification and localization&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Multiple objects detection and localization&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

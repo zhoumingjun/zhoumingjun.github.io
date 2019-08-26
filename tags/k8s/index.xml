@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>k8s | zhoumingjun&#39;s website</title>
+    <link>/tags/k8s/</link>
+      <atom:link href="/tags/k8s/index.xml" rel="self" type="application/rss+xml" />
+    <description>k8s</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 31 Oct 2018 09:11:17 +0000</lastBuildDate>
+    <image>
+      <url>/img/logo.png</url>
+      <title>k8s</title>
+      <link>/tags/k8s/</link>
+    </image>
+    
+    <item>
+      <title>k8s</title>
+      <link>/kb/k8s/</link>
+      <pubDate>Wed, 31 Oct 2018 09:11:17 +0000</pubDate>
+      <guid>/kb/k8s/</guid>
+      <description>
+
+&lt;h2 id=&#34;references&#34;&gt;references&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/ramitsurana/awesome-kubernetes&#34; target=&#34;_blank&#34;&gt;https://github.com/ramitsurana/awesome-kubernetes&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;microservice-on-k8s&#34;&gt;microservice on k8s&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://ewanvalentine.io/microservices-in-golang-part-1/&#34; target=&#34;_blank&#34;&gt;https://ewanvalentine.io/microservices-in-golang-part-1/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;minikube-start-with-rabc&#34;&gt;minikube start with RABC&lt;/h2&gt;
+
+&lt;p&gt;from &lt;a href=&#34;https://gist.github.com/F21/08bfc2e3592bed1e931ec40b8d2ab6f5&#34; target=&#34;_blank&#34;&gt;https://gist.github.com/F21/08bfc2e3592bed1e931ec40b8d2ab6f5&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;minikube start  &amp;ndash;cache-images &amp;ndash;vm-driver kvm2 &amp;ndash;cpus 4 &amp;ndash;memory 4096 &amp;ndash;extra-config=apiserver.authorization-mode=RBAC&lt;/p&gt;
+
+&lt;p&gt;kubectl create clusterrolebinding add-on-cluster-admin &amp;ndash;clusterrole=cluster-admin &amp;ndash;serviceaccount=kube-system:default&lt;/p&gt;
+
+&lt;h2 id=&#34;logs&#34;&gt;logs&lt;/h2&gt;
+
+&lt;p&gt;minikube ssh
+sudo journalctl -u kubelet -f&lt;/p&gt;
+
+&lt;h2 id=&#34;download-kublet&#34;&gt;download kublet&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://kubernetes.io/docs/setup/independent/install-kubeadm/&#34; target=&#34;_blank&#34;&gt;https://kubernetes.io/docs/setup/independent/install-kubeadm/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;RELEASE=&amp;ldquo;$(curl -sSL &lt;a href=&#34;https://dl.k8s.io/release/stable.txt)&amp;quot;&#34; target=&#34;_blank&#34;&gt;https://dl.k8s.io/release/stable.txt)&amp;quot;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;mkdir -p /opt/bin
+cd /opt/bin
+curl -L &amp;ndash;remote-name-all &lt;a href=&#34;https://storage.googleapis.com/kubernetes-release/release/${RELEASE}/bin/linux/amd64/{kubeadm,kubelet,kubectl&#34; target=&#34;_blank&#34;&gt;https://storage.googleapis.com/kubernetes-release/release/${RELEASE}/bin/linux/amd64/{kubeadm,kubelet,kubectl&lt;/a&gt;}
+chmod +x {kubeadm,kubelet,kubectl}&lt;/p&gt;
+
+&lt;p&gt;curl -sSL &amp;ldquo;&lt;a href=&#34;https://raw.githubusercontent.com/kubernetes/kubernetes/${RELEASE}/build/debs/kubelet.service&amp;quot;&#34; target=&#34;_blank&#34;&gt;https://raw.githubusercontent.com/kubernetes/kubernetes/${RELEASE}/build/debs/kubelet.service&amp;quot;&lt;/a&gt; | sed &amp;ldquo;s:/usr/bin:/opt/bin:g&amp;rdquo; &amp;gt; /etc/systemd/system/kubelet.service
+mkdir -p /etc/systemd/system/kubelet.service.d
+curl -sSL &amp;ldquo;&lt;a href=&#34;https://raw.githubusercontent.com/kubernetes/kubernetes/${RELEASE}/build/debs/10-kubeadm.conf&amp;quot;&#34; target=&#34;_blank&#34;&gt;https://raw.githubusercontent.com/kubernetes/kubernetes/${RELEASE}/build/debs/10-kubeadm.conf&amp;quot;&lt;/a&gt; | sed &amp;ldquo;s:/usr/bin:/opt/bin:g&amp;rdquo; &amp;gt; /etc/systemd/system/kubelet.service.d/10-kubeadm.conf&lt;/p&gt;
+
+&lt;h2 id=&#34;errors&#34;&gt;errors&lt;/h2&gt;
+
+&lt;p&gt;unknown flag: &amp;ndash;Authorization.Mode&lt;/p&gt;
+
+&lt;h2 id=&#34;tutorial&#34;&gt;tutorial&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://baijiahao.baidu.com/s?id=1602795888204860650&amp;amp;wfr=spider&amp;amp;for=pc&#34; target=&#34;_blank&#34;&gt;http://baijiahao.baidu.com/s?id=1602795888204860650&amp;amp;wfr=spider&amp;amp;for=pc&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

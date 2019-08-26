@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>machine learning | zhoumingjun&#39;s website</title>
+    <link>/tags/machine-learning/</link>
+      <atom:link href="/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <description>machine learning</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 07 Sep 2018 10:16:47 +0000</lastBuildDate>
+    <image>
+      <url>/img/logo.png</url>
+      <title>machine learning</title>
+      <link>/tags/machine-learning/</link>
+    </image>
+    
+    <item>
+      <title>Pytorch</title>
+      <link>/series/pytorch/</link>
+      <pubDate>Fri, 07 Sep 2018 10:16:47 +0000</pubDate>
+      <guid>/series/pytorch/</guid>
+      <description>
+
+&lt;h1 id=&#34;pytorch&#34;&gt;Pytorch&lt;/h1&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Reinforcement learning</title>
+      <link>/series/rl/</link>
+      <pubDate>Tue, 14 Mar 2017 15:05:04 +0800</pubDate>
+      <guid>/series/rl/</guid>
+      <description>&lt;p&gt;have not been revised yet.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gatsby | zhoumingjun&#39;s website</title>
+    <link>/tags/gatsby/</link>
+      <atom:link href="/tags/gatsby/index.xml" rel="self" type="application/rss+xml" />
+    <description>gatsby</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 04 Sep 2018 06:30:28 +0000</lastBuildDate>
+    <image>
+      <url>/img/logo.png</url>
+      <title>gatsby</title>
+      <link>/tags/gatsby/</link>
+    </image>
+    
+    <item>
+      <title>Enable mathjax in gatsby</title>
+      <link>/post/2018-09-04-enable-mathjax-in-gatsby/</link>
+      <pubDate>Tue, 04 Sep 2018 06:30:28 +0000</pubDate>
+      <guid>/post/2018-09-04-enable-mathjax-in-gatsby/</guid>
+      <description>
+
+&lt;h1 id=&#34;how-to-enable-mathjax-in-gatsby&#34;&gt;how to enable mathjax in gatsby&lt;/h1&gt;
+
+&lt;h1 id=&#34;steps&#34;&gt;Steps&lt;/h1&gt;
+
+&lt;h2 id=&#34;1-configure-gatsby-config-js&#34;&gt;1. Configure gatsby-config.js&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;// In your gatsby-config.js
+plugins: [
+  {
+    resolve: `gatsby-transformer-remark`,
+    options: {
+      plugins: [
+        `gatsby-remark-mathjax`,
+      ],
+    },
+  },
+],
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;2-customize-html-js&#34;&gt;2. Customize html.js&lt;/h2&gt;
+
+&lt;p&gt;Follows the &lt;a href=&#34;https://www.gatsbyjs.org/docs/custom-html/&#34; target=&#34;_blank&#34;&gt;official document&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Here is my &lt;a href=&#34;https://github.com/zhoumingjun/zhoumingjun.github.io/blob/source/src/html.js&#34; target=&#34;_blank&#34;&gt;html.js&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;import React from &#39;react&#39;;
+import PropTypes from &#39;prop-types&#39;;
+
+const MathJaxConfig = `
+window.MathJax = {
+  tex2jax: {
+    inlineMath: [[&#39;$&#39;, &#39;$&#39;] ],
+    displayMath: [[&#39;$$&#39;, &#39;$$&#39;] ],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: [&#39;script&#39;, &#39;noscript&#39;, &#39;style&#39;, &#39;textarea&#39;, &#39;pre&#39;],
+    TeX: {
+      equationNumbers: {autoNumber: &#39;AMS&#39;},
+      extensions: [&#39;AMSmath.js&#39;, &#39;AMSsymbols.js&#39;, &#39;color.js&#39;],
+    },
+  }
+};
+`;
+
+export default class HTML extends React.Component {
+  render() {
+    return (
+      &amp;lt;html {...this.props.htmlAttributes}&amp;gt;
+        &amp;lt;head&amp;gt;
+          &amp;lt;meta charSet=&amp;quot;utf-8&amp;quot; /&amp;gt;
+          &amp;lt;meta httpEquiv=&amp;quot;x-ua-compatible&amp;quot; content=&amp;quot;ie=edge&amp;quot; /&amp;gt;
+          &amp;lt;meta
+            name=&amp;quot;viewport&amp;quot;
+            content=&amp;quot;width=device-width, initial-scale=1, shrink-to-fit=no&amp;quot;
+          /&amp;gt;
+          {this.props.headComponents}
+        &amp;lt;/head&amp;gt;
+        &amp;lt;body {...this.props.bodyAttributes}&amp;gt;
+          {this.props.preBodyComponents}
+          &amp;lt;div
+            key={`body`}
+            id=&amp;quot;___gatsby&amp;quot;
+            dangerouslySetInnerHTML={{__html: this.props.body}}
+          /&amp;gt;
+          {this.props.postBodyComponents}
+          &amp;lt;script dangerouslySetInnerHTML={{__html: MathJaxConfig}} /&amp;gt;
+          &amp;lt;script
+            defer
+            src=&amp;quot;https://cdn.bootcss.com/mathjax/2.7.4/latest.js?config=TeX-AMS_SVG&amp;quot;
+          /&amp;gt;
+        &amp;lt;/body&amp;gt;
+      &amp;lt;/html&amp;gt;
+    );
+  }
+}
+
+HTML.propTypes = {
+  htmlAttributes: PropTypes.object,
+  headComponents: PropTypes.array,
+  bodyAttributes: PropTypes.object,
+  preBodyComponents: PropTypes.array,
+  body: PropTypes.string,
+  postBodyComponents: PropTypes.array,
+};
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;3-configure-gatsby-browser-js&#34;&gt;3. Configure gatsby-browser.js&lt;/h2&gt;
+
+&lt;p&gt;MathJax will process all math equations when the location changed.&lt;/p&gt;
+
+&lt;p&gt;Here is my &lt;a href=&#34;https://github.com/zhoumingjun/zhoumingjun.github.io/blob/source/gatsby-browser.js&#34; target=&#34;_blank&#34;&gt;gatsby-brower.js&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;exports.onRouteUpdate = ({location}) =&amp;gt; {
+  console.log(&#39;new pathname&#39;, location.pathname);
+  if (window.MathJax !== undefined) {
+    MathJax.Hub.Queue([&#39;Typeset&#39;, MathJax.Hub]);
+  }
+};
+
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

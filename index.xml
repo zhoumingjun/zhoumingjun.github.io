@@ -1,0 +1,1235 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>zhoumingjun&#39;s website</title>
+    <link>/</link>
+      <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <description>zhoumingjun&#39;s website</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 26 Aug 2019 03:25:42 +0800</lastBuildDate>
+    <image>
+      <url>/img/logo.png</url>
+      <title>zhoumingjun&#39;s website</title>
+      <link>/</link>
+    </image>
+    
+    <item>
+      <title>dotfiles</title>
+      <link>/project/dotfiles/</link>
+      <pubDate>Mon, 26 Aug 2019 02:13:01 +0800</pubDate>
+      <guid>/project/dotfiles/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Adr-Tools</title>
+      <link>/project/adr-tools/</link>
+      <pubDate>Mon, 26 Aug 2019 03:22:38 +0800</pubDate>
+      <guid>/project/adr-tools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Darwin Ansible Playbooks</title>
+      <link>/project/darwin-ansible-playbooks/</link>
+      <pubDate>Mon, 26 Aug 2019 03:25:42 +0800</pubDate>
+      <guid>/project/darwin-ansible-playbooks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rock64 Ansible Playbooks</title>
+      <link>/project/rock64-ansible-playbooks/</link>
+      <pubDate>Mon, 26 Aug 2019 03:25:35 +0800</pubDate>
+      <guid>/project/rock64-ansible-playbooks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu Ansible Playbooks</title>
+      <link>/project/ubuntu-ansible-playbooks/</link>
+      <pubDate>Mon, 26 Aug 2019 03:25:25 +0800</pubDate>
+      <guid>/project/ubuntu-ansible-playbooks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Arch Ansible Playbook</title>
+      <link>/project/arch-ansible-playbook/</link>
+      <pubDate>Mon, 26 Aug 2019 03:25:14 +0800</pubDate>
+      <guid>/project/arch-ansible-playbook/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>golang</title>
+      <link>/kb/golang/</link>
+      <pubDate>Tue, 20 Nov 2018 05:18:14 +0000</pubDate>
+      <guid>/kb/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>openapi</title>
+      <link>/kb/openapi/</link>
+      <pubDate>Tue, 06 Nov 2018 02:16:07 +0000</pubDate>
+      <guid>/kb/openapi/</guid>
+      <description>
+
+&lt;h1 id=&#34;overview&#34;&gt;overview&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://openapi.tools/&#34; target=&#34;_blank&#34;&gt;https://openapi.tools/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;reference-openapi&#34;&gt;reference openapi&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://apis.guru/awesome-openapi3/&#34; target=&#34;_blank&#34;&gt;https://apis.guru/awesome-openapi3/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;code-generator&#34;&gt;code generator&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/OpenAPITools/openapi-generator&#34; target=&#34;_blank&#34;&gt;https://github.com/OpenAPITools/openapi-generator&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;mock-server&#34;&gt;mock server&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>k8s</title>
+      <link>/kb/k8s/</link>
+      <pubDate>Wed, 31 Oct 2018 09:11:17 +0000</pubDate>
+      <guid>/kb/k8s/</guid>
+      <description>
+
+&lt;h2 id=&#34;references&#34;&gt;references&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/ramitsurana/awesome-kubernetes&#34; target=&#34;_blank&#34;&gt;https://github.com/ramitsurana/awesome-kubernetes&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;microservice-on-k8s&#34;&gt;microservice on k8s&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://ewanvalentine.io/microservices-in-golang-part-1/&#34; target=&#34;_blank&#34;&gt;https://ewanvalentine.io/microservices-in-golang-part-1/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;minikube-start-with-rabc&#34;&gt;minikube start with RABC&lt;/h2&gt;
+
+&lt;p&gt;from &lt;a href=&#34;https://gist.github.com/F21/08bfc2e3592bed1e931ec40b8d2ab6f5&#34; target=&#34;_blank&#34;&gt;https://gist.github.com/F21/08bfc2e3592bed1e931ec40b8d2ab6f5&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;minikube start  &amp;ndash;cache-images &amp;ndash;vm-driver kvm2 &amp;ndash;cpus 4 &amp;ndash;memory 4096 &amp;ndash;extra-config=apiserver.authorization-mode=RBAC&lt;/p&gt;
+
+&lt;p&gt;kubectl create clusterrolebinding add-on-cluster-admin &amp;ndash;clusterrole=cluster-admin &amp;ndash;serviceaccount=kube-system:default&lt;/p&gt;
+
+&lt;h2 id=&#34;logs&#34;&gt;logs&lt;/h2&gt;
+
+&lt;p&gt;minikube ssh
+sudo journalctl -u kubelet -f&lt;/p&gt;
+
+&lt;h2 id=&#34;download-kublet&#34;&gt;download kublet&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://kubernetes.io/docs/setup/independent/install-kubeadm/&#34; target=&#34;_blank&#34;&gt;https://kubernetes.io/docs/setup/independent/install-kubeadm/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;RELEASE=&amp;ldquo;$(curl -sSL &lt;a href=&#34;https://dl.k8s.io/release/stable.txt)&amp;quot;&#34; target=&#34;_blank&#34;&gt;https://dl.k8s.io/release/stable.txt)&amp;quot;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;mkdir -p /opt/bin
+cd /opt/bin
+curl -L &amp;ndash;remote-name-all &lt;a href=&#34;https://storage.googleapis.com/kubernetes-release/release/${RELEASE}/bin/linux/amd64/{kubeadm,kubelet,kubectl&#34; target=&#34;_blank&#34;&gt;https://storage.googleapis.com/kubernetes-release/release/${RELEASE}/bin/linux/amd64/{kubeadm,kubelet,kubectl&lt;/a&gt;}
+chmod +x {kubeadm,kubelet,kubectl}&lt;/p&gt;
+
+&lt;p&gt;curl -sSL &amp;ldquo;&lt;a href=&#34;https://raw.githubusercontent.com/kubernetes/kubernetes/${RELEASE}/build/debs/kubelet.service&amp;quot;&#34; target=&#34;_blank&#34;&gt;https://raw.githubusercontent.com/kubernetes/kubernetes/${RELEASE}/build/debs/kubelet.service&amp;quot;&lt;/a&gt; | sed &amp;ldquo;s:/usr/bin:/opt/bin:g&amp;rdquo; &amp;gt; /etc/systemd/system/kubelet.service
+mkdir -p /etc/systemd/system/kubelet.service.d
+curl -sSL &amp;ldquo;&lt;a href=&#34;https://raw.githubusercontent.com/kubernetes/kubernetes/${RELEASE}/build/debs/10-kubeadm.conf&amp;quot;&#34; target=&#34;_blank&#34;&gt;https://raw.githubusercontent.com/kubernetes/kubernetes/${RELEASE}/build/debs/10-kubeadm.conf&amp;quot;&lt;/a&gt; | sed &amp;ldquo;s:/usr/bin:/opt/bin:g&amp;rdquo; &amp;gt; /etc/systemd/system/kubelet.service.d/10-kubeadm.conf&lt;/p&gt;
+
+&lt;h2 id=&#34;errors&#34;&gt;errors&lt;/h2&gt;
+
+&lt;p&gt;unknown flag: &amp;ndash;Authorization.Mode&lt;/p&gt;
+
+&lt;h2 id=&#34;tutorial&#34;&gt;tutorial&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://baijiahao.baidu.com/s?id=1602795888204860650&amp;amp;wfr=spider&amp;amp;for=pc&#34; target=&#34;_blank&#34;&gt;http://baijiahao.baidu.com/s?id=1602795888204860650&amp;amp;wfr=spider&amp;amp;for=pc&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>RaspberryPi zero w</title>
+      <link>/note/rpi/</link>
+      <pubDate>Mon, 15 Oct 2018 08:10:38 +0000</pubDate>
+      <guid>/note/rpi/</guid>
+      <description>
+
+&lt;h1 id=&#34;introduction&#34;&gt;introduction&lt;/h1&gt;
+
+&lt;h1 id=&#34;config&#34;&gt;config&lt;/h1&gt;
+
+&lt;h2 id=&#34;enable-ssh&#34;&gt;enable ssh&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;cd boot
+touch ssh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;hack-config-txt&#34;&gt;hack config.txt&lt;/h2&gt;
+
+&lt;p&gt;/boot/config.txt&lt;/p&gt;
+
+&lt;p&gt;dtoverlay=dwc2&lt;/p&gt;
+
+&lt;h2 id=&#34;hack-cmdline-txt&#34;&gt;hack cmdline.txt&lt;/h2&gt;
+
+&lt;p&gt;/boot/cmdline.txt&lt;/p&gt;
+
+&lt;p&gt;modules-load=dwc2,g_ether&lt;/p&gt;
+
+&lt;h1 id=&#34;network&#34;&gt;network&lt;/h1&gt;
+
+&lt;h2 id=&#34;set-wireless-configuration&#34;&gt;set wireless configuration&lt;/h2&gt;
+
+&lt;p&gt;find the available wireless ap
+&lt;code&gt;iw dev wlan0 scan&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;cat /etc/wpa_supplicant/wpa_supplicant.conf&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+country=CN
+
+network={
+	ssid=&amp;quot;BBHome&amp;quot;
+	psk=&amp;quot;--&amp;quot;
+}
+
+network={
+	ssid=&amp;quot;Boxin2.4G_2&amp;quot;
+	psk=&amp;quot;--&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;set-static-address&#34;&gt;set static address&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;interface usb0
+metric 300
+static ip_address=192.168.7.2
+static routers=192.168.7.1
+static domain_name_servers=192.168.7.1
+
+interface wlan0
+metric 200
+static ip_address=10.0.0.200/24
+static routers=10.0.0.99
+static domain_name_servers=10.0.0.99
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;share-network-from-usb0&#34;&gt;share network from usb0&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo ip addr change 192.168.7.1/24 dev usb0
+echo 1 &amp;gt; /proc/sys/net/ipv4/ip_forward
+sudo iptables -t nat -A POSTROUTING -o enp4s0 -j MASQUERADE
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Pytorch</title>
+      <link>/series/pytorch/</link>
+      <pubDate>Fri, 07 Sep 2018 10:16:47 +0000</pubDate>
+      <guid>/series/pytorch/</guid>
+      <description>
+
+&lt;h1 id=&#34;pytorch&#34;&gt;Pytorch&lt;/h1&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Unicode</title>
+      <link>/note/unicode/</link>
+      <pubDate>Thu, 06 Sep 2018 02:12:39 +0000</pubDate>
+      <guid>/note/unicode/</guid>
+      <description>
+
+&lt;h1 id=&#34;unicode-nomalization&#34;&gt;unicode nomalization&lt;/h1&gt;
+
+&lt;h2 id=&#34;canonical-and-compatibility-equivalence&#34;&gt;Canonical and Compatibility Equivalence&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.unicode.org/reports/tr15/#Canon_Compat_Equivalence&#34; target=&#34;_blank&#34;&gt;http://www.unicode.org/reports/tr15/#Canon_Compat_Equivalence&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Examples of Canonical Equivalence&lt;/strong&gt;&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Subtype&lt;/th&gt;
+&lt;th&gt;Examples&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Combining sequence&lt;/td&gt;
+&lt;td&gt;Ç ↔   C+◌̧&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Ordering of combining marks&lt;/td&gt;
+&lt;td&gt;q+◌̇+◌̣   ↔   q+◌̣+◌̇&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Hangul &amp;amp; conjoining jamo&lt;/td&gt;
+&lt;td&gt;가 ↔   ᄀ +ᅡ&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Singleton equivalence&lt;/td&gt;
+&lt;td&gt;Ω ↔   Ω&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;Examples of Compatibility Equivalence&lt;/strong&gt;&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Subtype&lt;/th&gt;
+&lt;th&gt;Examples&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Font variants&lt;/td&gt;
+&lt;td&gt;ℌ   →   H&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Linebreaking differences&lt;/td&gt;
+&lt;td&gt;[NBSP]  →   [SPACE]&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Positional variant forms&lt;/td&gt;
+&lt;td&gt;ﻉ   →   ‌ع‌&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Circled variants&lt;/td&gt;
+&lt;td&gt;①   →   1&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Width variants&lt;/td&gt;
+&lt;td&gt;ｶ   →   カ&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Rotated variants&lt;/td&gt;
+&lt;td&gt;︷   →   {&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Superscripts/subscripts&lt;/td&gt;
+&lt;td&gt;i⁹  →   i9&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Squared characters&lt;/td&gt;
+&lt;td&gt;㌀   →   アパート&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Fractions&lt;/td&gt;
+&lt;td&gt;¼   →   &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;4&lt;/sub&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Other&lt;/td&gt;
+&lt;td&gt;ǆ   →   dž&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;normalization-forms&#34;&gt;Normalization Forms&lt;/h2&gt;
+
+&lt;p&gt;Form    |   Description
+&amp;ndash; |  &amp;ndash;
+Normalization Form D (NFD)      |Canonical Decomposition
+Normalization Form C (NFC)      |Canonical Decomposition,followed by Canonical Composition
+Normalization Form KD (NFKD)    |Compatibility Decomposition
+Normalization Form KC (NFKC)    |Compatibility Decomposition,followed by Canonical Composition&lt;/p&gt;
+
+&lt;h1 id=&#34;unicode-charater-category&#34;&gt;unicode charater category&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Unicode_character_property#General_Category&#34; target=&#34;_blank&#34;&gt;https://en.wikipedia.org/wiki/Unicode_character_property#General_Category&lt;/a&gt;
+&lt;a href=&#34;http://www.fileformat.info/info/unicode/category/index.htm&#34; target=&#34;_blank&#34;&gt;http://www.fileformat.info/info/unicode/category/index.htm&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Code    Description
+[Cc]    Other, Control
+[Cf]    Other, Format
+[Cn]    Other, Not Assigned (no characters in the file have this property)
+[Co]    Other, Private Use
+[Cs]    Other, Surrogate
+[LC]    Letter, Cased
+[Ll]    Letter, Lowercase
+[Lm]    Letter, Modifier
+[Lo]    Letter, Other
+[Lt]    Letter, Titlecase
+[Lu]    Letter, Uppercase
+[Mc]    Mark, Spacing Combining
+[Me]    Mark, Enclosing
+[Mn]    Mark, Nonspacing
+[Nd]    Number, Decimal Digit
+[Nl]    Number, Letter
+[No]    Number, Other
+[Pc]    Punctuation, Connector
+[Pd]    Punctuation, Dash
+[Pe]    Punctuation, Close
+[Pf]    Punctuation, Final quote (may behave like Ps or Pe depending on usage)
+[Pi]    Punctuation, Initial quote (may behave like Ps or Pe depending on usage)
+[Po]    Punctuation, Other
+[Ps]    Punctuation, Open
+[Sc]    Symbol, Currency
+[Sk]    Symbol, Modifier
+[Sm]    Symbol, Math
+[So]    Symbol, Other
+[Zl]    Separator, Line
+[Zp]    Separator, Paragraph
+[Zs]    Separator, Space&lt;/p&gt;
+
+&lt;h1 id=&#34;python-code&#34;&gt;python code&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import unicodedata
+all_letters = string.ascii_letters + &amp;quot; .,;&#39;&amp;quot;
+n_letters = len(all_letters)
+# Turn a Unicode string to plain ASCII, thanks to http://stackoverflow.com/a/518232/2809427
+def unicodeToAscii(s):
+    return &#39;&#39;.join(c for c in unicodedata.normalize(&#39;NFD&#39;, s) if unicodedata.category(c) != &#39;Mn&#39; and c in all_letters)
+
+# show case
+str = &#39;Abelló&#39;
+print([c for c in str])
+print([c for c in unicodedata.normalize(&#39;NFD&#39;, str)])
+print([c for c in unicodedata.normalize(&#39;NFD&#39;, str) if unicodedata.category(c)!= &#39;Mn&#39;])
+print([c for c in unicodedata.normalize(&#39;NFD&#39;, str) if unicodedata.category(c)!= &#39;Mn&#39;  and c in all_letters])
+
+# result 
+[&#39;A&#39;, &#39;b&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;ó&#39;]
+[&#39;A&#39;, &#39;b&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;, &#39;́&#39;]
+[&#39;A&#39;, &#39;b&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;]
+[&#39;A&#39;, &#39;b&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;]
+
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Enable mathjax in gatsby</title>
+      <link>/post/2018-09-04-enable-mathjax-in-gatsby/</link>
+      <pubDate>Tue, 04 Sep 2018 06:30:28 +0000</pubDate>
+      <guid>/post/2018-09-04-enable-mathjax-in-gatsby/</guid>
+      <description>
+
+&lt;h1 id=&#34;how-to-enable-mathjax-in-gatsby&#34;&gt;how to enable mathjax in gatsby&lt;/h1&gt;
+
+&lt;h1 id=&#34;steps&#34;&gt;Steps&lt;/h1&gt;
+
+&lt;h2 id=&#34;1-configure-gatsby-config-js&#34;&gt;1. Configure gatsby-config.js&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;// In your gatsby-config.js
+plugins: [
+  {
+    resolve: `gatsby-transformer-remark`,
+    options: {
+      plugins: [
+        `gatsby-remark-mathjax`,
+      ],
+    },
+  },
+],
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;2-customize-html-js&#34;&gt;2. Customize html.js&lt;/h2&gt;
+
+&lt;p&gt;Follows the &lt;a href=&#34;https://www.gatsbyjs.org/docs/custom-html/&#34; target=&#34;_blank&#34;&gt;official document&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Here is my &lt;a href=&#34;https://github.com/zhoumingjun/zhoumingjun.github.io/blob/source/src/html.js&#34; target=&#34;_blank&#34;&gt;html.js&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;import React from &#39;react&#39;;
+import PropTypes from &#39;prop-types&#39;;
+
+const MathJaxConfig = `
+window.MathJax = {
+  tex2jax: {
+    inlineMath: [[&#39;$&#39;, &#39;$&#39;] ],
+    displayMath: [[&#39;$$&#39;, &#39;$$&#39;] ],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: [&#39;script&#39;, &#39;noscript&#39;, &#39;style&#39;, &#39;textarea&#39;, &#39;pre&#39;],
+    TeX: {
+      equationNumbers: {autoNumber: &#39;AMS&#39;},
+      extensions: [&#39;AMSmath.js&#39;, &#39;AMSsymbols.js&#39;, &#39;color.js&#39;],
+    },
+  }
+};
+`;
+
+export default class HTML extends React.Component {
+  render() {
+    return (
+      &amp;lt;html {...this.props.htmlAttributes}&amp;gt;
+        &amp;lt;head&amp;gt;
+          &amp;lt;meta charSet=&amp;quot;utf-8&amp;quot; /&amp;gt;
+          &amp;lt;meta httpEquiv=&amp;quot;x-ua-compatible&amp;quot; content=&amp;quot;ie=edge&amp;quot; /&amp;gt;
+          &amp;lt;meta
+            name=&amp;quot;viewport&amp;quot;
+            content=&amp;quot;width=device-width, initial-scale=1, shrink-to-fit=no&amp;quot;
+          /&amp;gt;
+          {this.props.headComponents}
+        &amp;lt;/head&amp;gt;
+        &amp;lt;body {...this.props.bodyAttributes}&amp;gt;
+          {this.props.preBodyComponents}
+          &amp;lt;div
+            key={`body`}
+            id=&amp;quot;___gatsby&amp;quot;
+            dangerouslySetInnerHTML={{__html: this.props.body}}
+          /&amp;gt;
+          {this.props.postBodyComponents}
+          &amp;lt;script dangerouslySetInnerHTML={{__html: MathJaxConfig}} /&amp;gt;
+          &amp;lt;script
+            defer
+            src=&amp;quot;https://cdn.bootcss.com/mathjax/2.7.4/latest.js?config=TeX-AMS_SVG&amp;quot;
+          /&amp;gt;
+        &amp;lt;/body&amp;gt;
+      &amp;lt;/html&amp;gt;
+    );
+  }
+}
+
+HTML.propTypes = {
+  htmlAttributes: PropTypes.object,
+  headComponents: PropTypes.array,
+  bodyAttributes: PropTypes.object,
+  preBodyComponents: PropTypes.array,
+  body: PropTypes.string,
+  postBodyComponents: PropTypes.array,
+};
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;3-configure-gatsby-browser-js&#34;&gt;3. Configure gatsby-browser.js&lt;/h2&gt;
+
+&lt;p&gt;MathJax will process all math equations when the location changed.&lt;/p&gt;
+
+&lt;p&gt;Here is my &lt;a href=&#34;https://github.com/zhoumingjun/zhoumingjun.github.io/blob/source/gatsby-browser.js&#34; target=&#34;_blank&#34;&gt;gatsby-brower.js&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;exports.onRouteUpdate = ({location}) =&amp;gt; {
+  console.log(&#39;new pathname&#39;, location.pathname);
+  if (window.MathJax !== undefined) {
+    MathJax.Hub.Queue([&#39;Typeset&#39;, MathJax.Hub]);
+  }
+};
+
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>inside shell</title>
+      <link>/note/inside-shell/</link>
+      <pubDate>Fri, 31 Aug 2018 17:08:12 +0000</pubDate>
+      <guid>/note/inside-shell/</guid>
+      <description>&lt;p&gt;which foo &amp;gt;/dev/null
+command -v foo &amp;gt;/dev/null 2&amp;gt;&amp;amp;1
+type foo &amp;gt;/dev/null 2&amp;gt;&amp;amp;1
+hash foo 2&amp;gt;/dev/null&lt;/p&gt;
+
+&lt;p&gt;if [[ -n &amp;ldquo;${commands[perlbrew]}&amp;rdquo; ]] ; then
+  &amp;hellip;
+fi&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://hyperpolyglot.org/unix-shells&#34; target=&#34;_blank&#34;&gt;http://hyperpolyglot.org/unix-shells&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>visualization</title>
+      <link>/kb/visualization/</link>
+      <pubDate>Fri, 31 Aug 2018 10:44:53 +0000</pubDate>
+      <guid>/kb/visualization/</guid>
+      <description>&lt;p&gt;Visualization&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>/kb/linux/</link>
+      <pubDate>Mon, 27 Aug 2018 05:20:27 +0000</pubDate>
+      <guid>/kb/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>iptables</title>
+      <link>/note/iptables/</link>
+      <pubDate>Fri, 24 Aug 2018 03:58:03 +0000</pubDate>
+      <guid>/note/iptables/</guid>
+      <description>
+
+&lt;h1 id=&#34;refs&#34;&gt;refs&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.hostinger.com/tutorials/iptables-tutorial&#34; target=&#34;_blank&#34;&gt;https://www.hostinger.com/tutorials/iptables-tutorial&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://wiki.archlinux.org/index.php/iptables&#34; target=&#34;_blank&#34;&gt;https://wiki.archlinux.org/index.php/iptables&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Install cuda9.2 and cudnn7.2 on ubuntu 18.04</title>
+      <link>/post/2018-08-23-install-cuda-and-cudnn-on-ubuntu18.04/</link>
+      <pubDate>Thu, 23 Aug 2018 15:01:49 +0000</pubDate>
+      <guid>/post/2018-08-23-install-cuda-and-cudnn-on-ubuntu18.04/</guid>
+      <description>
+
+&lt;h1 id=&#34;overview&#34;&gt;Overview&lt;/h1&gt;
+
+&lt;p&gt;To run tensorflow/pytorch with gpu, I need to install cuda and cudnn.
+It&amp;rsquo;s really tricky, but finally I found the method.&lt;/p&gt;
+
+&lt;p&gt;The secret is&lt;br /&gt;
+* install the graphics driver from a PPA
+* install the toolkit from the run file&lt;/p&gt;
+
+&lt;h1 id=&#34;packages&#34;&gt;packages&lt;/h1&gt;
+
+&lt;p&gt;The following packages need to be installed.
+* nvidia graphics driver&lt;br /&gt;
+* cuda 9.2&lt;br /&gt;
+* cudnn 7.2&lt;/p&gt;
+
+&lt;p&gt;For nvidia graphics driver, there are two sources:
+1. raphics-drivers/ppa:&lt;br /&gt;
+&lt;a href=&#34;https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa&#34; target=&#34;_blank&#34;&gt;https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa&lt;/a&gt;&lt;br /&gt;
+the package is nvidia-driver-396&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;nvidia official repo
+&lt;a href=&#34;https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1710/x86_64/cuda-drivers_396.44-1_amd64.deb&#34; target=&#34;_blank&#34;&gt;https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1710/x86_64/cuda-drivers_396.44-1_amd64.deb&lt;/a&gt;&lt;br /&gt;
+the package is cuda-drivers&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;In fact the nvidia cuda-drivers is for ubuntu 17.10, and there are no official nvidia repo for ubuntu 18.04 currently.&lt;br /&gt;
+Here we need to select option 1, I have try option2, but there are conflict with other packages.&lt;br /&gt;
+I install the cuda-drivers with &amp;ldquo;&amp;ndash;force-overwrite&amp;rdquo;, but gdm can&amp;rsquo;t be launched normally.&lt;/p&gt;
+
+&lt;p&gt;For cuda 9.2, it can be download directly from nvidia website.&lt;/p&gt;
+
+&lt;p&gt;For cudnn7.2, &lt;strong&gt;it can be download from nvidia machine-learning repo without login&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;installation-steps&#34;&gt;installation steps&lt;/h1&gt;
+
+&lt;p&gt;install nvidia graphics driver&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt update
+sudo apt-get install nvidia-driver-396
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;install cuda&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# dowload installer
+aria2c https://developer.nvidia.com/compute/cuda/9.2/Prod2/local_installers/cuda_9.2.148_396.37_linux 
+
+aria2c https://developer.nvidia.com/compute/cuda/9.2/Prod2/patches/1/cuda_9.2.148.1_linux  
+
+# install cuda9.2 and patch
+chmod +x cuda*
+
+sudo ./cuda_9.2.148_396.37_linux.run --verbose --silent --toolkit --override
+
+sudo ./cuda_9.2.148.1_linux.run --silent --accept-eula
+
+# add to ld
+sudo echo &amp;quot;/usr/local/cuda-9.2/lib64&amp;quot; &amp;gt;&amp;gt; /etc/ld.so.conf
+sudo ldconfig
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;install cudnn&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#download packages
+aria2c https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64/libcudnn7_7.2.1.38-1+cuda9.2_amd64.deb
+
+aria2c https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64/libcudnn7-dev_7.2.1.38-1+cuda9.2_amd64.deb    
+
+# install
+sudo dpkg -i libcudnn7_7.2.1.38-1+cuda9.2_amd64.deb
+sudo dpkg -i libcudnn7-dev_7.2.1.38-1+cuda9.2_amd64.deb
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>GAN</title>
+      <link>/note/gan/</link>
+      <pubDate>Fri, 17 Aug 2018 06:00:00 +0000</pubDate>
+      <guid>/note/gan/</guid>
+      <description>
+
+&lt;h2 id=&#34;refs&#34;&gt;refs&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/@jonathan_hui/gan-gan-series-2d279f906e7b&#34; target=&#34;_blank&#34;&gt;https://medium.com/@jonathan_hui/gan-gan-series-2d279f906e7b&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.datacamp.com/community/tutorials/generative-adversarial-networks&#34; target=&#34;_blank&#34;&gt;https://www.datacamp.com/community/tutorials/generative-adversarial-networks&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;people&#34;&gt;people&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://people.csail.mit.edu/junyanz/&#34; target=&#34;_blank&#34;&gt;Jun-Yan Zhu&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Awesome AI</title>
+      <link>/note/awesome-ai/</link>
+      <pubDate>Wed, 15 Aug 2018 04:12:07 +0000</pubDate>
+      <guid>/note/awesome-ai/</guid>
+      <description>
+
+&lt;h2 id=&#34;latest&#34;&gt;latest&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/zepingyu0512/srnn&#34; target=&#34;_blank&#34;&gt;srnn&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;datasets&#34;&gt;Datasets&lt;/h2&gt;
+
+&lt;h3 id=&#34;image&#34;&gt;image&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://host.robots.ox.ac.uk/pascal/VOC/&#34; target=&#34;_blank&#34;&gt;PASCAL Visual Object Classification (PASCAL VOC) dataset&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.image-net.org/&#34; target=&#34;_blank&#34;&gt;ImageNet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://cocodataset.org/#home&#34; target=&#34;_blank&#34;&gt;COCO&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;nlp&#34;&gt;nlp&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://nlp.stanford.edu/projects/glove/&#34; target=&#34;_blank&#34;&gt;GloVe&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Yelp&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Object Detection and Localization</title>
+      <link>/note/object-detection-and-localization-algorithms/</link>
+      <pubDate>Wed, 15 Aug 2018 04:12:07 +0000</pubDate>
+      <guid>/note/object-detection-and-localization-algorithms/</guid>
+      <description>
+
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+
+&lt;h3 id=&#34;blogs&#34;&gt;blogs&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://towardsdatascience.com/evolution-of-object-detection-and-localization-algorithms-e241021d8bad&#34; target=&#34;_blank&#34;&gt;Evolution of Object Detection and Localization Algorithms&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/comet-app/review-of-deep-learning-algorithms-for-object-detection-c1f3d437b852&#34; target=&#34;_blank&#34;&gt;Review of Deep Learning Algorithms for Object Detection&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;*&lt;a href=&#34;https://www.kdnuggets.com/2018/05/implement-yolo-v3-object-detector-pytorch-part-1.html&#34; target=&#34;_blank&#34;&gt;yolo v3&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;papers&#34;&gt;papers&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/pdf/1506.02640.pdf&#34; target=&#34;_blank&#34;&gt;You Only Look Once: Unified, Real-Time Object Detection&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/pdf/1612.08242.pdf&#34; target=&#34;_blank&#34;&gt;YOLO9000: Better, Faster, Stronger&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.coursera.org/learn/convolutional-neural-networks&#34; target=&#34;_blank&#34;&gt;Convolutional Neural Networks by Andrew Ng (deeplearning.ai)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;problems&#34;&gt;Problems&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Image Classification&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Object classification and localization&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Multiple objects detection and localization&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Migrate from Hugo to Gatsby</title>
+      <link>/post/2018-08-14-migrate-from-hugo-to-gatsby/</link>
+      <pubDate>Tue, 14 Aug 2018 10:52:17 +0000</pubDate>
+      <guid>/post/2018-08-14-migrate-from-hugo-to-gatsby/</guid>
+      <description>&lt;p&gt;I decided to migrate my blog from hugo to gatsby.
+Gatsby is based on react and misc plugins, and it works in the same way as normal web development.
+But there are still some works to do, such as mathjax support.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>lvs keepalived</title>
+      <link>/post/2017-03-22-lvs-keepalived/</link>
+      <pubDate>Wed, 22 Mar 2017 17:23:36 +0800</pubDate>
+      <guid>/post/2017-03-22-lvs-keepalived/</guid>
+      <description>
+
+&lt;h1 id=&#34;introduction&#34;&gt;introduction&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;lvs:&lt;br /&gt;
+&lt;a href=&#34;http://www.linuxvirtualserver.org/&#34; target=&#34;_blank&#34;&gt;lvs&lt;/a&gt; is a kind of L4 load balancer.&lt;br /&gt;
+some references here:
+&lt;a href=&#34;http://www.austintek.com/LVS/LVS-HOWTO/HOWTO/index.html&#34; target=&#34;_blank&#34;&gt;howto&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;keepalived:&lt;br /&gt;
+&lt;a href=&#34;http://www.keepalived.org/&#34; target=&#34;_blank&#34;&gt;keepalived&lt;/a&gt; is a facilitator for lvs&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;configuration&#34;&gt;configuration&lt;/h1&gt;
+
+&lt;p&gt;topology:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;DIP: 192.168.2.172&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;RIP[1]: 192.168.2.173&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;RIP[2]: 192.168.2.174&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;VIP: 192.168.2.175&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;lvs-only&#34;&gt;lvs only&lt;/h2&gt;
+
+&lt;p&gt;director side&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#install ipvsadm
+yum -y install ipvsadm
+echo &#39;net.ipv4.ip_forward = 1&#39; &amp;gt;&amp;gt; /etc/sysctl.conf 
+sysctl -p
+touch /etc/sysconfig/ipvsadm 
+systemctl start ipvsadm 
+systemctl enable ipvsadm 
+
+# add vip
+ifconfig em1:0 192.168.2.175 netmask 255.255.255.255
+
+# configuration
+ipvsadm -C
+ipvsadm -A -t 192.168.2,175:80 -s rr
+ipvsadm -a -t 192.168.2,175:80 -r 192.168.2,173:80 -g
+ipvsadm -a -t 192.168.2,175:80 -r 192.168.2,174:80 -g
+ipvsadm -l 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;realserver side&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# add vip
+ifconfig lo:0 192.168.2.175 netmask 255.255.255.255 broadcast 192.168.2.175 
+
+# disable VIP arp
+echo &amp;quot;1&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/lo/arp_ignore
+echo &amp;quot;2&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/lo/arp_announce
+echo &amp;quot;1&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/all/arp_ignore
+echo &amp;quot;2&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/all/arp_announce
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;lvs-keepalived&#34;&gt;lvs + keepalived&lt;/h2&gt;
+
+&lt;p&gt;director side&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;global_defs {              
+    router_id LVS_MASTER   
+}
+vrrp_instance VI_1 {       
+    state MASTER           
+    interface em1          
+    virtual_router_id 51   
+    priority 100           
+    advert_int 1           
+    authentication {       
+    auth_type PASS
+    auth_pass 1111
+    }
+virtual_ipaddress {        
+    192.168.2.175
+    }
+}
+virtual_server 192.168.2.175 80 {
+    delay_loop 6            
+    lb_algo wrr             
+    lb_kind DR              
+    nat_mask 255.255.255.0  
+    #persistence_timeout 5  
+    protocol TCP            
+    real_server 192.168.2.173 80 {      
+        weight 3                   
+        TCP_CHECK {               
+        connect_timeout 5        
+        nb_get_retry 3
+        delay_before_retry 3
+        connect_port 80
+        }
+    }
+    real_server 192.168.2.174 80 {
+        weight 3
+        TCP_CHECK {
+        connect_timeout 10
+        nb_get_retry 3
+        delay_before_retry 3
+        connect_port 80
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;realserver side&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# add vip
+ifconfig lo:0 192.168.2.175 netmask 255.255.255.255 broadcast 192.168.2.175 
+
+# disable VIP arp
+echo &amp;quot;1&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/lo/arp_ignore
+echo &amp;quot;2&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/lo/arp_announce
+echo &amp;quot;1&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/all/arp_ignore
+echo &amp;quot;2&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/all/arp_announce
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Reinforcement learning</title>
+      <link>/series/rl/</link>
+      <pubDate>Tue, 14 Mar 2017 15:05:04 +0800</pubDate>
+      <guid>/series/rl/</guid>
+      <description>&lt;p&gt;have not been revised yet.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Using MathJax and Graphviz with Hugo</title>
+      <link>/post/2017-03-10-using-mathjax-viz-with-hugo/</link>
+      <pubDate>Fri, 10 Mar 2017 11:40:12 +0800</pubDate>
+      <guid>/post/2017-03-10-using-mathjax-viz-with-hugo/</guid>
+      <description>
+
+&lt;h1 id=&#34;mathjax-support&#34;&gt;MathJax support&lt;/h1&gt;
+
+&lt;h2 id=&#34;configuration&#34;&gt;configuration&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gohugo.io/tutorials/mathjax/&#34; target=&#34;_blank&#34;&gt;Hugo doc&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://docs.mathjax.org/en/latest/configuration.html?#using-plain-javascript&#34; target=&#34;_blank&#34;&gt;MathJax doc&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!-- LaTeX math rendering --&amp;gt;
+{{ if  .Params.math   }}
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+    window.MathJax = {
+        tex2jax: {
+            inlineMath: [[&#39;$&#39;,&#39;$&#39;], [&#39;\\(&#39;,&#39;\\)&#39;]],
+            displayMath: [[&#39;$$&#39;,&#39;$$&#39;], [&#39;\[&#39;,&#39;\]&#39;]],
+            processEscapes: true,
+            processEnvironments: true,
+            skipTags: [&#39;script&#39;, &#39;noscript&#39;, &#39;style&#39;, &#39;textarea&#39;, &#39;pre&#39;],
+            TeX: { equationNumbers: { autoNumber: &amp;quot;AMS&amp;quot; },
+                extensions: [&amp;quot;AMSmath.js&amp;quot;, &amp;quot;AMSsymbols.js&amp;quot;, &amp;quot;color.js&amp;quot;] }
+        },
+        AuthorInit: function () {
+            MathJax.Hub.Register.StartupHook(&amp;quot;Begin&amp;quot;,function () {
+                MathJax.Hub.Queue(function() {
+                    var all = MathJax.Hub.getAllJax(), i;
+                    for(i = 0; i &amp;lt; all.length; i += 1) {
+                        all[i].SourceElement().parentNode.className += &#39; has-jax&#39;;
+                    }
+                })
+            });
+        }
+    };
+&amp;lt;/script&amp;gt;
+&amp;lt;script  type=&amp;quot;text/javascript&amp;quot;
+    src=&amp;quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML&amp;quot;&amp;gt;
+&amp;lt;/script&amp;gt;
+{{ end }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;example&#34;&gt;example&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;code&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    $ v_\pi(s) = \sum_{a \in \mathcal{A}} \pi(a|s) q_\pi(s,a)  $
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;result&lt;/strong&gt;&lt;br /&gt;
+$ v&lt;em&gt;\pi(s) = \sum&lt;/em&gt;{a \in \mathcal{A}} \pi(a|s) q_\pi(s,a)  $&lt;/p&gt;
+
+&lt;h1 id=&#34;graphviz-support&#34;&gt;graphviz support&lt;/h1&gt;
+
+&lt;h2 id=&#34;configuration-1&#34;&gt;configuration&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!-- graphviz renderring --&amp;gt;
+{{ if  .Params.viz}}
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;//cdnjs.cloudflare.com/ajax/libs/viz.js/1.7.1/viz.js&amp;quot;&amp;gt; &amp;lt;/script&amp;gt;
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+(function(){
+    var vizPrefix = &amp;quot;language-viz-&amp;quot;;
+    Array.prototype.forEach.call(document.querySelectorAll(&amp;quot;[class^=&amp;quot; + vizPrefix + &amp;quot;]&amp;quot;), function(x){
+        var engine;
+        x.getAttribute(&amp;quot;class&amp;quot;).split(&amp;quot; &amp;quot;).forEach(function(cls){
+            if (cls.startsWith(vizPrefix)) {
+                engine = cls.substr(vizPrefix.length);
+            }
+        });
+        var image = new DOMParser().parseFromString(Viz(x.innerText, {format:&amp;quot;svg&amp;quot;, engine:engine}), &amp;quot;image/svg+xml&amp;quot;);
+        x.parentNode.insertBefore(image.documentElement, x);
+        x.style.display = &#39;none&#39;
+        x.parentNode.style.backgroundColor = &amp;quot;white&amp;quot;
+    });
+})();
+&amp;lt;/script&amp;gt;
+{{ end }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;example-1&#34;&gt;example&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;code&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    ```viz-dot
+    digraph g { 
+    node[shape=&amp;quot;circle&amp;quot; , label=&amp;quot;&amp;quot;, width=0.2, height=0.2]
+    l1[xlabel=&amp;quot;v\(s\)&amp;quot;]
+    l21[xlabel=&amp;quot;a&amp;quot;, width=0.1, height=0.1 , style=filled]
+    l22[width=0.1, height=0.1, style=filled]
+    l31[xlabel=&amp;quot;v\(s&#39;\)&amp;quot;]
+
+    l1 -&amp;gt; l21
+    l1 -&amp;gt; l22
+    l21 -&amp;gt; l31 [xlabel=&amp;quot;r&amp;quot;]
+    l21 -&amp;gt; l32
+    l22 -&amp;gt; l33
+    l22 -&amp;gt; l34
+    }
+    ```
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;result&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-viz-dot&#34;&gt;digraph g { 
+   node[shape=&amp;quot;circle&amp;quot; , label=&amp;quot;&amp;quot;, width=0.2, height=0.2]
+   l1[xlabel=&amp;quot;v\(s\)&amp;quot;]
+   l21[xlabel=&amp;quot;a&amp;quot;, width=0.1, height=0.1 , style=filled]
+   l22[width=0.1, height=0.1, style=filled]
+   l31[xlabel=&amp;quot;v\(s&#39;\)&amp;quot;]
+
+   l1 -&amp;gt; l21
+   l1 -&amp;gt; l22
+   l21 -&amp;gt; l31 [xlabel=&amp;quot;r&amp;quot;]
+   l21 -&amp;gt; l32
+   l22 -&amp;gt; l33
+   l22 -&amp;gt; l34
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>First Post</title>
+      <link>/post/2017-03-06-first-post/</link>
+      <pubDate>Mon, 06 Mar 2017 16:03:35 +0800</pubDate>
+      <guid>/post/2017-03-06-first-post/</guid>
+      <description>&lt;p&gt;I build this site to boost my daily work.&lt;/p&gt;
+
+&lt;p&gt;This website is powered by &lt;a href=&#34;https://github.com/gcushen/hugo-academic&#34; target=&#34;_blank&#34;&gt;Academic&lt;/a&gt;, &lt;a href=&#34;https://gohugo.io&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt;, and &lt;a href=&#34;https://github.com/&#34; target=&#34;_blank&#34;&gt;GitHub Pages&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/interview/other/web-developer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/interview/other/web-developer/</guid>
+      <description>
+
+&lt;h1 id=&#34;interview-others&#34;&gt;interview others&lt;/h1&gt;
+
+&lt;h1 id=&#34;project&#34;&gt;project&lt;/h1&gt;
+
+&lt;p&gt;what task did you do.
+   what challenage have you met, and how did you resolve it.&lt;/p&gt;
+
+&lt;h1 id=&#34;web-evelopment&#34;&gt;web evelopment&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.techug.com/post/interviewing-a-front-end-developer.html&#34; target=&#34;_blank&#34;&gt;http://www.techug.com/post/interviewing-a-front-end-developer.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/h5bp/Front-end-Developer-Interview-Questions&#34; target=&#34;_blank&#34;&gt;https://github.com/h5bp/Front-end-Developer-Interview-Questions&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://bonsaiden.github.io/JavaScript-Garden/zh/&#34; target=&#34;_blank&#34;&gt;http://bonsaiden.github.io/JavaScript-Garden/zh/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;basic&#34;&gt;basic&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;对象原型&lt;/li&gt;
+&lt;li&gt;arguments
+apply call&lt;/li&gt;
+&lt;li&gt;context&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;medium&#34;&gt;medium&lt;/h2&gt;
+
+&lt;p&gt;js modules:
+    amd cmd umd&lt;/p&gt;
+
+&lt;p&gt;testing:
+    jest
+    karma&lt;/p&gt;
+
+&lt;p&gt;comman framework:
+    vue
+    react&lt;/p&gt;
+
+&lt;p&gt;tool chain:
+    webpack gulp browerify&lt;/p&gt;
+
+&lt;p&gt;browser:
+    storage: local/session/cookies
+    service worker&lt;/p&gt;
+
+&lt;h2 id=&#34;advanced&#34;&gt;advanced&lt;/h2&gt;
+
+&lt;p&gt;https&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/kb/kong/1.openresty/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/kb/kong/1.openresty/</guid>
+      <description>&lt;p&gt;##&lt;/p&gt;
+
+&lt;p&gt;OpenResty最佳实践
+&lt;a href=&#34;https://legacy.gitbook.com/book/moonbingbing/openresty-best-practices/details&#34; target=&#34;_blank&#34;&gt;https://legacy.gitbook.com/book/moonbingbing/openresty-best-practices/details&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/kb/kong/2.kong/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/kb/kong/2.kong/</guid>
+      <description>
+
+&lt;h1 id=&#34;install&#34;&gt;install&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;install official distribution&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;git clone kong&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# clone the Kong repo (inside the vagrant one)
+git clone https://github.com/Kong/kong
+
+# only if you want to develop a custom plugin, also clone the plugin template
+git clone https://github.com/Kong/kong-plugin
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;define env&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;export KONG_PLUGINS=bundled,myplugin
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;db schema&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
+psql -U postgres &amp;lt;&amp;lt;EOF
+\x
+CREATE ROLE kong;
+ALTER ROLE kong WITH login;
+CREATE DATABASE kong OWNER kong;
+CREATE DATABASE kong_tests OWNER kong;
+EOF
+
+psql -d kong -U postgres &amp;lt;&amp;lt;EOF
+\x
+DROP SCHEMA IF EXISTS public CASCADE;
+CREATE SCHEMA IF NOT EXISTS public AUTHORIZATION kong;
+GRANT ALL ON SCHEMA public TO kong;
+EOF
+
+CREATE USER konga; CREATE DATABASE konga OWNER konga;
+ALTER USER konga WITH PASSWORD &#39;new_password&#39;;
+
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;start&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;bin/kong migrations bootstrap
+# if you are running Kong &amp;lt; 0.15.0, run this instead of bootstrap:
+# $ bin/kong migrations up
+bin/kong start
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;sample&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ curl -i -X POST \
+--url http://localhost:8001/services/ \
+--data &#39;name=mockbin&#39; \
+--data &#39;url=http://mockbin.org/request&#39;
+
+$ curl -i -X POST \
+--url http://localhost:8001/services/mockbin/routes \
+--data &#39;paths=/&#39;
+
+# add the custom plugin, to our new api
+$ curl -i -X POST \
+--url http://localhost:8001/services/mockbin/plugins \
+--data &#39;name=myplugin&#39;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/kb/web/react/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/kb/web/react/</guid>
+      <description>
+
+&lt;h1 id=&#34;tech-stack&#34;&gt;tech stack&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/verekia/js-stack-from-scratch&#34; target=&#34;_blank&#34;&gt;https://github.com/verekia/js-stack-from-scratch&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;01 - Node, Yarn, package.json&lt;/p&gt;
+
+&lt;p&gt;02 - Babel, ES6, ESLint, Flow, Jest, Husky&lt;/p&gt;
+
+&lt;p&gt;03 - Express, Nodemon, PM2&lt;/p&gt;
+
+&lt;p&gt;04 - Webpack, React, HMR&lt;/p&gt;
+
+&lt;p&gt;05 - Redux, Immutable, Fetch&lt;/p&gt;
+
+&lt;p&gt;06 - React Router, Server-Side Rendering, Helmet&lt;/p&gt;
+
+&lt;p&gt;07 - Socket.IO&lt;/p&gt;
+
+&lt;p&gt;08 - Bootstrap, JSS&lt;/p&gt;
+
+&lt;p&gt;09 - Travis, Coveralls, Heroku&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/Lemoncode/react-typescript-samples&#34; target=&#34;_blank&#34;&gt;https://github.com/Lemoncode/react-typescript-samples&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;real-case&#34;&gt;real case&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/markerikson/redux-ecosystem-links/blob/master/apps-and-examples.md&#34; target=&#34;_blank&#34;&gt;https://github.com/markerikson/redux-ecosystem-links/blob/master/apps-and-examples.md&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Large open source react/redux projects&lt;/p&gt;
+
+&lt;h1 id=&#34;guide&#34;&gt;guide&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gist.github.com/datchley/4e0d05c526d532d1b05bf9b48b174faf&#34; target=&#34;_blank&#34;&gt;https://gist.github.com/datchley/4e0d05c526d532d1b05bf9b48b174faf&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://marmelab.com/react-admin/Tutorial.html&#34; target=&#34;_blank&#34;&gt;https://marmelab.com/react-admin/Tutorial.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/piotrwitek/react-redux-typescript-guide&#34; target=&#34;_blank&#34;&gt;https://github.com/piotrwitek/react-redux-typescript-guide&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/sw-yx/react-typescript-cheatsheet&#34; target=&#34;_blank&#34;&gt;https://github.com/sw-yx/react-typescript-cheatsheet&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/sandstorm/typescript-react-app-kickstart-guide&#34; target=&#34;_blank&#34;&gt;https://github.com/sandstorm/typescript-react-app-kickstart-guide&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;boilerplate&#34;&gt;boilerplate&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/Can-Sahin/react-boilerplate-typescript.git&#34; target=&#34;_blank&#34;&gt;https://github.com/Can-Sahin/react-boilerplate-typescript.git&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

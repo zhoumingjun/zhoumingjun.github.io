@@ -28,10 +28,19 @@
   
     
   
-  <meta name="description" content="">
+  <meta name="description" content="references https://github.com/ramitsurana/awesome-kubernetes
+microservice on k8s https://ewanvalentine.io/microservices-in-golang-part-1/
+minikube start with RABC from https://gist.github.com/F21/08bfc2e3592bed1e931ec40b8d2ab6f5
+minikube start &ndash;cache-images &ndash;vm-driver kvm2 &ndash;cpus 4 &ndash;memory 4096 &ndash;extra-config=apiserver.authorization-mode=RBAC
+kubectl create clusterrolebinding add-on-cluster-admin &ndash;clusterrole=cluster-admin &ndash;serviceaccount=kube-system:default
+logs minikube ssh sudo journalctl -u kubelet -f
+download kublet https://kubernetes.io/docs/setup/independent/install-kubeadm/
+RELEASE=&ldquo;$(curl -sSL https://dl.k8s.io/release/stable.txt)&quot;
+mkdir -p /opt/bin cd /opt/bin curl -L &ndash;remote-name-all https://storage.googleapis.com/kubernetes-release/release/${RELEASE}/bin/linux/amd64/{kubeadm,kubelet,kubectl} chmod &#43;x {kubeadm,kubelet,kubectl}
+curl -sSL &ldquo;https://raw.githubusercontent.com/kubernetes/kubernetes/${RELEASE}/build/debs/kubelet.service&quot; | sed &ldquo;s:/usr/bin:/opt/bin:g&rdquo; &gt; /etc/systemd/system/kubelet.service mkdir -p /etc/systemd/system/kubelet.service.d curl -sSL &ldquo;https://raw.githubusercontent.com/kubernetes/kubernetes/${RELEASE}/build/debs/10-kubeadm.conf&quot; | sed &ldquo;s:/usr/bin:/opt/bin:g&rdquo; &gt; /etc/systemd/system/kubelet.">
 
   
-  <link rel="alternate" hreflang="en-us" href="/404.html">
+  <link rel="alternate" hreflang="en-us" href="/kb/k8s/">
 
   
 
@@ -96,7 +105,7 @@
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/404.html">
+  <link rel="canonical" href="/kb/k8s/">
 
   
   
@@ -109,12 +118,24 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="zhoumingjun&#39;s website">
-  <meta property="og:url" content="/404.html">
-  <meta property="og:title" content="404 Page not found | zhoumingjun&#39;s website">
-  <meta property="og:description" content=""><meta property="og:image" content="/img/logo.png">
+  <meta property="og:url" content="/kb/k8s/">
+  <meta property="og:title" content="k8s | zhoumingjun&#39;s website">
+  <meta property="og:description" content="references https://github.com/ramitsurana/awesome-kubernetes
+microservice on k8s https://ewanvalentine.io/microservices-in-golang-part-1/
+minikube start with RABC from https://gist.github.com/F21/08bfc2e3592bed1e931ec40b8d2ab6f5
+minikube start &ndash;cache-images &ndash;vm-driver kvm2 &ndash;cpus 4 &ndash;memory 4096 &ndash;extra-config=apiserver.authorization-mode=RBAC
+kubectl create clusterrolebinding add-on-cluster-admin &ndash;clusterrole=cluster-admin &ndash;serviceaccount=kube-system:default
+logs minikube ssh sudo journalctl -u kubelet -f
+download kublet https://kubernetes.io/docs/setup/independent/install-kubeadm/
+RELEASE=&ldquo;$(curl -sSL https://dl.k8s.io/release/stable.txt)&quot;
+mkdir -p /opt/bin cd /opt/bin curl -L &ndash;remote-name-all https://storage.googleapis.com/kubernetes-release/release/${RELEASE}/bin/linux/amd64/{kubeadm,kubelet,kubectl} chmod &#43;x {kubeadm,kubelet,kubectl}
+curl -sSL &ldquo;https://raw.githubusercontent.com/kubernetes/kubernetes/${RELEASE}/build/debs/kubelet.service&quot; | sed &ldquo;s:/usr/bin:/opt/bin:g&rdquo; &gt; /etc/systemd/system/kubelet.service mkdir -p /etc/systemd/system/kubelet.service.d curl -sSL &ldquo;https://raw.githubusercontent.com/kubernetes/kubernetes/${RELEASE}/build/debs/10-kubeadm.conf&quot; | sed &ldquo;s:/usr/bin:/opt/bin:g&rdquo; &gt; /etc/systemd/system/kubelet."><meta property="og:image" content="/img/logo.png">
   <meta property="twitter:image" content="/img/logo.png"><meta property="og:locale" content="en-us">
   
     
+      <meta property="article:published_time" content="2018-10-31T09:11:17&#43;00:00">
+    
+    <meta property="article:modified_time" content="2018-10-31T09:11:17&#43;00:00">
   
 
   
@@ -126,7 +147,7 @@
 
 
 
-  <title>404 Page not found | zhoumingjun&#39;s website</title>
+  <title>k8s | zhoumingjun&#39;s website</title>
 
 </head>
 
@@ -315,51 +336,291 @@
 </nav>
 
 
-  <div class="universal-wrapper pt-3">
-
-  <h1>Page not found</h1>
-
-  
-  
-  <form class="d-flex align-items-center mb-3">
-    <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
-  </form>
-  
+  <article class="article" itemscope itemtype="http://schema.org/Article">
 
   
 
-  <p>Perhaps you were looking for one of these?</p>
+
+
+
+
+
+
+
+
+
+
+
+  
 
   
   
   
-  <h2>Latest</h2>
-  <ul>
+<div class="article-container pt-3">
+  <h1 itemprop="name">k8s</h1>
+
+  
+
+  
     
-      <li><a href="/project/dotfiles/">dotfiles</a></li>
+
+
+
+<meta content="2018-10-31 09:11:17 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2018-10-31 09:11:17 &#43;0000 UTC" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
     
-      <li><a href="/project/adr-tools/">Adr-Tools</a></li>
     
-      <li><a href="/project/darwin-ansible-playbooks/">Darwin Ansible Playbooks</a></li>
+      
     
-      <li><a href="/project/rock64-ansible-playbooks/">Rock64 Ansible Playbooks</a></li>
+    <time>Oct 31, 2018</time>
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+  
     
-      <li><a href="/project/ubuntu-ansible-playbooks/">Ubuntu Ansible Playbooks</a></li>
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
     
-      <li><a href="/project/arch-ansible-playbook/">Arch Ansible Playbook</a></li>
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/kb/k8s/&amp;text=k8s" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
     
-      <li><a href="/kb/golang/">golang</a></li>
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/kb/k8s/&amp;t=k8s" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
     
-      <li><a href="/kb/openapi/">openapi</a></li>
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=k8s&amp;body=/kb/k8s/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
     
-      <li><a href="/kb/k8s/">k8s</a></li>
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/kb/k8s/&amp;title=k8s" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
     
-      <li><a href="/note/rpi/">RaspberryPi zero w</a></li>
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=k8s%20/kb/k8s/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/kb/k8s/&amp;title=k8s" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
     
   </ul>
+</div>
+
+
   
 
 </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<h2 id="references">references</h2>
+
+<p><a href="https://github.com/ramitsurana/awesome-kubernetes" target="_blank">https://github.com/ramitsurana/awesome-kubernetes</a></p>
+
+<h2 id="microservice-on-k8s">microservice on k8s</h2>
+
+<p><a href="https://ewanvalentine.io/microservices-in-golang-part-1/" target="_blank">https://ewanvalentine.io/microservices-in-golang-part-1/</a></p>
+
+<h2 id="minikube-start-with-rabc">minikube start with RABC</h2>
+
+<p>from <a href="https://gist.github.com/F21/08bfc2e3592bed1e931ec40b8d2ab6f5" target="_blank">https://gist.github.com/F21/08bfc2e3592bed1e931ec40b8d2ab6f5</a></p>
+
+<p>minikube start  &ndash;cache-images &ndash;vm-driver kvm2 &ndash;cpus 4 &ndash;memory 4096 &ndash;extra-config=apiserver.authorization-mode=RBAC</p>
+
+<p>kubectl create clusterrolebinding add-on-cluster-admin &ndash;clusterrole=cluster-admin &ndash;serviceaccount=kube-system:default</p>
+
+<h2 id="logs">logs</h2>
+
+<p>minikube ssh
+sudo journalctl -u kubelet -f</p>
+
+<h2 id="download-kublet">download kublet</h2>
+
+<p><a href="https://kubernetes.io/docs/setup/independent/install-kubeadm/" target="_blank">https://kubernetes.io/docs/setup/independent/install-kubeadm/</a></p>
+
+<p>RELEASE=&ldquo;$(curl -sSL <a href="https://dl.k8s.io/release/stable.txt)&quot;" target="_blank">https://dl.k8s.io/release/stable.txt)&quot;</a></p>
+
+<p>mkdir -p /opt/bin
+cd /opt/bin
+curl -L &ndash;remote-name-all <a href="https://storage.googleapis.com/kubernetes-release/release/${RELEASE}/bin/linux/amd64/{kubeadm,kubelet,kubectl" target="_blank">https://storage.googleapis.com/kubernetes-release/release/${RELEASE}/bin/linux/amd64/{kubeadm,kubelet,kubectl</a>}
+chmod +x {kubeadm,kubelet,kubectl}</p>
+
+<p>curl -sSL &ldquo;<a href="https://raw.githubusercontent.com/kubernetes/kubernetes/${RELEASE}/build/debs/kubelet.service&quot;" target="_blank">https://raw.githubusercontent.com/kubernetes/kubernetes/${RELEASE}/build/debs/kubelet.service&quot;</a> | sed &ldquo;s:/usr/bin:/opt/bin:g&rdquo; &gt; /etc/systemd/system/kubelet.service
+mkdir -p /etc/systemd/system/kubelet.service.d
+curl -sSL &ldquo;<a href="https://raw.githubusercontent.com/kubernetes/kubernetes/${RELEASE}/build/debs/10-kubeadm.conf&quot;" target="_blank">https://raw.githubusercontent.com/kubernetes/kubernetes/${RELEASE}/build/debs/10-kubeadm.conf&quot;</a> | sed &ldquo;s:/usr/bin:/opt/bin:g&rdquo; &gt; /etc/systemd/system/kubelet.service.d/10-kubeadm.conf</p>
+
+<h2 id="errors">errors</h2>
+
+<p>unknown flag: &ndash;Authorization.Mode</p>
+
+<h2 id="tutorial">tutorial</h2>
+
+<p><a href="http://baijiahao.baidu.com/s?id=1602795888204860650&amp;wfr=spider&amp;for=pc" target="_blank">http://baijiahao.baidu.com/s?id=1602795888204860650&amp;wfr=spider&amp;for=pc</a></p>
+
+    </div>
+
+    
+
+
+    
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/k8s/">k8s</a>
+  
+</div>
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="/">zhoumingjun</a></h5>
+      
+      <p class="card-text" itemprop="description">My work interests include devops, gaming and programmable matter.</p>
+      <ul class="network-icon" aria-hidden="true">
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
 
       
 

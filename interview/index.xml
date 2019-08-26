@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Interviews | zhoumingjun&#39;s website</title>
+    <link>/interview/</link>
+      <atom:link href="/interview/index.xml" rel="self" type="application/rss+xml" />
+    <description>Interviews</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
+    <image>
+      <url>/img/logo.png</url>
+      <title>Interviews</title>
+      <link>/interview/</link>
+    </image>
+    
+    <item>
+      <title></title>
+      <link>/interview/other/web-developer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/interview/other/web-developer/</guid>
+      <description>
+
+&lt;h1 id=&#34;interview-others&#34;&gt;interview others&lt;/h1&gt;
+
+&lt;h1 id=&#34;project&#34;&gt;project&lt;/h1&gt;
+
+&lt;p&gt;what task did you do.
+   what challenage have you met, and how did you resolve it.&lt;/p&gt;
+
+&lt;h1 id=&#34;web-evelopment&#34;&gt;web evelopment&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.techug.com/post/interviewing-a-front-end-developer.html&#34; target=&#34;_blank&#34;&gt;http://www.techug.com/post/interviewing-a-front-end-developer.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/h5bp/Front-end-Developer-Interview-Questions&#34; target=&#34;_blank&#34;&gt;https://github.com/h5bp/Front-end-Developer-Interview-Questions&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://bonsaiden.github.io/JavaScript-Garden/zh/&#34; target=&#34;_blank&#34;&gt;http://bonsaiden.github.io/JavaScript-Garden/zh/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;basic&#34;&gt;basic&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;对象原型&lt;/li&gt;
+&lt;li&gt;arguments
+apply call&lt;/li&gt;
+&lt;li&gt;context&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;medium&#34;&gt;medium&lt;/h2&gt;
+
+&lt;p&gt;js modules:
+    amd cmd umd&lt;/p&gt;
+
+&lt;p&gt;testing:
+    jest
+    karma&lt;/p&gt;
+
+&lt;p&gt;comman framework:
+    vue
+    react&lt;/p&gt;
+
+&lt;p&gt;tool chain:
+    webpack gulp browerify&lt;/p&gt;
+
+&lt;p&gt;browser:
+    storage: local/session/cookies
+    service worker&lt;/p&gt;
+
+&lt;h2 id=&#34;advanced&#34;&gt;advanced&lt;/h2&gt;
+
+&lt;p&gt;https&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>reinforcement learning | zhoumingjun&#39;s website</title>
+    <link>/tags/reinforcement-learning/</link>
+      <atom:link href="/tags/reinforcement-learning/index.xml" rel="self" type="application/rss+xml" />
+    <description>reinforcement learning</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 14 Mar 2017 15:05:04 +0800</lastBuildDate>
+    <image>
+      <url>/img/logo.png</url>
+      <title>reinforcement learning</title>
+      <link>/tags/reinforcement-learning/</link>
+    </image>
+    
+    <item>
+      <title>Reinforcement learning</title>
+      <link>/series/rl/</link>
+      <pubDate>Tue, 14 Mar 2017 15:05:04 +0800</pubDate>
+      <guid>/series/rl/</guid>
+      <description>&lt;p&gt;have not been revised yet.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

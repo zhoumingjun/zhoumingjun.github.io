@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>lvs | zhoumingjun&#39;s website</title>
+    <link>/tags/lvs/</link>
+      <atom:link href="/tags/lvs/index.xml" rel="self" type="application/rss+xml" />
+    <description>lvs</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 22 Mar 2017 17:23:36 +0800</lastBuildDate>
+    <image>
+      <url>/img/logo.png</url>
+      <title>lvs</title>
+      <link>/tags/lvs/</link>
+    </image>
+    
+    <item>
+      <title>lvs keepalived</title>
+      <link>/post/2017-03-22-lvs-keepalived/</link>
+      <pubDate>Wed, 22 Mar 2017 17:23:36 +0800</pubDate>
+      <guid>/post/2017-03-22-lvs-keepalived/</guid>
+      <description>
+
+&lt;h1 id=&#34;introduction&#34;&gt;introduction&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;lvs:&lt;br /&gt;
+&lt;a href=&#34;http://www.linuxvirtualserver.org/&#34; target=&#34;_blank&#34;&gt;lvs&lt;/a&gt; is a kind of L4 load balancer.&lt;br /&gt;
+some references here:
+&lt;a href=&#34;http://www.austintek.com/LVS/LVS-HOWTO/HOWTO/index.html&#34; target=&#34;_blank&#34;&gt;howto&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;keepalived:&lt;br /&gt;
+&lt;a href=&#34;http://www.keepalived.org/&#34; target=&#34;_blank&#34;&gt;keepalived&lt;/a&gt; is a facilitator for lvs&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;configuration&#34;&gt;configuration&lt;/h1&gt;
+
+&lt;p&gt;topology:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;DIP: 192.168.2.172&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;RIP[1]: 192.168.2.173&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;RIP[2]: 192.168.2.174&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;VIP: 192.168.2.175&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;lvs-only&#34;&gt;lvs only&lt;/h2&gt;
+
+&lt;p&gt;director side&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#install ipvsadm
+yum -y install ipvsadm
+echo &#39;net.ipv4.ip_forward = 1&#39; &amp;gt;&amp;gt; /etc/sysctl.conf 
+sysctl -p
+touch /etc/sysconfig/ipvsadm 
+systemctl start ipvsadm 
+systemctl enable ipvsadm 
+
+# add vip
+ifconfig em1:0 192.168.2.175 netmask 255.255.255.255
+
+# configuration
+ipvsadm -C
+ipvsadm -A -t 192.168.2,175:80 -s rr
+ipvsadm -a -t 192.168.2,175:80 -r 192.168.2,173:80 -g
+ipvsadm -a -t 192.168.2,175:80 -r 192.168.2,174:80 -g
+ipvsadm -l 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;realserver side&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# add vip
+ifconfig lo:0 192.168.2.175 netmask 255.255.255.255 broadcast 192.168.2.175 
+
+# disable VIP arp
+echo &amp;quot;1&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/lo/arp_ignore
+echo &amp;quot;2&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/lo/arp_announce
+echo &amp;quot;1&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/all/arp_ignore
+echo &amp;quot;2&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/all/arp_announce
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;lvs-keepalived&#34;&gt;lvs + keepalived&lt;/h2&gt;
+
+&lt;p&gt;director side&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;global_defs {              
+    router_id LVS_MASTER   
+}
+vrrp_instance VI_1 {       
+    state MASTER           
+    interface em1          
+    virtual_router_id 51   
+    priority 100           
+    advert_int 1           
+    authentication {       
+    auth_type PASS
+    auth_pass 1111
+    }
+virtual_ipaddress {        
+    192.168.2.175
+    }
+}
+virtual_server 192.168.2.175 80 {
+    delay_loop 6            
+    lb_algo wrr             
+    lb_kind DR              
+    nat_mask 255.255.255.0  
+    #persistence_timeout 5  
+    protocol TCP            
+    real_server 192.168.2.173 80 {      
+        weight 3                   
+        TCP_CHECK {               
+        connect_timeout 5        
+        nb_get_retry 3
+        delay_before_retry 3
+        connect_port 80
+        }
+    }
+    real_server 192.168.2.174 80 {
+        weight 3
+        TCP_CHECK {
+        connect_timeout 10
+        nb_get_retry 3
+        delay_before_retry 3
+        connect_port 80
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;realserver side&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# add vip
+ifconfig lo:0 192.168.2.175 netmask 255.255.255.255 broadcast 192.168.2.175 
+
+# disable VIP arp
+echo &amp;quot;1&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/lo/arp_ignore
+echo &amp;quot;2&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/lo/arp_announce
+echo &amp;quot;1&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/all/arp_ignore
+echo &amp;quot;2&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/all/arp_announce
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

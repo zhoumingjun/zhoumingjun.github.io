@@ -28,10 +28,21 @@
   
     
   
-  <meta name="description" content="">
+  <meta name="description" content="introduction  lvs:
+lvs is a kind of L4 load balancer.
+some references here: howto
+ keepalived:
+keepalived is a facilitator for lvs
+  configuration topology:
+ DIP: 192.168.2.172
+ RIP[1]: 192.168.2.173
+ RIP[2]: 192.168.2.174
+ VIP: 192.168.2.175
+  lvs only director side
+#install ipvsadm yum -y install ipvsadm echo &#39;net.ipv4.ip_forward = 1&#39; &gt;&gt; /etc/sysctl.conf sysctl -p touch /etc/sysconfig/ipvsadm systemctl start ipvsadm systemctl enable ipvsadm # add vip ifconfig em1:0 192.">
 
   
-  <link rel="alternate" hreflang="en-us" href="/404.html">
+  <link rel="alternate" hreflang="en-us" href="/post/2017-03-22-lvs-keepalived/">
 
   
 
@@ -96,7 +107,7 @@
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/404.html">
+  <link rel="canonical" href="/post/2017-03-22-lvs-keepalived/">
 
   
   
@@ -109,12 +120,26 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="zhoumingjun&#39;s website">
-  <meta property="og:url" content="/404.html">
-  <meta property="og:title" content="404 Page not found | zhoumingjun&#39;s website">
-  <meta property="og:description" content=""><meta property="og:image" content="/img/logo.png">
+  <meta property="og:url" content="/post/2017-03-22-lvs-keepalived/">
+  <meta property="og:title" content="lvs keepalived | zhoumingjun&#39;s website">
+  <meta property="og:description" content="introduction  lvs:
+lvs is a kind of L4 load balancer.
+some references here: howto
+ keepalived:
+keepalived is a facilitator for lvs
+  configuration topology:
+ DIP: 192.168.2.172
+ RIP[1]: 192.168.2.173
+ RIP[2]: 192.168.2.174
+ VIP: 192.168.2.175
+  lvs only director side
+#install ipvsadm yum -y install ipvsadm echo &#39;net.ipv4.ip_forward = 1&#39; &gt;&gt; /etc/sysctl.conf sysctl -p touch /etc/sysconfig/ipvsadm systemctl start ipvsadm systemctl enable ipvsadm # add vip ifconfig em1:0 192."><meta property="og:image" content="/img/logo.png">
   <meta property="twitter:image" content="/img/logo.png"><meta property="og:locale" content="en-us">
   
     
+      <meta property="article:published_time" content="2017-03-22T17:23:36&#43;08:00">
+    
+    <meta property="article:modified_time" content="2017-03-22T17:23:36&#43;08:00">
   
 
   
@@ -126,7 +151,7 @@
 
 
 
-  <title>404 Page not found | zhoumingjun&#39;s website</title>
+  <title>lvs keepalived | zhoumingjun&#39;s website</title>
 
 </head>
 
@@ -315,51 +340,371 @@
 </nav>
 
 
-  <div class="universal-wrapper pt-3">
-
-  <h1>Page not found</h1>
-
-  
-  
-  <form class="d-flex align-items-center mb-3">
-    <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
-  </form>
-  
+  <article class="article" itemscope itemtype="http://schema.org/Article">
 
   
 
-  <p>Perhaps you were looking for one of these?</p>
+
+
+
+
+
+
+
+
+
+
+
+  
 
   
   
   
-  <h2>Latest</h2>
-  <ul>
+<div class="article-container pt-3">
+  <h1 itemprop="name">lvs keepalived</h1>
+
+  
+
+  
     
-      <li><a href="/project/dotfiles/">dotfiles</a></li>
+
+
+
+<meta content="2017-03-22 17:23:36 &#43;0800 CST" itemprop="datePublished">
+<meta content="2017-03-22 17:23:36 &#43;0800 CST" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
     
-      <li><a href="/project/adr-tools/">Adr-Tools</a></li>
     
-      <li><a href="/project/darwin-ansible-playbooks/">Darwin Ansible Playbooks</a></li>
+      
     
-      <li><a href="/project/rock64-ansible-playbooks/">Rock64 Ansible Playbooks</a></li>
+    <time>Mar 22, 2017</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    2 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+
+  
     
-      <li><a href="/project/ubuntu-ansible-playbooks/">Ubuntu Ansible Playbooks</a></li>
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
     
-      <li><a href="/project/arch-ansible-playbook/">Arch Ansible Playbook</a></li>
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/post/2017-03-22-lvs-keepalived/&amp;text=lvs%20keepalived" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
     
-      <li><a href="/kb/golang/">golang</a></li>
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/post/2017-03-22-lvs-keepalived/&amp;t=lvs%20keepalived" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
     
-      <li><a href="/kb/openapi/">openapi</a></li>
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=lvs%20keepalived&amp;body=/post/2017-03-22-lvs-keepalived/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
     
-      <li><a href="/kb/k8s/">k8s</a></li>
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/post/2017-03-22-lvs-keepalived/&amp;title=lvs%20keepalived" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
     
-      <li><a href="/note/rpi/">RaspberryPi zero w</a></li>
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=lvs%20keepalived%20/post/2017-03-22-lvs-keepalived/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/post/2017-03-22-lvs-keepalived/&amp;title=lvs%20keepalived" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
     
   </ul>
+</div>
+
+
   
 
 </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<h1 id="introduction">introduction</h1>
+
+<ul>
+<li><p>lvs:<br />
+<a href="http://www.linuxvirtualserver.org/" target="_blank">lvs</a> is a kind of L4 load balancer.<br />
+some references here:
+<a href="http://www.austintek.com/LVS/LVS-HOWTO/HOWTO/index.html" target="_blank">howto</a></p></li>
+
+<li><p>keepalived:<br />
+<a href="http://www.keepalived.org/" target="_blank">keepalived</a> is a facilitator for lvs</p></li>
+</ul>
+
+<h1 id="configuration">configuration</h1>
+
+<p>topology:</p>
+
+<ul>
+<li>DIP: 192.168.2.172<br /></li>
+<li>RIP[1]: 192.168.2.173<br /></li>
+<li>RIP[2]: 192.168.2.174<br /></li>
+<li>VIP: 192.168.2.175<br /></li>
+</ul>
+
+<h2 id="lvs-only">lvs only</h2>
+
+<p>director side</p>
+
+<pre><code>#install ipvsadm
+yum -y install ipvsadm
+echo 'net.ipv4.ip_forward = 1' &gt;&gt; /etc/sysctl.conf 
+sysctl -p
+touch /etc/sysconfig/ipvsadm 
+systemctl start ipvsadm 
+systemctl enable ipvsadm 
+
+# add vip
+ifconfig em1:0 192.168.2.175 netmask 255.255.255.255
+
+# configuration
+ipvsadm -C
+ipvsadm -A -t 192.168.2,175:80 -s rr
+ipvsadm -a -t 192.168.2,175:80 -r 192.168.2,173:80 -g
+ipvsadm -a -t 192.168.2,175:80 -r 192.168.2,174:80 -g
+ipvsadm -l 
+</code></pre>
+
+<p>realserver side</p>
+
+<pre><code># add vip
+ifconfig lo:0 192.168.2.175 netmask 255.255.255.255 broadcast 192.168.2.175 
+
+# disable VIP arp
+echo &quot;1&quot; &gt; /proc/sys/net/ipv4/conf/lo/arp_ignore
+echo &quot;2&quot; &gt; /proc/sys/net/ipv4/conf/lo/arp_announce
+echo &quot;1&quot; &gt; /proc/sys/net/ipv4/conf/all/arp_ignore
+echo &quot;2&quot; &gt; /proc/sys/net/ipv4/conf/all/arp_announce
+</code></pre>
+
+<h2 id="lvs-keepalived">lvs + keepalived</h2>
+
+<p>director side</p>
+
+<pre><code>global_defs {              
+    router_id LVS_MASTER   
+}
+vrrp_instance VI_1 {       
+    state MASTER           
+    interface em1          
+    virtual_router_id 51   
+    priority 100           
+    advert_int 1           
+    authentication {       
+    auth_type PASS
+    auth_pass 1111
+    }
+virtual_ipaddress {        
+    192.168.2.175
+    }
+}
+virtual_server 192.168.2.175 80 {
+    delay_loop 6            
+    lb_algo wrr             
+    lb_kind DR              
+    nat_mask 255.255.255.0  
+    #persistence_timeout 5  
+    protocol TCP            
+    real_server 192.168.2.173 80 {      
+        weight 3                   
+        TCP_CHECK {               
+        connect_timeout 5        
+        nb_get_retry 3
+        delay_before_retry 3
+        connect_port 80
+        }
+    }
+    real_server 192.168.2.174 80 {
+        weight 3
+        TCP_CHECK {
+        connect_timeout 10
+        nb_get_retry 3
+        delay_before_retry 3
+        connect_port 80
+        }
+    }
+}
+</code></pre>
+
+<p>realserver side</p>
+
+<pre><code># add vip
+ifconfig lo:0 192.168.2.175 netmask 255.255.255.255 broadcast 192.168.2.175 
+
+# disable VIP arp
+echo &quot;1&quot; &gt; /proc/sys/net/ipv4/conf/lo/arp_ignore
+echo &quot;2&quot; &gt; /proc/sys/net/ipv4/conf/lo/arp_announce
+echo &quot;1&quot; &gt; /proc/sys/net/ipv4/conf/all/arp_ignore
+echo &quot;2&quot; &gt; /proc/sys/net/ipv4/conf/all/arp_announce
+</code></pre>
+
+    </div>
+
+    
+
+
+    
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/lvs/">lvs</a>
+  
+</div>
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="/">zhoumingjun</a></h5>
+      
+      <p class="card-text" itemprop="description">My work interests include devops, gaming and programmable matter.</p>
+      <ul class="network-icon" aria-hidden="true">
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
 
       
 

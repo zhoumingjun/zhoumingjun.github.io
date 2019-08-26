@@ -31,7 +31,7 @@
   <meta name="description" content="">
 
   
-  <link rel="alternate" hreflang="en-us" href="/404.html">
+  <link rel="alternate" hreflang="en-us" href="/note/">
 
   
 
@@ -91,12 +91,14 @@
   
 
   
+  <link rel="alternate" href="/note/index.xml" type="application/rss+xml" title="zhoumingjun&#39;s website">
+  
 
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/404.html">
+  <link rel="canonical" href="/note/">
 
   
   
@@ -109,12 +111,12 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="zhoumingjun&#39;s website">
-  <meta property="og:url" content="/404.html">
-  <meta property="og:title" content="404 Page not found | zhoumingjun&#39;s website">
+  <meta property="og:url" content="/note/">
+  <meta property="og:title" content="Notes | zhoumingjun&#39;s website">
   <meta property="og:description" content=""><meta property="og:image" content="/img/logo.png">
   <meta property="twitter:image" content="/img/logo.png"><meta property="og:locale" content="en-us">
   
-    
+    <meta property="og:updated_time" content="2018-10-15T08:10:38&#43;00:00">
   
 
   
@@ -126,7 +128,7 @@
 
 
 
-  <title>404 Page not found | zhoumingjun&#39;s website</title>
+  <title>Notes | zhoumingjun&#39;s website</title>
 
 </head>
 
@@ -315,48 +317,125 @@
 </nav>
 
 
-  <div class="universal-wrapper pt-3">
-
-  <h1>Page not found</h1>
-
-  
-  
-  <form class="d-flex align-items-center mb-3">
-    <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
-  </form>
   
 
+
+
+
+
+
+
+
+
+
+
+
   
 
-  <p>Perhaps you were looking for one of these?</p>
+  
+  
+  
+    
+  
+<div class="universal-wrapper pt-3">
+  <h1 itemprop="name">Notes</h1>
+
+  
+
+  
+</div>
+
+
+
+<div class="universal-wrapper">
+  
 
   
   
+  <div>
+    <h2><a href="/note/rpi/">RaspberryPi zero w</a></h2>
+    <div class="article-style">
+      
+      introduction config enable ssh cd boot touch ssh  hack config.txt /boot/config.txt
+dtoverlay=dwc2
+hack cmdline.txt /boot/cmdline.txt
+modules-load=dwc2,g_ether
+network set wireless configuration find the available wireless ap iw dev wlan0 scan
+cat /etc/wpa_supplicant/wpa_supplicant.conf
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev update_config=1 country=CN network={ ssid=&quot;BBHome&quot; psk=&quot;--&quot; } network={ ssid=&quot;Boxin2.4G_2&quot; psk=&quot;--&quot; }  set static address interface usb0 metric 300 static ip_address=192.168.7.2 static routers=192.168.7.1 static domain_name_servers=192.168.7.1 interface wlan0 metric 200 static ip_address=10.0.0.200/24 static routers=10.0.0.99 static domain_name_servers=10.0.0.99  share network from usb0 sudo ip addr change 192.
+      
+    </div>
+  </div>
   
-  <h2>Latest</h2>
-  <ul>
-    
-      <li><a href="/project/dotfiles/">dotfiles</a></li>
-    
-      <li><a href="/project/adr-tools/">Adr-Tools</a></li>
-    
-      <li><a href="/project/darwin-ansible-playbooks/">Darwin Ansible Playbooks</a></li>
-    
-      <li><a href="/project/rock64-ansible-playbooks/">Rock64 Ansible Playbooks</a></li>
-    
-      <li><a href="/project/ubuntu-ansible-playbooks/">Ubuntu Ansible Playbooks</a></li>
-    
-      <li><a href="/project/arch-ansible-playbook/">Arch Ansible Playbook</a></li>
-    
-      <li><a href="/kb/golang/">golang</a></li>
-    
-      <li><a href="/kb/openapi/">openapi</a></li>
-    
-      <li><a href="/kb/k8s/">k8s</a></li>
-    
-      <li><a href="/note/rpi/">RaspberryPi zero w</a></li>
-    
-  </ul>
+  <div>
+    <h2><a href="/note/unicode/">Unicode</a></h2>
+    <div class="article-style">
+      
+      unicode nomalization Canonical and Compatibility Equivalence http://www.unicode.org/reports/tr15/#Canon_Compat_Equivalence
+Examples of Canonical Equivalence
+   Subtype Examples     Combining sequence Ç ↔ C+◌̧   Ordering of combining marks q+◌̇+◌̣ ↔ q+◌̣+◌̇   Hangul &amp; conjoining jamo 가 ↔ ᄀ +ᅡ   Singleton equivalence Ω ↔ Ω    Examples of Compatibility Equivalence
+   Subtype Examples     Font variants ℌ → H   Linebreaking differences [NBSP] → [SPACE]   Positional variant forms ﻉ → ‌ع‌   Circled variants ① → 1   Width variants ｶ → カ   Rotated variants ︷ → {   Superscripts/subscripts i⁹ → i9   Squared characters ㌀ → アパート   Fractions ¼ → 1&frasl;4   Other ǆ → dž    Normalization Forms Form | Description &ndash; | &ndash; Normalization Form D (NFD) |Canonical Decomposition Normalization Form C (NFC) |Canonical Decomposition,followed by Canonical Composition Normalization Form KD (NFKD) |Compatibility Decomposition Normalization Form KC (NFKC) |Compatibility Decomposition,followed by Canonical Composition
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="/note/inside-shell/">inside shell</a></h2>
+    <div class="article-style">
+      
+      which foo &gt;/dev/null command -v foo &gt;/dev/null 2&gt;&amp;1 type foo &gt;/dev/null 2&gt;&amp;1 hash foo 2&gt;/dev/null
+if [[ -n &ldquo;${commands[perlbrew]}&rdquo; ]] ; then &hellip; fi
+http://hyperpolyglot.org/unix-shells
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="/note/iptables/">iptables</a></h2>
+    <div class="article-style">
+      
+      refs https://www.hostinger.com/tutorials/iptables-tutorial
+https://wiki.archlinux.org/index.php/iptables
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="/note/gan/">GAN</a></h2>
+    <div class="article-style">
+      
+      refs https://medium.com/@jonathan_hui/gan-gan-series-2d279f906e7b
+https://www.datacamp.com/community/tutorials/generative-adversarial-networks
+people Jun-Yan Zhu
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="/note/awesome-ai/">Awesome AI</a></h2>
+    <div class="article-style">
+      
+      latest srnn
+Datasets image  PASCAL Visual Object Classification (PASCAL VOC) dataset ImageNet COCO  nlp GloVe
+Yelp
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="/note/object-detection-and-localization-algorithms/">Object Detection and Localization</a></h2>
+    <div class="article-style">
+      
+       References blogs  Evolution of Object Detection and Localization Algorithms Review of Deep Learning Algorithms for Object Detection  *yolo v3
+papers  You Only Look Once: Unified, Real-Time Object Detection YOLO9000: Better, Faster, Stronger
+ Convolutional Neural Networks by Andrew Ng (deeplearning.ai)  Problems  Image Classification
+ Object classification and localization
+ Multiple objects detection and localization  
+      
+    </div>
+  </div>
+  
+
   
 
 </div>

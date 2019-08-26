@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ubuntu | zhoumingjun&#39;s website</title>
+    <link>/tags/ubuntu/</link>
+      <atom:link href="/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <description>ubuntu</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 23 Aug 2018 15:01:49 +0000</lastBuildDate>
+    <image>
+      <url>/img/logo.png</url>
+      <title>ubuntu</title>
+      <link>/tags/ubuntu/</link>
+    </image>
+    
+    <item>
+      <title>Install cuda9.2 and cudnn7.2 on ubuntu 18.04</title>
+      <link>/post/2018-08-23-install-cuda-and-cudnn-on-ubuntu18.04/</link>
+      <pubDate>Thu, 23 Aug 2018 15:01:49 +0000</pubDate>
+      <guid>/post/2018-08-23-install-cuda-and-cudnn-on-ubuntu18.04/</guid>
+      <description>
+
+&lt;h1 id=&#34;overview&#34;&gt;Overview&lt;/h1&gt;
+
+&lt;p&gt;To run tensorflow/pytorch with gpu, I need to install cuda and cudnn.
+It&amp;rsquo;s really tricky, but finally I found the method.&lt;/p&gt;
+
+&lt;p&gt;The secret is&lt;br /&gt;
+* install the graphics driver from a PPA
+* install the toolkit from the run file&lt;/p&gt;
+
+&lt;h1 id=&#34;packages&#34;&gt;packages&lt;/h1&gt;
+
+&lt;p&gt;The following packages need to be installed.
+* nvidia graphics driver&lt;br /&gt;
+* cuda 9.2&lt;br /&gt;
+* cudnn 7.2&lt;/p&gt;
+
+&lt;p&gt;For nvidia graphics driver, there are two sources:
+1. raphics-drivers/ppa:&lt;br /&gt;
+&lt;a href=&#34;https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa&#34; target=&#34;_blank&#34;&gt;https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa&lt;/a&gt;&lt;br /&gt;
+the package is nvidia-driver-396&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;nvidia official repo
+&lt;a href=&#34;https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1710/x86_64/cuda-drivers_396.44-1_amd64.deb&#34; target=&#34;_blank&#34;&gt;https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1710/x86_64/cuda-drivers_396.44-1_amd64.deb&lt;/a&gt;&lt;br /&gt;
+the package is cuda-drivers&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;In fact the nvidia cuda-drivers is for ubuntu 17.10, and there are no official nvidia repo for ubuntu 18.04 currently.&lt;br /&gt;
+Here we need to select option 1, I have try option2, but there are conflict with other packages.&lt;br /&gt;
+I install the cuda-drivers with &amp;ldquo;&amp;ndash;force-overwrite&amp;rdquo;, but gdm can&amp;rsquo;t be launched normally.&lt;/p&gt;
+
+&lt;p&gt;For cuda 9.2, it can be download directly from nvidia website.&lt;/p&gt;
+
+&lt;p&gt;For cudnn7.2, &lt;strong&gt;it can be download from nvidia machine-learning repo without login&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;installation-steps&#34;&gt;installation steps&lt;/h1&gt;
+
+&lt;p&gt;install nvidia graphics driver&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt update
+sudo apt-get install nvidia-driver-396
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;install cuda&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# dowload installer
+aria2c https://developer.nvidia.com/compute/cuda/9.2/Prod2/local_installers/cuda_9.2.148_396.37_linux 
+
+aria2c https://developer.nvidia.com/compute/cuda/9.2/Prod2/patches/1/cuda_9.2.148.1_linux  
+
+# install cuda9.2 and patch
+chmod +x cuda*
+
+sudo ./cuda_9.2.148_396.37_linux.run --verbose --silent --toolkit --override
+
+sudo ./cuda_9.2.148.1_linux.run --silent --accept-eula
+
+# add to ld
+sudo echo &amp;quot;/usr/local/cuda-9.2/lib64&amp;quot; &amp;gt;&amp;gt; /etc/ld.so.conf
+sudo ldconfig
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;install cudnn&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#download packages
+aria2c https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64/libcudnn7_7.2.1.38-1+cuda9.2_amd64.deb
+
+aria2c https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64/libcudnn7-dev_7.2.1.38-1+cuda9.2_amd64.deb    
+
+# install
+sudo dpkg -i libcudnn7_7.2.1.38-1+cuda9.2_amd64.deb
+sudo dpkg -i libcudnn7-dev_7.2.1.38-1+cuda9.2_amd64.deb
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>openapi | zhoumingjun&#39;s website</title>
+    <link>/tags/openapi/</link>
+      <atom:link href="/tags/openapi/index.xml" rel="self" type="application/rss+xml" />
+    <description>openapi</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 06 Nov 2018 02:16:07 +0000</lastBuildDate>
+    <image>
+      <url>/img/logo.png</url>
+      <title>openapi</title>
+      <link>/tags/openapi/</link>
+    </image>
+    
+    <item>
+      <title>openapi</title>
+      <link>/kb/openapi/</link>
+      <pubDate>Tue, 06 Nov 2018 02:16:07 +0000</pubDate>
+      <guid>/kb/openapi/</guid>
+      <description>
+
+&lt;h1 id=&#34;overview&#34;&gt;overview&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://openapi.tools/&#34; target=&#34;_blank&#34;&gt;https://openapi.tools/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;reference-openapi&#34;&gt;reference openapi&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://apis.guru/awesome-openapi3/&#34; target=&#34;_blank&#34;&gt;https://apis.guru/awesome-openapi3/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;code-generator&#34;&gt;code generator&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/OpenAPITools/openapi-generator&#34; target=&#34;_blank&#34;&gt;https://github.com/OpenAPITools/openapi-generator&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;mock-server&#34;&gt;mock server&lt;/h2&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

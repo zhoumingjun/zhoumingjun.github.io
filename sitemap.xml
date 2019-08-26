@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/project/dotfiles/</loc>
+    <lastmod>2019-08-26T02:13:01+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/project/adr-tools/</loc>
+    <lastmod>2019-08-26T03:22:38+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/</loc>
+    <lastmod>2019-08-26T03:25:42+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/project/darwin-ansible-playbooks/</loc>
+    <lastmod>2019-08-26T03:25:42+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/project/</loc>
+    <lastmod>2019-08-26T03:25:42+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2019-08-26T03:25:42+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/ansible/</loc>
+    <lastmod>2019-08-26T03:25:42+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/zhoumingjun/</loc>
+    <lastmod>2019-08-26T03:25:42+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2019-08-26T03:25:42+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/project/rock64-ansible-playbooks/</loc>
+    <lastmod>2019-08-26T03:25:35+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/project/ubuntu-ansible-playbooks/</loc>
+    <lastmod>2019-08-26T03:25:25+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/project/arch-ansible-playbook/</loc>
+    <lastmod>2019-08-26T03:25:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/shell/</loc>
+    <lastmod>2019-08-26T03:22:38+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/kb/</loc>
+    <lastmod>2018-11-20T05:18:14+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/golang/</loc>
+    <lastmod>2018-11-20T05:18:14+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/kb/golang/</loc>
+    <lastmod>2018-11-20T05:18:14+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/openapi/</loc>
+    <lastmod>2018-11-06T02:16:07+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/kb/openapi/</loc>
+    <lastmod>2018-11-06T02:16:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/k8s/</loc>
+    <lastmod>2018-10-31T09:11:17+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/kb/k8s/</loc>
+    <lastmod>2018-10-31T09:11:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/note/</loc>
+    <lastmod>2018-10-15T08:10:38+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/note/rpi/</loc>
+    <lastmod>2018-10-15T08:10:38+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/rpi/</loc>
+    <lastmod>2018-10-15T08:10:38+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/series/pytorch/</loc>
+    <lastmod>2018-09-07T10:16:47+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/series/</loc>
+    <lastmod>2018-09-07T10:16:47+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/machine-learning/</loc>
+    <lastmod>2018-09-07T10:16:47+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/pytorch/</loc>
+    <lastmod>2018-09-07T10:16:47+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/note/unicode/</loc>
+    <lastmod>2018-09-06T02:12:39+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2018-09-04-enable-mathjax-in-gatsby/</loc>
+    <lastmod>2018-09-04T06:30:28+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2018-09-04T06:30:28+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/gatsby/</loc>
+    <lastmod>2018-09-04T06:30:28+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/mathjax/</loc>
+    <lastmod>2018-09-04T06:30:28+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/note/inside-shell/</loc>
+    <lastmod>2018-08-31T17:08:12+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/visualization/</loc>
+    <lastmod>2018-08-31T10:44:53+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/kb/visualization/</loc>
+    <lastmod>2018-08-31T10:44:53+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/linux/</loc>
+    <lastmod>2018-08-27T05:20:27+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/kb/linux/</loc>
+    <lastmod>2018-08-27T05:20:27+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/note/iptables/</loc>
+    <lastmod>2018-08-24T03:58:03+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2018-08-23-install-cuda-and-cudnn-on-ubuntu18.04/</loc>
+    <lastmod>2018-08-23T15:01:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/cuda/</loc>
+    <lastmod>2018-08-23T15:01:49+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/ubuntu/</loc>
+    <lastmod>2018-08-23T15:01:49+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/note/gan/</loc>
+    <lastmod>2018-08-17T06:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/note/awesome-ai/</loc>
+    <lastmod>2018-08-15T04:12:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/note/object-detection-and-localization-algorithms/</loc>
+    <lastmod>2018-08-15T04:12:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2018-08-14-migrate-from-hugo-to-gatsby/</loc>
+    <lastmod>2018-08-14T10:52:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/lvs/</loc>
+    <lastmod>2017-03-22T17:23:36+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/post/2017-03-22-lvs-keepalived/</loc>
+    <lastmod>2017-03-22T17:23:36+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/series/rl/</loc>
+    <lastmod>2017-03-14T15:05:04+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/reinforcement-learning/</loc>
+    <lastmod>2017-03-14T15:05:04+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/post/2017-03-10-using-mathjax-viz-with-hugo/</loc>
+    <lastmod>2017-03-10T11:40:12+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2017-03-06-first-post/</loc>
+    <lastmod>2017-03-06T16:03:35+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/admin/</loc>
+  </url>
+  
+  <url>
+    <loc>/interview/other/web-developer/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/kb/kong/1.openresty/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/kb/kong/2.kong/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/kb/web/react/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/interview/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/publication_types/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/publication/</loc>
+  </url>
+  
+  <url>
+    <loc>/talk/</loc>
+  </url>
+  
+</urlset>

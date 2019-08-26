@@ -28,10 +28,16 @@
   
     
   
-  <meta name="description" content="">
+  <meta name="description" content="Overview To run tensorflow/pytorch with gpu, I need to install cuda and cudnn. It&rsquo;s really tricky, but finally I found the method.
+The secret is
+* install the graphics driver from a PPA * install the toolkit from the run file
+packages The following packages need to be installed. * nvidia graphics driver
+* cuda 9.2
+* cudnn 7.2
+For nvidia graphics driver, there are two sources: 1. raphics-drivers/ppa:">
 
   
-  <link rel="alternate" hreflang="en-us" href="/404.html">
+  <link rel="alternate" hreflang="en-us" href="/post/2018-08-23-install-cuda-and-cudnn-on-ubuntu18.04/">
 
   
 
@@ -96,7 +102,7 @@
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/404.html">
+  <link rel="canonical" href="/post/2018-08-23-install-cuda-and-cudnn-on-ubuntu18.04/">
 
   
   
@@ -109,12 +115,21 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="zhoumingjun&#39;s website">
-  <meta property="og:url" content="/404.html">
-  <meta property="og:title" content="404 Page not found | zhoumingjun&#39;s website">
-  <meta property="og:description" content=""><meta property="og:image" content="/img/logo.png">
+  <meta property="og:url" content="/post/2018-08-23-install-cuda-and-cudnn-on-ubuntu18.04/">
+  <meta property="og:title" content="Install cuda9.2 and cudnn7.2 on ubuntu 18.04 | zhoumingjun&#39;s website">
+  <meta property="og:description" content="Overview To run tensorflow/pytorch with gpu, I need to install cuda and cudnn. It&rsquo;s really tricky, but finally I found the method.
+The secret is
+* install the graphics driver from a PPA * install the toolkit from the run file
+packages The following packages need to be installed. * nvidia graphics driver
+* cuda 9.2
+* cudnn 7.2
+For nvidia graphics driver, there are two sources: 1. raphics-drivers/ppa:"><meta property="og:image" content="/img/logo.png">
   <meta property="twitter:image" content="/img/logo.png"><meta property="og:locale" content="en-us">
   
     
+      <meta property="article:published_time" content="2018-08-23T15:01:49&#43;00:00">
+    
+    <meta property="article:modified_time" content="2018-08-23T15:01:49&#43;00:00">
   
 
   
@@ -126,7 +141,7 @@
 
 
 
-  <title>404 Page not found | zhoumingjun&#39;s website</title>
+  <title>Install cuda9.2 and cudnn7.2 on ubuntu 18.04 | zhoumingjun&#39;s website</title>
 
 </head>
 
@@ -315,51 +330,329 @@
 </nav>
 
 
-  <div class="universal-wrapper pt-3">
-
-  <h1>Page not found</h1>
-
-  
-  
-  <form class="d-flex align-items-center mb-3">
-    <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
-  </form>
-  
+  <article class="article" itemscope itemtype="http://schema.org/Article">
 
   
 
-  <p>Perhaps you were looking for one of these?</p>
+
+
+
+
+
+
+
+
+
+
+
+  
 
   
   
   
-  <h2>Latest</h2>
-  <ul>
+<div class="article-container pt-3">
+  <h1 itemprop="name">Install cuda9.2 and cudnn7.2 on ubuntu 18.04</h1>
+
+  
+
+  
     
-      <li><a href="/project/dotfiles/">dotfiles</a></li>
+
+
+
+<meta content="2018-08-23 15:01:49 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2018-08-23 15:01:49 &#43;0000 UTC" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
     
-      <li><a href="/project/adr-tools/">Adr-Tools</a></li>
     
-      <li><a href="/project/darwin-ansible-playbooks/">Darwin Ansible Playbooks</a></li>
+      
     
-      <li><a href="/project/rock64-ansible-playbooks/">Rock64 Ansible Playbooks</a></li>
+    <time>Aug 23, 2018</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    2 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+
+  
     
-      <li><a href="/project/ubuntu-ansible-playbooks/">Ubuntu Ansible Playbooks</a></li>
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
     
-      <li><a href="/project/arch-ansible-playbook/">Arch Ansible Playbook</a></li>
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/post/2018-08-23-install-cuda-and-cudnn-on-ubuntu18.04/&amp;text=Install%20cuda9.2%20and%20cudnn7.2%20on%20ubuntu%2018.04" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
     
-      <li><a href="/kb/golang/">golang</a></li>
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/post/2018-08-23-install-cuda-and-cudnn-on-ubuntu18.04/&amp;t=Install%20cuda9.2%20and%20cudnn7.2%20on%20ubuntu%2018.04" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
     
-      <li><a href="/kb/openapi/">openapi</a></li>
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Install%20cuda9.2%20and%20cudnn7.2%20on%20ubuntu%2018.04&amp;body=/post/2018-08-23-install-cuda-and-cudnn-on-ubuntu18.04/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
     
-      <li><a href="/kb/k8s/">k8s</a></li>
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/post/2018-08-23-install-cuda-and-cudnn-on-ubuntu18.04/&amp;title=Install%20cuda9.2%20and%20cudnn7.2%20on%20ubuntu%2018.04" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
     
-      <li><a href="/note/rpi/">RaspberryPi zero w</a></li>
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Install%20cuda9.2%20and%20cudnn7.2%20on%20ubuntu%2018.04%20/post/2018-08-23-install-cuda-and-cudnn-on-ubuntu18.04/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/post/2018-08-23-install-cuda-and-cudnn-on-ubuntu18.04/&amp;title=Install%20cuda9.2%20and%20cudnn7.2%20on%20ubuntu%2018.04" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
     
   </ul>
+</div>
+
+
   
 
 </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<h1 id="overview">Overview</h1>
+
+<p>To run tensorflow/pytorch with gpu, I need to install cuda and cudnn.
+It&rsquo;s really tricky, but finally I found the method.</p>
+
+<p>The secret is<br />
+* install the graphics driver from a PPA
+* install the toolkit from the run file</p>
+
+<h1 id="packages">packages</h1>
+
+<p>The following packages need to be installed.
+* nvidia graphics driver<br />
+* cuda 9.2<br />
+* cudnn 7.2</p>
+
+<p>For nvidia graphics driver, there are two sources:
+1. raphics-drivers/ppa:<br />
+<a href="https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa" target="_blank">https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa</a><br />
+the package is nvidia-driver-396</p>
+
+<ol>
+<li>nvidia official repo
+<a href="https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1710/x86_64/cuda-drivers_396.44-1_amd64.deb" target="_blank">https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1710/x86_64/cuda-drivers_396.44-1_amd64.deb</a><br />
+the package is cuda-drivers</li>
+</ol>
+
+<p>In fact the nvidia cuda-drivers is for ubuntu 17.10, and there are no official nvidia repo for ubuntu 18.04 currently.<br />
+Here we need to select option 1, I have try option2, but there are conflict with other packages.<br />
+I install the cuda-drivers with &ldquo;&ndash;force-overwrite&rdquo;, but gdm can&rsquo;t be launched normally.</p>
+
+<p>For cuda 9.2, it can be download directly from nvidia website.</p>
+
+<p>For cudnn7.2, <strong>it can be download from nvidia machine-learning repo without login</strong></p>
+
+<h1 id="installation-steps">installation steps</h1>
+
+<p>install nvidia graphics driver</p>
+
+<pre><code class="language-bash">sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt update
+sudo apt-get install nvidia-driver-396
+</code></pre>
+
+<p>install cuda</p>
+
+<pre><code class="language-bash"># dowload installer
+aria2c https://developer.nvidia.com/compute/cuda/9.2/Prod2/local_installers/cuda_9.2.148_396.37_linux 
+
+aria2c https://developer.nvidia.com/compute/cuda/9.2/Prod2/patches/1/cuda_9.2.148.1_linux  
+
+# install cuda9.2 and patch
+chmod +x cuda*
+
+sudo ./cuda_9.2.148_396.37_linux.run --verbose --silent --toolkit --override
+
+sudo ./cuda_9.2.148.1_linux.run --silent --accept-eula
+
+# add to ld
+sudo echo &quot;/usr/local/cuda-9.2/lib64&quot; &gt;&gt; /etc/ld.so.conf
+sudo ldconfig
+</code></pre>
+
+<p>install cudnn</p>
+
+<pre><code class="language-bash">#download packages
+aria2c https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64/libcudnn7_7.2.1.38-1+cuda9.2_amd64.deb
+
+aria2c https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64/libcudnn7-dev_7.2.1.38-1+cuda9.2_amd64.deb    
+
+# install
+sudo dpkg -i libcudnn7_7.2.1.38-1+cuda9.2_amd64.deb
+sudo dpkg -i libcudnn7-dev_7.2.1.38-1+cuda9.2_amd64.deb
+</code></pre>
+
+    </div>
+
+    
+
+
+    
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/cuda/">cuda</a>
+  
+  <a class="badge badge-light" href="/tags/ubuntu/">ubuntu</a>
+  
+</div>
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="/">zhoumingjun</a></h5>
+      
+      <p class="card-text" itemprop="description">My work interests include devops, gaming and programmable matter.</p>
+      <ul class="network-icon" aria-hidden="true">
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
 
       
 

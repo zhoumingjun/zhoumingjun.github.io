@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pytorch | zhoumingjun&#39;s website</title>
+    <link>/tags/pytorch/</link>
+      <atom:link href="/tags/pytorch/index.xml" rel="self" type="application/rss+xml" />
+    <description>pytorch</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 07 Sep 2018 10:16:47 +0000</lastBuildDate>
+    <image>
+      <url>/img/logo.png</url>
+      <title>pytorch</title>
+      <link>/tags/pytorch/</link>
+    </image>
+    
+    <item>
+      <title>Pytorch</title>
+      <link>/series/pytorch/</link>
+      <pubDate>Fri, 07 Sep 2018 10:16:47 +0000</pubDate>
+      <guid>/series/pytorch/</guid>
+      <description>
+
+&lt;h1 id=&#34;pytorch&#34;&gt;Pytorch&lt;/h1&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

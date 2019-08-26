@@ -31,7 +31,7 @@
   <meta name="description" content="">
 
   
-  <link rel="alternate" hreflang="en-us" href="/404.html">
+  <link rel="alternate" hreflang="en-us" href="/tags/k8s/">
 
   
 
@@ -91,12 +91,14 @@
   
 
   
+  <link rel="alternate" href="/tags/k8s/index.xml" type="application/rss+xml" title="zhoumingjun&#39;s website">
+  
 
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/404.html">
+  <link rel="canonical" href="/tags/k8s/">
 
   
   
@@ -109,12 +111,12 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="zhoumingjun&#39;s website">
-  <meta property="og:url" content="/404.html">
-  <meta property="og:title" content="404 Page not found | zhoumingjun&#39;s website">
+  <meta property="og:url" content="/tags/k8s/">
+  <meta property="og:title" content="k8s | zhoumingjun&#39;s website">
   <meta property="og:description" content=""><meta property="og:image" content="/img/logo.png">
   <meta property="twitter:image" content="/img/logo.png"><meta property="og:locale" content="en-us">
   
-    
+    <meta property="og:updated_time" content="2018-10-31T09:11:17&#43;00:00">
   
 
   
@@ -126,7 +128,7 @@
 
 
 
-  <title>404 Page not found | zhoumingjun&#39;s website</title>
+  <title>k8s | zhoumingjun&#39;s website</title>
 
 </head>
 
@@ -315,48 +317,60 @@
 </nav>
 
 
-  <div class="universal-wrapper pt-3">
-
-  <h1>Page not found</h1>
-
-  
-  
-  <form class="d-flex align-items-center mb-3">
-    <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
-  </form>
   
 
+
+
+
+
+
+
+
+
+
+
+
   
 
-  <p>Perhaps you were looking for one of these?</p>
+  
+  
+  
+    
+  
+<div class="universal-wrapper pt-3">
+  <h1 itemprop="name">k8s</h1>
+
+  
+
+  
+</div>
+
+
+
+<div class="universal-wrapper">
+  
 
   
   
+  <div>
+    <h2><a href="/kb/k8s/">k8s</a></h2>
+    <div class="article-style">
+      
+      references https://github.com/ramitsurana/awesome-kubernetes
+microservice on k8s https://ewanvalentine.io/microservices-in-golang-part-1/
+minikube start with RABC from https://gist.github.com/F21/08bfc2e3592bed1e931ec40b8d2ab6f5
+minikube start &ndash;cache-images &ndash;vm-driver kvm2 &ndash;cpus 4 &ndash;memory 4096 &ndash;extra-config=apiserver.authorization-mode=RBAC
+kubectl create clusterrolebinding add-on-cluster-admin &ndash;clusterrole=cluster-admin &ndash;serviceaccount=kube-system:default
+logs minikube ssh sudo journalctl -u kubelet -f
+download kublet https://kubernetes.io/docs/setup/independent/install-kubeadm/
+RELEASE=&ldquo;$(curl -sSL https://dl.k8s.io/release/stable.txt)&quot;
+mkdir -p /opt/bin cd /opt/bin curl -L &ndash;remote-name-all https://storage.googleapis.com/kubernetes-release/release/${RELEASE}/bin/linux/amd64/{kubeadm,kubelet,kubectl} chmod +x {kubeadm,kubelet,kubectl}
+curl -sSL &ldquo;https://raw.githubusercontent.com/kubernetes/kubernetes/${RELEASE}/build/debs/kubelet.service&quot; | sed &ldquo;s:/usr/bin:/opt/bin:g&rdquo; &gt; /etc/systemd/system/kubelet.service mkdir -p /etc/systemd/system/kubelet.service.d curl -sSL &ldquo;https://raw.githubusercontent.com/kubernetes/kubernetes/${RELEASE}/build/debs/10-kubeadm.conf&quot; | sed &ldquo;s:/usr/bin:/opt/bin:g&rdquo; &gt; /etc/systemd/system/kubelet.
+      
+    </div>
+  </div>
   
-  <h2>Latest</h2>
-  <ul>
-    
-      <li><a href="/project/dotfiles/">dotfiles</a></li>
-    
-      <li><a href="/project/adr-tools/">Adr-Tools</a></li>
-    
-      <li><a href="/project/darwin-ansible-playbooks/">Darwin Ansible Playbooks</a></li>
-    
-      <li><a href="/project/rock64-ansible-playbooks/">Rock64 Ansible Playbooks</a></li>
-    
-      <li><a href="/project/ubuntu-ansible-playbooks/">Ubuntu Ansible Playbooks</a></li>
-    
-      <li><a href="/project/arch-ansible-playbook/">Arch Ansible Playbook</a></li>
-    
-      <li><a href="/kb/golang/">golang</a></li>
-    
-      <li><a href="/kb/openapi/">openapi</a></li>
-    
-      <li><a href="/kb/k8s/">k8s</a></li>
-    
-      <li><a href="/note/rpi/">RaspberryPi zero w</a></li>
-    
-  </ul>
+
   
 
 </div>

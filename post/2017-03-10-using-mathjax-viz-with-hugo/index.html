@@ -28,10 +28,12 @@
   
     
   
-  <meta name="description" content="">
+  <meta name="description" content="MathJax support configuration Hugo doc
+MathJax doc
+&lt;!-- LaTeX math rendering --&gt; {{ if .Params.math }} &lt;script type=&quot;text/javascript&quot;&gt; window.MathJax = { tex2jax: { inlineMath: [[&#39;$&#39;,&#39;$&#39;], [&#39;\\(&#39;,&#39;\\)&#39;]], displayMath: [[&#39;$$&#39;,&#39;$$&#39;], [&#39;\[&#39;,&#39;\]&#39;]], processEscapes: true, processEnvironments: true, skipTags: [&#39;script&#39;, &#39;noscript&#39;, &#39;style&#39;, &#39;textarea&#39;, &#39;pre&#39;], TeX: { equationNumbers: { autoNumber: &quot;AMS&quot; }, extensions: [&quot;AMSmath.js&quot;, &quot;AMSsymbols.js&quot;, &quot;color.js&quot;] } }, AuthorInit: function () { MathJax.Hub.Register.StartupHook(&quot;Begin&quot;,function () { MathJax.Hub.Queue(function() { var all = MathJax.Hub.getAllJax(), i; for(i = 0; i &lt; all.">
 
   
-  <link rel="alternate" hreflang="en-us" href="/404.html">
+  <link rel="alternate" hreflang="en-us" href="/post/2017-03-10-using-mathjax-viz-with-hugo/">
 
   
 
@@ -96,7 +98,7 @@
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/404.html">
+  <link rel="canonical" href="/post/2017-03-10-using-mathjax-viz-with-hugo/">
 
   
   
@@ -109,12 +111,17 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="zhoumingjun&#39;s website">
-  <meta property="og:url" content="/404.html">
-  <meta property="og:title" content="404 Page not found | zhoumingjun&#39;s website">
-  <meta property="og:description" content=""><meta property="og:image" content="/img/logo.png">
+  <meta property="og:url" content="/post/2017-03-10-using-mathjax-viz-with-hugo/">
+  <meta property="og:title" content="Using MathJax and Graphviz with Hugo | zhoumingjun&#39;s website">
+  <meta property="og:description" content="MathJax support configuration Hugo doc
+MathJax doc
+&lt;!-- LaTeX math rendering --&gt; {{ if .Params.math }} &lt;script type=&quot;text/javascript&quot;&gt; window.MathJax = { tex2jax: { inlineMath: [[&#39;$&#39;,&#39;$&#39;], [&#39;\\(&#39;,&#39;\\)&#39;]], displayMath: [[&#39;$$&#39;,&#39;$$&#39;], [&#39;\[&#39;,&#39;\]&#39;]], processEscapes: true, processEnvironments: true, skipTags: [&#39;script&#39;, &#39;noscript&#39;, &#39;style&#39;, &#39;textarea&#39;, &#39;pre&#39;], TeX: { equationNumbers: { autoNumber: &quot;AMS&quot; }, extensions: [&quot;AMSmath.js&quot;, &quot;AMSsymbols.js&quot;, &quot;color.js&quot;] } }, AuthorInit: function () { MathJax.Hub.Register.StartupHook(&quot;Begin&quot;,function () { MathJax.Hub.Queue(function() { var all = MathJax.Hub.getAllJax(), i; for(i = 0; i &lt; all."><meta property="og:image" content="/img/logo.png">
   <meta property="twitter:image" content="/img/logo.png"><meta property="og:locale" content="en-us">
   
     
+      <meta property="article:published_time" content="2017-03-10T11:40:12&#43;08:00">
+    
+    <meta property="article:modified_time" content="2017-03-10T11:40:12&#43;08:00">
   
 
   
@@ -126,7 +133,7 @@
 
 
 
-  <title>404 Page not found | zhoumingjun&#39;s website</title>
+  <title>Using MathJax and Graphviz with Hugo | zhoumingjun&#39;s website</title>
 
 </head>
 
@@ -315,51 +322,361 @@
 </nav>
 
 
-  <div class="universal-wrapper pt-3">
-
-  <h1>Page not found</h1>
-
-  
-  
-  <form class="d-flex align-items-center mb-3">
-    <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
-  </form>
-  
+  <article class="article" itemscope itemtype="http://schema.org/Article">
 
   
 
-  <p>Perhaps you were looking for one of these?</p>
+
+
+
+
+
+
+
+
+
+
+
+  
 
   
   
   
-  <h2>Latest</h2>
-  <ul>
+<div class="article-container pt-3">
+  <h1 itemprop="name">Using MathJax and Graphviz with Hugo</h1>
+
+  
+
+  
     
-      <li><a href="/project/dotfiles/">dotfiles</a></li>
+
+
+
+<meta content="2017-03-10 11:40:12 &#43;0800 CST" itemprop="datePublished">
+<meta content="2017-03-10 11:40:12 &#43;0800 CST" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
     
-      <li><a href="/project/adr-tools/">Adr-Tools</a></li>
     
-      <li><a href="/project/darwin-ansible-playbooks/">Darwin Ansible Playbooks</a></li>
+      
     
-      <li><a href="/project/rock64-ansible-playbooks/">Rock64 Ansible Playbooks</a></li>
+    <time>Mar 10, 2017</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    2 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+
+  
     
-      <li><a href="/project/ubuntu-ansible-playbooks/">Ubuntu Ansible Playbooks</a></li>
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
     
-      <li><a href="/project/arch-ansible-playbook/">Arch Ansible Playbook</a></li>
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/post/2017-03-10-using-mathjax-viz-with-hugo/&amp;text=Using%20MathJax%20and%20Graphviz%20with%20Hugo" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
     
-      <li><a href="/kb/golang/">golang</a></li>
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/post/2017-03-10-using-mathjax-viz-with-hugo/&amp;t=Using%20MathJax%20and%20Graphviz%20with%20Hugo" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
     
-      <li><a href="/kb/openapi/">openapi</a></li>
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Using%20MathJax%20and%20Graphviz%20with%20Hugo&amp;body=/post/2017-03-10-using-mathjax-viz-with-hugo/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
     
-      <li><a href="/kb/k8s/">k8s</a></li>
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/post/2017-03-10-using-mathjax-viz-with-hugo/&amp;title=Using%20MathJax%20and%20Graphviz%20with%20Hugo" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
     
-      <li><a href="/note/rpi/">RaspberryPi zero w</a></li>
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Using%20MathJax%20and%20Graphviz%20with%20Hugo%20/post/2017-03-10-using-mathjax-viz-with-hugo/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/post/2017-03-10-using-mathjax-viz-with-hugo/&amp;title=Using%20MathJax%20and%20Graphviz%20with%20Hugo" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
     
   </ul>
+</div>
+
+
   
 
 </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<h1 id="mathjax-support">MathJax support</h1>
+
+<h2 id="configuration">configuration</h2>
+
+<p><a href="https://gohugo.io/tutorials/mathjax/" target="_blank">Hugo doc</a><br />
+<a href="http://docs.mathjax.org/en/latest/configuration.html?#using-plain-javascript" target="_blank">MathJax doc</a></p>
+
+<pre><code>&lt;!-- LaTeX math rendering --&gt;
+{{ if  .Params.math   }}
+&lt;script type=&quot;text/javascript&quot;&gt;
+    window.MathJax = {
+        tex2jax: {
+            inlineMath: [['$','$'], ['\\(','\\)']],
+            displayMath: [['$$','$$'], ['\[','\]']],
+            processEscapes: true,
+            processEnvironments: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            TeX: { equationNumbers: { autoNumber: &quot;AMS&quot; },
+                extensions: [&quot;AMSmath.js&quot;, &quot;AMSsymbols.js&quot;, &quot;color.js&quot;] }
+        },
+        AuthorInit: function () {
+            MathJax.Hub.Register.StartupHook(&quot;Begin&quot;,function () {
+                MathJax.Hub.Queue(function() {
+                    var all = MathJax.Hub.getAllJax(), i;
+                    for(i = 0; i &lt; all.length; i += 1) {
+                        all[i].SourceElement().parentNode.className += ' has-jax';
+                    }
+                })
+            });
+        }
+    };
+&lt;/script&gt;
+&lt;script  type=&quot;text/javascript&quot;
+    src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML&quot;&gt;
+&lt;/script&gt;
+{{ end }}
+</code></pre>
+
+<h2 id="example">example</h2>
+
+<p><strong>code</strong></p>
+
+<pre><code>    $ v_\pi(s) = \sum_{a \in \mathcal{A}} \pi(a|s) q_\pi(s,a)  $
+</code></pre>
+
+<p><strong>result</strong><br />
+$ v<em>\pi(s) = \sum</em>{a \in \mathcal{A}} \pi(a|s) q_\pi(s,a)  $</p>
+
+<h1 id="graphviz-support">graphviz support</h1>
+
+<h2 id="configuration-1">configuration</h2>
+
+<pre><code class="language-html">&lt;!-- graphviz renderring --&gt;
+{{ if  .Params.viz}}
+&lt;script type=&quot;text/javascript&quot; src=&quot;//cdnjs.cloudflare.com/ajax/libs/viz.js/1.7.1/viz.js&quot;&gt; &lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+(function(){
+    var vizPrefix = &quot;language-viz-&quot;;
+    Array.prototype.forEach.call(document.querySelectorAll(&quot;[class^=&quot; + vizPrefix + &quot;]&quot;), function(x){
+        var engine;
+        x.getAttribute(&quot;class&quot;).split(&quot; &quot;).forEach(function(cls){
+            if (cls.startsWith(vizPrefix)) {
+                engine = cls.substr(vizPrefix.length);
+            }
+        });
+        var image = new DOMParser().parseFromString(Viz(x.innerText, {format:&quot;svg&quot;, engine:engine}), &quot;image/svg+xml&quot;);
+        x.parentNode.insertBefore(image.documentElement, x);
+        x.style.display = 'none'
+        x.parentNode.style.backgroundColor = &quot;white&quot;
+    });
+})();
+&lt;/script&gt;
+{{ end }}
+</code></pre>
+
+<h2 id="example-1">example</h2>
+
+<p><strong>code</strong></p>
+
+<pre><code>    ```viz-dot
+    digraph g { 
+    node[shape=&quot;circle&quot; , label=&quot;&quot;, width=0.2, height=0.2]
+    l1[xlabel=&quot;v\(s\)&quot;]
+    l21[xlabel=&quot;a&quot;, width=0.1, height=0.1 , style=filled]
+    l22[width=0.1, height=0.1, style=filled]
+    l31[xlabel=&quot;v\(s'\)&quot;]
+
+    l1 -&gt; l21
+    l1 -&gt; l22
+    l21 -&gt; l31 [xlabel=&quot;r&quot;]
+    l21 -&gt; l32
+    l22 -&gt; l33
+    l22 -&gt; l34
+    }
+    ```
+</code></pre>
+
+<p><strong>result</strong></p>
+
+<pre><code class="language-viz-dot">digraph g { 
+   node[shape=&quot;circle&quot; , label=&quot;&quot;, width=0.2, height=0.2]
+   l1[xlabel=&quot;v\(s\)&quot;]
+   l21[xlabel=&quot;a&quot;, width=0.1, height=0.1 , style=filled]
+   l22[width=0.1, height=0.1, style=filled]
+   l31[xlabel=&quot;v\(s'\)&quot;]
+
+   l1 -&gt; l21
+   l1 -&gt; l22
+   l21 -&gt; l31 [xlabel=&quot;r&quot;]
+   l21 -&gt; l32
+   l22 -&gt; l33
+   l22 -&gt; l34
+}
+</code></pre>
+
+    </div>
+
+    
+
+
+    
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="/">zhoumingjun</a></h5>
+      
+      <p class="card-text" itemprop="description">My work interests include devops, gaming and programmable matter.</p>
+      <ul class="network-icon" aria-hidden="true">
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
 
       
 

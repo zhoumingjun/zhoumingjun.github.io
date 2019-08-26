@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>zhoumingjun | zhoumingjun&#39;s website</title>
+    <link>/authors/zhoumingjun/</link>
+      <atom:link href="/authors/zhoumingjun/index.xml" rel="self" type="application/rss+xml" />
+    <description>zhoumingjun</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 26 Aug 2019 03:25:42 +0800</lastBuildDate>
+    <image>
+      <url>/img/logo.png</url>
+      <title>zhoumingjun</title>
+      <link>/authors/zhoumingjun/</link>
+    </image>
+    
+    <item>
+      <title>dotfiles</title>
+      <link>/project/dotfiles/</link>
+      <pubDate>Mon, 26 Aug 2019 02:13:01 +0800</pubDate>
+      <guid>/project/dotfiles/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Adr-Tools</title>
+      <link>/project/adr-tools/</link>
+      <pubDate>Mon, 26 Aug 2019 03:22:38 +0800</pubDate>
+      <guid>/project/adr-tools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Darwin Ansible Playbooks</title>
+      <link>/project/darwin-ansible-playbooks/</link>
+      <pubDate>Mon, 26 Aug 2019 03:25:42 +0800</pubDate>
+      <guid>/project/darwin-ansible-playbooks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rock64 Ansible Playbooks</title>
+      <link>/project/rock64-ansible-playbooks/</link>
+      <pubDate>Mon, 26 Aug 2019 03:25:35 +0800</pubDate>
+      <guid>/project/rock64-ansible-playbooks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu Ansible Playbooks</title>
+      <link>/project/ubuntu-ansible-playbooks/</link>
+      <pubDate>Mon, 26 Aug 2019 03:25:25 +0800</pubDate>
+      <guid>/project/ubuntu-ansible-playbooks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Arch Ansible Playbook</title>
+      <link>/project/arch-ansible-playbook/</link>
+      <pubDate>Mon, 26 Aug 2019 03:25:14 +0800</pubDate>
+      <guid>/project/arch-ansible-playbook/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

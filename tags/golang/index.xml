@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>golang | zhoumingjun&#39;s website</title>
+    <link>/tags/golang/</link>
+      <atom:link href="/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    <description>golang</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 20 Nov 2018 05:18:14 +0000</lastBuildDate>
+    <image>
+      <url>/img/logo.png</url>
+      <title>golang</title>
+      <link>/tags/golang/</link>
+    </image>
+    
+    <item>
+      <title>golang</title>
+      <link>/kb/golang/</link>
+      <pubDate>Tue, 20 Nov 2018 05:18:14 +0000</pubDate>
+      <guid>/kb/golang/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

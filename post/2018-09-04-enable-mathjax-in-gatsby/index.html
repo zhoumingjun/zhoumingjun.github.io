@@ -28,10 +28,12 @@
   
     
   
-  <meta name="description" content="">
+  <meta name="description" content="how to enable mathjax in gatsby Steps 1. Configure gatsby-config.js // In your gatsby-config.js plugins: [ { resolve: `gatsby-transformer-remark`, options: { plugins: [ `gatsby-remark-mathjax`, ], }, }, ],  2. Customize html.js Follows the official document
+Here is my html.js
+import React from &#39;react&#39;; import PropTypes from &#39;prop-types&#39;; const MathJaxConfig = ` window.MathJax = { tex2jax: { inlineMath: [[&#39;$&#39;, &#39;$&#39;] ], displayMath: [[&#39;$$&#39;, &#39;$$&#39;] ], processEscapes: true, processEnvironments: true, skipTags: [&#39;script&#39;, &#39;noscript&#39;, &#39;style&#39;, &#39;textarea&#39;, &#39;pre&#39;], TeX: { equationNumbers: {autoNumber: &#39;AMS&#39;}, extensions: [&#39;AMSmath.">
 
   
-  <link rel="alternate" hreflang="en-us" href="/404.html">
+  <link rel="alternate" hreflang="en-us" href="/post/2018-09-04-enable-mathjax-in-gatsby/">
 
   
 
@@ -96,7 +98,7 @@
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/404.html">
+  <link rel="canonical" href="/post/2018-09-04-enable-mathjax-in-gatsby/">
 
   
   
@@ -109,12 +111,17 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="zhoumingjun&#39;s website">
-  <meta property="og:url" content="/404.html">
-  <meta property="og:title" content="404 Page not found | zhoumingjun&#39;s website">
-  <meta property="og:description" content=""><meta property="og:image" content="/img/logo.png">
+  <meta property="og:url" content="/post/2018-09-04-enable-mathjax-in-gatsby/">
+  <meta property="og:title" content="Enable mathjax in gatsby | zhoumingjun&#39;s website">
+  <meta property="og:description" content="how to enable mathjax in gatsby Steps 1. Configure gatsby-config.js // In your gatsby-config.js plugins: [ { resolve: `gatsby-transformer-remark`, options: { plugins: [ `gatsby-remark-mathjax`, ], }, }, ],  2. Customize html.js Follows the official document
+Here is my html.js
+import React from &#39;react&#39;; import PropTypes from &#39;prop-types&#39;; const MathJaxConfig = ` window.MathJax = { tex2jax: { inlineMath: [[&#39;$&#39;, &#39;$&#39;] ], displayMath: [[&#39;$$&#39;, &#39;$$&#39;] ], processEscapes: true, processEnvironments: true, skipTags: [&#39;script&#39;, &#39;noscript&#39;, &#39;style&#39;, &#39;textarea&#39;, &#39;pre&#39;], TeX: { equationNumbers: {autoNumber: &#39;AMS&#39;}, extensions: [&#39;AMSmath."><meta property="og:image" content="/img/logo.png">
   <meta property="twitter:image" content="/img/logo.png"><meta property="og:locale" content="en-us">
   
     
+      <meta property="article:published_time" content="2018-09-04T06:30:28&#43;00:00">
+    
+    <meta property="article:modified_time" content="2018-09-04T06:30:28&#43;00:00">
   
 
   
@@ -126,7 +133,7 @@
 
 
 
-  <title>404 Page not found | zhoumingjun&#39;s website</title>
+  <title>Enable mathjax in gatsby | zhoumingjun&#39;s website</title>
 
 </head>
 
@@ -315,51 +322,356 @@
 </nav>
 
 
-  <div class="universal-wrapper pt-3">
-
-  <h1>Page not found</h1>
-
-  
-  
-  <form class="d-flex align-items-center mb-3">
-    <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
-  </form>
-  
+  <article class="article" itemscope itemtype="http://schema.org/Article">
 
   
 
-  <p>Perhaps you were looking for one of these?</p>
+
+
+
+
+
+
+
+
+
+
+
+  
 
   
   
   
-  <h2>Latest</h2>
-  <ul>
+<div class="article-container pt-3">
+  <h1 itemprop="name">Enable mathjax in gatsby</h1>
+
+  
+
+  
     
-      <li><a href="/project/dotfiles/">dotfiles</a></li>
+
+
+
+<meta content="2018-09-04 06:30:28 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2018-09-04 06:30:28 &#43;0000 UTC" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
     
-      <li><a href="/project/adr-tools/">Adr-Tools</a></li>
     
-      <li><a href="/project/darwin-ansible-playbooks/">Darwin Ansible Playbooks</a></li>
+      
     
-      <li><a href="/project/rock64-ansible-playbooks/">Rock64 Ansible Playbooks</a></li>
+    <time>Sep 4, 2018</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    1 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+
+  
     
-      <li><a href="/project/ubuntu-ansible-playbooks/">Ubuntu Ansible Playbooks</a></li>
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
     
-      <li><a href="/project/arch-ansible-playbook/">Arch Ansible Playbook</a></li>
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/post/2018-09-04-enable-mathjax-in-gatsby/&amp;text=Enable%20mathjax%20in%20gatsby" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
     
-      <li><a href="/kb/golang/">golang</a></li>
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/post/2018-09-04-enable-mathjax-in-gatsby/&amp;t=Enable%20mathjax%20in%20gatsby" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
     
-      <li><a href="/kb/openapi/">openapi</a></li>
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Enable%20mathjax%20in%20gatsby&amp;body=/post/2018-09-04-enable-mathjax-in-gatsby/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
     
-      <li><a href="/kb/k8s/">k8s</a></li>
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/post/2018-09-04-enable-mathjax-in-gatsby/&amp;title=Enable%20mathjax%20in%20gatsby" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
     
-      <li><a href="/note/rpi/">RaspberryPi zero w</a></li>
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Enable%20mathjax%20in%20gatsby%20/post/2018-09-04-enable-mathjax-in-gatsby/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/post/2018-09-04-enable-mathjax-in-gatsby/&amp;title=Enable%20mathjax%20in%20gatsby" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
     
   </ul>
+</div>
+
+
   
 
 </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<h1 id="how-to-enable-mathjax-in-gatsby">how to enable mathjax in gatsby</h1>
+
+<h1 id="steps">Steps</h1>
+
+<h2 id="1-configure-gatsby-config-js">1. Configure gatsby-config.js</h2>
+
+<pre><code>// In your gatsby-config.js
+plugins: [
+  {
+    resolve: `gatsby-transformer-remark`,
+    options: {
+      plugins: [
+        `gatsby-remark-mathjax`,
+      ],
+    },
+  },
+],
+</code></pre>
+
+<h2 id="2-customize-html-js">2. Customize html.js</h2>
+
+<p>Follows the <a href="https://www.gatsbyjs.org/docs/custom-html/" target="_blank">official document</a></p>
+
+<p>Here is my <a href="https://github.com/zhoumingjun/zhoumingjun.github.io/blob/source/src/html.js" target="_blank">html.js</a></p>
+
+<pre><code class="language-javascript">import React from 'react';
+import PropTypes from 'prop-types';
+
+const MathJaxConfig = `
+window.MathJax = {
+  tex2jax: {
+    inlineMath: [['$', '$'] ],
+    displayMath: [['$$', '$$'] ],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: {
+      equationNumbers: {autoNumber: 'AMS'},
+      extensions: ['AMSmath.js', 'AMSsymbols.js', 'color.js'],
+    },
+  }
+};
+`;
+
+export default class HTML extends React.Component {
+  render() {
+    return (
+      &lt;html {...this.props.htmlAttributes}&gt;
+        &lt;head&gt;
+          &lt;meta charSet=&quot;utf-8&quot; /&gt;
+          &lt;meta httpEquiv=&quot;x-ua-compatible&quot; content=&quot;ie=edge&quot; /&gt;
+          &lt;meta
+            name=&quot;viewport&quot;
+            content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;
+          /&gt;
+          {this.props.headComponents}
+        &lt;/head&gt;
+        &lt;body {...this.props.bodyAttributes}&gt;
+          {this.props.preBodyComponents}
+          &lt;div
+            key={`body`}
+            id=&quot;___gatsby&quot;
+            dangerouslySetInnerHTML={{__html: this.props.body}}
+          /&gt;
+          {this.props.postBodyComponents}
+          &lt;script dangerouslySetInnerHTML={{__html: MathJaxConfig}} /&gt;
+          &lt;script
+            defer
+            src=&quot;https://cdn.bootcss.com/mathjax/2.7.4/latest.js?config=TeX-AMS_SVG&quot;
+          /&gt;
+        &lt;/body&gt;
+      &lt;/html&gt;
+    );
+  }
+}
+
+HTML.propTypes = {
+  htmlAttributes: PropTypes.object,
+  headComponents: PropTypes.array,
+  bodyAttributes: PropTypes.object,
+  preBodyComponents: PropTypes.array,
+  body: PropTypes.string,
+  postBodyComponents: PropTypes.array,
+};
+
+</code></pre>
+
+<h2 id="3-configure-gatsby-browser-js">3. Configure gatsby-browser.js</h2>
+
+<p>MathJax will process all math equations when the location changed.</p>
+
+<p>Here is my <a href="https://github.com/zhoumingjun/zhoumingjun.github.io/blob/source/gatsby-browser.js" target="_blank">gatsby-brower.js</a></p>
+
+<pre><code>exports.onRouteUpdate = ({location}) =&gt; {
+  console.log('new pathname', location.pathname);
+  if (window.MathJax !== undefined) {
+    MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
+  }
+};
+
+</code></pre>
+
+    </div>
+
+    
+
+
+    
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/gatsby/">gatsby</a>
+  
+  <a class="badge badge-light" href="/tags/mathjax/">mathjax</a>
+  
+</div>
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="/">zhoumingjun</a></h5>
+      
+      <p class="card-text" itemprop="description">My work interests include devops, gaming and programmable matter.</p>
+      <ul class="network-icon" aria-hidden="true">
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
 
       
 

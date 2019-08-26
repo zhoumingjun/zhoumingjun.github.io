@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts | zhoumingjun&#39;s website</title>
+    <link>/post/</link>
+      <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <description>Posts</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 04 Sep 2018 06:30:28 +0000</lastBuildDate>
+    <image>
+      <url>/img/logo.png</url>
+      <title>Posts</title>
+      <link>/post/</link>
+    </image>
+    
+    <item>
+      <title>Enable mathjax in gatsby</title>
+      <link>/post/2018-09-04-enable-mathjax-in-gatsby/</link>
+      <pubDate>Tue, 04 Sep 2018 06:30:28 +0000</pubDate>
+      <guid>/post/2018-09-04-enable-mathjax-in-gatsby/</guid>
+      <description>
+
+&lt;h1 id=&#34;how-to-enable-mathjax-in-gatsby&#34;&gt;how to enable mathjax in gatsby&lt;/h1&gt;
+
+&lt;h1 id=&#34;steps&#34;&gt;Steps&lt;/h1&gt;
+
+&lt;h2 id=&#34;1-configure-gatsby-config-js&#34;&gt;1. Configure gatsby-config.js&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;// In your gatsby-config.js
+plugins: [
+  {
+    resolve: `gatsby-transformer-remark`,
+    options: {
+      plugins: [
+        `gatsby-remark-mathjax`,
+      ],
+    },
+  },
+],
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;2-customize-html-js&#34;&gt;2. Customize html.js&lt;/h2&gt;
+
+&lt;p&gt;Follows the &lt;a href=&#34;https://www.gatsbyjs.org/docs/custom-html/&#34; target=&#34;_blank&#34;&gt;official document&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Here is my &lt;a href=&#34;https://github.com/zhoumingjun/zhoumingjun.github.io/blob/source/src/html.js&#34; target=&#34;_blank&#34;&gt;html.js&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;import React from &#39;react&#39;;
+import PropTypes from &#39;prop-types&#39;;
+
+const MathJaxConfig = `
+window.MathJax = {
+  tex2jax: {
+    inlineMath: [[&#39;$&#39;, &#39;$&#39;] ],
+    displayMath: [[&#39;$$&#39;, &#39;$$&#39;] ],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: [&#39;script&#39;, &#39;noscript&#39;, &#39;style&#39;, &#39;textarea&#39;, &#39;pre&#39;],
+    TeX: {
+      equationNumbers: {autoNumber: &#39;AMS&#39;},
+      extensions: [&#39;AMSmath.js&#39;, &#39;AMSsymbols.js&#39;, &#39;color.js&#39;],
+    },
+  }
+};
+`;
+
+export default class HTML extends React.Component {
+  render() {
+    return (
+      &amp;lt;html {...this.props.htmlAttributes}&amp;gt;
+        &amp;lt;head&amp;gt;
+          &amp;lt;meta charSet=&amp;quot;utf-8&amp;quot; /&amp;gt;
+          &amp;lt;meta httpEquiv=&amp;quot;x-ua-compatible&amp;quot; content=&amp;quot;ie=edge&amp;quot; /&amp;gt;
+          &amp;lt;meta
+            name=&amp;quot;viewport&amp;quot;
+            content=&amp;quot;width=device-width, initial-scale=1, shrink-to-fit=no&amp;quot;
+          /&amp;gt;
+          {this.props.headComponents}
+        &amp;lt;/head&amp;gt;
+        &amp;lt;body {...this.props.bodyAttributes}&amp;gt;
+          {this.props.preBodyComponents}
+          &amp;lt;div
+            key={`body`}
+            id=&amp;quot;___gatsby&amp;quot;
+            dangerouslySetInnerHTML={{__html: this.props.body}}
+          /&amp;gt;
+          {this.props.postBodyComponents}
+          &amp;lt;script dangerouslySetInnerHTML={{__html: MathJaxConfig}} /&amp;gt;
+          &amp;lt;script
+            defer
+            src=&amp;quot;https://cdn.bootcss.com/mathjax/2.7.4/latest.js?config=TeX-AMS_SVG&amp;quot;
+          /&amp;gt;
+        &amp;lt;/body&amp;gt;
+      &amp;lt;/html&amp;gt;
+    );
+  }
+}
+
+HTML.propTypes = {
+  htmlAttributes: PropTypes.object,
+  headComponents: PropTypes.array,
+  bodyAttributes: PropTypes.object,
+  preBodyComponents: PropTypes.array,
+  body: PropTypes.string,
+  postBodyComponents: PropTypes.array,
+};
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;3-configure-gatsby-browser-js&#34;&gt;3. Configure gatsby-browser.js&lt;/h2&gt;
+
+&lt;p&gt;MathJax will process all math equations when the location changed.&lt;/p&gt;
+
+&lt;p&gt;Here is my &lt;a href=&#34;https://github.com/zhoumingjun/zhoumingjun.github.io/blob/source/gatsby-browser.js&#34; target=&#34;_blank&#34;&gt;gatsby-brower.js&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;exports.onRouteUpdate = ({location}) =&amp;gt; {
+  console.log(&#39;new pathname&#39;, location.pathname);
+  if (window.MathJax !== undefined) {
+    MathJax.Hub.Queue([&#39;Typeset&#39;, MathJax.Hub]);
+  }
+};
+
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Install cuda9.2 and cudnn7.2 on ubuntu 18.04</title>
+      <link>/post/2018-08-23-install-cuda-and-cudnn-on-ubuntu18.04/</link>
+      <pubDate>Thu, 23 Aug 2018 15:01:49 +0000</pubDate>
+      <guid>/post/2018-08-23-install-cuda-and-cudnn-on-ubuntu18.04/</guid>
+      <description>
+
+&lt;h1 id=&#34;overview&#34;&gt;Overview&lt;/h1&gt;
+
+&lt;p&gt;To run tensorflow/pytorch with gpu, I need to install cuda and cudnn.
+It&amp;rsquo;s really tricky, but finally I found the method.&lt;/p&gt;
+
+&lt;p&gt;The secret is&lt;br /&gt;
+* install the graphics driver from a PPA
+* install the toolkit from the run file&lt;/p&gt;
+
+&lt;h1 id=&#34;packages&#34;&gt;packages&lt;/h1&gt;
+
+&lt;p&gt;The following packages need to be installed.
+* nvidia graphics driver&lt;br /&gt;
+* cuda 9.2&lt;br /&gt;
+* cudnn 7.2&lt;/p&gt;
+
+&lt;p&gt;For nvidia graphics driver, there are two sources:
+1. raphics-drivers/ppa:&lt;br /&gt;
+&lt;a href=&#34;https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa&#34; target=&#34;_blank&#34;&gt;https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa&lt;/a&gt;&lt;br /&gt;
+the package is nvidia-driver-396&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;nvidia official repo
+&lt;a href=&#34;https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1710/x86_64/cuda-drivers_396.44-1_amd64.deb&#34; target=&#34;_blank&#34;&gt;https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1710/x86_64/cuda-drivers_396.44-1_amd64.deb&lt;/a&gt;&lt;br /&gt;
+the package is cuda-drivers&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;In fact the nvidia cuda-drivers is for ubuntu 17.10, and there are no official nvidia repo for ubuntu 18.04 currently.&lt;br /&gt;
+Here we need to select option 1, I have try option2, but there are conflict with other packages.&lt;br /&gt;
+I install the cuda-drivers with &amp;ldquo;&amp;ndash;force-overwrite&amp;rdquo;, but gdm can&amp;rsquo;t be launched normally.&lt;/p&gt;
+
+&lt;p&gt;For cuda 9.2, it can be download directly from nvidia website.&lt;/p&gt;
+
+&lt;p&gt;For cudnn7.2, &lt;strong&gt;it can be download from nvidia machine-learning repo without login&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;installation-steps&#34;&gt;installation steps&lt;/h1&gt;
+
+&lt;p&gt;install nvidia graphics driver&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt update
+sudo apt-get install nvidia-driver-396
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;install cuda&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# dowload installer
+aria2c https://developer.nvidia.com/compute/cuda/9.2/Prod2/local_installers/cuda_9.2.148_396.37_linux 
+
+aria2c https://developer.nvidia.com/compute/cuda/9.2/Prod2/patches/1/cuda_9.2.148.1_linux  
+
+# install cuda9.2 and patch
+chmod +x cuda*
+
+sudo ./cuda_9.2.148_396.37_linux.run --verbose --silent --toolkit --override
+
+sudo ./cuda_9.2.148.1_linux.run --silent --accept-eula
+
+# add to ld
+sudo echo &amp;quot;/usr/local/cuda-9.2/lib64&amp;quot; &amp;gt;&amp;gt; /etc/ld.so.conf
+sudo ldconfig
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;install cudnn&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#download packages
+aria2c https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64/libcudnn7_7.2.1.38-1+cuda9.2_amd64.deb
+
+aria2c https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64/libcudnn7-dev_7.2.1.38-1+cuda9.2_amd64.deb    
+
+# install
+sudo dpkg -i libcudnn7_7.2.1.38-1+cuda9.2_amd64.deb
+sudo dpkg -i libcudnn7-dev_7.2.1.38-1+cuda9.2_amd64.deb
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Migrate from Hugo to Gatsby</title>
+      <link>/post/2018-08-14-migrate-from-hugo-to-gatsby/</link>
+      <pubDate>Tue, 14 Aug 2018 10:52:17 +0000</pubDate>
+      <guid>/post/2018-08-14-migrate-from-hugo-to-gatsby/</guid>
+      <description>&lt;p&gt;I decided to migrate my blog from hugo to gatsby.
+Gatsby is based on react and misc plugins, and it works in the same way as normal web development.
+But there are still some works to do, such as mathjax support.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>lvs keepalived</title>
+      <link>/post/2017-03-22-lvs-keepalived/</link>
+      <pubDate>Wed, 22 Mar 2017 17:23:36 +0800</pubDate>
+      <guid>/post/2017-03-22-lvs-keepalived/</guid>
+      <description>
+
+&lt;h1 id=&#34;introduction&#34;&gt;introduction&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;lvs:&lt;br /&gt;
+&lt;a href=&#34;http://www.linuxvirtualserver.org/&#34; target=&#34;_blank&#34;&gt;lvs&lt;/a&gt; is a kind of L4 load balancer.&lt;br /&gt;
+some references here:
+&lt;a href=&#34;http://www.austintek.com/LVS/LVS-HOWTO/HOWTO/index.html&#34; target=&#34;_blank&#34;&gt;howto&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;keepalived:&lt;br /&gt;
+&lt;a href=&#34;http://www.keepalived.org/&#34; target=&#34;_blank&#34;&gt;keepalived&lt;/a&gt; is a facilitator for lvs&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;configuration&#34;&gt;configuration&lt;/h1&gt;
+
+&lt;p&gt;topology:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;DIP: 192.168.2.172&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;RIP[1]: 192.168.2.173&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;RIP[2]: 192.168.2.174&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;VIP: 192.168.2.175&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;lvs-only&#34;&gt;lvs only&lt;/h2&gt;
+
+&lt;p&gt;director side&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#install ipvsadm
+yum -y install ipvsadm
+echo &#39;net.ipv4.ip_forward = 1&#39; &amp;gt;&amp;gt; /etc/sysctl.conf 
+sysctl -p
+touch /etc/sysconfig/ipvsadm 
+systemctl start ipvsadm 
+systemctl enable ipvsadm 
+
+# add vip
+ifconfig em1:0 192.168.2.175 netmask 255.255.255.255
+
+# configuration
+ipvsadm -C
+ipvsadm -A -t 192.168.2,175:80 -s rr
+ipvsadm -a -t 192.168.2,175:80 -r 192.168.2,173:80 -g
+ipvsadm -a -t 192.168.2,175:80 -r 192.168.2,174:80 -g
+ipvsadm -l 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;realserver side&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# add vip
+ifconfig lo:0 192.168.2.175 netmask 255.255.255.255 broadcast 192.168.2.175 
+
+# disable VIP arp
+echo &amp;quot;1&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/lo/arp_ignore
+echo &amp;quot;2&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/lo/arp_announce
+echo &amp;quot;1&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/all/arp_ignore
+echo &amp;quot;2&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/all/arp_announce
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;lvs-keepalived&#34;&gt;lvs + keepalived&lt;/h2&gt;
+
+&lt;p&gt;director side&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;global_defs {              
+    router_id LVS_MASTER   
+}
+vrrp_instance VI_1 {       
+    state MASTER           
+    interface em1          
+    virtual_router_id 51   
+    priority 100           
+    advert_int 1           
+    authentication {       
+    auth_type PASS
+    auth_pass 1111
+    }
+virtual_ipaddress {        
+    192.168.2.175
+    }
+}
+virtual_server 192.168.2.175 80 {
+    delay_loop 6            
+    lb_algo wrr             
+    lb_kind DR              
+    nat_mask 255.255.255.0  
+    #persistence_timeout 5  
+    protocol TCP            
+    real_server 192.168.2.173 80 {      
+        weight 3                   
+        TCP_CHECK {               
+        connect_timeout 5        
+        nb_get_retry 3
+        delay_before_retry 3
+        connect_port 80
+        }
+    }
+    real_server 192.168.2.174 80 {
+        weight 3
+        TCP_CHECK {
+        connect_timeout 10
+        nb_get_retry 3
+        delay_before_retry 3
+        connect_port 80
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;realserver side&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# add vip
+ifconfig lo:0 192.168.2.175 netmask 255.255.255.255 broadcast 192.168.2.175 
+
+# disable VIP arp
+echo &amp;quot;1&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/lo/arp_ignore
+echo &amp;quot;2&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/lo/arp_announce
+echo &amp;quot;1&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/all/arp_ignore
+echo &amp;quot;2&amp;quot; &amp;gt; /proc/sys/net/ipv4/conf/all/arp_announce
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Using MathJax and Graphviz with Hugo</title>
+      <link>/post/2017-03-10-using-mathjax-viz-with-hugo/</link>
+      <pubDate>Fri, 10 Mar 2017 11:40:12 +0800</pubDate>
+      <guid>/post/2017-03-10-using-mathjax-viz-with-hugo/</guid>
+      <description>
+
+&lt;h1 id=&#34;mathjax-support&#34;&gt;MathJax support&lt;/h1&gt;
+
+&lt;h2 id=&#34;configuration&#34;&gt;configuration&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gohugo.io/tutorials/mathjax/&#34; target=&#34;_blank&#34;&gt;Hugo doc&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://docs.mathjax.org/en/latest/configuration.html?#using-plain-javascript&#34; target=&#34;_blank&#34;&gt;MathJax doc&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!-- LaTeX math rendering --&amp;gt;
+{{ if  .Params.math   }}
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+    window.MathJax = {
+        tex2jax: {
+            inlineMath: [[&#39;$&#39;,&#39;$&#39;], [&#39;\\(&#39;,&#39;\\)&#39;]],
+            displayMath: [[&#39;$$&#39;,&#39;$$&#39;], [&#39;\[&#39;,&#39;\]&#39;]],
+            processEscapes: true,
+            processEnvironments: true,
+            skipTags: [&#39;script&#39;, &#39;noscript&#39;, &#39;style&#39;, &#39;textarea&#39;, &#39;pre&#39;],
+            TeX: { equationNumbers: { autoNumber: &amp;quot;AMS&amp;quot; },
+                extensions: [&amp;quot;AMSmath.js&amp;quot;, &amp;quot;AMSsymbols.js&amp;quot;, &amp;quot;color.js&amp;quot;] }
+        },
+        AuthorInit: function () {
+            MathJax.Hub.Register.StartupHook(&amp;quot;Begin&amp;quot;,function () {
+                MathJax.Hub.Queue(function() {
+                    var all = MathJax.Hub.getAllJax(), i;
+                    for(i = 0; i &amp;lt; all.length; i += 1) {
+                        all[i].SourceElement().parentNode.className += &#39; has-jax&#39;;
+                    }
+                })
+            });
+        }
+    };
+&amp;lt;/script&amp;gt;
+&amp;lt;script  type=&amp;quot;text/javascript&amp;quot;
+    src=&amp;quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML&amp;quot;&amp;gt;
+&amp;lt;/script&amp;gt;
+{{ end }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;example&#34;&gt;example&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;code&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    $ v_\pi(s) = \sum_{a \in \mathcal{A}} \pi(a|s) q_\pi(s,a)  $
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;result&lt;/strong&gt;&lt;br /&gt;
+$ v&lt;em&gt;\pi(s) = \sum&lt;/em&gt;{a \in \mathcal{A}} \pi(a|s) q_\pi(s,a)  $&lt;/p&gt;
+
+&lt;h1 id=&#34;graphviz-support&#34;&gt;graphviz support&lt;/h1&gt;
+
+&lt;h2 id=&#34;configuration-1&#34;&gt;configuration&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!-- graphviz renderring --&amp;gt;
+{{ if  .Params.viz}}
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;//cdnjs.cloudflare.com/ajax/libs/viz.js/1.7.1/viz.js&amp;quot;&amp;gt; &amp;lt;/script&amp;gt;
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+(function(){
+    var vizPrefix = &amp;quot;language-viz-&amp;quot;;
+    Array.prototype.forEach.call(document.querySelectorAll(&amp;quot;[class^=&amp;quot; + vizPrefix + &amp;quot;]&amp;quot;), function(x){
+        var engine;
+        x.getAttribute(&amp;quot;class&amp;quot;).split(&amp;quot; &amp;quot;).forEach(function(cls){
+            if (cls.startsWith(vizPrefix)) {
+                engine = cls.substr(vizPrefix.length);
+            }
+        });
+        var image = new DOMParser().parseFromString(Viz(x.innerText, {format:&amp;quot;svg&amp;quot;, engine:engine}), &amp;quot;image/svg+xml&amp;quot;);
+        x.parentNode.insertBefore(image.documentElement, x);
+        x.style.display = &#39;none&#39;
+        x.parentNode.style.backgroundColor = &amp;quot;white&amp;quot;
+    });
+})();
+&amp;lt;/script&amp;gt;
+{{ end }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;example-1&#34;&gt;example&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;code&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    ```viz-dot
+    digraph g { 
+    node[shape=&amp;quot;circle&amp;quot; , label=&amp;quot;&amp;quot;, width=0.2, height=0.2]
+    l1[xlabel=&amp;quot;v\(s\)&amp;quot;]
+    l21[xlabel=&amp;quot;a&amp;quot;, width=0.1, height=0.1 , style=filled]
+    l22[width=0.1, height=0.1, style=filled]
+    l31[xlabel=&amp;quot;v\(s&#39;\)&amp;quot;]
+
+    l1 -&amp;gt; l21
+    l1 -&amp;gt; l22
+    l21 -&amp;gt; l31 [xlabel=&amp;quot;r&amp;quot;]
+    l21 -&amp;gt; l32
+    l22 -&amp;gt; l33
+    l22 -&amp;gt; l34
+    }
+    ```
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;result&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-viz-dot&#34;&gt;digraph g { 
+   node[shape=&amp;quot;circle&amp;quot; , label=&amp;quot;&amp;quot;, width=0.2, height=0.2]
+   l1[xlabel=&amp;quot;v\(s\)&amp;quot;]
+   l21[xlabel=&amp;quot;a&amp;quot;, width=0.1, height=0.1 , style=filled]
+   l22[width=0.1, height=0.1, style=filled]
+   l31[xlabel=&amp;quot;v\(s&#39;\)&amp;quot;]
+
+   l1 -&amp;gt; l21
+   l1 -&amp;gt; l22
+   l21 -&amp;gt; l31 [xlabel=&amp;quot;r&amp;quot;]
+   l21 -&amp;gt; l32
+   l22 -&amp;gt; l33
+   l22 -&amp;gt; l34
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>First Post</title>
+      <link>/post/2017-03-06-first-post/</link>
+      <pubDate>Mon, 06 Mar 2017 16:03:35 +0800</pubDate>
+      <guid>/post/2017-03-06-first-post/</guid>
+      <description>&lt;p&gt;I build this site to boost my daily work.&lt;/p&gt;
+
+&lt;p&gt;This website is powered by &lt;a href=&#34;https://github.com/gcushen/hugo-academic&#34; target=&#34;_blank&#34;&gt;Academic&lt;/a&gt;, &lt;a href=&#34;https://gohugo.io&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt;, and &lt;a href=&#34;https://github.com/&#34; target=&#34;_blank&#34;&gt;GitHub Pages&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

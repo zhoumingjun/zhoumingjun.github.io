@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>shell | zhoumingjun&#39;s website</title>
+    <link>/tags/shell/</link>
+      <atom:link href="/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+    <description>shell</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 26 Aug 2019 03:22:38 +0800</lastBuildDate>
+    <image>
+      <url>/img/logo.png</url>
+      <title>shell</title>
+      <link>/tags/shell/</link>
+    </image>
+    
+    <item>
+      <title>dotfiles</title>
+      <link>/project/dotfiles/</link>
+      <pubDate>Mon, 26 Aug 2019 02:13:01 +0800</pubDate>
+      <guid>/project/dotfiles/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Adr-Tools</title>
+      <link>/project/adr-tools/</link>
+      <pubDate>Mon, 26 Aug 2019 03:22:38 +0800</pubDate>
+      <guid>/project/adr-tools/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

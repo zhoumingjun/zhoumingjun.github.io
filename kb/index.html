@@ -31,7 +31,7 @@
   <meta name="description" content="">
 
   
-  <link rel="alternate" hreflang="en-us" href="/404.html">
+  <link rel="alternate" hreflang="en-us" href="/kb/">
 
   
 
@@ -91,12 +91,14 @@
   
 
   
+  <link rel="alternate" href="/kb/index.xml" type="application/rss+xml" title="zhoumingjun&#39;s website">
+  
 
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/404.html">
+  <link rel="canonical" href="/kb/">
 
   
   
@@ -109,12 +111,12 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="zhoumingjun&#39;s website">
-  <meta property="og:url" content="/404.html">
-  <meta property="og:title" content="404 Page not found | zhoumingjun&#39;s website">
+  <meta property="og:url" content="/kb/">
+  <meta property="og:title" content="Kbs | zhoumingjun&#39;s website">
   <meta property="og:description" content=""><meta property="og:image" content="/img/logo.png">
   <meta property="twitter:image" content="/img/logo.png"><meta property="og:locale" content="en-us">
   
-    
+    <meta property="og:updated_time" content="2018-11-20T05:18:14&#43;00:00">
   
 
   
@@ -126,7 +128,7 @@
 
 
 
-  <title>404 Page not found | zhoumingjun&#39;s website</title>
+  <title>Kbs | zhoumingjun&#39;s website</title>
 
 </head>
 
@@ -315,48 +317,144 @@
 </nav>
 
 
-  <div class="universal-wrapper pt-3">
-
-  <h1>Page not found</h1>
-
-  
-  
-  <form class="d-flex align-items-center mb-3">
-    <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
-  </form>
   
 
+
+
+
+
+
+
+
+
+
+
+
   
 
-  <p>Perhaps you were looking for one of these?</p>
+  
+  
+  
+    
+  
+<div class="universal-wrapper pt-3">
+  <h1 itemprop="name">Kbs</h1>
+
+  
+
+  
+</div>
+
+
+
+<div class="universal-wrapper">
+  
 
   
   
+  <div>
+    <h2><a href="/kb/golang/">golang</a></h2>
+    <div class="article-style">
+      
+    </div>
+  </div>
   
-  <h2>Latest</h2>
-  <ul>
-    
-      <li><a href="/project/dotfiles/">dotfiles</a></li>
-    
-      <li><a href="/project/adr-tools/">Adr-Tools</a></li>
-    
-      <li><a href="/project/darwin-ansible-playbooks/">Darwin Ansible Playbooks</a></li>
-    
-      <li><a href="/project/rock64-ansible-playbooks/">Rock64 Ansible Playbooks</a></li>
-    
-      <li><a href="/project/ubuntu-ansible-playbooks/">Ubuntu Ansible Playbooks</a></li>
-    
-      <li><a href="/project/arch-ansible-playbook/">Arch Ansible Playbook</a></li>
-    
-      <li><a href="/kb/golang/">golang</a></li>
-    
-      <li><a href="/kb/openapi/">openapi</a></li>
-    
-      <li><a href="/kb/k8s/">k8s</a></li>
-    
-      <li><a href="/note/rpi/">RaspberryPi zero w</a></li>
-    
-  </ul>
+  <div>
+    <h2><a href="/kb/openapi/">openapi</a></h2>
+    <div class="article-style">
+      
+       overview https://openapi.tools/
+reference openapi https://apis.guru/awesome-openapi3/
+code generator https://github.com/OpenAPITools/openapi-generator
+mock server 
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="/kb/k8s/">k8s</a></h2>
+    <div class="article-style">
+      
+      references https://github.com/ramitsurana/awesome-kubernetes
+microservice on k8s https://ewanvalentine.io/microservices-in-golang-part-1/
+minikube start with RABC from https://gist.github.com/F21/08bfc2e3592bed1e931ec40b8d2ab6f5
+minikube start &ndash;cache-images &ndash;vm-driver kvm2 &ndash;cpus 4 &ndash;memory 4096 &ndash;extra-config=apiserver.authorization-mode=RBAC
+kubectl create clusterrolebinding add-on-cluster-admin &ndash;clusterrole=cluster-admin &ndash;serviceaccount=kube-system:default
+logs minikube ssh sudo journalctl -u kubelet -f
+download kublet https://kubernetes.io/docs/setup/independent/install-kubeadm/
+RELEASE=&ldquo;$(curl -sSL https://dl.k8s.io/release/stable.txt)&quot;
+mkdir -p /opt/bin cd /opt/bin curl -L &ndash;remote-name-all https://storage.googleapis.com/kubernetes-release/release/${RELEASE}/bin/linux/amd64/{kubeadm,kubelet,kubectl} chmod +x {kubeadm,kubelet,kubectl}
+curl -sSL &ldquo;https://raw.githubusercontent.com/kubernetes/kubernetes/${RELEASE}/build/debs/kubelet.service&quot; | sed &ldquo;s:/usr/bin:/opt/bin:g&rdquo; &gt; /etc/systemd/system/kubelet.service mkdir -p /etc/systemd/system/kubelet.service.d curl -sSL &ldquo;https://raw.githubusercontent.com/kubernetes/kubernetes/${RELEASE}/build/debs/10-kubeadm.conf&quot; | sed &ldquo;s:/usr/bin:/opt/bin:g&rdquo; &gt; /etc/systemd/system/kubelet.
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="/kb/visualization/">visualization</a></h2>
+    <div class="article-style">
+      
+      Visualization
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="/kb/linux/">linux</a></h2>
+    <div class="article-style">
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="/kb/kong/1.openresty/"></a></h2>
+    <div class="article-style">
+      
+      ##
+OpenResty最佳实践 https://legacy.gitbook.com/book/moonbingbing/openresty-best-practices/details
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="/kb/kong/2.kong/"></a></h2>
+    <div class="article-style">
+      
+      install  install official distribution git clone kong
+# clone the Kong repo (inside the vagrant one) git clone https://github.com/Kong/kong # only if you want to develop a custom plugin, also clone the plugin template git clone https://github.com/Kong/kong-plugin  define env
+export KONG_PLUGINS=bundled,myplugin  db schema
+psql -U postgres &lt;&lt;EOF \x CREATE ROLE kong; ALTER ROLE kong WITH login; CREATE DATABASE kong OWNER kong; CREATE DATABASE kong_tests OWNER kong; EOF psql -d kong -U postgres &lt;&lt;EOF \x DROP SCHEMA IF EXISTS public CASCADE; CREATE SCHEMA IF NOT EXISTS public AUTHORIZATION kong; GRANT ALL ON SCHEMA public TO kong; EOF CREATE USER konga; CREATE DATABASE konga OWNER konga; ALTER USER konga WITH PASSWORD 'new_password';  start
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="/kb/web/react/"></a></h2>
+    <div class="article-style">
+      
+      tech stack https://github.com/verekia/js-stack-from-scratch
+01 - Node, Yarn, package.json
+02 - Babel, ES6, ESLint, Flow, Jest, Husky
+03 - Express, Nodemon, PM2
+04 - Webpack, React, HMR
+05 - Redux, Immutable, Fetch
+06 - React Router, Server-Side Rendering, Helmet
+07 - Socket.IO
+08 - Bootstrap, JSS
+09 - Travis, Coveralls, Heroku
+https://github.com/Lemoncode/react-typescript-samples
+real case https://github.com/markerikson/redux-ecosystem-links/blob/master/apps-and-examples.md
+Large open source react/redux projects
+guide https://gist.github.com/datchley/4e0d05c526d532d1b05bf9b48b174faf
+https://marmelab.com/react-admin/Tutorial.html
+https://github.com/piotrwitek/react-redux-typescript-guide
+https://github.com/sw-yx/react-typescript-cheatsheet
+https://github.com/sandstorm/typescript-react-app-kickstart-guide
+boilerplate https://github.com/Can-Sahin/react-boilerplate-typescript.git
+      
+    </div>
+  </div>
+  
+
   
 
 </div>

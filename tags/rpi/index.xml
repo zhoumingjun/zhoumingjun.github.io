@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rpi | zhoumingjun&#39;s website</title>
+    <link>/tags/rpi/</link>
+      <atom:link href="/tags/rpi/index.xml" rel="self" type="application/rss+xml" />
+    <description>rpi</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 15 Oct 2018 08:10:38 +0000</lastBuildDate>
+    <image>
+      <url>/img/logo.png</url>
+      <title>rpi</title>
+      <link>/tags/rpi/</link>
+    </image>
+    
+    <item>
+      <title>RaspberryPi zero w</title>
+      <link>/note/rpi/</link>
+      <pubDate>Mon, 15 Oct 2018 08:10:38 +0000</pubDate>
+      <guid>/note/rpi/</guid>
+      <description>
+
+&lt;h1 id=&#34;introduction&#34;&gt;introduction&lt;/h1&gt;
+
+&lt;h1 id=&#34;config&#34;&gt;config&lt;/h1&gt;
+
+&lt;h2 id=&#34;enable-ssh&#34;&gt;enable ssh&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;cd boot
+touch ssh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;hack-config-txt&#34;&gt;hack config.txt&lt;/h2&gt;
+
+&lt;p&gt;/boot/config.txt&lt;/p&gt;
+
+&lt;p&gt;dtoverlay=dwc2&lt;/p&gt;
+
+&lt;h2 id=&#34;hack-cmdline-txt&#34;&gt;hack cmdline.txt&lt;/h2&gt;
+
+&lt;p&gt;/boot/cmdline.txt&lt;/p&gt;
+
+&lt;p&gt;modules-load=dwc2,g_ether&lt;/p&gt;
+
+&lt;h1 id=&#34;network&#34;&gt;network&lt;/h1&gt;
+
+&lt;h2 id=&#34;set-wireless-configuration&#34;&gt;set wireless configuration&lt;/h2&gt;
+
+&lt;p&gt;find the available wireless ap
+&lt;code&gt;iw dev wlan0 scan&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;cat /etc/wpa_supplicant/wpa_supplicant.conf&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+country=CN
+
+network={
+	ssid=&amp;quot;BBHome&amp;quot;
+	psk=&amp;quot;--&amp;quot;
+}
+
+network={
+	ssid=&amp;quot;Boxin2.4G_2&amp;quot;
+	psk=&amp;quot;--&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;set-static-address&#34;&gt;set static address&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;interface usb0
+metric 300
+static ip_address=192.168.7.2
+static routers=192.168.7.1
+static domain_name_servers=192.168.7.1
+
+interface wlan0
+metric 200
+static ip_address=10.0.0.200/24
+static routers=10.0.0.99
+static domain_name_servers=10.0.0.99
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;share-network-from-usb0&#34;&gt;share network from usb0&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo ip addr change 192.168.7.1/24 dev usb0
+echo 1 &amp;gt; /proc/sys/net/ipv4/ip_forward
+sudo iptables -t nat -A POSTROUTING -o enp4s0 -j MASQUERADE
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
