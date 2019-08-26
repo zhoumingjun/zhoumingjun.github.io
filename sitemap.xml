@@ -13,9 +13,28 @@
   </url>
   
   <url>
+    <loc>/post/2019-08-26-change-to-hugo-and-adoc/</loc>
+    <lastmod>2019-08-26T22:32:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2019-08-26T22:32:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2019-08-26T22:32:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/ansible/</loc>
+    <lastmod>2019-08-26T03:25:42+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/authors/</loc>
     <lastmod>2019-08-26T03:25:42+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -26,31 +45,16 @@
   <url>
     <loc>/project/</loc>
     <lastmod>2019-08-26T03:25:42+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/</loc>
     <lastmod>2019-08-26T03:25:42+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/ansible/</loc>
-    <lastmod>2019-08-26T03:25:42+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/zhoumingjun/</loc>
     <lastmod>2019-08-26T03:25:42+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2019-08-26T03:25:42+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -71,19 +75,11 @@
   <url>
     <loc>/tags/shell/</loc>
     <lastmod>2019-08-26T03:22:38+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/kb/</loc>
-    <lastmod>2018-11-20T05:18:14+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/golang/</loc>
     <lastmod>2018-11-20T05:18:14+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -92,9 +88,13 @@
   </url>
   
   <url>
+    <loc>/kb/</loc>
+    <lastmod>2018-11-20T05:18:14+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/tags/openapi/</loc>
     <lastmod>2018-11-06T02:16:07+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -105,7 +105,6 @@
   <url>
     <loc>/tags/k8s/</loc>
     <lastmod>2018-10-31T09:11:17+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -116,7 +115,6 @@
   <url>
     <loc>/note/</loc>
     <lastmod>2018-10-15T08:10:38+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -127,7 +125,11 @@
   <url>
     <loc>/tags/rpi/</loc>
     <lastmod>2018-10-15T08:10:38+00:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/machine-learning/</loc>
+    <lastmod>2018-09-07T10:16:47+00:00</lastmod>
   </url>
   
   <url>
@@ -136,21 +138,13 @@
   </url>
   
   <url>
-    <loc>/series/</loc>
-    <lastmod>2018-09-07T10:16:47+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/machine-learning/</loc>
-    <lastmod>2018-09-07T10:16:47+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/pytorch/</loc>
     <lastmod>2018-09-07T10:16:47+00:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/series/</loc>
+    <lastmod>2018-09-07T10:16:47+00:00</lastmod>
   </url>
   
   <url>
@@ -164,20 +158,13 @@
   </url>
   
   <url>
-    <loc>/post/</loc>
-    <lastmod>2018-09-04T06:30:28+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/gatsby/</loc>
     <lastmod>2018-09-04T06:30:28+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/mathjax/</loc>
     <lastmod>2018-09-04T06:30:28+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -188,7 +175,6 @@
   <url>
     <loc>/tags/visualization/</loc>
     <lastmod>2018-08-31T10:44:53+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -199,7 +185,6 @@
   <url>
     <loc>/tags/linux/</loc>
     <lastmod>2018-08-27T05:20:27+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -213,20 +198,18 @@
   </url>
   
   <url>
+    <loc>/tags/cuda/</loc>
+    <lastmod>2018-08-23T15:01:49+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/2018-08-23-install-cuda-and-cudnn-on-ubuntu18.04/</loc>
     <lastmod>2018-08-23T15:01:49+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/cuda/</loc>
-    <lastmod>2018-08-23T15:01:49+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/ubuntu/</loc>
     <lastmod>2018-08-23T15:01:49+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -252,7 +235,6 @@
   <url>
     <loc>/tags/lvs/</loc>
     <lastmod>2017-03-22T17:23:36+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -268,7 +250,6 @@
   <url>
     <loc>/tags/reinforcement-learning/</loc>
     <lastmod>2017-03-14T15:05:04+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -307,17 +288,14 @@
   
   <url>
     <loc>/categories/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/interview/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/publication_types/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
