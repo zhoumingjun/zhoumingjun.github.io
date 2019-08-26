@@ -1,0 +1,2 @@
+#!/bin/bash
+$HOME/.rbenv/shims/asciidoctor -r asciidoctor-html5s    -r asciidoctor-diagram     -b html5s      -a icons=font     -a imagesoutdir=public/img-autogen     -a imagesdir=/img-autogen    "$@"
