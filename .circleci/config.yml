@@ -17,7 +17,7 @@ jobs:
       - run:
           name: Generate site
           working_directory: ~/zhoumingjun.github.io
-          command: ls -alh && HUGO_ENV=production hugo -d ~/public
+          command: git submodule sync && git submodule update --init && HUGO_ENV=production hugo -d ~/public
       - deploy:
           name: Deploy to Github Pages
           working_directory: ~/public
